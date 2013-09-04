@@ -19,8 +19,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <polopoly.version>10.6.0-bc91117</polopoly.version>
-    <baseline.version>2.0.4</baseline.version>
+    <polopoly.version>10.8.0</polopoly.version>
+    <baseline.version>3.0.0</baseline.version>
   </properties>
 
   <licenses>
@@ -158,6 +158,16 @@
       <artifactId>plugin-test-baseline</artifactId>
       <version>1.1.0</version>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.googlecode.json-simple</groupId>
+      <artifactId>json-simple</artifactId>
+      <version>1.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.polopoly</groupId>
+      <artifactId>legacy-site-plugin</artifactId>
+      <version>${polopoly.version}</version>
     </dependency>
   </dependencies>
 

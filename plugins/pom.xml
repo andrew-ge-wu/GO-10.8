@@ -19,7 +19,6 @@
     </pluginRepository>
   </pluginRepositories>
 
-
   <repositories>
     <repository>
       <id>polopoly-public</id>
