@@ -1,7 +1,0 @@
-<div class="possibleError">
-  <ul>
-    #foreach ($errorKey in $error)
-      <li>$rs.blog.error.get($errorKey)</li>
-    #end
-  </ul>
-</div>

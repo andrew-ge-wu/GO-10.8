@@ -1,7 +1,0 @@
-<div class="tableElement element">
-     <div class="$!content.style.value">
-      #if($content.table.value)
-        $content.table.value
-      #end
-  </div>
-</div>

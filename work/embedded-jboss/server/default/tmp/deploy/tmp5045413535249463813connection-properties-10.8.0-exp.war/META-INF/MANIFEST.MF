@@ -1,6 +1,0 @@
-Manifest-Version: 1.0
-Build-Jdk: 1.6.0_24
-Built-By: polopoly
-Created-By: Apache Maven
-Archiver-Version: Plexus Archiver
-

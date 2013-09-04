@@ -1,4 +1,0 @@
-#set($path = $content.parentIds)
-#set($posting = $content.blogPostingBean)
-
-<a href="#link({"path": $path, 'htmlEncodeLink': 'true', "":""})">$posting.getShortTitle(40,"...")</a>

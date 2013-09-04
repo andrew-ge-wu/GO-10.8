@@ -1,4 +1,0 @@
-
-<div>
-#parse("/WEB-INF/velocity/link/link.vm")
-</div>

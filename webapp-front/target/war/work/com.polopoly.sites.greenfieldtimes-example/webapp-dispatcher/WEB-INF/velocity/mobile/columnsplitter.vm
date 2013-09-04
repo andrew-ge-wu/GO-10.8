@@ -1,4 +1,0 @@
-<div>
-    #render({"content": $content.leftSlot, "":""})  
-    #render({"content": $content.rightSlot, "":""})  
-</div>

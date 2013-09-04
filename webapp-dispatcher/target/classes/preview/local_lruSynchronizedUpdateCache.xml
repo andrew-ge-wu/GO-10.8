@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<model typeName="com.polopoly.cache.LRUSynchronizedUpdateCache">
-  <cacheSettings>
-    <!-- Max number of entries to cache -->
-    <maxSize>1000</maxSize>
-    <computeTimeout>10000</computeTimeout>
-  </cacheSettings>
-  <!-- Add other configuration here if needed. -->
-</model>
