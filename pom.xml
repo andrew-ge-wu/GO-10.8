@@ -179,22 +179,6 @@
     </dependency>
     -->
     <!-- Alternatively, you can also choose to place these dependencies in the specific modules that need them -->
-
-    <dependency>
-      <groupId>com.atex.plugins</groupId>
-      <artifactId>imagegallery-plugin</artifactId>
-      <version>1.2.0</version>
-    </dependency>
-    <dependency>
-      <groupId>com.atex.plugins</groupId>
-      <artifactId>department-driven-publishing-queue-plugin</artifactId>
-      <version>2.0.1</version>
-    </dependency>
-    <dependency>
-      <groupId>com.atex.plugins</groupId>
-      <artifactId>brightcove-plugin</artifactId>
-      <version>2.0.1-SNAPSHOT</version>
-    </dependency>
   </dependencies>
 
   <build>
@@ -263,6 +247,15 @@
               </warArtifact>
               <contextPath>/management</contextPath>
             </contextHandler>
+            <contextHandler implementation="org.mortbay.jetty.plugin.JettyWebAppContext">
+              <warArtifact>
+                <groupId>com.polopoly.public</groupId>
+                <artifactId>integration-textmining-temis</artifactId>
+                <version>${polopoly.version}</version>
+                <type>war</type>
+              </warArtifact>
+              <contextPath>/textmining</contextPath>
+            </contextHandler>            
           </externalArtifactContextHandlers>
         </configuration>
       </plugin>
@@ -536,8 +529,8 @@
         <module>test-acceptance</module>
       </modules>
       <properties>
-        <targetEnv>dev</targetEnv>
-      </properties>
+       <targetEnv>dev</targetEnv>
+     </properties>
     </profile>
     <profile>
       <id>dev</id>
@@ -549,7 +542,7 @@
         </property>
       </activation>
       <properties>
-        <targetEnv>dev</targetEnv>
+       <targetEnv>dev</targetEnv>
       </properties>
     </profile>
     <profile>
@@ -561,7 +554,7 @@
         </property>
       </activation>
       <properties>
-        <targetEnv>prod</targetEnv>
+       <targetEnv>prod</targetEnv>
       </properties>
     </profile>
   </profiles>
