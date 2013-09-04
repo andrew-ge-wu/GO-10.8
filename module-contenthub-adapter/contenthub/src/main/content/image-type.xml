@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modelType typeName="com.polopoly.model.ModelTypePojo"
+           xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+
+  <typeClass>pojo</typeClass>
+  <generator>com.polopoly.model.ModelTypePojo</generator>
+
+  <beanClass>example.greenfieldtimes.adapter.ImageBean</beanClass>
+  <declaredOnly>false</declaredOnly>
+
+  <attributes typeClass="array" typeName="com.polopoly.model.ModelTypeFieldData[]">
+    <item>
+      <name>aspectInputTemplate</name>
+      <modifiers>11</modifiers>
+      <typeName>java.lang.String</typeName>
+      <value>example.contenthub.Image</value>
+    </item>
+   </attributes>
+</modelType>

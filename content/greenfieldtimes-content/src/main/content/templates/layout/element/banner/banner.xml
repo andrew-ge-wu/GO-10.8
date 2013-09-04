@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+
+  <input-template name="example.BannerElement" label="cm.template.example.BannerElement">
+    <policy>example.layout.element.banner.BannerResourcePolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <type>LayoutElement</type>
+    <param name="ViewState_insert">false</param>
+    <param name="ViewState_preview">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditState_preview">false</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="EditNewState_preview">false</param>
+    <param name="titleOfNewContent">cm.template.example.BannerElement.new</param>
+    <param name="templateIcon">currency_dollar.png</param>
+    <param name="renderTemplateIconInSelect">true</param>
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+
+    <field name="name" input-template="p.ContentName" label="cm.label.Title" required="false" />
+
+    <field name="image" input-template="p.ImageManager" label="cm.template.example.BannerElement.FileUpload" required="false">
+      <param name="inlineHelp">true</param>
+      <help>cm.template.example.BannerElement.FileUpload.help</help>
+      <param name="mode">singleUploadSingleSelect</param>
+      <param name="staticFilename">banner</param>
+      <param name="allowEdit">true</param>
+      <param name="showPasteButton">false</param>
+      <param name="openEditorOnUpload">true</param>
+      <param name="openEditorOnSelect">true</param>
+      <param name="appletWidth">640</param>
+      <param name="appletHeight">480</param>
+      <param name="appletState">
+      <![CDATA[
+          <imageapplet>
+            <buttonset name="zoombuttons">
+              <button label="Zoom In" icon="zoom_in.png" action="ZoomInImageAppletAction"/>
+              <button label="Zoom Out" icon="zoom_out.png" action="ZoomOutImageAppletAction"/>
+            </buttonset>
+            <buttonset name="rotatemirrorbuttons">
+                <button label="Rotate" icon="rotate_cw.png" action="ClockwiseRotateImageAppletAction"/>
+                <button label="Mirror" icon="mirror.png" action="HorizontalMirrorImageAppletAction"/>
+            </buttonset>
+            <editmode name="landscapeBannerEdit" label="Landscape style format" description="This format is the default with completely free editing capabilities.">
+              <buttonset name="fullbs">
+                <includebuttonset name="rotatemirrorbuttons"/>
+                <button label="Crop" icon="crop.png" action="CropEditImageAppletAction"/>
+                <button label="Resize" icon="resize.png" action="ResizeEditImageAppletAction"/>
+                <button label="Scramble" icon="photo_portrait.png" action="ScrambleEditImageAppletAction"/>
+                <separator/>
+                <includebuttonset name="zoombuttons"/>
+              </buttonset>
+              <derivative name="landscape_993" label="993px">
+                <postprocess>
+                  <transform code="resizew993"/>
+                </postprocess>
+              </derivative>
+            </editmode>
+            <editmode name="AspectRatioBannerEdit" label="Aspect ratio style format (6:5)" description="Aspect ratio editing with fixed proportios crop">
+              <buttonset name="bs-teaserLargeRectangleEdit">
+                <includebuttonset name="rotatemirrorbuttons"/>
+                <button label="Crop" icon="crop.png" action="CropEditImageAppletAction">
+                  <param name="width" value="1"/>
+                  <param name="height" value="1"/>
+                </button>
+                <button label="Scramble" icon="photo_portrait.png" action="ScrambleEditImageAppletAction"/>
+                <separator/>
+                <includebuttonset name="zoombuttons"/>
+              </buttonset>
+              <derivative name="aspect_300" label="300x250px">
+                <postprocess>
+                  <transform code="fitw300h250"/>
+                </postprocess>
+              </derivative>
+            </editmode>
+          </imageapplet>
+        ]]>
+      </param>
+    </field>
+
+    <output-templates mode="www">
+      <id>example.BannerElement.ot</id>
+    </output-templates>
+  </input-template>
+
+  <output-template name="example.BannerElement.ot" input-template="p.siteengine.ElementOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/www/banner.vm</component>
+      <contentref group="output/controller" name="selected">
+        <contentid>
+          <externalid>p.siteengine.JavaClassRenderController</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/controller/selected/renderControllerClass" name="value">example.layout.element.banner.RenderControllerBannerElement</component>
+    </content-xml>
+  </output-template>  
+
+</template-definition>

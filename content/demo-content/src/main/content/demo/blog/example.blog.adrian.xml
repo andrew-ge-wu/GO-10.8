@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+<!-- enable weblogin for adrian -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>Content</major>
+        <externalid>example.GTWebLoginEnabler</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.EnableGTWebUser</externalid>
+      </input-template>
+    </metadata>
+    <value name="enableWebUser">4000:adrian</value>
+    <value name="enableWebBlog">ubg-0-adrian:example.adrian.blog</value>
+  </content>
+</batch>

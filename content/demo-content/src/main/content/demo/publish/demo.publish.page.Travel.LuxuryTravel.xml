@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.3.6.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.3.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Luxury travel</component>
+  </content>
+</batch>

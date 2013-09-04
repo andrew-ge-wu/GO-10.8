@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <name>greenfieldtimes-example - Configuration - dev</name>
+  <artifactId>config-dev</artifactId>
+  <packaging>pom</packaging>
+
+  <description>Development configuration for the Greenfield example Project</description>
+
+  <parent>
+    <groupId>com.polopoly.sites.greenfieldtimes-example</groupId>
+    <artifactId>config</artifactId>
+    <version>10.8.0</version>
+  </parent>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>2.3</version>
+        <inherited>false</inherited>
+        <configuration>
+          <descriptors>
+            <descriptor>src/main/assembly/solr-home.xml</descriptor>
+            <descriptor>src/main/assembly/config.xml</descriptor>
+          </descriptors>
+        </configuration>
+        <executions>
+          <execution>
+            <id>assemble</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

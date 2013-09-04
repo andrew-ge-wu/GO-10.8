@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>p.siteengine.Site</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>p.siteengine.Sites.d</externalid>
+      </security-parent>
+    </metadata>
+    
+    <contentlist group="feeds" />
+    <contentlist group="default" />
+    <contentlist group="css" />
+
+    <component group="membershipConfiguration/htmlMail" name="value">true</component>
+    <component group="membershipConfiguration/mailSenderAddress" name="value">no-reply@greenfieldtimes.com
+    </component>
+    <component group="membershipConfiguration/allowLogin" name="value">true</component>
+    <component group="pageLayout/selected/righttop/inheritSetting" name="count">1</component>
+    <component group="pageLayout/selected/righttop/inheritSetting" name="selected_0">default
+    </component>
+
+    <component group="resources" name="contentListMaxSize">50</component>
+    <component group="pageLayout/selected/topheader/inheritSetting" name="count">1</component>
+    <component group="pageLayout/selected/topheader/inheritSetting" name="selected_0">default
+    </component>
+    <component group="pageLayout/selected/rightbanner_bottom/inheritSetting" name="count">1
+    </component>
+    <component group="pageLayout/selected/rightbanner_bottom/inheritSetting" name="selected_0">default
+    </component>
+    <component group="polopoly.Content" name="name">Greenfield Times</component>
+    <component group="pageLayout/selected/nav/inheritSetting" name="count">1</component>
+    <component group="pageLayout/selected/nav/inheritSetting" name="selected_0">default</component>
+    <component group="polopoly.ContentLists" name="polopoly.Department">default</component>
+
+    <component group="polopoly.ContentLists" name="pageLayout/selected/right/slotElements">pageLayout/selected/right/slotElements
+    </component>
+    <component group="polopoly.ContentLists" name="resources">resources</component>
+    <component group="polopoly.ContentLists" name="feeds">feeds</component>
+    <component group="polopoly.ContentLists" name="pageLayout/selected/mobileheader/slotElements">pageLayout/selected/mobileheader/slotElements
+    </component>
+    <component group="polopoly.ContentLists" name="articles">articles</component>
+    <component group="polopoly.ContentLists" name="pageLayout/selected/nav/slotElements">pageLayout/selected/nav/slotElements
+    </component>
+    <component group="polopoly.ContentLists" name="pageLayout/selected/main/slotElements">pageLayout/selected/main/slotElements
+    </component>
+    <component group="polopoly.ContentLists" name="p.site.Categorization">p.site.Categorization</component>
+    <component group="polopoly.ContentLists" name="pageLayouts">pageLayouts</component>
+
+    <component group="polopoly.ContentLists" name="pageLayout/selected/righttop/slotElements">pageLayout/selected/righttop/slotElements
+    </component>
+    <component group="polopoly.ContentLists" name="sources">sources</component>
+    <component group="polopoly.ContentLists" name="pageLayout/selected/topheaderbanner/slotElements">pageLayout/selected/topheaderbanner/slotElements
+    </component>
+    <component group="polopoly.ContentLists" name="pageLayout/selected/topheader/slotElements">pageLayout/selected/topheader/slotElements
+    </component>
+    <component group="polopoly.ContentLists" name="pageLayout/selected/wide/slotElements">pageLayout/selected/wide/slotElements
+    </component>
+    <component group="polopoly.ContentLists" name="pageLayout/selected/rightbanner_top/slotElements">pageLayout/selected/rightbanner_top/slotElements
+    </component>
+    <component group="polopoly.ContentLists" name="pageLayout/selected/rightbanner_bottom/slotElements">pageLayout/selected/rightbanner_bottom/slotElements
+    </component>
+    <component group="polopoly.ContentLists" name="landingPages">landingPages</component>
+    <component group="polopoly.ContentLists" name="pageLayout/selected/header/slotElements">pageLayout/selected/header/slotElements
+    </component>
+
+    <component group="polopoly.ContentLists" name="css">css</component>
+    <component group="disallowIndexing" name="value">false</component>
+    <component group="pageLayout/selected/rightbanner_top/inheritSetting" name="count">1
+    </component>
+    <component group="pageLayout/selected/rightbanner_top/inheritSetting" name="selected_0">default
+    </component>
+    <component group="pageLayout/selected/topheaderbanner/inheritSetting" name="count">1
+    </component>
+    <component group="pageLayout/selected/topheaderbanner/inheritSetting" name="selected_0">default
+    </component>
+    <component group="polopoly.Client" name="homeDepartment">true</component>
+    <component group="pageLayout/selected/mobileheader/inheritSetting" name="count">1</component>
+    <component group="pageLayout/selected/mobileheader/inheritSetting" name="selected_0">default
+    </component>
+
+    <component group="pageLayout/selected/right/inheritSetting" name="count">1</component>
+    <component group="pageLayout/selected/right/inheritSetting" name="selected_0">default</component>
+    <component group="membershipConfiguration/mailSender" name="value">Greenfieldtimes</component>
+    <component group="pageLayout/selected/wide/inheritSetting" name="count">1</component>
+    <component group="pageLayout/selected/wide/inheritSetting" name="selected_0">default</component>
+    <component group="pageLayout/selected/main/inheritSetting" name="count">1</component>
+    <component group="pageLayout/selected/main/inheritSetting" name="selected_0">default</component>
+    <component group="membershipConfiguration/blogPage" name="count">1</component>
+    <component group="membershipConfiguration/allowRegistration" name="value">true</component>
+
+    <component group="pageLayout/selected/header/inheritSetting" name="count">1</component>
+    <component group="pageLayout/selected/header/inheritSetting" name="selected_0">default</component>
+    <component group="localizedstrings" name="count">0</component>
+    <component group="cacheTime/cacheTime" name="count">1</component>
+    <component group="cacheTime/cacheTime" name="selected_0">-1</component>
+
+    <contentref group="polopoly.Department" name="1280">
+      <contentid>
+        <major>Article</major>
+        <externalid>example.linktopolopolycom</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="polopoly.Department" name="512">
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.2.d</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="polopoly.Department" name="0">
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.0.d</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="polopoly.Department" name="768">
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.3.d</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="polopoly.Department" name="256">
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.1.d</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="polopoly.Department" name="1024">
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.Blogs.d</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout/selected/right/slotElements" name="20">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.imagegallery.business.images</externalid>
+      </contentid>
+    </contentref>
+     <contentref group="pageLayout/selected/right/slotElements" name="30">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.columnsplitter.sport.LeftHeavy</externalid>
+      </contentid>
+    </contentref>
+       <contentref group="pageLayout/selected/right/slotElements" name="15">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.shadesofgreenpoll</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout/selected/right/slotElements" name="10">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.topblogstabview</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout/selected/right/slotElements" name="1">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.mostreadtabview</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout/selected/right/slotElements" name="0">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>newextidextidnewexample.tabViewGreenfieldTimes</externalid>
+      </contentid>      
+    </contentref>
+    <contentref group="pageLayout/selected/right/slotElements" name="-1">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.BestOfGreenfieldNews</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout/selected/mobileheader/slotElements" name="0">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>mobileLogotype118</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout/selected/mobileheader/slotElements" name="256">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>extid7.116</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout" name="selected">
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.DefaultPageLayout</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout/selected/nav/slotElements" name="0">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>extid7.105</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="membershipConfiguration/resetPasswordElement" name="reference">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.membership.resetpasswordelement</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="membershipConfiguration/profileElement" name="reference">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.membership.profile</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout/selected/righttop/slotElements" name="0">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>extid7.147</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout/selected/topheaderbanner/slotElements" name="0">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>banner.top</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="membershipConfiguration/registrationElement" name="reference">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>extid7.148</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout/selected/topheader/slotElements" name="0">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>elem.navpath</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout/selected/rightbanner_top/slotElements" name="0">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>banner.right.top</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="membershipConfiguration/blogPage" name="reference0">
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.Blogs.d</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout/selected/rightbanner_bottom/slotElements" name="0">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>banner.right.bottom</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="landingPages" name="0">
+      <contentid>
+        <major>Department</major>
+        <externalid>extid2.1610</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout/selected/header/slotElements" name="0">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>extid7.107</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout/selected/header/slotElements" name="-256">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>extid7.119</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout/selected/header/slotElements" name="256">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>extid7.116</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout/selected/main/slotElements" name="0">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.MostBeautifulCars</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout/selected/main/slotElements" name="256">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.columnsplitter.travel.halv</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout/selected/main/slotElements" name="512">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.columnsplitter.business.halv</externalid>
+      </contentid>
+    </contentref>        
+    <contentref group="pageLayout/selected/main/slotElements" name="768">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.columnsplitter.sport.halv</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout/selected/main/slotElements" name="1024">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.InternetBusiness</externalid>
+      </contentid>
+    </contentref>
+    
+    <contentlist group="resources">
+      <entry>
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.demo.article.MostBeautifulCars</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry>
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.file.pdf.greenfieldTimes</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+    
+    <contentlist group="sources">
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.demo.pq.selectedarticles</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.demo.pq.latest</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+</batch>

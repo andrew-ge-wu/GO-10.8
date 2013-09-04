@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.TravelInLuxury</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="titleFontSize" name="value">28</component> 
+	<component group="articles" name="contentListMaxSize">1</component> 
+	<component group="teaserFontSize" name="value">14</component> 
+	<component group="polopoly.Content" name="name">Boeing 747 Hostel</component> 
+	<component group="teaser" name="value">Oscar Diös is a Swedish  businessman looking to invest in a new project within the aviation community. He's already bought the venture's first airliner, a Boeing 747-200.</component> 
+	<component group="image" name="selected">landscape</component> 
+	<component group="image" name="landscape_height">234</component> 
+	<component group="image" name="landscape_x">83</component> 
+	<component group="image" name="landscape_y">34</component> 
+	<component group="image" name="landscape_width">417</component> 
+	<component group="polopoly.ContentLists" name="articles">articles</component> 
+	<component group="breakingNews" name="value">false</component>
+    <contentref group="articles" name="0">
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.TravelInLuxury</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="image" name="image">
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.TravelInLuxury</externalid>
+      </contentid>
+    </contentref>
+  </content>
+</batch>

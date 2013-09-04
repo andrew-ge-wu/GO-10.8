@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.MostBeautifulCars</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="titleFontSize" name="value">32</component> 
+	<component group="articles" name="contentListMaxSize">1</component> 
+	<component group="teaserFontSize" name="value">14</component> 
+	<component group="polopoly.Content" name="name">Luxury Cars: Our Favorite Classics</component> 
+	<component group="teaser" name="value">Few objects hold such acclaim and evoke such strong feelings of want as luxury cars. Every era in automobile history has had a group of car marques and models that have been both expensive to purchase and superior in both design and engineering. It has been said that luxury cars is the realm of "individualistic consideration, and coachwork that could be tailored to an owner like a bespoke suit", as Dennis Alder wrote. Here, we list our favorite ten such cars, ever.</component> 
+	<component group="image" name="selected">landscape</component> 
+	<component group="image" name="landscape_height">338</component> 
+	<component group="image" name="landscape_x">5</component> 
+	<component group="image" name="landscape_y">26</component> 
+	<component group="image" name="landscape_width">452</component> 
+	<component group="polopoly.ContentLists" name="articles">articles</component> 
+	<component group="breakingNews" name="value">false</component>
+    <contentref group="articles" name="0">
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.MostBeautifulCars</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="image" name="image">
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.RollsRoycePhantom</externalid>
+      </contentid>
+    </contentref>
+  </content>
+</batch>

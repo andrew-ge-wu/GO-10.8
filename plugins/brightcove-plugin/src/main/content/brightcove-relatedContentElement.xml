@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="com.atex.plugins.brightcove.BrightcoveRelatedContentElement" label="com.atex.plugins.brightcove.RelatedContentElement">
+
+    <policy>com.atex.plugins.brightcove.element.ElementPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+
+    <type>LayoutElement</type>
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="titleOfNewContent">com.atex.plugins.brightcove.RelatedContentElement.new</param>
+    <param name="templateIcon">web.png</param>
+    <param name="renderTemplateIconInSelect">true</param>
+
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+    <!--
+      p.siteengine.LandingPageContentListWrapper does not limit to max size of 1
+      but also does not make sense to copy chuck of code from example code.
+    -->
+    <content-list name="landingPage" input-template="p.siteengine.LandingPageContentListWrapper" />
+
+    <field name="name" input-template="p.ContentName" label="cm.label.Name" />
+    <field name="landingPage" input-template="p.ContentListEntryContainer" label="com.atex.plugins.brightcove.RelatedContentElement.relatedContent">
+      <param name="contentListName">landingPage</param>
+      <param name="showActionButtonsInViewMode">false</param>
+    </field>
+
+    <output-templates mode="www">
+      <id>com.atex.plugins.brightcove.BrightcoveRelatedContentElement.ot</id>
+    </output-templates>
+  </input-template>
+
+</template-definition>

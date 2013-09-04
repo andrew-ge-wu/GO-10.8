@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.Hockey</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="titleFontSize" name="value">24</component> 
+	<component group="articles" name="contentListMaxSize">1</component> 
+	<component group="teaserFontSize" name="value">14</component> 
+	<component group="polopoly.Content" name="name">Stanley Cup Thriller</component> 
+	<component group="teaser" name="value">Tomáš Kopecký scored the game-winning goal for the Chicago Blackhawks 8:25 into the third period to lift the Blackhawks over the Philadelphia Flyers in Game 1 of the 2010 Stanley Cup Finals Saturday night in Chicago, United States.</component> 
+	<component group="image" name="selected">landscape</component> 
+	<component group="image" name="landscape_height">296</component> 
+	<component group="image" name="landscape_x">0</component> 
+	<component group="image" name="landscape_y">79</component> 
+	<component group="image" name="landscape_width">500</component> 
+	<component group="polopoly.ContentLists" name="articles">articles</component> 
+	<component group="breakingNews" name="value">false</component> 
+	<component group="titleLetterSpacing" name="value">1</component>
+	    <contentref group="articles" name="0">
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.Hockey</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="image" name="image">
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.HockeyNHL</externalid>
+      </contentid>
+    </contentref>
+  </content>
+</batch>

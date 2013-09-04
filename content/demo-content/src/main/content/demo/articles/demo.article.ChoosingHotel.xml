@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+<!-- http://en.wikinews.org/wiki/Thai_Tourism_Minister_applauds_the_Chiang_Mai_Charity_Calendar -->
+<content clear="true">
+<metadata>
+  <contentid>
+    <major>Article</major>
+    <externalid>example.demo.article.ChoosingHotel</externalid>
+  </contentid>
+  <input-template>
+    <major>InputTemplate</major>
+    <externalid>example.StandardArticle</externalid>
+  </input-template>
+  <security-parent>
+    <major>Department</major>
+    <externalid>GreenfieldTimes.d</externalid>
+  </security-parent>
+</metadata>
+<component group="author" name="value">Wikinews</component>
+<component group="polopoly.Content" name="name">Thai Tourism Minister applauds the Chiang Mai Charity Calendar</component>
+<component group="lead" name="value">A small desk calendar, which started as a voluntary school project, has risen to unexpected heights of fame.</component>
+<component group="body" name="value">
+<![CDATA[
+<p>His Excellency Dr. Suvit Yodmani, Thai Minister for Tourism and Sports paid tribute to the young creators of the "Chiang Mai Charity Calendar" by travelling up from Bangkok to preside at the official launch of this initiative, which is designed to increase visitor arrivals to the Northern Thai city, and raise funds through calendar sales for childrens' charities in the region. The event was held on October 5th 2007 at the recently opened Sofitel Riverside Hotel Chiang Mai, and attended by over 100 senior travel trade, airline media, consular and city hall representatives.</p>
+<p>In an evening which included a presentation of how the calendar was conceived and created plus solo violin and classical guitar performances by students, Dr Suvit gave a talk about the future of the tourism industry in Chiang Mai, highlighting the importance of environmental issues, and close co-operation between the government and private sectors. He cited the Charity Calendar as an example of what could be achieved even by schoolchildren in terms of tourism promotion, and gave it his wholehearted support.</p>
+<p>The evening concluded with the Minister presenting certificates of appreciation to the artists who painted the colourful images of the city which were chosen to be included in the non-profit calendar and representing why "Chiang Mai is a Wonderful Place to Live"</p>
+<p>Offered as an unusual gift, the desk calendar is likely to carry its promotional message — in text and childrens' paintings — into homes and offices in countries around the world.</p>
+<p><i>This article was originally published on <a href="http://en.wikinews.org/wiki/Thai_Tourism_Minister_applauds_the_Chiang_Mai_Charity_Calendar">Wikinews</a> and is reproduced here in accordance with <a href="http://creativecommons.org/licenses/by/2.5/">CC-Attribution-Generic 2.5.</a></i></p>
+]]></component>
+<component group="publishedDate" name="date">1192287600000</component>
+<component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+<component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+<component group="polopoly.ContentLists" name="images">images</component>
+<component group="polopoly.ContentLists" name="topimages">topimages</component>
+<component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+<component group="p.Inbox" name="showContent">true</component>
+<component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+<component group="p.Content.state" name="onlineState">true</component>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-10",
+          "name": "lifestyle and leisure",
+          "entities": [
+            {
+              "id": "subject-10005",
+              "name": "holiday or vacation",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+<contentref group="topimages" name="0">
+  <contentid>
+    <major>ReferenceMetaData</major>
+    <externalid>example.demo.ref.image.ChoosingHotel</externalid>
+  </contentid>
+</contentref>
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.ChoosingHotel.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.ChoosingHotel.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.ChoosingHotel.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.ChoosingHotel.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.ChoosingHotel.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.ChoosingHotel.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content>
+</batch>

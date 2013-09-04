@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.ImageTransition">
+    <editor>com.polopoly.cm.app.widget.OEmptyPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OEmptyPolicyWidget</viewer>
+  </input-template>
+
+  <input-template name="example.ImageGalleryElement" label="cm.template.example.ImageGalleryElement">
+    <policy>example.layout.element.gallery.GalleryElementPolicy</policy>
+
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+
+    <type>LayoutElement</type>
+
+    <param name="templateIcon">images.png</param>
+    <param name="renderTemplateIconInSelect">true</param>
+
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+    <editor contextName="orchid_THUMBENTRY">example.widget.OSearchThumbImageGallery</editor>
+    <viewer contextName="orchid_THUMBENTRY">example.widget.OSearchThumbImageGallery</viewer>
+
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="titleOfNewContent">cm.template.example.ImageGalleryElement.new</param>
+    <content-list name="publishingQueue" input-template="example.SingleEntryContentListWrapper" />
+
+    <layout name="imageGalleryElementIntroduction" input-template="p.Comment" label="cm.template.example.ImageGalleryElement.Introduction.Title">
+        <param name="comment">
+            <![CDATA[
+                cm.template.example.ImageGalleryElement.Introduction.Description
+            ]]>
+        </param>
+    </layout>
+
+    <field name="name" input-template="p.ContentName" label="cm.label.Name" required="true" />
+
+    <field name="description" input-template="p.TextArea" label="cm.general.Description">
+      <param name="rows">4</param>
+      <param name="cols">50</param>
+    </field>
+
+
+    <field name="imageTransition" input-template="example.ImageTransition" />
+
+    <field name="publishingQueueCreator" input-template="p.ContentCreator" label="cm.action.NewPublishingQueue">
+      <param name="createWithSecurityParent">true</param>
+      <param name="securityParentAlias">content</param>
+      <param name="insertTargetAlias">content</param>
+      <param name="askInsertTarget">false</param>
+      <param name="insertionContentListName">publishingQueue</param>
+      <param name="askInsertionContentListName">false</param>
+       <param name="askContentListPosition">false</param>
+       <param name="insertPosition">top</param>
+      <param name="showCategorySelectWithOneCategory">false</param>
+
+      <idparam name="templateRoot">
+        <externalid>p.siteengine.SourcesRepositoryTemplates</externalid>
+      </idparam>
+    </field>
+
+
+    <field name="publishingQueue" input-template="p.ContentListEntryContainer" label="cm.general.PublishingQueue">
+      <param name="contentListName">publishingQueue</param>
+      <param name="showActionButtonsInViewMode">false</param>
+    </field>
+
+    <output-templates mode="www">
+      <id>example.ImageGalleryElement.ot</id>
+    </output-templates>
+    <output-templates mode="mobile">
+      <id>example.MobileImageGalleryElement.ot</id>
+    </output-templates>
+  </input-template>
+
+  <output-template name="example.ImageGalleryElement.ot" input-template="p.siteengine.ElementOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/controller" name="selected">
+        <contentid>
+          <externalid>p.siteengine.JavaClassRenderController</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/controller/selected/renderControllerClass" name="value">example.layout.element.gallery.GalleryElementController</component>
+
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/www/gallery.vm</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+    </content-xml>
+  </output-template>
+
+  <output-template name="example.MobileImageGalleryElement.ot" input-template="p.siteengine.ElementOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/mobile/gallery.vm</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+    </content-xml>
+  </output-template>
+</template-definition>

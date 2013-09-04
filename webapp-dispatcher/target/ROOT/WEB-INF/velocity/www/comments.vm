@@ -1,0 +1,64 @@
+#set($rs = $m.context.site.bean.resources.strings)
+#set($elementId = $content.contentId.minor)
+
+#if ($m.local.content.online)
+  #if($m.request.httpRequest.getParameter("comments"))
+    #parse("/WEB-INF/velocity/www/comments-view.vm")
+  #else
+  <div class="element">
+    <div class="articleComments" id="comment-$elementId">
+    #parse("/WEB-INF/velocity/www/comments-input.vm")
+  
+    <div id="commentsField-$elementId" style="display: none;"></div>
+    <script type="text/javascript">
+
+    var updateCommentsButton$elementId = function () {
+        if(jQuery(this).is(":visible")) {
+            jQuery("#comment_this_article-$elementId").addClass("highlighted");
+        } else {
+            jQuery("#comment_this_article-$elementId").removeClass("highlighted");
+        }
+    }
+
+    function showComments$elementId() {
+        if (jQuery("#commentsField-$elementId .commentList").length == 0) {
+            polopoly.comments.get('#link({"path":$m.request.originalContentPath, 'htmlEncodeLink': 'true', "":""})/$content.contentId.contentId.contentIdString', 0, "#commentsField-$elementId",
+                   function() { 
+                       jQuery("#commentsField-$elementId").slideToggle("fast", updateCommentsButton$elementId);
+                    });
+        } else {
+          jQuery("#commentsField-$elementId").slideToggle("fast", updateCommentsButton$elementId);
+        }
+      }
+      var toggleCommentsContainer$elementId = function () {
+          if($content.openForComments == true) {
+             jQuery("#comments_container-$elementId").show();
+             firstTimeCaptcha$elementId();
+         }
+      }
+    
+      #if($m.request.httpRequest.method == "POST")
+      if (location.hash == "#commentsForm-$elementId") {
+         showComments$elementId();
+         toggleCommentsContainer$elementId();
+      }
+      #end
+      jQuery("#comment_this_article-$elementId").click(showComments$elementId);
+
+      #if($m.request.httpRequest.getParameter("showCommentId") &&
+        $m.request.httpRequest.getParameter("showCommentId").trim().matches("[0-9]+[.][0-9]+") &&
+        $m.request.httpRequest.getParameter("commentsElementId") &&
+        $m.request.httpRequest.getParameter("commentsElementId") == $elementId)
+      jQuery(function () {
+        polopoly.comments.get('#link({"path":$m.request.originalContentPath, 'htmlEncodeLink': 'true', "":""})/$content.contentId.contentId.contentIdString', -1, "#commentsField-$elementId",
+          function() { 
+              toggleCommentsContainer$elementId();
+              jQuery("#commentsField-$elementId").show( function() { jQuery(document).scrollTop(jQuery("#shownComment").offset().top); });
+          }, "$m.request.httpRequest.getParameter('showCommentId')");
+      });
+      #end
+    </script>
+    </div>
+  </div>
+  #end
+#end

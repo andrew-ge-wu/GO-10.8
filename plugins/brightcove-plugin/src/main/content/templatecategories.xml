@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content>
+    <metadata>
+      <contentid>
+        <externalid>p.templatecategory.video</externalid>
+      </contentid>
+    </metadata>
+    <contentlist>
+      <entry withMetadata="false" mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>com.atex.plugins.brightcove.video.MainElement</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+</batch>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.SearchElement" label="cm.template.example.SearchElement">
+    <policy>example.layout.element.ElementPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <type>LayoutElement</type>
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="titleOfNewContent">cm.template.example.SearchElement.new</param>
+    <param name="templateIcon">view.png</param>
+    <param name="renderTemplateIconInSelect">true</param>
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+    <field name="name" input-template="p.ContentName" label="cm.label.Name" required="false" />
+    <field name="resultpage" input-template="p.SelectableSubField" label="cm.template.example.SearchElement.resultPage">
+      <layout name="current" input-template="p.Comment" label="cm.template.example.SearchElement.showOnCurrentPage">
+        <param name="comment">cm.template.example.SearchElement.showOnCurrentPage.comment</param>
+      </layout>
+      <field name="specific" input-template="p.SecurityParentSelect" label="cm.template.example.SearchElement.showOnSpecificPage">
+        <param name="width">314</param>
+        <param name="height">120</param>
+      </field>
+    </field>
+    <output-templates mode="www">
+      <id>example.SearchElement.ot</id>
+    </output-templates>
+  </input-template>
+  <output-template name="example.SearchElement.ot" input-template="p.siteengine.ElementOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/www/search.vm</component>
+      <contentref group="output/controller" name="selected">
+        <contentid>
+          <externalid>p.siteengine.JavaClassRenderController</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/controller/selected/renderControllerClass" name="value">example.layout.element.search.RenderControllerSearchElement</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+    </content-xml>
+  </output-template>
+</template-definition>

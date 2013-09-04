@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <!-- Template for enabling web login for user -->
+  <input-template name="example.EnableGTWebUser">
+    <policy>example.user.EnableGTWebUserPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+  </input-template>
+</template-definition>

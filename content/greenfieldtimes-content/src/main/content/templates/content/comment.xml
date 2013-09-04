@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.Comment" label="cm.template.example.Comment.it">
+    <policy>example.comment.CommentPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <editor contextName="orchid_SEARCHITEM">example.widget.OSearchItemBaseWidget</editor>
+    <viewer contextName="orchid_SEARCHITEM">example.widget.OSearchItemBaseWidget</viewer>
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+    <editor contextName="orchid_MODERATIONITEM">example.widget.OCommentListItemWidget</editor>
+    <viewer contextName="orchid_MODERATIONITEM">example.widget.OCommentListItemWidget</viewer>
+    <type>Community</type>
+    <param name="templateIcon">message.png</param>
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">false</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">false</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="ViewState_copy">true</param>
+    <param name="cloneSecurityParent">currentOrHome</param>
+    <param name="titleOfNewContent">cm.template.example.Comment.it.new</param>
+    <field name="contentVersionLimiter" input-template="p.ContentVersionLimiter">
+      <param name="maxVersions">4</param>
+    </field>
+    <field name="text" input-template="p.TextArea" label="cm.label.Text" />
+    <field name="author" input-template="p.TextInput" label="cm.label.Author" />
+    <field name="authorIP" input-template="p.TextOutput" label="cm.template.example.comment.AuthorIP" />
+    <field name="authorUserId" input-template="p.TextOutput" label="cm.template.example.comment.AuthorUserId" />
+    <field name="authorWasLoggedIn" input-template="p.TextOutput" label="cm.template.example.comment.AuthorWasLoggedIn" />
+    <field name="deleteState" input-template="p.DeleteState" label="cm.field.DeleteState.Label" />
+    <field name="moderationState" input-template="p.ModerationState" label="cm.field.ModerationState.Label" />
+  </input-template>
+  
+</template-definition>

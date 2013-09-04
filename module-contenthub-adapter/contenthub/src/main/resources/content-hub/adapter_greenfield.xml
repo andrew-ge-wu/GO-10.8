@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<model typeName="com.polopoly.cm.client.AdaptingContentRepositoryClient">
+  <adaptingRepositorySettings>
+    <repository typeName="com.polopoly.cm.adapter.ContentRepositoryAdapting">
+      <settings>
+        <majorName>Greenfield</majorName>
+        <majorId>1000</majorId>
+        <recordChanges>true</recordChanges>
+        <securityParent>GreenfieldTimes.d</securityParent>
+      </settings>
+
+      <adapter typeName="com.polopoly.cm.adapter.ws.ContentAdapterWebServiceClient">
+        <configuration>
+          <userName>sysadmin</userName>
+          <password>sysadmin</password>
+          <variant>greenfield</variant>
+          <changesServiceUrl>http://${remote-content-hub-host}:${remote-content-hub-port}/content-hub/changes-service/changes</changesServiceUrl>
+          <!--
+          In 10.6.1 the data api were named the model service
+          <contentServiceUrl>http://${remote-content-hub-host}:${remote-content-hub-port}/content-hub/model-service/contentid</contentServiceUrl>
+          -->
+          <contentServiceUrl>http://${remote-content-hub-host}:${remote-content-hub-port}/content-hub/ws/content/contentid</contentServiceUrl>
+          <versionHistoryServiceUrl>http://${remote-content-hub-host}:${remote-content-hub-port}/content-hub/version-history-service/versions/</versionHistoryServiceUrl>
+          <fileServiceUrl>http://${remote-content-hub-host}:${remote-content-hub-port}/content-hub/polopoly_fs</fileServiceUrl>
+          <pingUrl>http://${remote-content-hub-host}:${remote-content-hub-port}/content-hub/content-hub-status</pingUrl>
+        </configuration>
+      </adapter>
+    </repository>
+  </adaptingRepositorySettings>
+</model>

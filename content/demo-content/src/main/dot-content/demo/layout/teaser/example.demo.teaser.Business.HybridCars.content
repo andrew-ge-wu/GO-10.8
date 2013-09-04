@@ -1,0 +1,7 @@
+id:.
+major:Layoutelement
+inputtemplate:example.TeaserElement
+securityparent:GreenfieldTimes.d
+list:articles:example.demo.article.HybridCars
+ref:image:image:example.demo.image.HondaCivicHybrid
+publish:pageLayout/selected/main/slotElements:GreenfieldTimes.SubPage.2.d

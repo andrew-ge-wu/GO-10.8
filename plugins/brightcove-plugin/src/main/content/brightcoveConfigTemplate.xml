@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <!--This file contains input template definitions -->
+  <input-template name="com.atex.plugins.brightcove.BrightcoveConfigTemplate" label="com.atex.plugins.brightcove.configTemplate">
+    <policy>com.atex.plugins.brightcove.BrightcoveConfigPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <type>AppConfig</type>
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="renderTemplateIconInSelect">true</param>
+    <content-list name="brightcoveConfigs" input-template="configListWrapper"></content-list>
+    <layout name="menu" input-template="p.PageMenu">
+      <layout name="general" input-template="p.Page" label="cm.general.General">
+        <field name="name" input-template="p.ContentName" label="cm.label.Name" required="true" />
+        <field name="brightcoveConfigs" input-template="p.ContentListEntryContainer">
+          <param name="contentListName">brightcoveConfigs</param>
+         </field>
+        <field name="configCreator" input-template="p.SimpleContentCreator">
+          <param name="insertionContentListName">brightcoveConfigs</param>
+          <idparam name="inputTemplateId">
+            <externalid>com.atex.plugins.brightcove.BrightcoveSiteConfigTemplate</externalid>
+          </idparam>
+          <!-- all alias content -->
+          <param name="securityParentAlias">content</param>
+          <param name="createWithSecurityParent">true</param>
+          <param name="insertParentAlias">content</param>
+          <param name="insertTargetAlias">content</param>
+          <param name="autoInsertContentListRelativeName">brightcoveConfigs</param>
+          <param name="createLabel">com.atex.plugins.brightcove.site.config.create</param>
+        </field>
+
+      </layout>
+    </layout>
+  </input-template>
+
+  <!--This file contains input template definitions -->
+  <input-template name="com.atex.plugins.brightcove.BrightcoveSiteConfigTemplate" label="com.atex.plugins.brightcove.configTemplate">
+    <policy>com.atex.plugins.brightcove.BrightcoveSiteConfigPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <type>AppConfig</type>
+    <param name="ViewState_insert">false</param>
+    <param name="ViewState_refresh">true</param>
+    <param name="EditState_saveAndClose">false</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">true</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditState_saveAndEdit">false</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="renderTemplateIconInSelect">true</param>
+    <layout name="menu" input-template="p.PageMenu">
+      <layout name="general" input-template="p.Page" label="cm.general.General">
+      
+        <field name="site" input-template="p.ContentTreeSelect" label="com.atex.plugins.brightcove.site.config.select" required="true">
+          <param name="inlineHelp">true</param>
+          <help>com.atex.plugins.brightcove.site.config.select.help</help>
+          <param name="multipleSelect">false</param>
+          <param name="height">250</param>
+          <param name="width">300</param>
+          <param name="allowDepartments">true</param>
+          <param name="allowArticles">false</param>
+          <idparam name="rootContent">
+            <externalid>p.siteengine.Sites.d</externalid>
+          </idparam>
+        </field>
+        
+        <field name="name" input-template="p.ContentName" label="cm.label.Name" required="true" />
+        <field name="publisherId" input-template="p.TextInput" label="com.atex.plugins.brightcove.publisherId" required="true">
+          <param name="inlineHelp">true</param>
+          <help>com.atex.plugins.brightcove.publisherId.help</help>
+        </field>
+        <field name="readToken" input-template="p.TextInput" label="com.atex.plugins.brightcove.readToken" required="true">
+          <param name="inlineHelp">true</param>
+          <help>com.atex.plugins.brightcove.readToken.help</help>
+        </field>
+        <field name="readTokenUrl" input-template="p.TextInput" label="com.atex.plugins.brightcove.readTokenUrl" required="true">
+          <param name="inlineHelp">true</param>
+          <help>com.atex.plugins.brightcove.readTokenUrl.help</help>
+        </field>
+        <field name="writeToken" input-template="p.TextInput" label="com.atex.plugins.brightcove.writeToken" required="true">
+          <param name="inlineHelp">true</param>
+          <help>com.atex.plugins.brightcove.writeToken.help</help>
+        </field>
+        <field name="previewPlayerId" input-template="p.TextInput" label="com.atex.plugins.brightcove.previewPlayerId" required="true">
+          <param name="inlineHelp">true</param>
+          <help>com.atex.plugins.brightcove.previewPlayerId.help</help>
+        </field>
+        <field name="department" input-template="p.ContentTreeSelect" label="com.atex.plugins.brightcove.video.department" required="true">
+          <param name="inlineHelp">true</param>
+          <help>com.atex.plugins.brightcove.video.department.help</help>
+          <param name="multipleSelect">false</param>
+          <param name="allowArticles">false</param>
+          <param name="height">250</param>
+          <param name="width">300</param>
+          <param name="allowDepartments">true</param>
+          <idparam name="rootContent">
+            <externalid>p.siteengine.Sites.d</externalid>
+          </idparam>
+        </field>
+      </layout>
+      <layout name="advanced" input-template="p.Page" label="cm.general.Advanced">
+        <field name="mapCustomField" input-template="p.Checkbox" label="com.atex.plugins.brightcove.mapCustomField">
+          <param name="inlineHelp">true</param>
+          <help>com.atex.plugins.brightcove.mapCustomField.help</help>
+        </field>
+        <field name="mapping" input-template="p.NameValue" label="com.atex.plugins.brightcove.mapping">
+          <param name="listSize">4</param>
+        </field>
+      </layout>
+    </layout>
+  </input-template>
+  
+</template-definition>

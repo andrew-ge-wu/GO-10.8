@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+
+    <input-template name="p.siteengine.Site.MembershipConfiguration" label="cm.template.p.siteengine.Site.MembershipConfiguration">
+        <policy>example.membership.MembershipConfigurationPolicy</policy>
+        <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+        <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+
+        <field name="allowRegistration" input-template="p.Checkbox" label="cm.template.p.siteengine.Site.MembershipConfiguration.AllowRegistration">
+            <param name="checked">false</param>
+            <param name="inlineHelp">true</param>
+
+            <help>cm.template.p.siteengine.Site.MembershipConfiguration.AllowRegistration.Help</help>
+        </field>
+        <field name="allowLogin" input-template="p.Checkbox" label="cm.template.p.siteengine.Site.MembershipConfiguration.AllowLogin">
+            <param name="checked">false</param>
+            <param name="inlineHelp">true</param>
+
+            <help>cm.template.p.siteengine.Site.MembershipConfiguration.AllowLogin.Help</help>
+        </field>
+        
+        <field name="registrationElement" input-template="p.ContentSingleSelect"
+               label="cm.template.p.siteengine.Site.MembershipConfiguration.RegistrationElement">
+          <help>cm.template.p.siteengine.Site.MembershipConfiguration.RegistrationElementHelp</help>
+          <param name="inlineHelp">true</param>
+        </field>
+        
+        <field name="resetPasswordElement" input-template="p.ContentSingleSelect"
+               label="cm.template.p.siteengine.Site.MembershipConfiguration.ResetPasswordElement">
+          <help>cm.template.p.siteengine.Site.MembershipConfiguration.ResetPasswordElementHelp</help>
+          <param name="inlineHelp">true</param>
+        </field>
+        
+        <field name="profileElement" input-template="p.ContentSingleSelect"
+               label="cm.template.p.siteengine.Site.MembershipConfiguration.ProfileElement">
+          <help>cm.template.p.siteengine.Site.MembershipConfiguration.ProfileElementHelp</help>
+          <param name="inlineHelp">true</param>
+        </field>
+        
+		<field name="blogPage" input-template="p.ContentTreeSelect" 
+			   label="cm.template.p.siteengine.Site.MembershipConfiguration.BlogPage">
+          <help>cm.template.p.siteengine.Site.MembershipConfiguration.BlogPageHelp</help>
+          <param name="inlineHelp">true</param>
+          <param name="multipleSelect">false</param>
+          <param name="allowDepartments">true</param>
+          <param name="allowArticles">false</param>
+          <param name="height">300</param>
+          <param name="width">250</param>
+          <param name="rootContentAlias">content</param>
+        </field>
+        
+        <field name="mailSenderAddress" input-template="p.TextInput"
+               label="cm.template.p.siteengine.Site.MembershipConfiguration.MailSenderAddress">
+          <help>cm.template.p.siteengine.Site.MembershipConfiguration.MailSenderAddressHelp</help>
+          <param name="inlineHelp">true</param>
+        </field>
+        
+        <field name="mailSender" input-template="p.TextInput"
+               label="cm.template.p.siteengine.Site.MembershipConfiguration.MailSender">
+          <help>cm.template.p.siteengine.Site.MembershipConfiguration.MailSenderHelp</help>
+          <param name="inlineHelp">true</param>
+        </field>
+        
+        <field name="htmlMail" input-template="p.Checkbox" label="cm.template.p.siteengine.Site.MembershipConfiguration.HtmlMail">
+            <param name="checked">false</param>
+            <param name="inlineHelp">true</param>
+            <help>cm.template.p.siteengine.Site.MembershipConfiguration.HtmlMailHelp</help>
+        </field>
+    </input-template>
+</template-definition>

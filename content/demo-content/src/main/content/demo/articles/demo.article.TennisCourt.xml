@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+<!-- http://en.wikinews.org/wiki/Rafael_Nadal_withdraws_from_Wimbledon_Championships -->
+<content clear="true">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.TennisCourt</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+<component group="author" name="value">Wikinews</component>
+<component group="polopoly.Content" name="name">Rafael Nadal withdraws from Wimbledon Championships</component>
+<component group="lead" name="value">Rafael Nadal, the 2008 Men's Singles winner at the Wimbledon Championships, announced today his withdrawal from the 2009 Championships because of a knee injury caused by his tendinitis. The formal announcement came after he had played the second of his warm-up matches.</component>
+<component group="body" name="value">
+<![CDATA[
+<p>On Thursday, whilst playing Lleyton Hewitt, Nadal had experienced issues with moving about the court.</p>
+<p>Again, whilst playing Stanislas Wawrinkatoday, he had problems and lost the match. He will be the first champion to not defend his Wimbledon championship since Goran Ivanišević pulled out in 2002. As a result, fifth seed Juan Martín del Potro takes Nadal's place in the first quarter of the draw, seventeenth seed James Blake takes del Potro's place in the fifth quarter, Nicolas Kiefer becomes the thirty-third seed and takes Blake's place in the fourth quarter, with his own previous spot now filled by lucky loser Thiago Alves.</p>
+<p><i>This article was originally published on <a href="http://en.wikinews.org/wiki/Rafael_Nadal_withdraws_from_Wimbledon_Championships">Wikinews</a> and is reproduced here in accordance with <a href="http://creativecommons.org/licenses/by/2.5/">CC-Attribution-Generic 2.5.</a></i></p>
+]]>
+</component>
+<component group="publishedDate" name="date">1245502800467</component>
+<component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+<component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+
+<component group="polopoly.ContentLists" name="images">images</component>
+<component group="polopoly.ContentLists" name="topimages">topimages</component>
+<component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+<component group="p.Inbox" name="showContent">true</component>
+<component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+<component group="p.Content.state" name="onlineState">true</component>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": [
+        {
+          "id": "Rafael Nadal",
+          "name": "Rafael Nadal",
+          "entities": [],
+          "attributes": []
+        }
+      ]
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-15",
+          "name": "sport",
+          "entities": [],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+<contentref group="images" name="0">
+  <contentid>
+    <externalid>example.demo.image.TennisCourt</externalid>
+  </contentid>
+</contentref>
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.TennisCourt.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.TennisCourt.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.TennisCourt.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.TennisCourt.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.TennisCourt.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.TennisCourt.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content>    
+</batch>

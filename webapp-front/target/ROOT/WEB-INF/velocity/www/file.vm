@@ -1,0 +1,10 @@
+## Set the file resource policy
+#if ($content.lead && $content.lead.value)
+  #set($title = $content.lead.value)
+#else
+  #set($title = "")
+#end
+
+<a href="$previewPath" style="background-image: url($smallIconPath)"
+        title="$title" 
+        class="fileResourceLink">$esc.html($content.name)</a>

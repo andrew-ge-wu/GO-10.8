@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <!-- NOTE p.GroupData does not synchronize the members list with the actual members of the group,
+       it only ensures that the listed members are members of the group. -->
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Content</major>
+        <externalid>p.Group:Greenfield times administrators</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.GroupData</externalid>
+      </input-template>
+    </metadata>
+
+    <contentlist group="members" mode="reset">
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>3001</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Content</major>
+        <externalid>p.Group:Greenfield times editors</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.GroupData</externalid>
+      </input-template>
+    </metadata>
+
+    <contentlist group="members" mode="reset">
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>3000</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>3002</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Content</major>
+        <externalid>p.Group:Greenfield times moderators</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.GroupData</externalid>
+      </input-template>
+    </metadata>
+
+    <contentlist group="members" mode="reset">
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>3001</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>3002</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Content</major>
+        <externalid>p.Group:Greyhound post administrators</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.GroupData</externalid>
+      </input-template>
+    </metadata>
+
+    <contentlist group="members" mode="reset">
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>3005</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Content</major>
+        <externalid>p.Group:Greyhound post editors</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.GroupData</externalid>
+      </input-template>
+    </metadata>
+
+    <contentlist group="members" mode="reset">
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>3003</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>3004</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Content</major>
+        <externalid>p.Group:Greyhound post moderators</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.GroupData</externalid>
+      </input-template>
+    </metadata>
+
+    <contentlist group="members" mode="reset">
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>3004</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>3005</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+</batch>

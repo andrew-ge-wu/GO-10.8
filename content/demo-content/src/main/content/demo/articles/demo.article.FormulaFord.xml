@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+<!-- http://en.wikinews.org/wiki/Juan_Montoya_wins_second_career_NASCAR_Sprint_Cup_race -->
+<content clear="true">
+<metadata>
+  <contentid>
+    <major>Article</major>
+    <externalid>example.demo.article.FormulaFord</externalid>
+  </contentid>
+  <input-template>
+    <major>InputTemplate</major>
+    <externalid>example.StandardArticle</externalid>
+  </input-template>
+  <security-parent>
+    <major>Department</major>
+    <externalid>GreenfieldTimes.d</externalid>
+  </security-parent>
+</metadata>
+<component group="author" name="value">Wikinews</component>
+<component group="polopoly.Content" name="name">Juan Montoya wins second career NASCAR Sprint Cup race</component>
+<component group="lead" name="value">NASCAR Sprint Cup Series driver Juan Pablo Montoya won his first race of the season after leading seventy-four laps on Sunday during the 2010 Heluva Good! Sour Cream Dips at the Glen race at Watkins Glen International in Watkins Glen, New York. The victory moved him up to nineteenth points position, but he was still 774 points behind Kevin Harvick.</component>
+<component group="body" name="value">
+<![CDATA[
+<p>It was his second career victory in the US's leading professional stock car series. His previous victory came in 2007 at Infineon Raceway.</p>
+<p>Kurt Busch finished in the second position, ahead of Marcos Ambrose and A. J. Allmendinger in third and fourth, respectively. Carl Edwards, Jamie McMurray, Tony Stewart, Kyle Busch, Jeff Burton, and Jeff Gordon rounded out the top ten positions. The race had a total of five cautions and ten lead changes among five different drivers. Montoya led the most laps by leading seventy-four.</p>
+<p>In the point standings, Harvick and Gordon remained in the first and second position, and Burton moved into the third position as Kurt Busch moved to fourth. Jimmie Johnson, Denny Hamlin, Kyle Busch, and Stewart followed in the top eight points positions. Edwards movedd into to the ninth position, as Matt Kenseth fell to tenth. Greg Biffle and Mark Martin rounded out the top twelve, and are currently in the Chase.</p>
+<p><i>This article was originally published on <a href="http://en.wikinews.org/wiki/Juan_Montoya_wins_second_career_NASCAR_Sprint_Cup_race">Wikinews</a> and is reproduced here in accordance with <a href="http://creativecommons.org/licenses/by/2.5/">CC-Attribution-Generic 2.5.</a></i></p>
+]]>
+</component>
+<component group="publishedDate" name="date">1281452400000</component>
+<component group="p.Inbox" name="showContent">true</component>
+<component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+<component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+<component group="polopoly.ContentLists" name="images">images</component>
+<component group="polopoly.ContentLists" name="topimages">topimages</component>
+<component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+<component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+<component group="p.Content.state" name="onlineState">true</component>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": [
+        {
+          "id": "Juan Montoya",
+          "name": "Juan Montoya",
+          "entities": [],
+          "attributes": []
+        }
+      ]
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-15",
+          "name": "sport",
+          "entities": [
+            {
+              "id": "subject-15039",
+              "name": "motor racing",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+<contentref group="images" name="0">
+  <contentid>
+    <major>ReferenceMetaData</major>
+    <externalid>example.demo.ref.image.FormulaFord</externalid>
+  </contentid>
+</contentref>
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.FormulaFord.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.FormulaFord.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.FormulaFord.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.FormulaFord.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.FormulaFord.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.FormulaFord.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content>
+</batch>

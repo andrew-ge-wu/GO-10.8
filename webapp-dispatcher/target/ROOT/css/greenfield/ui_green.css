@@ -1,0 +1,1293 @@
+/* 
+ * POLOPOLY SITE ENGINE *USER INTERFACE* MASTER TEMPLATE
+ * -----------------------------------------------------
+ * This stylesheet contains look and feel for common
+ * elements related to a Site Engine implementation.
+ * 
+ * This document declares typography, colors and 
+ * decorations. See layout.css for grid and layout
+ * declarations.
+ * 
+ * Refer to Site Engine documentation for further
+ * explanation of the declared elements below.
+ *
+ * NOTE: rules beginning with an underscore (_)
+ * are IE hacks and should remain as is.
+ */
+
+/* BASE STYLES */
+BODY {
+        font-family: georgia, times, serif;
+        font-size: 13px;
+        line-height: 1.4;
+        color: #333;
+        background: #ccc;
+}
+H1 {
+        font-size: 30px;
+        line-height: 1.1;
+        font-weight: normal;
+        margin: 0 0 7px 0;
+}
+/*
+NOTE: Text decoration and color must be declared !important in order to avoid
+      Firefox overriding them in contenteditable mode (i.e. interactive preview).
+*/
+H1 A {
+        text-decoration: none !important;
+        color: #333 !important;
+        border-bottom: 1px solid #ccc;
+}
+H1 A:hover {
+        border-bottom: 1px solid #ddd;
+}
+H1 SPAN.tag {
+        display: none;
+}
+P {
+        line-height: 1.3;
+}
+P SPAN.location {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 80%;
+}
+DIV.article DIV.leadContainer P {
+        font-weight: bold;
+}
+A {
+        text-decoration: none;
+        color: rgb(0, 158, 255);
+}
+IMG {
+        display: block;
+}
+LI {
+        line-height: 1.3;
+}
+
+STRONG {
+    font-weight: bold;
+}
+EM {
+    font-style: italic;
+}        
+
+/* BORDER LAYOUT */
+.borderLayout {
+        background: white;
+        margin: 0 auto;
+}
+
+
+/* MASTHEAD */
+.borderLayoutMastHead {
+        margin: 0 14px 14px 0;
+}
+
+
+/* TOP MENU */
+/* TOP MENU */
+.menu.menuTop {
+    border-bottom: 3px solid #333;
+    border-top: 1px solid #ccc;
+}
+.borderLayoutMastHead .menu.menuTop A {
+    display: block;
+    padding: 7px 10px 5px 10px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.borderLayoutMastHead .menu.menuTop A {
+    color: rgb(142, 168, 36);
+}
+.borderLayoutMastHead .menu.menuTop A:hover {
+    background: none;
+    color: rgb(0, 158, 255);
+}
+.menu.menuTop A.current {
+    background: #333;
+    color: white;
+}
+
+
+/* SUB MENU */
+.menu.menuPage {
+    background: #e8ecd7;
+}
+.menu.menuPage A {
+    display: block;
+    padding: 8px 10px 6px 10px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #666;
+}
+.menu.menuPage A:hover {
+    background: none;
+    color: rgb(0, 158, 255);
+}
+.menu.menuPage A.current {
+    color: #333;
+    font-weight: bold;
+}
+
+
+/* HEADER */
+.borderLayoutMastHead {
+        padding: 0 0 0 0;
+}
+.borderLayoutMastHead .container {
+        background: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+}
+.borderLayoutMastHead .element {
+        margin: 0;
+        padding: 0;
+        float: left;
+}
+.borderLayoutMastHead .element.logo {
+        font-size: 35px;
+        color: #333;
+        display: block;
+        margin: 0 20px 0 0;
+}
+.borderLayoutMastHead .element.blogTeaser {
+        width: 400px;
+}
+.borderLayoutMastHead .element.blogTeaser H1 {
+        font-size: 13px;
+        font-weight: bold;
+        margin: 10px 0 2px 0;
+}
+.borderLayoutMastHead .element.blogTeaser IMG {
+        float: left;
+        padding: 0;
+}
+
+
+/* ELEMENTBORDER ELEMENTS (BOXED ELEMENTS, MAY HAVE BACKGROUNDS, BORDERS ETC)*/
+.elementBorderHeader {
+        display: block;
+        margin: 0 0 10px 0;
+        padding: 2px 5px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 11px;
+        background: #B5C500 url(/img/greenfield/gradient_green_long.jpg) no-repeat;
+        color: white;
+}
+.secondaryColumn .elementBorderHeader,
+.bannerColumn .elementBorderHeader {
+        background-image: url(/img/greenfield/gradient_green_short.jpg); 
+        /* use shorter bg for narrower columns */
+}
+.elementBorder.mediumBlock {
+        background: #e8ecd7;
+        padding: 7px 7px 0 7px;
+        overflow: hidden;
+}
+.elementBorder.lightBlock {
+        background: #f1f1f1;
+        padding: 7px 7px 0 7px;
+        overflow: hidden;
+}
+.elementBorder.heavyBlock {
+        background: #f1f1f1;
+        padding: 7px 7px 0 7px;
+        overflow: hidden;
+}
+.heavyBlock .elementBorderHeader {
+        background: url(/img/greenfield/gradient_purple_long.jpg);
+}
+.secondaryColumn .heavyBlock .elementBorderHeader,
+.bannerColumn .heavyBlock .elementBorderHeader {
+        background: url(/img/greenfield/gradient_purple_short.jpg);
+}
+.banner.headerTopBanner {
+        text-align: left;
+        margin-bottom: 8px;
+}
+.elementBorder {
+        margin-top: 7px;
+        padding-bottom: 0;
+}
+.elementBorder .container.twoColumns,
+.elementBorder .container.twoColumnsLeftHeavy,
+.elementBorder .container.twoColumnsRightHeavy,
+.elementBorder .container.fourColumns {
+        background: none;
+}
+.elementBorder .container .col1 .element {
+        margin-right: 14px;
+}
+.elementBorder .container .element {
+        padding-top: 0;
+}
+
+
+/* CONTAINERS (COLUMN DIVIDERS ETC) */
+.container {
+        background: url(/img/greenfield/line_thick.gif) no-repeat bottom right;
+}
+.secondaryColumn .container {
+        background: none;
+        padding: 0;
+}
+.container.twoColumns {
+        background: url(/img/greenfield/separator_mid_twoCol.gif) no-repeat bottom right;
+}
+.container.twoColumnsRightHeavy {
+        background: url(/img/greenfield/separator_mid_twoCol_rightHeavy.gif) no-repeat bottom right;
+}
+.container.twoColumnsLeftHeavy {
+        background: url(/img/greenfield/separator_mid_twoCol_leftHeavy.gif) no-repeat bottom right;
+}
+.bannerColumn .container {
+        background: none;
+}
+
+
+/* TABBED CONTAINER (UTILIZING YUI FUNCTIONALITY) */
+.container.tabbed {
+        background: none;
+        padding: 7px 0 0 0;
+}
+.tabbed .yui-nav {
+        background: #eee;
+        display: block;
+        overflow: hidden;
+        _height: 1%;
+        margin-right: 14px;
+        padding: 4px;
+}
+.tabbed .yui-nav LI {
+        float: left; 
+        position: relative;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 0 2px 0 0;
+}
+.tabbed .yui-content {
+        clear: both;
+}
+.tabbed .yui-nav LI.selected {
+        background: url(/img/greenfield/pattern_green.gif);
+        padding: 0 0 0 0;
+}
+.tabbed .yui-nav LI.selected A {
+        color: white;
+}
+.tabbed .yui-nav LI.selected A:hover {
+        background: url(/img/greenfield/pattern_green.gif);
+}
+.tabbed .yui-nav A {
+        display: block;
+        padding: 2px 6px;
+        color: #333;
+}
+.tabbed .yui-nav A:hover {
+        background: white;
+}
+.tabbed .yui-content {
+        background: #eee;
+        padding: 0 4px 4px 4px;
+        margin-right: 14px;
+}
+.tabbed .yui-content .container,
+.tabbed .yui-content .element {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 7px;
+        margin: 0;
+}
+.tabbed .yui-content .container .element {
+        border: 0;
+        padding: 0;
+}
+.tabbed .yui-content .container.twoColumns .col1 .element,
+.tabbed .yui-content .container.twoColumnsLeftHeavy .col1 .element,
+.tabbed .yui-content .container.twoColumnsRightHeavy .col1 .element {
+        margin-right: 7px;
+}
+
+
+/* STORY (FOR EXAMPLE A GROUP OF CONTAINERS SHARING THE SAME CONTENT)*/
+.story {
+        padding-top: 7px;
+}
+.storyHeader {
+        display: block;
+        background: url(/img/greenfield/gradient_purple_long.jpg) bottom right;
+        padding: 2px 5px;
+        margin: 0 0 10px 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 11px;
+        color: white;
+}
+.story H1 {
+        font-weight: bold;
+}
+.story IMG {
+        padding: 0 0 5px 0;
+}
+
+
+/* CATEGORY HEADINGS FOR TEASERS */
+A.category {
+        color: rgb(142, 168, 36);
+        text-transform: uppercase;
+        text-decoration: none;
+        font-style: italic;
+        letter-spacing: 1px;
+        font-size: 11px;
+}
+A.category:hover {
+        background: none;
+        color: #333;
+        text-decoration: underline;
+}
+
+
+/* ARTICLE ELEMENT */
+.article P {
+        margin: 0 0 11px 0;
+}
+.article H1 {
+        margin: 0 0 16px 0;
+}
+.article H2 {
+		font-size : 15px;
+		font-weight: bold;
+        margin: 0 0 16px 0;
+}
+.article H3 {
+		font-size : 14px;
+		font-weight: bold;
+        margin: 0 0 16px 0;
+}
+.sideBar {
+        float: right;
+        width: 175px;
+        margin: 0 0 7px 7px;
+}
+.article ol, .article ul {
+	margin-bottom: 10px;
+	margin-left: 25px;
+}
+.article ol {
+	list-style: decimal;
+}
+.article ul {
+	list-style: disc;
+}
+.sideBar ol, .sideBar ul {
+	list-style: none;
+	margin: 7px 0 0 0;
+}
+.sideBar .tools,
+.sideBar .related,
+.sideBar .bookmarks,
+.sideBar .related-content {
+        margin: 0 0 7px 0;
+        border: 2px solid #f1f1f1;
+        padding: 7px;
+}
+.sideBar .element {
+        margin: 7px 0 0 0;
+}
+.sideBar .element P {
+        color: #666;
+        font-size: 11px;
+        margin: 0;
+}
+A.increaseTextSize,
+A.decreaseTextSize {
+        padding-left: 15px;
+}
+A.increaseTextSize:hover,
+A.decreaseTextSize:hover {
+        color: #333;
+}
+A.increaseTextSize {
+        background: url(/img/greenfield/media/textPlus.gif) no-repeat 0 2px;
+}
+A.decreaseTextSize {
+        background: url(/img/greenfield/media/textMinus.gif) no-repeat 0 2px;
+}
+.sideBar H2 {
+        padding: 1px 3px;
+        background: #333 url(/img/greenfield/gradient_grey_short.jpg) top right;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 11px;
+        color: white;
+        margin: 0 0 7px 0;
+}
+.sideBar UL {
+        margin-bottom: 0px;
+}
+.image P {
+        margin: 4px 0 0 0;
+        color: #666;
+        font-size: 11px;
+}
+.image.top {
+        margin: 0 0 14px 0;
+}
+.dateLine {
+        margin-bottom: 14px;
+}
+.dateLine SPAN {
+        padding: 2px 0;
+}
+.dateLine .author {
+        border-top: 1px solid #ccc;
+}
+.dateLine .date {
+        border-bottom: 1px solid #ccc;
+}
+
+
+/* STANDARD TEASER */
+.teaser {
+        overflow: hidden;
+}
+.teaser UL {
+        list-style-type: square;
+        padding-left: 1em;
+        margin-top: 5px;
+}
+.teaser IMG {
+        margin: 0 0 4px 0;
+        _width: 100%; /* So that wide images won't brake the design in ie */
+}
+/* Fix for IE collapsing margin bug */
+.teaser IMG {
+        _margin-bottom: 0;
+        _padding-bottom: 4px;
+}
+.teaser A IMG {
+        _margin-bottom: 4px;
+        _padding-bottom: 0;
+}
+.teaser .breakingNewsHeader {
+        background-color: #cc0033 !important;
+        padding-left: 5px;
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase; 
+}
+
+.teaser .breakingNewsFooter {
+        background-color: #cc0033 !important;
+        height: 5px;
+        margin-top: 5px;
+        font-size: 0;
+        clear: both;
+}       
+        
+.container.twoColumns .teaser H1,
+.container.twoColumnsRightHeavy .teaser H1,
+.container.twoColumnsLeftHeavy .teaser H1 {
+        font-size: 20px;
+}
+
+
+/* SPECIAL ADDED STYLES */
+.tickerColumn .teaser H1 {
+        font-size: 48px;
+}
+.teaser IMG.left, .teaser DIV.left{
+        float: left;
+        margin: 3px 5px 2px 0;
+}
+.teaser-image-inline IMG{
+        float: left;
+        margin: 3px 5px 2px 0;        
+}
+
+#col3 .container.twoColumnsRightHeavy .col1 .teaser H1,
+#col3 .container.twoColumnsLeftHeavy .col2 .teaser H1,
+#col4 .container.twoColumnsRightHeavy .col1 .teaser H1,
+#col4 .container.twoColumnsLeftHeavy .col2 .teaser H1 {
+        font-size: 13px;
+        margin-bottom: 2px;
+        font-weight: bold;
+}
+#col3 .container.twoColumnsRightHeavy .col1 .teaser,
+#col3 .container.twoColumnsLeftHeavy .col2 .teaser,
+#col4 .container.twoColumnsRightHeavy .col1 .teaser,
+#col4 .container.twoColumnsLeftHeavy .col2 .teaser{
+        margin-bottom: 2px;
+}
+#col3 .container.twoColumnsRightHeavy .col2 .teaser H1,
+#col3 .container.twoColumnsLeftHeavy .col1 .teaser H1,
+#col4 .container.twoColumnsRightHeavy .col2 .teaser H1,
+#col4 .container.twoColumnsLeftHeavy .col1 .teaser H1 {
+        font-size: 18px;
+        margin-bottom: 2px;
+}
+#col4 .teaser H1 {
+        font-size: 13px;
+        margin-bottom: 2px;
+        font-weight: bold;
+}
+#col3 .container.twoColumns .container,
+#col3 .container.twoColumnsLeftHeavy .container,
+#col3 .container.twoColumnsRightHeavy .container {
+        background: none;
+}
+#col3 .teaser H1 A:hover {
+        /*background-color: rgb(0, 158, 255) !important;*/
+}
+
+/* SMALL TEASER */
+.smallTeaser H1 {
+        font-size: 13px;
+        margin-bottom: 2px;
+        font-weight: bold;
+}
+.smallTeaser IMG {
+        float: left;
+        margin: 3px 5px 2px 0;
+}
+
+
+/* IMAGE TEASER */
+.imageTeaser IMG {
+        margin: 0 0 3px 0;
+        display: block;
+}
+.imageTeaser A {
+        display: block;
+        padding: 0 0 3px 0;
+}
+.imageTeaser A:hover {
+        background: none;
+}
+.imageTeaser A.category {
+        margin: 0;
+}
+.imageTeaser A:hover {
+        color: #333;
+}
+
+
+/* MEDIA SPECIFIC LINKS IN TEASERS ETC */
+.teaser UL,
+.related UL,
+.blogTeaser UL {
+        list-style-type: none;
+        padding: 0;
+}
+.teaser LI,
+.related LI,
+.blogTeaser LI {
+        padding-left: 16px;
+        background: url(/img/greenfield/media/textIcon.gif) no-repeat 2px 2px;
+}
+LI.video {
+        background: url(/img/greenfield/media/video.gif) no-repeat 0 2px;
+}
+LI.audio {
+        background: url(/img/greenfield/media/listenTo.gif) no-repeat 1px 1px;
+}
+
+
+/* GRAPHICS TEASER */
+.graphics P {
+        font-size: 11px;
+        color: #999;
+}
+
+
+/* LOGIN BOX */
+.login P {
+        font-size: 11px;
+        margin-top: 5px;
+}
+.login LABEL {
+        font-size: 11px;
+        display: block;
+        text-transform: uppercase;
+        color: rgb(142, 168, 36);
+}
+.login INPUT {
+        background: white;
+        border: 0;
+        border-bottom: 1px solid rgb(142, 168, 36);
+        width: 94%;
+        margin-bottom: 3px;
+        padding: 3px;
+}
+.login INPUT.submit {
+        width: auto;
+        background-color: rgb(142, 168, 36);
+        margin-top: 6px;
+        padding: 2px;
+        color: white;
+        font-size: 11px;
+}
+
+/* SEARCH FORM */
+INPUT, TEXTAREA {
+        background: white;
+        border: 0;
+        border: 1px solid #BFCA88;
+        border-bottom: 1px solid rgb(142, 168, 36);
+        margin-bottom: 3px;
+        padding: 3px;   
+}
+INPUT.submit {
+        width: auto;
+        background-color: rgb(142, 168, 36);    
+        padding: 2px;
+        color: white;
+        font-size: 11px;
+}
+
+/* MENU */
+.menu.menuTwo {
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 11px;
+    padding: 0;
+    border-top: 1px solid black;
+}
+.menu.menuTwo H1,
+.menu.menuTwo H2 {
+    margin: 0 0 4px 0;
+    padding: 10px 6px 0 6px;
+    font-size: 11px;
+    font-weight: bold;
+}
+.menu.menuTwo H1 {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+.menu.menuTwo A {
+    color: #78971C;
+}
+.menu.menuTwo UL {
+    padding: 0 6px 10px 6px;
+    border-bottom: 1px solid black;
+}
+.menu.menuTwo LI {
+    margin: 0 0 4px 0;
+}
+.menuBlock {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+}
+.menuBlock .menu {
+        background: #EFEFEF;
+        margin-bottom: 0;
+}
+.menuBlock .menu H1 {
+        position: static;
+        top: 0;
+        left: 0;
+}
+.menuBlock .menu UL {
+        border-bottom: 0;
+}
+
+
+/* MENU COLUMN */
+.menuColumn .container {
+  background: none;
+}
+
+/* TICKER */
+.ticker {
+        border: 1px solid black;
+        border-width: 1px 0;
+        margin: 14px 0 0 0;
+        padding: 6px 0 3px 0;
+}
+.ticker H1 {
+        float: left;
+        margin: 1px 5px 0 0;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 11px;
+}
+.ticker LI {
+        font-size: 11px;
+        font-style: italic;
+}
+.ticker LI A {
+        color: #333;
+}
+.ticker { 
+                position:relative;
+                overflow:hidden;
+}
+.ticker .carousel-clip-region { 
+                overflow:hidden;
+                position:relative; 
+}
+.ticker ul.carousel-list { 
+                width: 10000000px;
+                position:relative;
+                z-index:1; 
+}
+.ticker .carousel-list li { 
+                float:left;
+                list-style:none;
+                overflow:hidden;
+                width: 850px;
+}
+
+/* TICKER COLUMN */
+.tickerColumn .container {
+        background: 0;
+}
+
+
+/* SECONDARY COLUMN STYLES */
+.secondaryColumn .teaser H1 {
+        font-size: 25px;
+}
+.blogTeaser H1 {
+        font-size: 20px;
+        text-transform: uppercase;
+}
+.blogTeaser IMG {
+        padding: 0 0 5px 0;
+}
+.blogTeaser UL {
+        margin: 5px 0 0 0;
+}
+
+
+/* TEXT SIZES (FOR RESIZER IN ARTICLES) */
+.inactive,
+.inactive:hover {
+        color: #CCCCCC !important;
+}
+.large .article {
+        font-size: 20px;
+}
+.larger .article {
+        font-size: 30px;
+}
+
+/* BOOKMARKS */
+.bookmarks li a {
+    background-repeat: no-repeat;
+    padding-left: 22px;
+    background-position: left center;
+}
+
+.bookmarks li a:hover {
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.bookmarks li a.deliciousIcon {
+    background-image: url('/img/icons/delicious.jpg');
+}
+.bookmarks li a.diggIcon {
+    background-image: url('/img/icons/digg.jpg');
+}
+.bookmarks li a.facebookIcon {
+    background-image: url('/img/icons/facebook.jpg');
+}
+.bookmarks li a.newsvineIcon {
+    background-image: url('/img/icons/newsvine.jpg');
+}
+.bookmarks li a.redditIcon {
+    background-image: url('/img/icons/reddit.jpg');
+}
+.bookmarks li a.stumbleuponIcon {
+    background-image: url('/img/icons/stumbleupon.jpg');
+}
+.bookmarks li a.technoratiIcon {
+    background-image: url('/img/icons/technorati.jpg');
+}
+
+/* SEARCH */
+.mainColumn .search form, .bannerColumn .search form {
+        margin-bottom: 12px;
+        padding: 8px 8px 12px;
+                background-color: #E8ECD7;
+}
+.search h1 {
+        font-size: 20px;
+        border-bottom: 1px solid #CCCCCC;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+}
+.search UL {
+        border-bottom: 1px solid #CCCCCC;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+}
+.search UL li {
+        margin-bottom: 20px;
+}
+.search UL LI H3 A {
+        font-size: 16px;
+        text-decoration: underline;
+}
+.search UL LI .meta {
+        color: grey;
+}
+.search .pager {
+        font-size: 16px;
+        border-bottom: 1px solid #CCCCCC;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+}
+.search input {
+        font-size: 11px;
+}
+
+/* NAVIGATION PATH ELEMENT */
+.navpath {
+        margin-bottom: 4px;
+}
+.navpath LI A {
+        font-size: 11px;
+}
+.navpath .separator {
+        margin: 0 4px;
+}
+
+p.error,label.error {     
+    color: red;
+}
+p.error {     
+    margin-top: 5px;     
+}
+input.error {
+    border-color: red;
+}
+ul.linklist {
+    margin: 0;
+    padding: 0;
+}
+ul.linklist li {
+    margin: 2px 0;
+    padding: 0;
+}
+ul.linklist li span {
+    color: grey; 
+    font-weight: bold;
+}
+
+A.fileResourceLink,
+A.fileResourceLink:hover {
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 22px;
+}
+DIV#overlay {
+ background: #000000;
+ left: 0;
+ top: 0;
+ opacity: 0; 
+ position: absolute;
+ z-index: 999;
+}
+
+/** Article Comments **/
+.articleComments .form {
+  background-color: #eee;
+  margin: 10px 0;
+  padding: 8px;  
+}
+.articleComments .row {
+  margin: 10px 0;
+  padding-top:8px;
+  padding-left:8px;
+  padding-right:8px;
+  padding-bottom:4px;
+}
+.articleComments .row.odd {
+  background-color: #eeffde;  
+}
+.articleComments #shownComment.row.odd {
+  background-color: #FEEFCA;
+}
+.articleComments .row.even {
+  background-color: #fff;  
+}
+.articleComments #shownComment.row.even {
+  background-color: #FEEFCA;
+}
+
+.articleComments .row .commentFooter .timestamp,
+.articleComments .row .commentFooter .signature {
+ color: #666;
+}
+.articleComments .row .commentFooter .comment_links {
+  margin-left: 14px;
+  float: right;
+}
+.articleComments .row .commentFooter {
+  text-align: left;
+  margin-top: 10px;
+}
+.articleComments .commentReported {
+  color: #DC143C;
+}
+.articleComments h3.header_title {
+  font-weight: bold;
+}
+.articleComments .nav {
+  float: right;
+}
+.articleComments .nav a,
+.articleComments .nav .currentPage {
+  padding: 2px;
+}
+.articleComments .nav .nav_left {
+  margin-right: 5px;
+}
+.articleComments .nav .nav_right {
+  margin-left: 5px;
+}
+.commentIcon {
+  background: url('/img/icons/comment.png') no-repeat left center;  
+  padding-left: 20px !important;  
+}
+P.fieldError {
+  display: none;
+}
+P.formError {     
+    color: #DC143C;
+    margin: 1em 0;
+}
+.comment_contents LABEL {
+  font-weight: bold;
+}
+
+input.highlighted.button {
+    background-color: #A7C62A;
+}
+
+/* BLOG STYLES */
+DIV.metaBox {
+  border: 1px solid #DCDDDE;
+  background-color: #F1F1F1;
+  margin-bottom: 10px;
+}
+DIV.metaBox .metaHeader {
+  height: 20px;
+  border-bottom: 1px solid #DCDDDE;
+  background-color: #333333;
+  color: #FFFFFF;
+  padding: 3px 8px;
+  font-weight: bold;
+}
+DIV.metaBox .metaContent, DIV.related .metaContent {
+  padding: 5px;
+}
+DIV.metaBox .metaContent .year {
+}
+DIV.metaBox .metaContent .month,  DIV.related .metaContent .month {
+  margin-left: 10px;
+}
+DIV.related DIV.metaContent a:link {
+    color: black;
+}
+DIV.blogTeaserContainer {
+  border: 1px solid #DCDDDE;
+  padding: 5px;
+  background-color: #F1F1F1;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+DIV.blogTeaserContainer H2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+DIV.blogTeaserContainer H2 A {
+  background: none;
+  padding: 0;
+}
+DIV.metaContent A, DIV.blogTeaserContainer A {
+  color: #000000;
+  padding-left: 12px;
+  background: url(/img/greenfield/media/blue_arrow.gif) no-repeat;
+  background-position: 4px 6px;
+}
+
+DIV.related DIV.metaContent A:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* User Blogs */
+.possibleError { color: red; margin-bottom: 10px; }
+DIV.blog DIV.header {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+DIV.blog DIV.post DIV.header {
+  border-bottom: none;
+  margin-bottom: 20px;
+}
+DIV.blog H1 A, DIV.blog H1 A:hover {
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 0 0 5px 0;
+  color: #2B709E;
+  border: none;
+  background: none;
+}
+DIV.blog H1 A:hover {
+  text-decoration: underline;
+}
+DIV.post {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+}
+DIV.blog DIV.post DIV.header {
+  margin-bottom: 10px;
+  padding-bottom: 0;
+}
+DIV.blog DIV.post H2 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0 0 7px 0;
+}
+DIV.blog DIV.post P {
+  margin-bottom: 12px;
+}
+DIV.blog DIV.post IMG {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 12px;
+}
+DIV.blog DIV.post IMG.right {
+  float: right;
+  margin: 0 0 12px 12px;
+}
+DIV.blog DIV.post IMG.left {
+  float: left;
+  margin: 0 12px 12px 0;
+}
+DIV.blog DIV.post BLOCKQUOTE {
+  margin-left: 32px;
+  font-style: italic;
+}
+DIV.blog DIV.post DIV.footer {
+  padding-top: 12px;
+  color: #959595;
+}
+DIV.blog DIV.header DIV.toolbar, DIV.blog DIV.header FORM {
+  float: right;
+} 
+DIV.blog DIV.header DIV.toolbar FORM {
+  float: left;
+  margin-left: 5px;
+} 
+DIV.blog .requiresBlogOwner {
+  display: none;
+}
+DIV.blog DIV.row .left {
+    float: left;
+}
+DIV.blog DIV.row .right {
+    float: right;
+}
+DIV.blog DIV.header INPUT.submit {
+  margin-top: 8px;
+}
+DIV.blog DIV.post DIV.header INPUT.submit {
+  margin-top: 4px;
+  margin-left: 4px;
+}
+DIV.blog P.disclaimer, DIV.metaContent em {
+  font-style: italic;
+}
+DIV.paging DIV.olderPosts {
+  float: right;
+}
+DIV.blog DIV.postsContainer {
+    float: left;    
+    width: 490px;
+}
+#col3 .membershipForm UL.blogs LI {
+    padding: 6px 4px;
+    margin: 0;
+}
+UL.blogs LI.odd {
+    background-color: #F1F4E4;
+}
+
+DIV.captcha_container IMG {
+ cursor: pointer; 
+ cursor: hand; 
+ border: 1px solid #ddd;
+}
+
+DIV.tableElement caption {
+ font-style: italic;
+ padding-bottom: 4px;
+ text-align: center;
+}
+
+DIV.tableElement table, .article table {
+ border: 1px solid #E8ECD7;
+}
+
+DIV.tableElement th, .article th {
+ color: black;
+ background: #F1F4E4;
+ font-weight: bold;
+}
+
+DIV.tableElement tr td, DIV.tableElement tr th, .article tr th, .article tr td {
+ border-top: 1px solid #E8ECD7;
+ border-left: 1px solid #E8ECD7;
+}
+
+DIV.tableElement DIV.green table, .article table {
+ border-color: #E8ECD7;
+}
+
+DIV.tableElement DIV.green th, .article th {
+ color: black;
+ background: #F1F4E4;
+}
+
+DIV.tableElement DIV.green tr td, DIV.tableElement DIV.green tr th, .article tr th, .article tr td {
+ border-top-color: #E8ECD7;
+ border-left-color:#E8ECD7;
+}
+
+DIV.tableElement DIV.silver table {
+ border-color: #ccc;
+}
+
+DIV.tableElement DIV.silver th {
+ color: black;
+ padding: 2px;
+ background: #ccc;
+}
+
+DIV.tableElement DIV.silver tr td, DIV.tableElement DIV.silver tr th {
+ border-top-color: #aaa;
+ border-left-color:#aaa;
+}
+
+.related-content LI.category {
+ margin-left: 20px;
+}
+.related-content LI.category a {
+  color: #78971C;    
+}
+.related-content LI.category a:hover {  
+  color: #88A72C;
+}
+DIV.articleComments DIV.closedForComments {
+	font-style: italic;
+	margin-left: 2px;
+	margin-top: 2px;
+}
+
+/* IMAGE GALLERY */
+DIV.gallery {
+  margin-bottom: 8px;
+}
+DIV.gallery A.galleryitem IMG {
+  display: block;
+  margin-bottom: 4px;
+}
+DIV.gallery A.contentlink IMG {
+  display: ine-block;
+  vertical-align: middle;
+}
+.paywall.hint {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+
+  height: 45px;
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  /* IE 5-7 */
+  filter: alpha(opacity=80);
+  background-color: #000;
+  background: rgba(0,0,0,0.8);
+
+  color: #FFF;
+  text-align: center;
+
+  font-size: 16px;
+  padding: 5px;
+
+  z-index: 1000;
+}
+.paywall.hint h2 span {font-weight: bold; padding: 5px;}
+.paywall.hint span {color: rgb(142, 168, 36);}
+.premium-label, .element.teaser .premium-label, .element.teaser .premium-label span {
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  padding: 2px 4px;
+  font-weight: bold;
+  line-height: 14px;
+  color: #ffffff;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: #333;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.premium-label i {
+  font-size: 14px;
+}
+.premium-label span {
+  font-size: 9px;
+}
+.paywall.element {
+  padding: 20px;
+  background: gold;
+  position: fixed;
+  top: 10%;
+  border: 10px solid white;
+  z-index: 1000;
+  width: 30%;
+  border-radius: 3px;
+  left: 50%;
+  margin: 0 0 0 -20%;
+}
+.paywall .close_wall {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.paywall_overlay {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  /*background: rgba(255,215,0,0.8);*/
+  background: rgba(190,190,190,0.8);
+}
+.productPackage { padding-top: 10px; padding-left: 25px; list-style-type: disc; }
+.productPackage li { font-size: 1em;  }
+.paywallArticleTitle {display: block; padding: 20px; font-size: large; font-weight: bold; color: #B40404;}

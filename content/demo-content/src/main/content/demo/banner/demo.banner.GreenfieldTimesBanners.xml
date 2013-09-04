@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+ <content>
+  <metadata>
+   <contentid>
+    <major>LayoutElement</major>
+    <externalid>banner.top</externalid>
+   </contentid>
+   <input-template>
+    <major>InputTemplate</major>
+    <externalid>example.BannerElement</externalid>
+   </input-template>
+   <security-parent>
+    <externalid>GreenfieldTimes.d</externalid>
+   </security-parent>
+  </metadata>
+  <component group="polopoly.Content" name="name">Top Banner</component>
+  </content>
+  <content>
+  <metadata>
+   <contentid>
+    <major>LayoutElement</major>
+    <externalid>banner.right.top</externalid>
+   </contentid>
+   <input-template>
+    <major>InputTemplate</major>
+    <externalid>example.BannerElement</externalid>
+   </input-template>
+   <security-parent>
+    <externalid>GreenfieldTimes.d</externalid>
+   </security-parent>
+  </metadata>
+  <component group="polopoly.Content" name="name">Right Top Banner</component>
+  </content>
+  <content>
+  <metadata>
+   <contentid>
+    <major>LayoutElement</major>
+    <externalid>banner.right.bottom</externalid>
+   </contentid>
+   <input-template>
+    <major>InputTemplate</major>
+    <externalid>example.BannerElement</externalid>
+   </input-template>
+   <security-parent>
+    <externalid>GreenfieldTimes.d</externalid>
+   </security-parent>
+  </metadata>
+  <component group="polopoly.Content" name="name">Right Bottom Banner</component>
+  </content>
+ </batch>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+
+  <!-- flash preview widget -->
+  <input-template name="example.flash.Preview">
+    <policy>com.polopoly.cm.policy.ContentPolicy</policy>
+    <editor>example.content.flash.OFlashPreviewWidget</editor>
+    <viewer>example.content.flash.OFlashPreviewWidget</viewer>
+  </input-template>
+
+  <input-template name="example.Flash" label="cm.template.example.Flash">
+    <policy>example.content.flash.FlashResourcePolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <editor contextName="orchid_SEARCHITEM">example.content.OResourceContentSearchItem</editor>
+    <viewer contextName="orchid_SEARCHITEM">example.content.OResourceContentSearchItem</viewer>
+    <editor contextName="orchid_TOCENTRY">example.content.OResourceContentListEntryPolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">example.content.OResourceContentListEntryPolicyWidget</viewer>
+    <type>Article</type>
+
+    <param name="templateIcon">flash.png</param>
+    <param name="renderTemplateIconInSelect">true</param>
+
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">true</param>
+    <param name="EditNewState_saveAndFastInsert">false</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="ViewState_copy">true</param>
+    <param name="cloneSecurityParent">currentOrHome</param>
+    <param name="titleOfNewContent">cm.template.example.Flash.new</param>
+    <layout name="menu" input-template="p.PageMenu">
+      <layout name="standard" input-template="p.Page" label="cm.general.General">
+
+        <!-- flash (and properties) -->
+        <field name="file" input-template="p.SimpleFileUpload" label="cm.template.example.Flash.FileUpload" required="true" >
+          <param name="suffixes">.swf,.SWF</param>
+        </field>
+        <field name="preview" input-template="example.flash.Preview" label="cm.template.example.Flash.FlashPreview" />
+        <field name="refreshPreview" input-template="example.refreshButton" label="cm.template.example.Flash.UpdatePreview"/>
+        <layout name="size" input-template="p.ColumnHolder" label="Columns">
+          <layout name="size.column1" input-template="p.Column" label="Column1">
+            <param name="width">0</param>
+            <param name="widthRelative">true</param>
+            <field name="width" input-template="p.TextInput" label="cm.template.example.Flash.Width">
+              <policy>com.polopoly.cm.app.policy.NumberInputPolicy</policy>
+              <param name="size">8</param>
+              <param name="type">int</param>
+            </field>
+          </layout>
+          <layout name="size.column2" input-template="p.Column" label="Column2">
+            <param name="width">0</param>
+            <param name="widthRelative">true</param>
+            <field name="height" input-template="p.TextInput" label="cm.template.example.Flash.Height">
+              <policy>com.polopoly.cm.app.policy.NumberInputPolicy</policy>
+              <param name="size">8</param>
+              <param name="type">int</param>
+            </field>
+          </layout>
+          <layout name="size.column3" input-template="p.Column" label="Column2">
+            <param name="width">100</param>
+            <param name="widthRelative">true</param>
+          </layout>
+        </layout>
+        <field name="parameters" input-template="p.PropertyEditor" label="cm.template.example.Flash.Parameters" />
+
+        <!-- ordinary resource stuff -->
+        <field name="name" input-template="p.ContentName" label="cm.label.Title" required="true" />
+        <field name="lead" input-template="p.TextArea" label="cm.general.Description">
+          <param name="rows">3</param>
+          <param name="cols">50</param>
+          <param name="inlineHelp">true</param>
+          <help>cm.template.example.Flash.Description.help</help>
+        </field>
+
+        <field name="byline" input-template="p.TextInput" label="cm.general.Byline">
+          <param name="inlineHelp">true</param>
+          <help>cm.template.example.Flash.ByLine.help</help>
+        </field>
+
+        <field name="contact" input-template="p.TextInput" label="cm.general.Contact">
+          <param name="inlineHelp">true</param>
+          <help>cm.template.example.Flash.Contact.help</help>
+        </field>
+
+        <field name="licenseurl" input-template="p.TextInput" label="cm.template.example.Flash.LicenseURL">
+          <param name="inlineHelp">true</param>
+          <help>cm.template.example.Flash.LicenseURL.help</help>
+        </field>
+
+        <field name="categorization" input-template="p.Metadata" label="cm.general.Categorization">
+          <param name="inlineHelp">true</param>
+          <help>cm.template.example.Flash.Categorization.help</help>
+        </field>
+      </layout>
+      <layout name="advanced" input-template="p.Page" label="cm.general.Advanced">
+        <field name="parent" input-template="p.SecurityParentSelect" label="cm.label.HomeDepartment">
+          <param name="inlineHelp">true</param>
+          <help>cm.template.example.Flash.HomeDepartment.help</help>
+        </field>
+      </layout>
+    </layout>
+    <output-templates mode="www">
+      <id>example.Flash.ot</id>
+     </output-templates>
+  </input-template>
+  <output-template name="example.Flash.ot" input-template="p.siteengine.ArticleOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/www/flash.vm</component>
+      <contentref group="output/controller" name="selected">
+        <contentid>
+          <externalid>p.siteengine.JavaClassRenderController</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/controller/selected/renderControllerClass" name="value">example.content.flash.RenderControllerFlash</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+    </content-xml>
+  </output-template>
+</template-definition>

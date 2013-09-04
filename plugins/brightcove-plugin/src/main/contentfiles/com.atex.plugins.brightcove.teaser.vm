@@ -1,0 +1,51 @@
+#set($request = $m.request.httpRequest)
+<style type="text/css">
+  #$id ul li.teasermode:nth-child(n + $math.add($content.mode.selected.size.value, 1)) {
+    width: 50%;
+  }
+</style>
+#if($content.displayTitle.value=="true")
+  #if($display == "ownDept")
+    <h1>$content.name</h1>
+  #else
+    <h1><a href="#link({"path": $path, 'htmlEncodeLink': 'true', "":""})">$content.name</a></h1>
+  #end
+#end
+#if($rawVideos.size() > 0)
+  <ul>
+  #foreach($video in $rawVideos)
+    <li class="teasermode">
+      #if($display == "ownDept")
+        <a href="#link({"path": $video.parentIds, 'htmlEncodeLink': 'true', "":""})">
+      #else
+        <a href="#link({"path": $path, 'htmlEncodeLink': 'true', "":""})?vid=$video.contentId.contentId.contentIdString">
+      #end
+      <div class="videoThumbnail">
+		#if($video.getUrl($request))
+           <img src="$!{video.getUrl($request)}" alt="$video.shortDescription" title="$video.shortDescription" />
+		#else
+           <img style="background-image:url(#file({'contentId': $filesContentId, 'filename':'imagena.png', '':''}));background-repeat: no-repeat;background-position: center;background-size: auto 100%;min-height: 130px;" alt="$video.shortDescription" title="$video.shortDescription" />
+		#end
+		<div class="playIconContainer"> <div class="playIconCircleBorder"> <div class="playIconCircleInnerBorder">
+           <div class="playIconChar">&nbsp;</div>
+        </div> </div> </div>
+      </div>
+      <div class="caption">$video.name</div>
+    </a>
+    </li>
+  #end
+  </ul>
+<script type="text/javascript">
+  $(".playIconChar").css('background-image', "url(#file({'contentId': $filesContentId, 'filename':'playbutton.png', '':''}))");
+ 
+  var max = 0;
+  $("#$id li:nth-child(n + $math.add($content.mode.selected.size.value, 1)) .caption").each(function() {
+    if($(this).height() > max) {
+      max = $(this).height();
+    }
+  });
+  $("#$id li:nth-child(n + $math.add($content.mode.selected.size.value, 1)) .caption").each(function() {
+    $(this).css("min-height", max);
+  });
+</script>
+#end

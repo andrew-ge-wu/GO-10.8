@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+<content clear="true">
+<metadata>
+<contentid>
+<major>Department</major>
+<externalid>extid2.1610</externalid>
+</contentid>
+<input-template>
+<major>InputTemplate</major>
+<externalid>p.siteengine.LandingPage</externalid>
+</input-template>
+<security-parent>
+<major>Department</major>
+<externalid>GreenfieldTimes.d</externalid>
+</security-parent>
+</metadata>
+<component group="pageLayout/selected/righttop/inheritSetting" name="count">1</component>
+<component group="pageLayout/selected/righttop/inheritSetting" name="selected_0">default</component>
+<component group="pageLayout/selected/topheader/inheritSetting" name="count">1</component>
+<component group="pageLayout/selected/topheader/inheritSetting" name="selected_0">default</component>
+<component group="pageLayout/selected/rightbanner_bottom/inheritSetting" name="count">1</component>
+<component group="pageLayout/selected/rightbanner_bottom/inheritSetting" name="selected_0">default</component>
+<component group="polopoly.Content" name="name">Theme</component>
+<component group="pageLayout/selected/nav/inheritSetting" name="count">1</component>
+<component group="pageLayout/selected/nav/inheritSetting" name="selected_0">default</component>
+<component group="polopoly.ContentLists" name="pageLayout/selected/mobileheader/slotElements">pageLayout/selected/mobileheader/slotElements</component>
+<component group="polopoly.ContentLists" name="pageLayout/selected/right/slotElements">pageLayout/selected/right/slotElements</component>
+<component group="polopoly.ContentLists" name="feeds">feeds</component>
+<component group="polopoly.ContentLists" name="pageLayout/selected/nav/slotElements">pageLayout/selected/nav/slotElements</component>
+<component group="polopoly.ContentLists" name="pageLayout/selected/main/slotElements">pageLayout/selected/main/slotElements</component>
+<component group="polopoly.ContentLists" name="pageLayout/selected/righttop/slotElements">pageLayout/selected/righttop/slotElements</component>
+<component group="polopoly.ContentLists" name="pageLayout/selected/topheaderbanner/slotElements">pageLayout/selected/topheaderbanner/slotElements</component>
+<component group="polopoly.ContentLists" name="sources">sources</component>
+<component group="polopoly.ContentLists" name="pageLayout/selected/topheader/slotElements">pageLayout/selected/topheader/slotElements</component>
+<component group="polopoly.ContentLists" name="pageLayout/selected/wide/slotElements">pageLayout/selected/wide/slotElements</component>
+<component group="polopoly.ContentLists" name="pageLayout/selected/rightbanner_top/slotElements">pageLayout/selected/rightbanner_top/slotElements</component>
+<component group="polopoly.ContentLists" name="pageLayout/selected/rightbanner_bottom/slotElements">pageLayout/selected/rightbanner_bottom/slotElements</component>
+<component group="polopoly.ContentLists" name="pageLayout/selected/header/slotElements">pageLayout/selected/header/slotElements</component>
+<component group="polopoly.ContentLists" name="css">css</component>
+<component group="disallowIndexing" name="value">false</component>
+<component group="pageLayout/selected/rightbanner_top/inheritSetting" name="count">1</component>
+<component group="pageLayout/selected/rightbanner_top/inheritSetting" name="selected_0">default</component>
+<component group="pageLayout/selected/topheaderbanner/inheritSetting" name="count">1</component>
+<component group="pageLayout/selected/topheaderbanner/inheritSetting" name="selected_0">default</component>
+<component group="pageLayout/selected/right/inheritSetting" name="count">1</component>
+<component group="pageLayout/selected/right/inheritSetting" name="selected_0">default</component>
+<component group="pageLayout/selected/mobileheader/inheritSetting" name="count">1</component>
+<component group="pageLayout/selected/mobileheader/inheritSetting" name="selected_0">default</component>
+<component group="pageLayout/selected/wide/inheritSetting" name="count">1</component>
+<component group="pageLayout/selected/wide/inheritSetting" name="selected_0">default</component>
+<component group="pageLayout/selected/main/inheritSetting" name="count">1</component>
+<component group="pageLayout/selected/main/inheritSetting" name="selected_0">default</component>
+<component group="pageLayout/selected/header/inheritSetting" name="count">1</component>
+<component group="pageLayout/selected/header/inheritSetting" name="selected_0">default</component>
+<component group="localizedstrings" name="count">0</component>
+<component group="cacheTime/cacheTime" name="count">1</component>
+<component group="cacheTime/cacheTime" name="selected_0">-1</component>
+<contentref group="pageLayout" name="selected">
+<contentid>
+<major>InputTemplate</major>
+<externalid>example.DefaultPageLayout</externalid>
+</contentid>
+</contentref>
+<contentref group="polopoly.Content" name="inputTemplateId">
+<contentid>
+<major>InputTemplate</major>
+<externalid>p.siteengine.LandingPage</externalid>
+</contentid>
+</contentref>
+<contentlist group="pageLayout/selected/right/slotElements">
+<entry>
+<metadata>
+<position>0</position>
+<referredContent>
+<contentid>
+<major>LayoutElement</major>
+<externalid>extid7.227</externalid>
+</contentid>
+</referredContent>
+</metadata>
+</entry>
+</contentlist>
+<contentlist group="pageLayout/selected/main/slotElements">
+<entry>
+<metadata>
+<position>0</position>
+<referredContent>
+<contentid>
+<major>LayoutElement</major>
+<externalid>extid7.228</externalid>
+</contentid>
+</referredContent>
+</metadata>
+</entry>
+<entry>
+<metadata>
+<position>1</position>
+<referredContent>
+<contentid>
+<major>LayoutElement</major>
+<externalid>extid7.224</externalid>
+</contentid>
+</referredContent>
+</metadata>
+</entry>
+<entry>
+<metadata>
+<position>2</position>
+<referredContent>
+<contentid>
+<major>LayoutElement</major>
+<externalid>extid7.223</externalid>
+</contentid>
+</referredContent>
+</metadata>
+</entry>
+</contentlist>
+</content>
+
+<batch>
+<content clear="true">
+<metadata>
+<contentid>
+<major>LayoutElement</major>
+<externalid>extid7.227</externalid>
+</contentid>
+<input-template>
+<major>InputTemplate</major>
+<externalid>example.TabViewElement</externalid>
+</input-template>
+<security-parent>
+<major>Department</major>
+<externalid>extid2.1610</externalid>
+</security-parent>
+</metadata>
+</content>
+
+<content clear="true">
+<metadata>
+<contentid>
+<major>LayoutElement</major>
+<externalid>extid7.225</externalid>
+</contentid>
+<input-template>
+<major>InputTemplate</major>
+<externalid>example.ListElement</externalid>
+</input-template>
+<security-parent>
+<major>Department</major>
+<externalid>extid2.1610</externalid>
+</security-parent>
+</metadata>
+</content>
+
+<content clear="true">
+<metadata>
+<contentid>
+<major>Article</major>
+<externalid>extid1.180</externalid>
+</contentid>
+<input-template>
+<major>InputTemplate</major>
+<externalid>com.atex.plugins.baseline.ContextDrivenPublishingQueue</externalid>
+</input-template>
+<security-parent>
+<major>LayoutElement</major>
+<externalid>extid7.225</externalid>
+</security-parent>
+</metadata>
+</content>
+
+<content clear="true">
+<metadata>
+<contentid>
+<major>LayoutElement</major>
+<externalid>extid7.228</externalid>
+</contentid>
+<input-template>
+<major>InputTemplate</major>
+<externalid>example.TeaserElement</externalid>
+</input-template>
+<security-parent>
+<major>Department</major>
+<externalid>extid2.1610</externalid>
+</security-parent>
+</metadata>
+</content>
+
+<content clear="true">
+<metadata>
+<contentid>
+<major>LayoutElement</major>
+<externalid>extid7.224</externalid>
+</contentid>
+<input-template>
+<major>InputTemplate</major>
+<externalid>example.ImageGalleryElement</externalid>
+</input-template>
+<security-parent>
+<major>Department</major>
+<externalid>extid2.1610</externalid>
+</security-parent>
+</metadata>
+</content>
+
+<content clear="true">
+<metadata>
+<contentid>
+<major>Article</major>
+<externalid>extid1.179</externalid>
+</contentid>
+<input-template>
+<major>InputTemplate</major>
+<externalid>com.atex.plugins.baseline.ContextDrivenPublishingQueue</externalid>
+</input-template>
+<security-parent>
+<major>LayoutElement</major>
+<externalid>extid7.224</externalid>
+</security-parent>
+</metadata>
+</content>
+
+<content clear="true">
+<metadata>
+<contentid>
+<major>LayoutElement</major>
+<externalid>extid7.223</externalid>
+</contentid>
+<input-template>
+<major>InputTemplate</major>
+<externalid>example.ListElement</externalid>
+</input-template>
+<security-parent>
+<major>Department</major>
+<externalid>extid2.1610</externalid>
+</security-parent>
+</metadata>
+</content>
+
+<content clear="true">
+<metadata>
+<contentid>
+<major>Article</major>
+<externalid>extid1.178</externalid>
+</contentid>
+<input-template>
+<major>InputTemplate</major>
+<externalid>com.atex.plugins.baseline.ContextDrivenPublishingQueue</externalid>
+</input-template>
+<security-parent>
+<major>LayoutElement</major>
+<externalid>extid7.223</externalid>
+</security-parent>
+</metadata>
+</content>
+</batch>
+
+<content clear="true">
+<metadata>
+<contentid>
+<major>LayoutElement</major>
+<externalid>extid7.227</externalid>
+</contentid>
+<input-template>
+<major>InputTemplate</major>
+<externalid>example.TabViewElement</externalid>
+</input-template>
+<security-parent>
+<major>Department</major>
+<externalid>extid2.1610</externalid>
+</security-parent>
+</metadata>
+<component group="polopoly.Content" name="name">Tabs</component>
+<component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+<component group="elements/inheritSetting" name="count">1</component>
+<component group="elements/inheritSetting" name="selected_0">default</component>
+<contentref group="polopoly.Content" name="inputTemplateId">
+<contentid>
+<major>InputTemplate</major>
+<externalid>example.TabViewElement</externalid>
+</contentid>
+</contentref>
+<contentlist group="elements/slotElements">
+<entry>
+<metadata>
+<position>0</position>
+<referredContent>
+<contentid>
+<major>LayoutElement</major>
+<externalid>extid7.225</externalid>
+</contentid>
+</referredContent>
+</metadata>
+</entry>
+</contentlist>
+</content>
+<content clear="true">
+<metadata>
+<contentid>
+<major>LayoutElement</major>
+<externalid>extid7.225</externalid>
+</contentid>
+<input-template>
+<major>InputTemplate</major>
+<externalid>example.ListElement</externalid>
+</input-template>
+<security-parent>
+<major>Department</major>
+<externalid>extid2.1610</externalid>
+</security-parent>
+</metadata>
+<component group="polopoly.Content" name="name">Theme articles</component>
+<component group="maximumAmount" name="value">10</component>
+<component group="polopoly.ContentLists" name="publishingQueue">publishingQueue</component>
+<component group="viewMode" name="selected">link_timestamp</component>
+<component group="linkContext" name="count">0</component>
+<contentref group="polopoly.Content" name="inputTemplateId">
+<contentid>
+<major>InputTemplate</major>
+<externalid>example.ListElement</externalid>
+</contentid>
+</contentref>
+<contentlist group="publishingQueue">
+<entry>
+<metadata>
+<position>0</position>
+<referredContent>
+<contentid>
+<major>Article</major>
+<externalid>extid1.180</externalid>
+</contentid>
+</referredContent>
+</metadata>
+</entry>
+</contentlist>
+</content>
+<content clear="true">
+<metadata>
+<contentid>
+<major>Article</major>
+<externalid>extid1.180</externalid>
+</contentid>
+<input-template>
+<major>InputTemplate</major>
+<externalid>com.atex.plugins.baseline.ContextDrivenPublishingQueue</externalid>
+</input-template>
+<security-parent>
+<major>LayoutElement</major>
+<externalid>extid7.225</externalid>
+</security-parent>
+</metadata>
+<component group="polopoly.Content" name="name">Theme articles</component>
+<component group="associatedSites" name="count">0</component>
+<component group="type" name="count">1</component>
+<contentref group="polopoly.Content" name="inputTemplateId">
+<contentid>
+<major>InputTemplate</major>
+<externalid>com.atex.plugins.baseline.ContextDrivenPublishingQueue</externalid>
+</contentid>
+</contentref>
+<contentref group="type" name="reference0">
+<contentid>
+<major>Department</major>
+<externalid>p.templatecategory.article</externalid>
+</contentid>
+</contentref>
+<contentref group="type" name="reference_parent0">
+<contentid>
+<major>Department</major>
+<externalid>p.StandardResourceCategorization</externalid>
+</contentid>
+</contentref>
+</content>
+<content clear="true">
+<metadata>
+<contentid>
+<major>LayoutElement</major>
+<externalid>extid7.228</externalid>
+</contentid>
+<input-template>
+<major>InputTemplate</major>
+<externalid>example.TeaserElement</externalid>
+</input-template>
+<security-parent>
+<major>Department</major>
+<externalid>extid2.1610</externalid>
+</security-parent>
+</metadata>
+<component group="articles" name="contentListMaxSize">1</component>
+<component group="polopoly.Content" name="name">Automatic landing pages</component>
+<component group="image" name="selected">landscape</component>
+<component group="teaser" name="value">It is now possible to create automatic landing pages based on categorization.</component>
+<component group="polopoly.ContentLists" name="articles">articles</component>
+<component group="breakingNews" name="value">true</component>
+<contentref group="polopoly.Content" name="inputTemplateId">
+<contentid>
+<major>InputTemplate</major>
+<externalid>example.TeaserElement</externalid>
+</contentid>
+</contentref>
+</content>
+<content clear="true">
+<metadata>
+<contentid>
+<major>LayoutElement</major>
+<externalid>extid7.224</externalid>
+</contentid>
+<input-template>
+<major>InputTemplate</major>
+<externalid>example.ImageGalleryElement</externalid>
+</input-template>
+<security-parent>
+<major>Department</major>
+<externalid>extid2.1610</externalid>
+</security-parent>
+</metadata>
+<component group="polopoly.Content" name="name">Theme gallery</component>
+<component group="polopoly.ContentLists" name="publishingQueue">publishingQueue</component>
+<component group="publishingQueue" name="contentListMaxSize">1</component>
+<contentref group="polopoly.Content" name="inputTemplateId">
+<contentid>
+<major>InputTemplate</major>
+<externalid>example.ImageGalleryElement</externalid>
+</contentid>
+</contentref>
+<contentlist group="publishingQueue">
+<entry>
+<metadata>
+<position>0</position>
+<referredContent>
+<contentid>
+<major>Article</major>
+<externalid>extid1.179</externalid>
+</contentid>
+</referredContent>
+</metadata>
+</entry>
+</contentlist>
+</content>
+<content clear="true">
+<metadata>
+<contentid>
+<major>Article</major>
+<externalid>extid1.179</externalid>
+</contentid>
+<input-template>
+<major>InputTemplate</major>
+<externalid>com.atex.plugins.baseline.ContextDrivenPublishingQueue</externalid>
+</input-template>
+<security-parent>
+<major>LayoutElement</major>
+<externalid>extid7.224</externalid>
+</security-parent>
+</metadata>
+<component group="polopoly.Content" name="name">Images</component>
+<component group="associatedSites" name="count">0</component>
+<component group="type" name="count">1</component>
+<contentref group="polopoly.Content" name="inputTemplateId">
+<contentid>
+<major>InputTemplate</major>
+<externalid>com.atex.plugins.baseline.ContextDrivenPublishingQueue</externalid>
+</contentid>
+</contentref>
+<contentref group="type" name="reference0">
+<contentid>
+<major>Department</major>
+<externalid>p.templatecategory.image</externalid>
+</contentid>
+</contentref>
+<contentref group="type" name="reference_parent0">
+<contentid>
+<major>Department</major>
+<externalid>p.templatecategory.media</externalid>
+</contentid>
+</contentref>
+</content>
+<content clear="true">
+<metadata>
+<contentid>
+<major>LayoutElement</major>
+<externalid>extid7.223</externalid>
+</contentid>
+<input-template>
+<major>InputTemplate</major>
+<externalid>example.ListElement</externalid>
+</input-template>
+<security-parent>
+<major>Department</major>
+<externalid>extid2.1610</externalid>
+</security-parent>
+</metadata>
+<component group="polopoly.Content" name="name">Teasers</component>
+<component group="maximumAmount" name="value">3</component>
+<component group="polopoly.ContentLists" name="publishingQueue">publishingQueue</component>
+<component group="viewMode" name="selected">teaser</component>
+<component group="linkContext" name="count">0</component>
+<contentref group="polopoly.Content" name="inputTemplateId">
+<contentid>
+<major>InputTemplate</major>
+<externalid>example.ListElement</externalid>
+</contentid>
+</contentref>
+<contentlist group="publishingQueue">
+<entry>
+<metadata>
+<position>0</position>
+<referredContent>
+<contentid>
+<major>Article</major>
+<externalid>extid1.178</externalid>
+</contentid>
+</referredContent>
+</metadata>
+</entry>
+</contentlist>
+</content>
+<content clear="true">
+<metadata>
+<contentid>
+<major>Article</major>
+<externalid>extid1.178</externalid>
+</contentid>
+<input-template>
+<major>InputTemplate</major>
+<externalid>com.atex.plugins.baseline.ContextDrivenPublishingQueue</externalid>
+</input-template>
+<security-parent>
+<major>LayoutElement</major>
+<externalid>extid7.223</externalid>
+</security-parent>
+</metadata>
+<component group="polopoly.Content" name="name">Articles</component>
+<component group="associatedSites" name="count">0</component>
+<component group="type" name="count">1</component>
+<contentref group="polopoly.Content" name="inputTemplateId">
+<contentid>
+<major>InputTemplate</major>
+<externalid>com.atex.plugins.baseline.ContextDrivenPublishingQueue</externalid>
+</contentid>
+</contentref>
+<contentref group="type" name="reference0">
+<contentid>
+<major>Department</major>
+<externalid>p.templatecategory.article</externalid>
+</contentid>
+</contentref>
+<contentref group="type" name="reference_parent0">
+<contentid>
+<major>Department</major>
+<externalid>p.StandardResourceCategorization</externalid>
+</contentid>
+</contentref>
+</content>
+<content updateIfExists="true"> 
+<metadata>
+<contentid>
+<major>LayoutElement</major>
+<externalid>example.RelatedContentTemplate</externalid>
+</contentid>
+</metadata>
+<contentref group="landingPage" name="0">
+<contentid>
+<major>Department</major>
+<externalid>extid2.1610</externalid>
+</contentid>
+</contentref>
+</content>
+</batch>

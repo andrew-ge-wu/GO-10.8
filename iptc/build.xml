@@ -1,0 +1,29 @@
+<project name="Create IPTC categories for Polopoly. " default="generate-all" basedir=".">
+
+  <property name="lib.dir" location="${basedir}/lib"/>
+  <property name="saxon.lib.dir" location="${lib.dir}/saxonb9-1-0-6j"/>
+  <property name="xsl.dir" location="${basedir}/xsl"/>
+  <property name="xml.output.dir" location="${basedir}/build"/>
+
+  <target name="generate-all" depends="generate-content-xml, generate-publish-xml" 
+	  description="Generate both content and publish XML for ITPC codes"/>
+
+  <target name="generate-content-xml" description="Generates content XML for IPTC codes">
+    <xslt in="${basedir}/iptc_codes.xml" out="${xml.output.dir}/content.xml" style="${xsl.dir}/content.xsl">
+      <outputproperty name="method" value="xml"/>
+      <outputproperty name="standalone" value="yes"/>
+      <outputproperty name="indent" value="yes"/>
+      <classpath location="${saxon.lib.dir}/saxon9.jar" />
+    </xslt>
+  </target>
+  
+  <target name="generate-publish-xml" description="Generates publish XML for IPTC codes">
+    <xslt in="${basedir}/iptc_codes.xml" out="${xml.output.dir}/publish.xml" style="${xsl.dir}/publish.xsl" force="true">
+      <outputproperty name="method" value="xml"/>
+      <outputproperty name="standalone" value="yes"/>
+      <outputproperty name="indent" value="yes"/>
+      <classpath location="${saxon.lib.dir}/saxon9.jar" />
+    </xslt>
+  </target>
+</project>
+

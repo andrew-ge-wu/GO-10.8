@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="p.siteengine.VelocityRenderer">
+    <content-xml>
+      <component group="polopoly.Content" name="name">Velocity renderer</component>
+    </content-xml>
+    <policy>com.polopoly.siteengine.mvc.view.renderer.RendererProviderVelocityPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="ViewState_insert">false</param>
+    <layout name="layout.menu" input-template="p.AjaxPageMenu" label="cm.general.Menu">
+      <layout name="layout.default" input-template="p.Page" label="cm.template.p.siteengine.VelocityRenderer.HtmlVLT">
+        <field name="default" input-template="p.siteengine.editor.CodeMirror">
+          <param name="width">700</param>
+          <param name="height">325</param>
+          <!-- editorParameters is deprecated and will be ignored by the widget -->
+          <!--          <param name="editorParameters">html lineNumbers</param>-->
+          <param name="modeParameters">{mode: "velocity", lineNumbers: true}</param>
+        </field>
+      </layout>
+      <layout name="files" input-template="p.Page" label="cm.general.Files">
+        <layout name="current" input-template="p.Comment" label="cm.template.p.siteengine.VelocityRenderer.UploadedFilesComment">
+          <param name="comment">
+            <![CDATA[
+           To refer to an uploaded file from velocity, use e.g. <pre>&lt;img src="#file({'filename': 'logo.png', 'contentId': $m.layout.contentId, '':''})" alt=""/&gt;</pre>
+           to render the uploaded image file logo.png.
+           ]]>
+          </param>
+        </layout>
+        <field name="files" input-template="p.FileManager" label="cm.general.Files">
+          <param name="useTree">false</param>
+          <param name="showFiles">true</param>
+          <param name="showDirectories">true</param>
+          <param name="showCreateDirectory">true</param>
+          <param name="showDeleteDirectory">true</param>
+          <param name="showDeleteFile">true</param>
+          <param name="showFileList">true</param>
+          <param name="showFileUpload">true</param>
+          <param name="requireUploadButtonClick">false</param>
+          <param name="fileListSize">8</param>
+        </field>
+      </layout>
+    </layout>
+  </input-template>
+</template-definition>

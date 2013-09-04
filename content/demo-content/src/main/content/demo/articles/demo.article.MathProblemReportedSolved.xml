@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- http://en.wikinews.org/wiki/Researcher_claims_solution_to_P_vs_NP_math_problem -->
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.MathProblemReportedSolved</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="author" name="value">Wikinews</component>
+    <component group="body" name="value">&lt;p&gt;Vinay Deolalikar, a mathematician who works for
+      HP Labs, claims to have proven that P is not equal to NP. The problem is the greatest unsolved
+      problem in theoretical computer science and is one of seven problems in which the Clay
+      Mathematics Institute has offered million dollar prizes to the solutions.&lt;/p&gt;&#13;
+      &lt;p&gt;&amp;nbsp;&lt;/p&gt;&#13;
+      &lt;p&gt;The question of whether P equals NP essentially
+      asks whether there are categories of problems where
+      short proofs exist but finding those proofs
+      is difficult. More formally, a problem is said to
+      be in P if running the problem there is a
+      program for a Turing machine, an ideal theoretical
+      computer with unbounded amounts of memory,
+      such that running instances of the problem through
+      the program will always answer the question
+      in time bounded by the length of the input. A
+      problem is said to be in NP, if the problem can
+      be solved in polynomial time when it is
+      instead of being run on a Turing machine, it is run on
+      a non-deterministic Turing machine,
+      which is like a Turing machine but it the machine is able
+      to make copies of itself to try
+      different approaches to the problem
+      simultaneously.&lt;/p&gt;&#13;
+
+      &lt;p&gt;&amp;nbsp;&lt;/p&gt;&#13;
+      &lt;p&gt;Mathematicians have
+      long believed that P does not equal NP, and the question has many practical implications.
+      Much
+      of modern cryptography, such as the RSA algorithm and the Diffie-Hellman algorithm, rests
+      on
+      certain problems, such as factoring integers, being in NP and not in P. If it turned out
+      that
+      P=NP, these methods would not work but many now difficult problems would likely be easy
+      to
+      solve. If P does not equal NP then many natural, practical problems such as the traveling
+      salesman problem are intrinsically difficult.&lt;/p&gt;&#13;
+      &lt;p&gt;&amp;nbsp;&lt;/p&gt;&#13;
+      &lt;p&gt;In 2000, the Clay Foundation listed the
+      &amp;quot;Clay Millenium Problems,&amp;quot; seven
+      mathematical problems each of which they
+      would offer a million dollars for a correct solution.
+      One of these problems was whether P
+      equaled NP. Another of these seven, the
+      Poincar&amp;eacute; conjecture, was solved in 2002 by
+      Grigori Perelman who first made
+      headlines for solving the problem and then made them again
+      months later for refusing to take
+      the prize money.&lt;/p&gt;&#13;
+
+      &lt;p&gt;&amp;nbsp;&lt;/p&gt;&#13;
+      &lt;p&gt;On August 7, mathematician Greg Baker noted on his
+      blog that he had seen a draft of a claimed proof
+      by Deolalikar although among experts a draft
+      had apparently been circulating for a few days.
+      Deolalikar's proof works by connecting certain
+      ideas in computer science and finite model
+      theory to ideas in statistical mechanics. The proof
+      works by showing that if certain problems
+      known to be in NP were also in P then those problems
+      would have impossible statistical
+      properties. Computer scientists and mathematicians have
+      expressed a variety of opinions about
+      Deolalikar's proof, ranging from guarded optimism to near
+      certainty that the proof is
+      incorrect. Scott Aaronson of Massachusetts Institute of Technology
+      has expressed his pessimism
+      by stating that he will give $200,000 of his own money to
+      Deolalikar if the proof turns out to
+      be valid. Others have raised specific technical issues
+      with the proof but noted that the proof
+      attempt clearly presented interesting new techniques
+      that would be relevant to computer
+      science whether or not the proof turns out to be correct.
+      Richard Lipton, a professor of
+      computer science at Georgia Tech, has said that &amp;quot; the
+      author certainly shows
+      awareness of the relevant obstacles and command of literature supporting
+      his
+      arguments.&amp;quot; Lipton has listed four central objections to the proof, none of which
+      are
+      necessarily fatal but may require more work to address. It will likely take months for
+      experts
+      to reach a consensus on whether the proof is valid and if it is not valid in its
+      current form
+      whether the proof can be corrected to a valid proof.&lt;/p&gt;&#13;
+      
+      &lt;p&gt;&lt;i&gt;This article was originally published on &lt;a href=&quot;http://en.wikinews.org/wiki/Researcher_claims_solution_to_P_vs_NP_math_problem&quot;&gt;Wikinews&lt;/a&gt; and is reproduced here in accordance with &lt;a href=&quot;http://creativecommons.org/licenses/by/2.5/&quot;&gt;CC-Attribution-Generic 2.5.&lt;/a&gt;&lt;/i&gt;&lt;/p&gt;
+      
+      </component>
+    <component group="polopoly.Content" name="name">P=NP math problem reported solved</component>
+    <component group="p.Inbox" name="showContent">true</component>
+    <component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+    <component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+    <component group="polopoly.ContentLists" name="images">images</component>
+    <component group="polopoly.ContentLists" name="topimages">topimages</component>
+
+    <component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+    <component group="lead" name="value">Vinay Deolalikar, a mathematician who works for HP Labs,
+      claims to have proven that P is not equal to NP. The problem is the greatest unsolved problem
+      in theoretical computer science and is one of seven problems in which the Clay Mathematics
+      Institute has offered million dollar prizes to the solutions.</component>
+    <component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+    <component group="p.Content.state" name="onlineState">true</component>
+
+    <component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": [
+        {
+          "id": "Vinay",
+          "name": "Vinay",
+          "entities": [],
+          "attributes": []
+        },
+        {
+          "id": "Deolalikar",
+          "name": "Deolalikar",
+          "entities": [],
+          "attributes": []
+        },
+        {
+          "id": "Grigori Perelman",
+          "name": "Grigori Perelman",
+          "entities": [],
+          "attributes": []
+        }
+      ]
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": [
+        {
+          "id": "HP Labs",
+          "name": "HP Labs",
+          "entities": [],
+          "attributes": []
+        },
+        {
+          "id": "Clay Foundation",
+          "name": "Clay Foundation",
+          "entities": [],
+          "attributes": []
+        }
+      ]
+    },
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": [
+        {
+          "id": "Clay",
+          "name": "Clay",
+          "entities": [],
+          "attributes": []
+        },
+        {
+          "id": "Millenium Problems",
+          "name": "Millenium Problems",
+          "entities": [],
+          "attributes": []
+        }
+      ]
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-13",
+          "name": "science and technology",
+          "entities": [
+            {
+              "id": "subject-13009",
+              "name": "science (general)",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        },
+        {
+          "id": "subject-13",
+          "name": "science and technology",
+          "entities": [
+            {
+              "id": "subject-13018",
+              "name": "mathematics",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        },
+        {
+          "id": "subject-13",
+          "name": "science and technology",
+          "entities": [
+            {
+              "id": "subject-13001",
+              "name": "applied science",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MathProblemReportedSolved.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MathProblemReportedSolved.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MathProblemReportedSolved.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MathProblemReportedSolved.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MathProblemReportedSolved.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MathProblemReportedSolved.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content>
+</batch>

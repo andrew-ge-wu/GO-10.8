@@ -1,0 +1,6 @@
+<div class="image">
+#set($image = $content.image.getImage("default"))
+#if($image)
+  <img src="#file({"filename": $image.path, "contentId": $content.contentId, "":""})" alt="" />
+#end
+</div>

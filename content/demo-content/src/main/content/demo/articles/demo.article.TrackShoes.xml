@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- http://en.wikinews.org/wiki/British_comedian_Eddie_Izzard_completes_43_marathons_in_51_days -->
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+
+<content clear="true">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.TrackShoes</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="author" name="value">Wikinews</component>
+<component group="body" name="value"><![CDATA[
+    <p>British comedian Eddie Izzard has completed a series of 43 marathons in just 51 days to raise money for Sport Relief, a charity based in the United Kingdom.</p>
+    <p>The marathons covered a total running distance of 1,100 miles (1,700 kilometers) across the United Kingdom. He ran from London, England, to Cardiff, Wales, to Belfast, Northern Ireland, to Edinburgh, Scotland and back to London again. Izzard carried a flag of each of the four countries depending on which one he was running in.</p>
+    <p>Eddie is 47 years old and had spent just five weeks training for the event. He crossed the finish line on Tuesday in Trafalgar Square in London during a rainfall. He said to waiting journalists: "I feel dead."</p>
+    <p>In an interview with BBC News, he commented: "I don't know what the hell I was doing at the end but it must have been way faster than I was doing the rest of the time. So I feel exhausted now, but you know, it's over. Being here is very nice because, when I left here seven-and-a-half weeks ago, there was nothing here, it was just a cold morning and now there's a lot of people here, even in the rain."</p>
+
+     <p><i>This article was originally published on <a href="http://en.wikinews.org/wiki/British_comedian_Eddie_Izzard_completes_43_marathons_in_51_days">Wikinews</a> and is reproduced here in accordance with <a href="http://creativecommons.org/licenses/by/2.5/">CC-Attribution-Generic 2.5.</a></i></p>
+
+    ]]></component>
+<component group="polopoly.Content" name="name">British comedian Eddie Izzard completes 43 marathons in 51 days</component>
+<component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+<component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+<component group="polopoly.ContentLists" name="images">images</component>
+<component group="polopoly.ContentLists" name="topimages">topimages</component>
+
+<component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+<component group="p.Inbox" name="showContent">true</component>
+<component group="lead" name="value">British comedian Eddie Izzard has completed a series of 43 marathons in just 51 days to raise money for Sport Relief, a charity based in the United Kingdom. The marathons covered a total running distance of 1,100 miles (1,700 kilometers) across the United Kingdom. He ran from London, England, to Cardiff, Wales, to Belfast, Northern Ireland, to Edinburgh, Scotland and back to London again.</component>
+<component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+<component group="p.Content.state" name="onlineState">true</component>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-15",
+          "name": "sport",
+          "entities": [],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+<contentref group="images" name="0">
+<contentid>
+<externalid>example.demo.image.TrackShoes</externalid>
+</contentid>
+</contentref>
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.TrackShoes.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.TrackShoes.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.TrackShoes.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.TrackShoes.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.TrackShoes.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.TrackShoes.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content>
+</batch>

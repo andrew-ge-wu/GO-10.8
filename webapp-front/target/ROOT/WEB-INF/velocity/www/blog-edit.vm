@@ -1,0 +1,32 @@
+<h2>$rs.blog.blogSettings</h2>
+<form method="post" id="createBlogForm"
+      action="#link({"path":$m.request.originalContentPath, 'htmlEncodeLink': 'true', "":""})"
+      name="createBlogForm">
+  <input type="hidden" name="action" value="EDIT_BLOG"/>
+  <div id="createBlogFormContainer">
+    <div class="field">        
+      <label for="blog_name">$rs.blog.blogName <span class="required">*</span></label>
+      <input size="42" type="text" name="blog_name" id="blog_name" value="$!blogForm.blogName" />
+    </div>            
+    <div class="field">
+      <label for="blog_address">$rs.blog.blogAddress <span class="required">*</span></label>
+      <input size="42" type="text" name="blog_address" id="blog_address" value="$!blogForm.blogAddress" />              
+    </div>
+    <div class="field">
+      <label for="blog_description">$rs.blog.blogDescription</label>
+      <textarea rows="4" cols="48" name="blog_description" id="blog_description">$!blogForm.blogDescription</textarea>
+    </div>
+    <div class="button-set">
+      <input class="submit" type="submit" value="$rs.blog.save" id="submitBlogFormButton"/>
+      <input class="submit" type="button" value="$rs.blog.cancel" id="cancelEditBlog" onclick="window.location.href='#link({"path":$m.request.originalContentPath, 'htmlEncodeLink': 'true', "":""})'" />
+    </div>
+  </div>
+</form>
+
+<script type="text/javascript">
+  jQuery().ready(function() {      
+     polopoly.service.blog.validateBlogForm(
+        {'blog_name:required':'$rs.blog.error.fieldRequiredBlogName', 
+         'blog_address:required':'$rs.blog.error.fieldRequiredBlogAddress'});      
+  });
+</script>

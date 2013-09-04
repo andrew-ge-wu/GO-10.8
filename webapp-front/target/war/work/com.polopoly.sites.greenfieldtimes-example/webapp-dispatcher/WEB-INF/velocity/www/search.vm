@@ -1,0 +1,103 @@
+
+## Get resource strings
+#set($rs = $m.context.site.bean.resources.strings)
+
+## Get query
+#set($q = "")
+#if($m.request.httpRequest.parameters.q)
+  #set($q = $m.request.httpRequest.getParameter("q"))
+  ## Prevent xss
+  #set($q = $esc.html($q))
+#end
+
+## Check which context to show search results in. Defaulting to current context
+## if there is not a specific department selected
+#if($content.resultpage.selectedName == "specific" && $content.resultpage.selected.contentId)
+  #set($targetContentPath = $tool_path.getPathToRoot($content.resultpage.selected.contentId))
+  #if($tool_path.isValidPath($targetContentPath))
+    #set($hitctx = $targetContentPath)
+  #end
+#end
+#if(!$hitctx)
+  #set($hitctx = $m.context.page.contentPath.asArray)
+#end
+
+## Check if should use full view, indicated by view=article
+#set($view = $m.request.httpRequest.attributes.view)
+
+<div class="search element" id="search_$content.contentId.contentId.contentIdString">
+
+## The search form
+  #if ($m.system.serviceStatus.search_solrClientPublic.serving)
+  <form action="#link({"contentId": $content.contentId, "path": $hitctx, 'htmlEncodeLink': 'true', "":""})" method="get">
+    <div>
+      <input type="text" name="q" value="$q" />
+      <input class="submit" type="submit" value="$rs.search.search" />
+    </div>
+  </form>
+  #else
+  <p>Searching is temporarily unavailable.</p>
+  #end
+
+## The result page
+#if($view && $view == "article" && $m.system.serviceStatus.search_solrClientPublic.serving)
+    <h1 class="info">
+    #if($totalHitCount > 0)
+      #set($displayFirstIndex = $firstIndex + 1)
+      $rs.search.showing $displayFirstIndex - $lastIndex $rs.search.of $totalHitCount.
+    #else
+      $rs.search.yoursearchfor <em>"$q"</em> $rs.search.didnotmatch.
+    #end
+    </h1>
+
+#if($totalHitCount > 0)
+    <ul>
+    #foreach($hit in $hits)
+      <li>
+
+    ## If parent ids of article is invalid, use path to current page
+    #set($path = $hit.model.parentIds)
+    #if(!$tool_path.isValidPath($path))
+      #set($path = $tool_path.concat($m.context.page.contentPath, $hit.model.contentId))
+    #end
+
+
+        <h3><a href="#link({"path": $path, 'htmlEncodeLink': 'true', "":""})">$hit.name</a></h3>
+        <div class="text">$hit.text</div>
+        <div class="meta">
+        #if($hit.model.publishingDateTime)
+          $date.format("d MMMMMMMMMM yyyy", $hit.model.publishingDateTime, $m.context.site.bean.resources.locale)
+        #end
+
+        #if($hit.model.creator)
+          #set($creator = $hit.model.creator)
+          by $creator.firstname $creator.surname
+        #end
+
+        </div>
+      </li>
+    #end
+    </ul>
+#end
+
+## The pager
+#if($pages && $pages.size() > 1)
+<div class="pager">
+  #if($prevPageIndex != -1)
+    <a href="#link({"contentId": $content.contentId, "path": $hitctx, 'htmlEncodeLink': 'true', "":""})?q=$q&amp;page=$prevPageIndex">$rs.search.previous</a>
+  #end
+  #foreach($pageNo in $pages)
+    #set($displayPage = $pageNo + 1)
+    #if ($pageNo ==  $page)
+      <span class="currentpage">$displayPage</span>
+    #else
+      <a href="#link({"contentId": $content.contentId, "path": $hitctx, 'htmlEncodeLink': 'true', "":""})?q=$q&amp;page=$pageNo">$displayPage</a>
+    #end
+  #end
+  #if($nextPageIndex != -1)
+    <a href="#link({"contentId": $content.contentId, "path": $hitctx, 'htmlEncodeLink': 'true', "":""})?q=$q&amp;page=$nextPageIndex">$rs.search.next</a>
+  #end
+</div>
+#end
+#end
+</div>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+<!-- http://en.wikinews.org/wiki/Australian_rugby_league_club_to_have_extra_police_at_all_NSW_games -->
+<content clear="true">
+<metadata>
+  <contentid>
+    <major>Article</major>
+    <externalid>example.demo.article.AustralianRugby</externalid>
+  </contentid>
+  <input-template>
+    <major>InputTemplate</major>
+    <externalid>example.StandardArticle</externalid>
+  </input-template>
+  <security-parent>
+    <major>Department</major>
+    <externalid>GreenfieldTimes.d</externalid>
+  </security-parent>
+</metadata>
+<component group="author" name="value">Wikinews</component>
+<component group="polopoly.Content" name="name">Australian rugby league club to have extra police at all NSW games</component>
+<component group="lead" name="value">The Canterbury Bulldogs, a team in Australia's National Rugby League, has entered into an agreement with New South Wales police to provide extra police at all games in NSW. The agreement follows a spate of violent incidents at Bulldogs matches this year.</component>
+<component group="body" name="value">
+<![CDATA[
+<p>In March, there were fights during and after a game between the Bulldogs and Wests Tigers at Telstra Stadium, the Bulldogs home ground. This led police to step up their presence at Bulldogs matches for the rest of the season. A month later, a group of Bulldogs supporters abused four South Sydney cheerleaders at another home match.</p>
+<p>According to NSW Police, a meeting was held between the police executive and Bulldogs CEO, Malcolm Noad where it was decided that the club will pay for additional police at all Bulldogs games across NSW. The additional police will include specialist police (including riot police) to provide security for spectators.</p>
+<p>Only police that are working outside their normal rostered hours will be paid for by the club.</p>
+<p>The police Commander of the North West Sydney region, Assistant Commissioner said he was pleased that the club was working with the police proactively. <cite>“It is pleasing to see the club taking a proactive stance to ensure the games proceed with a strong police presence to provide increased safety”</cite> he said.</p>
+<p>Assistant Commissioner Clifford warned that police would not be specifically targeting Bulldogs supporters, but anyone who is causing trouble at games. <cite>“It is hoped this initiative will stamp out violence at future Bulldogs matches. Police will be targeting anyone doing the wrong thing, regardless of which team they support,”</cite> he said.</p>
+<p><i>This article was originally published on <a href="http://en.wikinews.org/wiki/Australian_rugby_league_club_to_have_extra_police_at_all_NSW_games">Wikinews</a> and is reproduced here in accordance with <a href="http://creativecommons.org/licenses/by/2.5/">CC-Attribution-Generic 2.5.</a></i></p>
+]]></component>
+<component group="publishedDate" name="date">1147964400000</component>
+<component group="p.Inbox" name="showContent">true</component>
+<component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+<component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+<component group="polopoly.ContentLists" name="images">images</component>
+<component group="polopoly.ContentLists" name="topimages">topimages</component>
+<component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+<component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+<component group="p.Content.state" name="onlineState">true</component>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-15",
+          "name": "sport",
+          "entities": [],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+<contentref group="topimages" name="0">
+<contentid>
+<externalid>example.demo.image.IrishRugby</externalid>
+</contentid>
+</contentref>
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.AustralianRugby.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.AustralianRugby.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.AustralianRugby.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.AustralianRugby.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.AustralianRugby.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.AustralianRugby.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content>
+</batch>

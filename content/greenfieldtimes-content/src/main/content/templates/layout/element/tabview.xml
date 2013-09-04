@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.TabViewElement" label="cm.template.example.TabViewElement">
+    <policy>example.layout.element.ElementPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <type>LayoutElement</type>
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="titleOfNewContent">cm.template.example.TabViewElement.new</param>
+    <param name="templateIcon">window_tab.png</param>
+    <param name="renderTemplateIconInSelect">true</param>
+    <editor contextName="orchid_TOCENTRY">example.layout.element.tabview.OTabViewListEntryPolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">example.layout.element.tabview.OTabViewListEntryPolicyWidget</viewer>
+    <field name="name" input-template="p.ContentName" label="cm.label.Name" required="true" />
+    <field name="elements" input-template="p.siteengine.layout.Slot.it" />
+    <output-templates mode="www">
+      <id>example.TabViewElement.ot</id>
+    </output-templates>
+    <output-templates mode="mobile">
+      <id>example.MobileTabViewElement.ot</id>
+    </output-templates>
+  </input-template>
+  <output-template name="example.TabViewElement.ot" input-template="p.siteengine.ElementOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/www/tabview.vm</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+    </content-xml>
+  </output-template>
+  <output-template name="example.MobileTabViewElement.ot" input-template="p.siteengine.ElementOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/mobile/tabview.vm</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+    </content-xml>
+  </output-template>
+</template-definition>

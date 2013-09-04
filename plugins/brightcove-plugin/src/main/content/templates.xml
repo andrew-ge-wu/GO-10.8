@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+
+  <input-template name="com.atex.plugins.brightcove.video">
+    <policy>com.polopoly.siteengine.standard.content.ContentBasePolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <field name="video" input-template="p.TextInput" label="com.atex.plugins.brightcove.videoId" required="true" />
+  </input-template>
+
+  <input-template name="com.atex.plugins.brightcove.playlist">
+    <policy>com.polopoly.siteengine.standard.content.ContentBasePolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+  </input-template>
+
+  <input-template name="com.atex.plugins.brightcove.viewer">
+    <policy>com.polopoly.siteengine.standard.content.ContentBasePolicy</policy>
+    <editor>com.atex.plugins.brightcove.widget.OBrightCoveViewer</editor>
+    <viewer>com.atex.plugins.brightcove.widget.OBrightCoveViewer</viewer>
+  </input-template>
+  
+  <input-template name="com.atex.plugins.brightcove.search">
+    <policy>com.polopoly.siteengine.standard.content.ContentBasePolicy</policy>
+    <editor>com.atex.plugins.brightcove.widget.OBrightcoveSearchWidget</editor>
+    <viewer>com.atex.plugins.brightcove.widget.OBrightcoveSearchWidget</viewer>
+  </input-template>
+
+  <input-template name="com.atex.plugins.brightcove.video.upload">
+    <policy>com.polopoly.siteengine.standard.content.ContentBasePolicy</policy>
+    <editor>com.atex.plugins.brightcove.widget.OBrightCoveUploadWidget</editor>
+    <viewer>com.atex.plugins.brightcove.widget.OBrightCoveUploadWidget</viewer>
+  </input-template>
+
+  <input-template name="com.atex.plugins.brightcove.video.element.contentlist">
+    <policy>com.polopoly.siteengine.standard.content.ContentBasePolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <field name="publishingQueueCreator" input-template="p.ContentCreator" label="cm.template.example.ListElement.newPublishingQueue">
+      <param name="createWithSecurityParent">true</param>
+      <param name="securityParentAlias">content</param>
+      <param name="insertTargetAlias">content</param>
+      <param name="askInsertTarget">false</param>
+      <param name="insertionContentListName">videoContainer</param>
+      <param name="askInsertionContentListName">false</param>
+      <param name="showCategorySelectWithOneCategory">false</param>
+      <param name="askContentListPosition">false</param>
+      <param name="insertPosition">top</param>
+      <idparam name="templateRoot">
+        <externalid>p.siteengine.SourcesRepositoryTemplates</externalid>
+      </idparam>
+    </field>
+    <field name="videoContainer" input-template="p.ContentListEntryContainer" label="com.atex.plugins.brightcove.video.contentlist">
+      <param name="contentListName">videoContainer</param>
+      <param name="showActionButtonsInViewMode">false</param>
+    </field>
+  </input-template>
+
+  <!-- Brightcove Video Content List Wrapper -->
+  <input-template name="com.atex.plugins.brightcove.ContentListWrapper">
+    <content-list-wrapper>com.atex.plugins.brightcove.ExtendedConfigurableContentListWrapper</content-list-wrapper>
+    <idparam-list name="allowedInputTemplates">
+      <contentid>
+        <externalid>com.atex.plugins.brightcove.video.MainElement</externalid>
+      </contentid>
+    </idparam-list>
+  </input-template>
+
+  <input-template name="configListWrapper">
+    <content-list-wrapper>com.atex.plugins.brightcove.ConfigListWrapper</content-list-wrapper>
+  </input-template>
+
+  <!--This file contains input template definitions -->
+  <input-template name="com.atex.plugins.brightcove.MainElement" label="com.atex.plugins.brightcove.mainElement">
+
+    <type>LayoutElement</type>
+
+    <policy>com.atex.plugins.brightcove.BrightCoveElementPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="renderTemplateIconInSelect">true</param>
+
+    <content-list name="videoContainer" input-template="com.atex.plugins.brightcove.ContentListWrapper">
+    </content-list>
+
+    <layout name="brightcoveelementcolumholder" input-template="p.ColumnHolder">
+      <layout name="brightcoveelementcolumn" input-template="p.Column">
+        <field name="name" input-template="p.ContentName" label="com.atex.plugins.brightcove.name" required="true" />
+        <field name="playerType" input-template="p.SelectableSubField" label="com.atex.plugins.brightcove.playerType" required="true">
+          <field name="video" input-template="com.atex.plugins.brightcove.video" label="com.atex.plugins.brightcove.video" />
+          <field name="contentlist" input-template="com.atex.plugins.brightcove.video.element.contentlist" label="com.atex.plugins.brightcove.video.contentlist" />
+          <field name="playlist" input-template="com.atex.plugins.brightcove.playlist" label="com.atex.plugins.brightcove.playlist" />
+        </field>
+        <field name="playerId" input-template="p.TextInput" label="com.atex.plugins.brightcove.playerId"/>
+        <field name="width" input-template="p.TextInput" label="com.atex.plugins.brightcove.width">
+          <policy>com.polopoly.cm.app.policy.NumberInputPolicy</policy>
+          <param name="type">int</param>
+          <param name="maxlength">5</param>
+          <param name="inlineHelp">true</param>
+          <param name="size">3</param>
+          <help>com.atex.plugins.brightcove.width.help</help>
+        </field>
+        <field name="height" input-template="p.TextInput" label="com.atex.plugins.brightcove.height">
+          <policy>com.polopoly.cm.app.policy.NumberInputPolicy</policy>
+          <param name="type">int</param>
+          <param name="maxlength">5</param>
+          <param name="inlineHelp">true</param>
+          <param name="size">3</param>
+          <help>com.atex.plugins.brightcove.height.help</help>
+        </field>
+      </layout>
+      <layout name="previewcolumn" input-template="p.Column">
+        <field name="preview" input-template="com.atex.plugins.brightcove.viewer" label="com.atex.plugins.brightcove.label.preview" />
+      </layout>
+    </layout>
+    <layout name="searchcolumnholder" input-template="p.ColumnHolder">
+      <layout name="searchcolumn" input-template="p.Column">
+        <field name="search" input-template="com.atex.plugins.brightcove.search"></field>      
+      </layout>
+    </layout>
+    <output-templates mode="www">
+      <id>com.atex.plugins.brightcove.MainElement.ot</id>
+    </output-templates>
+  </input-template>
+</template-definition>

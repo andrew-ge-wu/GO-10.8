@@ -1,0 +1,55 @@
+#set($rs = $m.context.site.bean.resources.strings)
+<div class="paywall hint" style="display: none;">&nbsp;</div>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    function showWarning(html) {
+        $(".hint").html(html);
+        setTimeout(function() {
+            $(".hint").fadeIn("slow");
+        }, 3000);
+    }
+    function parseMeteredCookieAllowedClicks(cookie_value) {
+        return cookie_value != null ? parseInt(cookie_value.split("|")[1]) : 0;
+    }
+    function parseMeteredViewedArticles(cookie_value) {
+        if (cookie_value != null) {
+            var viewedArticles = jQuery.trim(cookie_value.split("|")[2]);
+            if (viewedArticles != null && viewedArticles != "") {
+                return viewedArticles.split(":").length;
+            }
+        }
+        return 0;
+    }
+    function hasMeteredAccess(cookie_value, articleId) {
+        return (cookie_value != undefined && cookie_value.indexOf(articleId) !== -1)
+    }
+    function hasOnlineAccess(cookie_value, bundleIds) {
+        var onlineAccessArray = ((cookie_value != undefined) && (cookie_value != "")) ? cookie_value.split(":") : "";
+        var hasOnlineAccess = false;
+        for (var i = 0; i < bundleIds.length; i++) {
+            if (onlineAccessArray.indexOf(bundleIds[i]) >= 0) {
+                hasOnlineAccess = true;
+                break;
+            }
+        }
+        return hasOnlineAccess;
+    }
+    var articleId = '$!content.contentId.contentId.contentIdString';
+    var articleBundles = '$!premiumBundleIds'.split(":");
+    var meteredAccessValue = polopoly.cookie.get('p_metered_access');
+    var onlineAccessValue = polopoly.cookie.get('p_onlineaccess');
+    var sessionKey = polopoly.cookie.get('sessionKey');
+
+    var allowedClicks = parseMeteredCookieAllowedClicks(meteredAccessValue);
+    var viewedArticles = parseMeteredViewedArticles(meteredAccessValue);
+
+    var amountOfArticlesLeft = allowedClicks - viewedArticles;
+
+    if (hasMeteredAccess(meteredAccessValue, articleId) && !hasOnlineAccess(onlineAccessValue, articleBundles)) {
+        var html = "<h2>$!rs.paywall.warning.youhave <span>" + amountOfArticlesLeft + "</span>"
+                    + (amountOfArticlesLeft != 1 ? "$!rs.paywall.warning.comparticles" : "$!rs.paywall.warning.comparticle")
+                    + "</h2><span>$!rs.paywall.warning.enjoy </span>";
+        showWarning(html);
+    }
+});
+</script>

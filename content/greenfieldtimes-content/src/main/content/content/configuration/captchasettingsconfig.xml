@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content>
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>example.CaptchaSettingsConfig</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CaptchaSettings</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>p.UGCSettings</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Captcha Configuration</component>
+    <component group="enabled" name="value">true</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <externalid>p.UGCSettings</externalid>
+      </contentid>
+    </metadata>
+    <contentlist>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.CaptchaSettingsConfig</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+</batch>

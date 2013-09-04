@@ -1,0 +1,116 @@
+## (c) Polopoly AB (publ).
+## This software is protected by copyright law and international copyright
+## treaties as well as other intellectual property laws and treaties.
+## All title and rights in and to this software and any copies thereof
+## are the sole property of Polopoly AB (publ).
+## Polopoly is a registered trademark of Polopoly AB (publ).
+
+<link rel="stylesheet" type="text/css" href="#file({'contentId': $filesContentId, 'filename':'video.css', '':''})" />
+
+#set($view = $m.request.httpRequest.attributes.view)
+
+#set($videoBean = $content.videoBean)
+#set($request = $m.request.httpRequest)
+#set($image = $videoBean.getUrl($request))
+
+## Create link
+  #set($linkContext = $m.request.httpRequest.attributes.linkContext)
+  #if ($linkContext)
+    #set($path = $tool_path.concat($tool_path.getPathToRoot($linkContext.contentId), $content.contentId))
+  #else
+    #set($path = $content.parentIds)
+  #end
+  ## If parent ids of article is invalid, use path to current page
+  #if(!$tool_path.isValidPath($path))
+    ## If no current page exists, use the invalid path anyway
+    #if($m.context.page.contentPath)
+      #set($path = $tool_path.concat($m.context.page.contentPath, $content.contentId))
+    #end
+  #end
+
+#if(!$view || $view != "article")
+
+  <div class="element teaser">
+    ## Render linked thumbnail 
+    <a href="#link({"path": $path, 'htmlEncodeLink': 'true', "":""})">
+    <div class="brightcove teaserContainer">
+      <div class="brightcove teaserCol col1">
+        <img src="$!image"/>
+      </div>
+      <div class="brightcove teaserCol col2">
+        <div class="brightcove teaserCol content">$content.name</div>
+      </div>
+    </div>
+    </a>
+  </div>
+
+#else
+
+  ## player width
+  #if($m.stack.colwidth)
+    #set($widthVal = $m.stack.colwidth)
+    #set($heightVal = $math.toInteger($widthVal) * 3 / 5)
+  #else
+    #set($widthVal = "100%")
+    #set($heightVal = "450px")
+  #end
+
+  ## padding to avoid overflow
+  ## if the element is not paste in right column
+  #if($m.stack.colwidth)
+    #if($math.toInteger($m.stack.colwidth) != 300 && $math.toInteger($m.stack.colwidth) != 804)
+      #if($math.toInteger($widthVal) - $math.toInteger($m.stack.colwidth) < 8)
+        #set($widthVal = $math.sub($widthVal, 8))
+      #end
+    #end
+  #end
+
+  #set($playerId = $m.local.playerId)
+  #set($expId = $content.contentId.contentId.contentIdString.replaceAll('\.',''))
+  #if(!$m.global.bcexperienceloaded)
+  #set($m.global.bcexperienceloaded = true)
+    ##<script language="JavaScript" type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+    <script type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+  #end
+  <div class="container">
+    <div class="element article">
+      <div>
+        <h1>$!content.name</h1>
+      </div>
+      <object id="myExperience$expId" class="BrightcoveExperience">
+        <param name="bgcolor" value="#FFFFFF" />
+        <param name="width" value="$widthVal" />
+        <param name="height" value="$heightVal" />
+        <param name="playerID" value="$playerId" />
+        <param name="isVid" value="true" />
+        <param name="isUI" value="true" />
+        <param name="dynamicStreaming" value="true" />
+        <param name="@videoPlayer" value="$content.video.value" />
+      </object>
+  
+      ## related content
+      <div class="clearfix">
+        <div class="sideBar">
+          <div class="related">
+          #if($content.related.list && $content.related.list.size() > 0)
+            <h2>Related</h2>
+            <ul>
+            #foreach($entry in $content.related.list)
+              <li><a href="#link({"path": $entry.content.parentIds, 'htmlEncodeLink': 'true', "":""})">$entry.content.name</a></li>
+            #end
+            </ul>
+          #end
+
+          </div>
+          #if($content.elements)
+            #render({"content": $content.elements, "":""})
+          #end
+        </div>
+        <div class="leadContainer"><p class="lead">$content.shortDescription</p></div>
+        <div class="articleBody">$!content.longDescription</div>
+      </div>
+    </div>
+    <script type="text/javascript">brightcove.createExperiences();</script>
+  </div>
+#end
+

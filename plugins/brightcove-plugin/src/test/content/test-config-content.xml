@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>com.atex.plugins.brightcove.BrightcoveGreenfieldConfig</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.brightcove.BrightcoveSiteConfigTemplate</externalid>
+      </input-template>
+      <security-parent>
+        <major>AppConfig</major>
+        <externalid>com.atex.plugins.brightcove.BrightcoveConfigHome</externalid>
+      </security-parent>
+    </metadata>
+    <component group="readTokenUrl" name="value">9htdXeOZ1_fZaAHNKPUE7vJDpViOgAbOr4YuSFO_z_FO_n11JHyo8A..</component>
+    <component group="publisherId" name="value">1715776696001</component>
+    <component group="polopoly.Content" name="name">Greenfield Configuration</component>
+    <component group="department" name="count">1</component>
+    <component group="site" name="count">1</component>
+    <component group="previewPlayerId" name="value">1865220227001</component>
+    <component group="readToken" name="value">9htdXeOZ1_eb2iuRW9ls72U_5vaRFzkjCxqdoPoxj_h9FZEb-aWMeQ..</component>
+    <component group="writeToken" name="value">9htdXeOZ1_fZaAHNKPUE7vJDpViOgAbO33aa2hux4PQeR-VrEq0XZQ..</component>
+    <contentref group="department" name="reference0">
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="department" name="reference_parent0">
+      <contentid>
+        <major>Department</major>
+        <externalid>p.siteengine.Sites.d</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="site" name="reference0">
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="site" name="reference_parent0">
+      <contentid>
+        <major>Department</major>
+        <externalid>p.siteengine.Sites.d</externalid>
+      </contentid>
+    </contentref>
+  </content>
+
+  <content xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>com.atex.plugins.brightcove.BrightcoveConfigHome</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.brightcove.BrightcoveConfigTemplate</externalid>
+      </input-template>
+      <security-parent>
+        <major>InputTemplate</major>
+        <externalid>p.Configuration</externalid>
+      </security-parent>
+      </metadata>
+      <component group="polopoly.Content" name="name">Brightcove Configuration</component>
+      <component group="polopoly.ContentLists" name="brightcoveConfigs">brightcoveConfigs</component>
+      <contentref group="brightcoveConfigs" name="0">
+      <contentid>
+        <major>Article</major>
+        <externalid>com.atex.plugins.brightcove.BrightcoveGreenfieldConfig</externalid>
+      </contentid>
+    </contentref>
+  </content>
+</batch>

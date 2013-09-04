@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+
+  <!-- Template for Polopoly-managed users -->
+
+  <input-template name="p.UserEditor">
+    <policy>com.polopoly.cm.policy.UserDataPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+
+    <type>UserData</type>
+
+    <layout name="menu" input-template="p.PageMenu">
+      <layout name="userdata" input-template="p.Page" label="cm.general.StartPage">
+	    <field input-template="p.LoginName" name="LoginName" label="cm.field.loginName" />
+	    <field input-template="p.Password" name="Password"  label="cm.field.password" />
+	    <field input-template="p.TextInput" name="FirstName" label="cm.field.firstName" />
+	    <field input-template="p.TextInput" name="LastName" label="cm.field.lastName" />
+	    <field input-template="p.TextInput" name="Email" label="cm.field.email" />
+	    <field input-template="p.CMUser" name="IsCMUser" label="cm.field.isCmUser" />
+	    <field input-template="p.HomeDepartmentSelect" name="HomeDepartment" label="cm.field.homeDepartment" />
+	    <field input-template="p.LocaleSelect" name="Locale" label="cm.field.language" />
+	    <field input-template="p.SkinSelect" name="Skin" label="cm.field.skin.label" />
+	    <field input-template="p.siteengine.WorkingSitesProvider" name="workingSitesProvider" />
+      </layout>
+
+      <layout name="quickCreatorLayout" input-template="p.Page" label="cm.field.QuickCreator.preferences">
+        <field input-template="p.QuickCreator.Preferences" name="quickCreator">
+          <idparam name="availableSource"><externalid>p.QuickCreate.AvailableTemplateRepository</externalid></idparam>
+        </field>
+
+      </layout>
+      <layout name="shortcuts" input-template="p.Page" label="cm.shortcut.reference.Heading">
+        <field name="shortcutsQuickReference" input-template="p.ShortcutsQuickReference"/>
+      </layout>
+    </layout>
+  </input-template>
+
+  <!-- Template for externally managed users, with readonly attributes, for example LDAP users -->
+  
+  <input-template name="p.ExternalUserEditor">
+    <policy>com.polopoly.cm.policy.UserDataPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    
+    <type>UserData</type>
+    
+    <layout name="menu" input-template="p.PageMenu">
+      <layout name="userdata" input-template="p.Page" label="cm.general.StartPage">
+        <field input-template="p.LoginName" name="LoginName" label="cm.field.loginName" />
+        <field input-template="p.TextOutput" name="FirstName" label="cm.field.firstName" />
+        <field input-template="p.TextOutput" name="LastName" label="cm.field.lastName" />
+        <field input-template="p.TextOutput" name="Email" label="cm.field.email" />
+        <field input-template="p.CMUser" name="IsCMUser" label="cm.field.isCmUser" />
+        <field input-template="p.HomeDepartmentSelect" name="HomeDepartment" label="cm.field.homeDepartment" />
+        <field input-template="p.LocaleSelect" name="Locale" label="cm.field.language" />
+        <field input-template="p.SkinSelect" name="Skin" label="cm.field.skin.label" />
+        <field input-template="p.siteengine.WorkingSitesProvider" name="workingSitesProvider" />
+      </layout>
+
+      <layout name="quickCreatorLayout" input-template="p.Page" label="cm.field.QuickCreator.preferences">
+        <field input-template="p.QuickCreator.Preferences" name="quickCreator">
+            <idparam name="availableSource"><externalid>p.QuickCreate.AvailableTemplateRepository</externalid></idparam>
+        </field>
+      </layout>
+    </layout>
+  </input-template>
+
+</template-definition>

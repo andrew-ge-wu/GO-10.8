@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.Video" label="cm.template.example.Video">
+    <policy>example.content.video.VideoResourcePolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <editor contextName="orchid_SEARCHITEM">example.content.OResourceContentSearchItem</editor>
+    <viewer contextName="orchid_SEARCHITEM">example.content.OResourceContentSearchItem</viewer>
+    <editor contextName="orchid_TOCENTRY">example.content.OResourceContentListEntryPolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">example.content.OResourceContentListEntryPolicyWidget</viewer>
+    <type>Article</type>
+    <param name="templateIcon">movie.png</param>
+    <param name="renderTemplateIconInSelect">true</param>
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">true</param>
+    <param name="EditNewState_saveAndFastInsert">false</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="titleOfNewContent">cm.template.example.Video.new</param>
+    <param name="ViewState_copy">true</param>
+    <param name="cloneSecurityParent">currentOrHome</param>
+    <layout name="menu" input-template="p.PageMenu">
+      <layout name="standard" input-template="p.Page" label="cm.general.General">
+        <field name="file" input-template="p.SelectableSubField" label="cm.template.example.Video.VideoSource">
+          <param name="inlineHelp">true</param>
+          <help>cm.template.example.Video.VideoSource.help</help>
+          <field name="flashfile" input-template="p.SimpleFileUpload" label="cm.template.example.Video.UploadedVideo" required="true" externalid="example.Video.SimpleFileUpload">
+            <param name="suffixes">.flv,.FLV</param>
+          </field>
+          <field name="url" input-template="p.TextInput" label="cm.template.example.Video.RemoteVideoURL">
+            <param name="maxlength">2048</param>
+            <param name="inlineHelp">true</param>
+            <help>cm.template.example.Video.RemoteVideoURL.help</help>
+          </field>
+        </field>
+        <field name="image" input-template="p.ImageManager" label="cm.template.example.Video.PreviewImage" required="false" externalid="example.Video.ImageManager">
+          <param name="mode">singleUploadSingleSelect</param>
+          <param name="staticFilename">image</param>
+          <param name="allowEdit">true</param>
+          <param name="maxNofPixels">8000000</param>
+          <param name="showPasteButton">false</param>
+          <param name="openEditorOnUpload">true</param>
+          <param name="openEditorOnSelect">true</param>
+          <param name="appletWidth">640</param>
+          <param name="appletHeight">480</param>
+          <param name="appletState">
+            <![CDATA[
+                     <imageapplet>
+                     <buttonset name="zoombuttons">
+                     <button label="Zoom In" icon="zoom_in.png" action="ZoomInImageAppletAction"/>
+                     <button label="Zoom Out" icon="zoom_out.png" action="ZoomOutImageAppletAction"/>
+                     </buttonset>
+                     <buttonset name="rotatemirrorbuttons">
+                     <button label="Rotate" icon="rotate_cw.png" action="ClockwiseRotateImageAppletAction"/>
+                     <button label="Mirror" icon="mirror.png" action="HorizontalMirrorImageAppletAction"/>
+                     </buttonset>
+                     <editmode name="previewEdit" label="Preview" description="Used as preview image for this movie">
+                     <buttonset name="gallerybs">
+                     <includebuttonset name="rotatemirrorbuttons"/>
+                     <button label="Crop" icon="crop.png" action="CropEditImageAppletAction"/>
+                     <button label="Scramble" icon="photo_portrait.png" action="ScrambleEditImageAppletAction"/>
+                     <separator/>
+                     <includebuttonset name="zoombuttons"/>
+                     </buttonset>
+                     <derivative name="preview_320" label="Preview 320px">
+                     <postprocess>
+                     <transform code="resize2maxw320h240"/>
+                     </postprocess>
+                     </derivative>
+                     </editmode>
+                     </imageapplet>
+            ]]>
+          </param>
+          <param name="inlineHelp">true</param>
+          <help>cm.template.example.Video.PreviewImage.help</help>
+        </field>
+        <field name="previewVideo" input-template="example.videoPlayer" label="cm.template.example.Video.PreviewPlayer" />
+        <field name="refreshVideoPreview" input-template="example.refreshButton" label="cm.template.example.Video.UpdatePreview"/>
+        <field name="name" input-template="p.ContentName" label="cm.label.Title" required="true" />
+        <field name="lead" input-template="p.TextArea" label="cm.general.Description">
+          <param name="rows">3</param>
+          <param name="cols">50</param>
+          <param name="inlineHelp">true</param>
+          <help>cm.template.example.Video.Description.help</help>
+        </field>
+        <field name="byline" input-template="p.TextInput" label="cm.general.Byline">
+          <param name="inlineHelp">true</param>
+          <help>cm.template.example.Video.ByLine.help</help>
+        </field>
+        <field name="contact" input-template="p.TextInput" label="cm.general.Contact">
+          <param name="inlineHelp">true</param>
+          <help>cm.template.example.Video.Contact.help</help>
+        </field>
+        <field name="licenseurl" input-template="p.TextInput" label="cm.template.example.Video.LicenseURL">
+          <param name="inlineHelp">true</param>
+          <help>cm.template.example.Video.LicenseURL.help</help>
+        </field>
+        <field name="categorization" input-template="p.Metadata" label="cm.general.Categorization">
+          <param name="inlineHelp">true</param>
+          <help>cm.template.example.Video.Categorization.help</help>
+        </field>
+      </layout>
+      <layout name="advanced" input-template="p.Page" label="cm.general.Advanced">
+        <field name="parent" input-template="p.SecurityParentSelect" label="cm.label.HomeDepartment">
+          <param name="inlineHelp">true</param>
+          <help>cm.template.example.Video.HomeDepartment.help</help>
+        </field>
+      </layout>
+    </layout>
+
+    <output-templates mode="www">
+      <id>example.Video.ot</id>
+    </output-templates>
+  </input-template>
+  <output-template name="example.Video.ot" input-template="p.siteengine.ArticleOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/controller" name="selected">
+        <contentid>
+          <externalid>p.siteengine.JavaClassRenderController</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/controller/selected/renderControllerClass" name="value">example.content.video.RenderControllerVideo</component>
+
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/www/video.vm</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+    </content-xml>
+  </output-template>
+</template-definition>

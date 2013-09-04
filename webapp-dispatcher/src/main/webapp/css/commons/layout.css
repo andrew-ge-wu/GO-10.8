@@ -1,0 +1,152 @@
+/* 
+ * POLOPOLY SITE ENGINE *LAYOUT* MASTER TEMPLATE
+ * ---------------------------------------------
+ * This stylesheet contains basic layout for a 
+ * Site Engine implementation.
+ *
+ * This document declares widths, relations, 
+ * margins and paddings. See ui.css for "look and 
+ * feel" declarations.
+ * 
+ * Refer to Site Engine documentation for further
+ * explanation of the declared elements below.
+ *
+ * NOTE: rules beggining with an underscore (_)
+ * are IE hacks and should remain as is.
+ */
+ 
+
+/* THE "SITE" CONTAINER */
+.borderLayout {
+	width: 100%;
+	overflow: hidden;
+	_height: 1%;
+}
+
+
+/* A MAIN GRID COLUMN */
+.borderLayoutColumn {
+	float: left;
+	overflow: hidden;
+	_height: 1%;
+}
+
+
+/* TOP & SUB MENU */
+.borderLayoutMastHead .menu.menuTop,
+.menu.menuPage {
+	overflow: hidden;
+	_height: 1%;
+}
+.borderLayoutMastHead .menu.menuTop LI,
+.borderLayoutMastHead .menu.menuPage LI {
+	float: left;
+}
+
+/* CONTAINER */
+.container {
+	overflow: hidden;
+	_height: 1%;
+}
+
+/* NAVIGATION PATH ELEMENT */
+.navpath {
+	overflow: hidden;
+	_height: 1%;
+}
+.navpath LI {
+	float: left;
+}
+
+/* twoColumns container layout */
+.container.twoColumns DIV.col1,
+.container.twoColumns DIV.col2 {
+	width: 49.9%;
+	float: left;
+	overflow: hidden;
+}
+.container.twoColumnsLeftHeavy DIV.col1 {
+	float: left;
+	width: 62.5%;
+	overflow: hidden;
+}
+.container.twoColumnsLeftHeavy DIV.col2 {
+	float: left;
+	width: 37.5%;
+	overflow: hidden;
+}
+.container.twoColumnsRightHeavy DIV.col1 {
+	float: left;
+	width: 37.5%;
+	overflow: hidden;
+}
+.container.twoColumnsRightHeavy DIV.col2 {
+	float: left;
+	width: 62.5%;
+	overflow: hidden;
+}
+
+
+/* threeColumn container layout */
+.container.threeColumns DIV.col1,
+.container.threeColumns DIV.col2,
+.container.threeColumns DIV.col3 {
+	float: left;
+	width: 33.333%;
+	overflow: hidden;
+}
+.container.threeColumnsLeftHeavy DIV.col1 {
+	float: left;
+	width: 50%;
+	overflow: hidden;
+}
+.container.threeColumnsLeftHeavy DIV.col2,
+.container.threeColumnsLeftHeavy DIV.col3 {
+	float: left;
+	width: 25%;
+	overflow: hidden;
+}
+.container.threeColumnsRightHeavy DIV.col3 {
+	float: left;
+	width: 50%;
+	overflow: hidden;
+}
+.container.threeColumnsRightHeavy DIV.col1,
+.container.threeColumnsRightHeavy DIV.col2 {
+	float: left;
+	width: 25%;
+	overflow: hidden;
+}
+.container.threeColumnsCenterHeavy DIV.col2 {
+	float: left;
+	width: 50%;
+	overflow: hidden;
+}
+.container.threeColumnsCenterHeavy DIV.col1,
+.container.threeColumnsCenterHeavy DIV.col3 {
+	float: left;
+	width: 25%;
+	overflow: hidden;
+}
+
+/* fourColumn container layout */
+.container.fourColumns DIV.col1,
+.container.fourColumns DIV.col2,
+.container.fourColumns DIV.col3,
+.container.fourColumns DIV.col4 {
+	width: 25%;
+	float: left;
+	overflow: hidden;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.hide {
+  display: none;
+}
+

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.DefaultPageLayout">
+    <content-xml>
+      <component group="polopoly.Content" name="name">Default page layout</component>
+    </content-xml>
+    <policy>com.polopoly.siteengine.standard.content.ContentBasePolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <layout name="menu" input-template="p.AjaxPageMenu">
+      <layout name="mainpage" input-template="p.Page" label="cm.template.example.DefaultPageLayout.MainAndRightColumn">
+        <layout name="widesec" input-template="p.LabeledSection" label="cm.template.example.DefaultPageLayout.WideColumn">
+          <field name="wide" input-template="p.siteengine.layout.Slot.it">
+            <param name="defaultInheritSetting">false</param>
+            <param name="displayInheritSetting">false</param>
+          </field>
+        </layout>
+        <layout name="maincols" input-template="p.ColumnHolder">
+          <layout name="maincol" input-template="p.Column">
+            <layout name="mainsec" input-template="p.LabeledSection" label="cm.template.example.DefaultPageLayout.MainColumn">
+              <field name="main" input-template="p.siteengine.layout.Slot.it">
+                <param name="defaultInheritSetting">false</param>
+                <param name="displayInheritSetting">false</param>
+               </field>
+            </layout>
+          </layout>
+          <layout name="rightcol" input-template="p.Column">
+            <layout name="righttopsec" input-template="p.LabeledSection" label="cm.template.example.DefaultPageLayout.RightTopColumn">
+              <field name="righttop" input-template="p.siteengine.layout.Slot.it">
+                <param name="defaultInheritSetting">true</param>
+                <param name="displayInheritSetting">true</param>
+              </field>
+            </layout>
+            <layout name="rightsec" input-template="p.LabeledSection" label="cm.template.example.DefaultPageLayout.RightColumn">
+              <field name="right" input-template="p.siteengine.layout.Slot.it">
+                <param name="defaultInheritSetting">true</param>
+                <param name="displayInheritSetting">true</param>
+              </field>
+            </layout>
+          </layout>
+        </layout>
+      </layout>
+      <layout name="secondarypage" input-template="p.Page" label="cm.template.example.DefaultPageLayout.HeaderAndNavigation">
+        <layout name="secondarycols" input-template="p.ColumnHolder">
+          <layout name="headercol" input-template="p.Column">
+            <layout name="topheadersec" input-template="p.LabeledSection" label="cm.template.example.DefaultPageLayout.TopHeader">
+              <field name="topheader" input-template="p.siteengine.layout.Slot.it">
+                <param name="defaultInheritSetting">true</param>
+                <param name="displayInheritSetting">false</param>
+              </field>
+            </layout>
+            <layout name="headersec" input-template="p.LabeledSection" label="cm.template.example.DefaultPageLayout.Header">
+              <field name="header" input-template="p.siteengine.layout.Slot.it">
+                <param name="defaultInheritSetting">true</param>
+                <param name="displayInheritSetting">false</param>
+              </field>
+            </layout>
+          </layout>
+          <layout name="navcol" input-template="p.Column">
+            <layout name="navsec" input-template="p.LabeledSection" label="cm.template.example.DefaultPageLayout.NavigationColumn">
+              <field name="nav" input-template="p.siteengine.layout.Slot.it">
+                <param name="defaultInheritSetting">true</param>
+                <param name="displayInheritSetting">false</param>
+              </field>
+            </layout>
+            <layout name="mobileheadersec" input-template="p.LabeledSection" label="cm.template.example.DefaultPageLayout.MobileHeader">
+              <field name="mobileheader" input-template="p.siteengine.layout.Slot.it">
+                <param name="defaultInheritSetting">true</param>
+                <param name="displayInheritSetting">false</param>
+              </field>
+            </layout>
+            <layout name="seospec" input-template="p.LabeledSection" label="cm.template.example.BlogPageLayout.Seo">
+              <field name="metadescription" input-template="p.TextArea" label="cm.template.example.DefaultPageLayout.Seo.MetaDescription"/>
+            </layout>
+          </layout>
+        </layout>  
+      </layout>
+      <layout name="tertiarypage" input-template="p.Page" label="cm.template.example.DefaultPageLayout.Banners">
+        <layout name="topheaderbannersec" input-template="p.LabeledSection" label="cm.template.example.DefaultPageLayout.Banners.HeaderBanners">
+          <field name="topheaderbanner" input-template="p.siteengine.layout.BannerSlot.it">
+            <param name="defaultInheritSetting">true</param>
+            <param name="displayInheritSetting">false</param>
+            <param name="width">993</param>
+          </field>
+        </layout>
+        <layout name="rightbanner_topsec" input-template="p.LabeledSection" label="cm.template.example.DefaultPageLayout.Banners.RightTop">
+          <field name="rightbanner_top" input-template="p.siteengine.layout.BannerSlot.it">
+            <param name="defaultInheritSetting">true</param>
+            <param name="displayInheritSetting">false</param>
+            <param name="width">300</param>
+          </field>
+        </layout>
+        <layout name="rightbanner_bottomsec" input-template="p.LabeledSection" label="cm.template.example.DefaultPageLayout.Banners.RightBottom">
+          <field name="rightbanner_bottom" input-template="p.siteengine.layout.BannerSlot.it">
+            <param name="defaultInheritSetting">true</param>
+            <param name="displayInheritSetting">false</param>
+            <param name="width">300</param>
+          </field>
+        </layout>
+      </layout>
+      <layout name="leftoverspage" input-template="p.Page" label="cm.template.p.siteengine.LeftOvers.UnassignedContent">
+        <layout name="leftoverssec" input-template="p.LabeledSection" label="cm.template.p.siteengine.LeftOvers.UnassignedContent">
+          <field name="leftOvers" input-template="p.siteengine.LeftOvers" label="" />
+        </layout>
+      </layout>
+    </layout>
+    <output-templates mode="www">
+      <id>example.DefaultPageLayout.ot</id>
+    </output-templates>
+    <output-templates mode="mobile">
+      <id>example.MobileDefaultPageLayout.ot</id>
+    </output-templates>
+  </input-template>
+  <output-template name="example.DefaultPageLayout.ot" input-template="p.siteengine.PageLayoutOutputTemplate">
+    <content-xml>
+      <component group="polopoly.Content" name="name">Default page layout</component>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/www/defaultpagelayout.vm</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+      <component group="output/controller/selected/renderControllerClass" name="value">example.layout.RenderControllerDefaultPageLayout</component>      
+    </content-xml>
+  </output-template>
+  <output-template name="example.MobileDefaultPageLayout.ot" input-template="p.siteengine.PageLayoutOutputTemplate">
+    <content-xml>
+      <component group="polopoly.Content" name="name">Default page layout</component>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/mobile/defaultpagelayout.vm</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+    </content-xml>
+  </output-template>
+</template-definition>

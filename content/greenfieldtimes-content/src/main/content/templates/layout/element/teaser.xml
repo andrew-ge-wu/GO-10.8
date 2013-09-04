@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.TeaserElement" label="cm.template.example.TeaserElement">
+    <policy>example.layout.element.teaser.TeaserPolicy</policy>
+
+    <editor>com.polopoly.cm.app.widget.OAjaxTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OAjaxTopPolicyWidget</viewer>
+
+    <type>LayoutElement</type>
+
+    <param name="enableAutosave">true</param>
+
+    <param name="ViewState_insert">false</param>
+    <param name="ViewState_refresh">true</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+
+    <param name="titleOfNewContent">cm.template.example.TeaserElement.new</param>
+    <param name="templateIcon">text_teaser.png</param>
+    <param name="renderTemplateIconInSelect">true</param>
+
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+
+
+    <content-list name="articles" input-template="example.TeaserImageInitContentListWrapper" />
+
+    <layout name="text" input-template="p.Group">
+      <layout name="name" input-template="p.Group" label="cm.label.Title">
+        <param name="fieldsetClass">field p_resizable_text p_spaceable_text</param>
+        <field name="name" input-template="p.ContentName" label="cm.label.Title" required="false">
+          <param name="fieldsetClass">field text heading</param>
+          <param name="showLabel">false</param>
+          <param name="cols">50</param>
+          <param name="tabIndex">1</param>
+        </field>
+        <layout name="title tools" input-template="p.Group">
+          <param name="showLabel">false</param>
+          <param name="fieldsetClass">tools</param>
+          <field name="titleFontSize" input-template="p.TextInput" label="cm.template.example.TeaserElement.TitleFontSize">
+            <help>cm.template.example.TeaserElement.TitleFontSize.help</help>
+            <policy>com.polopoly.cm.app.policy.NumberInputPolicy</policy>
+            <param name="fieldsetClass">field p_font_size</param>
+            <param name="type">int</param>
+            <param name="size">3</param>
+            <param name="title">cm.template.example.TeaserElement.TitleFontSize</param>
+            <param name="tabIndex">11</param>
+          </field>
+          <field name="titleLetterSpacing" input-template="p.TextInput" label="cm.template.example.TeaserElement.TitleLetterSpacing">
+            <help>cm.template.example.TeaserElement.TitleLetterSpacing.help</help>
+            <policy>com.polopoly.cm.app.policy.NumberInputPolicy</policy>
+            <param name="fieldsetClass">field p_letter_spacing</param>
+            <param name="type">int</param>
+            <param name="size">2</param>
+            <param name="title">cm.template.example.TeaserElement.TitleLetterSpacing</param>
+            <param name="tabIndex">12</param>
+          </field>
+        </layout>
+      </layout>
+      <layout name="teaser" input-template="p.Group" label="cm.label.Text">
+        <param name="fieldsetClass">field p_resizable_text</param>
+        <field name="teaser" input-template="p.TextArea" label="">
+          <param name="fieldsetClass">field text</param>
+          <param name="showLabel">false</param>
+          <param name="rows">3</param>
+          <param name="cols">82</param>
+          <param name="tabIndex">2</param>
+        </field>
+        <layout name="teaser tools" input-template="p.Group">
+          <param name="fieldsetClass">tools</param>
+          <field name="teaserFontSize" input-template="p.TextInput" label="cm.template.example.TeaserElement.TextFontSize.label">
+            <help>cm.template.example.TeaserElement.TextFontSize.help</help>
+            <policy>com.polopoly.cm.app.policy.NumberInputPolicy</policy>
+            <param name="fieldsetClass">field p_font_size</param>
+            <param name="type">int</param>
+            <param name="size">3</param>
+            <param name="title">cm.template.example.TeaserElement.TextFontSize</param>
+            <param name="tabIndex">13</param>
+          </field>
+        </layout>
+      </layout>
+    </layout>
+    <layout name="otherContent" input-template="p.Group">
+      <field name="articles" input-template="p.ContentListEntryContainer" label="cm.template.example.TeaserElement.article">
+        <param name="contentListName">articles</param>
+        <param name="showActionButtonsInViewMode">false</param>
+        <param name="forceReload">true</param>
+      </field>
+      <field name="image" input-template="p.ImageEditor" label="cm.general.Image" externalid="field.image.p.ImageEditor">
+        <param name="supportedDerivativeType_value_0">landscape</param>
+        <param name="supportedDerivativeType_label_0">cm.template.example.TeaserElement.ImagePosition.top</param>
+        <param name="supportedDerivativeType_value_1">box</param>
+        <param name="supportedDerivativeType_label_1">cm.template.example.TeaserElement.ImagePosition.inline</param>
+        <param name="width">490</param>
+        <param name="acceptResourceTypes">image</param>
+      </field>
+      <field name="style" input-template="p.RadioButtonGroup" label="cm.label.Style">
+        <param name="label_0">cm.label.Default</param>
+        <param name="value_0">Default</param>
+        <param name="label_1">cm.template.example.TeaserElement.Style.BreakingNews</param>
+        <param name="value_1">BreakingNews</param>
+        <param name="label_2">cm.template.example.TeaserElement.Style.Highlighted</param>
+        <param name="value_2">Highlighted</param>
+        <param name="selected">0</param>
+      </field>
+    </layout>
+
+    <output-templates mode="www">
+      <id>example.TeaserElement.ot</id>
+    </output-templates>
+    <output-templates mode="mobile">
+      <id>example.MobileTeaserElement.ot</id>
+    </output-templates>
+  </input-template>
+  <!-- Teasers render differently depending on not just the
+       standard parameters, but also depending on the width of the
+       column they are in, which is used to determine which image
+       to display.  This means we need an extra component in the
+       cache key, beyond just content ID, mode and view.  We could
+       just use the raw colwidth attribute which is set by the
+       column splitter for this, but we only use that to figure
+       out which image width to use.  So we let the controller
+       store the width of the image used in the model, and then
+       use that, rather than the column width, to generate the
+       cache key.  This increases the hit rate when there are many
+       different column widths, without sacrificing
+       correctness. -->
+  <output-template name="example.TeaserElement.ot" input-template="p.siteengine.ElementOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">custom</component>
+      <component group="output/modelPaths" name="value">m.local.content.contentId;m.local.article.contentId;m.local.article.premiumContent;m.local.referredImageId;m.request.view;m.request.mode;m.local.imageDerivativeKey</component>
+      <contentref group="output/controller" name="selected">
+        <contentid>
+          <externalid>p.siteengine.JavaClassRenderController</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/controller/selected/renderControllerClass" name="value">example.layout.element.teaser.RenderControllerTeaserElement</component>
+      <component group="output/interactivePreviewEditableObjectName" name="value">Example.EditableTeaser</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/www/teaser.vm</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+    </content-xml>
+  </output-template>
+  <output-template name="example.MobileTeaserElement.ot" input-template="p.siteengine.ElementOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">custom</component>
+      <component group="output/modelPaths" name="value">m.local.content.contentId;m.local.article.contentId;m.local.referredImageId;m.request.view;m.request.mode;m.local.imageDerivativeKey</component>
+      <contentref group="output/controller" name="selected">
+        <contentid>
+          <externalid>p.siteengine.JavaClassRenderController</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/controller/selected/renderControllerClass" name="value">example.layout.element.teaser.RenderControllerTeaserElement</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/mobile/teaser.vm</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+    </content-xml>
+  </output-template>
+</template-definition>

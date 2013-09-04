@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.latestbloggedlist</externalid>
+      </contentid>
+
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ListElement</externalid>
+      </input-template>
+
+      <security-parent>
+        <major>LayoutElement</major>
+        <externalid>newextidextidnewexample.tabViewGreenfieldTimes</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Latest blogged</component>
+    <component group="maximumAmount" name="value">3</component>
+    <component group="polopoly.ContentLists" name="publishingQueue">publishingQueue</component>
+    <component group="viewMode" name="selected">link_timestamp</component>
+
+    <contentref group="publishingQueue" name="0">
+
+      <contentid>
+        <major>Article</major>
+        <externalid>example.latestbloggedpq</externalid>
+      </contentid>
+    </contentref>
+  </content>
+
+</batch>

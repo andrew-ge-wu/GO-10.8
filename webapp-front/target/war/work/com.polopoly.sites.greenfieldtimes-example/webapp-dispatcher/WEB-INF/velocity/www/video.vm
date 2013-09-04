@@ -1,0 +1,29 @@
+#set($rs = $m.context.site.bean.resources.strings)
+
+<div class="video">
+  #set($playerId = "video_" + $m.local.controllerContext.renderId + "_" + $content.contentId.contentId.contentIdString.replaceAll('\.', '_'))
+  #set($videoContentId = $content.contentId)
+  #set($videoPreviewImage = $m.local.previewImagePath)
+
+  #if($videoPath)
+    <div id="$playerId"><a href="http://www.adobe.com/support/flashplayer/downloads.html">$rs.video.missingPlayer</a></div>
+    
+     <script type="text/javascript">
+       jQuery(document).ready(function() {
+
+         // We try to calculate width and height based on
+         // the actual client width / height
+         var width = jQuery("#$playerId").width();
+         var height = Math.floor((width * 0.75) + 24);
+
+         jwplayer("$playerId").setup({
+           "flashplayer": "/swf/player.swf",
+           #if($videoPreviewImage) "image": "#file({"filename": $videoPreviewImage, "contentId": $videoContentId, "":""})",#end
+           "file": "$videoPath",
+           "width": width,
+           "height": height
+         });
+     });
+     </script>
+   #end
+</div>

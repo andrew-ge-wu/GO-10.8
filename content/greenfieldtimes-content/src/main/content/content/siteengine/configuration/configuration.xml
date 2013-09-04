@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <!-- Localized strings -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>localizedstrings.english</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.siteengine.LocalizedStrings.d</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.siteengine.LocalizedStrings</externalid>
+      </input-template>
+    </metadata>
+    <component name="name" group="polopoly.Content">English</component>
+    <component group="lc" name="value">en</component>
+    <component group="cc" name="value">US</component>
+    <component group="localizedstrings" name="breakingnews.title">Breaking News</component>
+    <component group="localizedstrings" name="search.search">Search</component>
+    <component group="localizedstrings" name="search.showing">Showing</component>
+    <component group="localizedstrings" name="search.of">of</component>
+    <component group="localizedstrings" name="search.yoursearchfor">Your search for</component>
+    <component group="localizedstrings" name="search.didnotmatch">did not match any documents</component>
+    <component group="localizedstrings" name="search.previous">Previous</component>
+    <component group="localizedstrings" name="search.next">Next</component>
+    <!-- Content comments -->
+    <component group="localizedstrings" name="comments.button.commentthisarticle">Comment this article</component>
+    <component group="localizedstrings" name="comments.button.commentthisblog">Comment this blog post</component>
+    <component group="localizedstrings" name="comments.comment">Send comment</component>
+    <component group="localizedstrings" name="comments.comments">Comments</component>
+    <component group="localizedstrings" name="comments.writtenby">Written by</component>
+    <component group="localizedstrings" name="comments.writecomment">Write your comment here</component>
+    <component group="localizedstrings" name="comments.yourname">Your name</component>
+    <component group="localizedstrings" name="comments.loggedinauthor">Since you are logged in, your screen name will be used for the author field.</component>
+    <component group="localizedstrings" name="comments.next"><![CDATA[Next &raquo;]]></component>
+    <component group="localizedstrings" name="comments.previous"><![CDATA[&laquo; Previous]]></component>
+    <component group="localizedstrings" name="comments.acceptterms">I have read and accepted</component>
+    <component group="localizedstrings" name="comments.licenseandterms">the website's terms for commenting</component>
+    <component group="localizedstrings" name="comments.nofcomments">posted comments</component>
+    <component group="localizedstrings" name="comments.signature.separator"><![CDATA[,&nbsp;]]></component>
+    <component group="localizedstrings" name="comments.inputerror">
+      For a comment to be approved the comment and a name must be filled in and the checkbox for accepting the terms must be checked.
+    </component>
+    <component group="localizedstrings" name="comments.temporarilyunavailable">Commenting is temporarily unavailable</component>
+    <component group="localizedstrings" name="comments.closedforwrite">This article is closed for commenting</component>
+    <component group="localizedstrings" name="comments.bethefirsttocomment">Be the first to comment on this article!</component>
+    <component group="localizedstrings" name="comments.premoderatedpost">Thank you for your comment. It will be shown when it has been approved by a moderator.</component>
+    <component group="localizedstrings" name="comments.reportabuse">Report</component>
+    <component group="localizedstrings" name="comments.report.title.done">Your report has been sent!</component>
+    <component group="localizedstrings" name="comments.report.title">Report comment</component>
+    <component group="localizedstrings" name="comments.report.close">Close window</component>
+    <component group="localizedstrings" name="comments.report.cancel">Cancel</component>
+    <component group="localizedstrings" name="comments.report.reason">Explain briefly why you think the comment should be removed:</component>
+    <component group="localizedstrings" name="comments.report.name">Your name:</component>
+    <component group="localizedstrings" name="comments.report.email">Your email address:</component>
+    <component group="localizedstrings" name="comments.report.send">Send</component>
+    <component group="localizedstrings" name="comments.report.thanks">
+      The comment has been reported and will be reviewed by our moderators. They will remove the comment if they find it inappropriate.
+    </component>
+    <component group="localizedstrings" name="comments.status.reported">Reported!</component>
+    <component group="localizedstrings" name="comments.report.alreadyreported">You have already reported this comment.</component>
+    <component group="localizedstrings" name="comments.date.format">d MMMMM yyyy 'kl.' HH:mm</component>
+    <component group="localizedstrings" name="comments.report.email.subject">New report on comment!</component>
+    <component group="localizedstrings" name="comments.report.email.message">Report:</component>
+    <component group="localizedstrings" name="comments.report.email.postid">Posting id:</component>
+    <component group="localizedstrings" name="comments.report.email.authorName">Reported by:</component>
+    <component group="localizedstrings" name="comments.report.email.authorEmail">Email:</component>
+    <component group="localizedstrings" name="comments.typeincharacters">Type in the characters you see in the picture below. If you have trouble reading the characters in the picture, click it to see a new one.</component>
+    <component group="localizedstrings" name="comments.requirescookies">You need to have cookies enabled to comment.</component>
+    <component group="localizedstrings" name="comments.deleteComment">Delete</component>
+    <component group="localizedstrings" name="comments.confirmDeleteComment">Do you really want to delete the comment?</component>
+    
+    <component group="localizedstrings" name="membership.loginname">E-mail/Login name</component>
+    <component group="localizedstrings" name="membership.errorEmail">Not a valid e-mail address.</component>
+    <component group="localizedstrings" name="membership.badbrowser">You need Javascript activated to view this page.</component>
+    <component group="localizedstrings" name="membership.errorRequired">Field required.</component>
+    <component group="localizedstrings" name="membership.errorPasswordMin4">Password has to be at least four characters.</component>
+    <component group="localizedstrings" name="membership.errorPasswordNotEqual">Passwords don't match.</component>
+    <component group="localizedstrings" name="membership.serverdown">An error occurred. Please try again later.</component>
+
+    <component group="localizedstrings" name="resetpassword.subject">Your password has been reset.</component>
+    <component group="localizedstrings" name="resetpassword.messagepattern"><![CDATA[
+        <html>
+            <head></head>
+            <body>
+                <h3>Dear user</h3>
+                <p>Your password has been reset to: {0}</p>
+                <p>Please login and change it as soon as possible.</p>
+                <p>Regards<br/>{1}</p>
+            </body>
+        </html>
+    ]]></component>
+    <component group="localizedstrings" name="resetpassword.successheader">Password successfully reset!</component>
+    <component group="localizedstrings" name="resetpassword.successbody">Your password has been reset. An e-mail containing your new, autogenerated password has been sent to you.</component>
+    <component group="localizedstrings" name="resetpassword.resetPasswordHeader">Reset password</component>
+    <component group="localizedstrings" name="resetpassword.introduction">Please enter your e-mail address in the form below in order to reset your password. An e-mail containing a new password will be sent to the address associated with your Greenfield Times account.</component>
+    <component group="localizedstrings" name="resetpassword.reset">Reset!</component>
+    <component group="localizedstrings" name="resetpassword.invaliduser">Invalid e-mail/login name</component>  
+    
+    <component group="localizedstrings" name="login.autherror">Invalid username or password</component>
+    <component group="localizedstrings" name="login.defaulterror">Error! Please try again</component>
+    <component group="localizedstrings" name="login.defaultlogin">E-mail</component>
+    <component group="localizedstrings" name="login.downerror">Login is currently unvailable. Please try again in a few minutes.</component>
+    <component group="localizedstrings" name="login.usererror">There seems to be a problem with your user account. Please contact customer services.</component>
+    <component group="localizedstrings" name="login.login">Login</component>
+    <component group="localizedstrings" name="login.logout">Log out</component>
+    <component group="localizedstrings" name="login.memberlogin">Member Login</component>
+    <component group="localizedstrings" name="login.permerror">Please log in to see this page</component>
+    <component group="localizedstrings" name="login.recoverpassword">Forgot your password?</component>
+    <component group="localizedstrings" name="login.register">Sign Up</component>
+    <component group="localizedstrings" name="login.loggedinas">Logged in as</component>
+    <component group="localizedstrings" name="login.profile">My Profile</component>
+    <component group="localizedstrings" name="video.missingPlayer">Get the Flash Player to see this video.</component>
+    
+    <component group="localizedstrings" name="registration.header">Sign Up</component>
+    <component group="localizedstrings" name="registration.introduction">Please use the form below to create a new Greenfield Times account. As a member of Greenfield Times you will get access to personalized features such as blogs.</component>
+    <component group="localizedstrings" name="registration.password">Password</component>
+    <component group="localizedstrings" name="registration.checkpassword">Verify password</component>
+    <component group="localizedstrings" name="registration.create">Sign Up</component>
+    <component group="localizedstrings" name="registration.screenname">Display name</component>
+    <component group="localizedstrings" name="registration.successbody">You are now registered! Log in to enjoy the new functionality.</component>
+    <component group="localizedstrings" name="registration.successheader">Congratulations!</component>
+    <component group="localizedstrings" name="registration.errorLoginAlreadyExists">Sorry this login name is already in use.</component>
+    <component group="localizedstrings" name="registration.errorScreenname">Only alphanumeric characters, _, - and space allowed.</component>
+    <component group="localizedstrings" name="registration.passwordstrength.titel">Password strength:</component>
+    <component group="localizedstrings" name="registration.passwordstrength.tooltip">Lets you know visually how safe your password is.</component>
+    
+    <component group="localizedstrings" name="captcha.error">Word verification failed</component>
+    <component group="localizedstrings" name="captcha.wordverification">Word verification</component>       
+    
+    <component group="localizedstrings" name="profile.changePasswordHeader">Change password</component>
+    <component group="localizedstrings" name="profile.introduction">Please use the form below to change your password.</component>
+    <component group="localizedstrings" name="profile.successheader">Password successfully changed!</component>
+    <component group="localizedstrings" name="profile.successbody">The next time you login you have to use your new password. Your old password is no longer valid and can not be used anymore.</component>
+    <component group="localizedstrings" name="profile.currentPassword">Old password</component>
+    <component group="localizedstrings" name="profile.password">New password</component>
+    <component group="localizedstrings" name="profile.checkPassword">Verify new password</component>
+    <component group="localizedstrings" name="profile.change">Change!</component>    
+    <component group="localizedstrings" name="profile.errorAuthorizationFailed">Invalid old password</component>
+    <component group="localizedstrings" name="profile.invalidNewPassword">Invalid new password</component>
+    <component group="localizedstrings" name="profile.errorNotLoggedIn">You have to be logged in to change password</component> 
+    <component group="localizedstrings" name="profile.notLoggedInBody">You have to log in to use this service.</component>
+    <component group="localizedstrings" name="profile.profileHeader">My Profile</component>
+    
+    <component group="localizedstrings" name="mynewslist.edit">Edit</component>
+    <component group="localizedstrings" name="mynewslist.save">Save</component>
+    <component group="localizedstrings" name="mynewslist.error">Failed to save. Please try again in a few minutes.</component>
+
+    <component group="localizedstrings" name="blog.myBlogsHeader">My Blogs</component>
+    <component group="localizedstrings" name="blog.myBlogsIntroduction">Below you will find information and tools to help you create and manage your Greenfield Times blogs.</component>
+    <component group="localizedstrings" name="blog.createBlog">Create a new blog</component>
+    <component group="localizedstrings" name="blog.createBlogHeader">Create new blog</component>
+    <component group="localizedstrings" name="blog.createBlogIntroduction">When created, the new blog will be visible in the "My blogs" listing below.</component>
+    <component group="localizedstrings" name="blog.myCurrentBlogsHeader">My blogs</component>
+    <component group="localizedstrings" name="blog.noBlogs">You have not yet created any blogs.</component>
+    <component group="localizedstrings" name="blog.blogName">Blog name</component>
+    <component group="localizedstrings" name="blog.blogDescription">Short description</component>
+    <component group="localizedstrings" name="blog.blogAddress">Blog address</component>
+    <component group="localizedstrings" name="blog.create">Create</component>
+    <component group="localizedstrings" name="blog.save">Save</component>
+    <component group="localizedstrings" name="blog.cancel">Cancel</component>
+    <component group="localizedstrings" name="blog.editNotAllowed">You need to be a logged in editor of this blog to edit it.</component>
+    <component group="localizedstrings" name="blog.downHeading">Temporary Unavailable</component> 
+    <component group="localizedstrings" name="blog.downText">This service is temporary unavaliable, please try again in a few minutes.</component>
+    <component group="localizedstrings" name="blog.createNewPost">New post</component>
+    <component group="localizedstrings" name="blog.editPost">Edit</component>
+    <component group="localizedstrings" name="blog.deletePost">Delete</component>
+    <component group="localizedstrings" name="blog.confirmDeletePost">Do you really want to delete the post?</component>
+    <component group="localizedstrings" name="blog.createBlogPostHeading">Create new post</component>
+    <component group="localizedstrings" name="blog.updateBlogPostHeading">Edit post</component>
+    <component group="localizedstrings" name="blog.blogPostHeading">Heading</component>
+    <component group="localizedstrings" name="blog.blogPostText">Blog post</component>
+    <component group="localizedstrings" name="blog.newerPosts">Newer posts</component>
+    <component group="localizedstrings" name="blog.olderPosts">Older posts</component>
+    <component group="localizedstrings" name="blog.blogHistory">Blog history</component>
+    <component group="localizedstrings" name="blog.nothingHasBeenPostedYet">Nothing has been posted yet</component>
+    <component group="localizedstrings" name="blog.disclaimer">Note that it may take a few minutes until the post is visible on the site.</component>
+    <component group="localizedstrings" name="blog.blogSettings">Blog settings</component>
+    <component group="localizedstrings" name="blog.blogSettingsSmall">Settings</component>
+    <component group="localizedstrings" name="blog.newerComments">Newer comments</component>
+    <component group="localizedstrings" name="blog.olderComments">Older comments</component>
+    <component group="localizedstrings" name="blog.bethefirsttocomment">Be the first to comment this post!</component>
+    
+    <component group="localizedstrings" name="blog.error.readError">An error occurred during blog read.</component>
+    <component group="localizedstrings" name="blog.error.badCaptcha">Word verification failed.</component>
+    <component group="localizedstrings" name="blog.error.createError">An error occurred during blog creation.</component>
+    <component group="localizedstrings" name="blog.error.webAliasExistsError">The selected blog address is already taken.</component>
+    <component group="localizedstrings" name="blog.error.createBlogError">An error occurred during blog creation.</component>
+    
+    <component group="localizedstrings" name="blog.error.fieldRequiredBlogName">A blog name has to be specified.</component>
+    <component group="localizedstrings" name="blog.error.fieldRequiredBlogAddress">A blog address has to be specified.</component>
+    <component group="localizedstrings" name="blog.error.fieldInvalidBlogAddress">The blog address contains invalid characters.</component>
+    
+    <component group="localizedstrings" name="blog.error.deleteBlogPostError">An error occurred during blog post deletion.</component>
+    <component group="localizedstrings" name="blog.error.createBlogPostError">An error occurred during blog post creation.</component>
+    <component group="localizedstrings" name="blog.error.updateBlogPostError">An error occurred during blog post update.</component>
+    <component group="localizedstrings" name="blog.error.blogPostNameEmpty">The blog post heading has to be specified.</component>
+    <component group="localizedstrings" name="blog.error.permissionDenied">Permission Denied</component>
+    <component group="localizedstrings" name="blog.error.internalServerError">An error occurred. Please try again in a few minutes.</component>
+    <component group="localizedstrings" name="blog.error.addCommentError">An error occurred. Please try again in a few minutes.</component>
+    <component group="localizedstrings" name="blog.error.deleteCommentError">An error occurred. Please try again in a few minutes.</component>
+    <component group="localizedstrings" name="blog.error.commentTextEmpty">The comment text has to be specified.</component>
+    <component group="localizedstrings" name="blog.error.commentAuthorEmpty">The comment author has to be specified.</component>
+    
+    <component group="localizedstrings" name="paywall.warning.youhave">You have </component>
+    <component group="localizedstrings" name="paywall.warning.comparticle"> complimentary article left.</component>
+    <component group="localizedstrings" name="paywall.warning.comparticles"> complimentary articles left.</component>
+    <component group="localizedstrings" name="paywall.warning.enjoy">Already viewed articles of this type will remain viewable. Enjoy!</component>
+
+    <component group="localizedstrings" name="paywall.userengagement.info">Below you'll find all premium content engagements and their end date.</component>
+    <component group="localizedstrings" name="paywall.userengagement.current">Your current engagement: </component>
+    <component group="localizedstrings" name="paywall.userengagement.validuntil">Valid until: </component>
+    <component group="localizedstrings" name="paywall.userengagement.noengagement">You have no current engagements.</component>
+
+    <component group="localizedstrings" name="paywall.premium.content">Premium</component>
+    <component group="localizedstrings" name="paywall.premium.article">This is a premium article, buy a premium package to see the whole story</component>
+
+    <component group="localizedstrings" name="paywall.overlay.nomoreviews1">It seems you've run out of complimentary views! Buy one of the suggested packages or </component>
+    <component group="localizedstrings" name="paywall.overlay.nomoreviews2">wait for</component>
+    <component group="localizedstrings" name="paywall.overlay.nomoreviews3">day(s)</component>
+    <component group="localizedstrings" name="paywall.overlay.nomoreviews4"> to get more for free.</component>
+    <component group="localizedstrings" name="paywall.overlay.description"><![CDATA[This is a premium article. Register <b>and</b> buy one of the following premium package(s) to read the whole story:]]></component>
+    <component group="localizedstrings" name="paywall.overlay.loggedin.description">This is a premium only article. You can buy access to it through one of the following offerings:</component>
+    <component group="localizedstrings" name="paywall.overlay.head">Subscription required!</component>
+    <component group="localizedstrings" name="paywall.overlay.close">Close</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>localizedstrings.swedish</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.siteengine.LocalizedStrings.d</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.siteengine.LocalizedStrings</externalid>
+      </input-template>
+    </metadata>
+    <component name="name" group="polopoly.Content">Swedish</component>
+    <component group="lc" name="value">sv</component>
+    <component group="cc" name="value">SE</component>
+    <component group="localizedstrings" name="breakingnews.title">Just nu</component>
+    <component group="localizedstrings" name="search.search">Sök</component>
+    <component group="localizedstrings" name="search.showing">Visar</component>
+    <component group="localizedstrings" name="search.of">av</component>
+    <component group="localizedstrings" name="search.yoursearchfor">Din sökning</component>
+    <component group="localizedstrings" name="search.didnotmatch">matchade inga dokument</component>
+    <component group="localizedstrings" name="search.previous">Föregående</component>
+    <component group="localizedstrings" name="search.next">Nästa</component>
+    <!-- Content comments -->
+    <component group="localizedstrings" name="comments.button.commentthisarticle">Kommentera den här artikeln</component>
+    <component group="localizedstrings" name="comments.button.commentthisblog">Kommentera det här blogginlägget</component>
+    <component group="localizedstrings" name="comments.comment">Skicka kommentar</component>
+    <component group="localizedstrings" name="comments.comments">Kommentarer</component>
+    <component group="localizedstrings" name="comments.writtenby">Skrivet av</component>
+    <component group="localizedstrings" name="comments.writecomment">Skriv din kommentar:</component>
+    <component group="localizedstrings" name="comments.yourname">Ditt namn</component>
+    <component group="localizedstrings" name="comments.loggedinauthor">Eftersom du är inloggad kommer smeknamnet för ditt användarkonto att användas.</component>
+    <component group="localizedstrings" name="comments.next"><![CDATA[Nästa &raquo;]]></component>
+    <component group="localizedstrings" name="comments.previous"><![CDATA[&laquo; Föregående]]></component>
+    <component group="localizedstrings" name="comments.acceptterms">Jag har läst och godkänt</component>
+    <component group="localizedstrings" name="comments.licenseandterms">webbplatsens regler och villkor för kommentarer</component>
+    <component group="localizedstrings" name="comments.nofcomments">Postade kommentarer</component>
+    <component group="localizedstrings" name="comments.signature.separator"><![CDATA[,&nbsp;]]></component>
+    <component group="localizedstrings" name="comments.inputerror">
+      För att en kommentar ska godkännas måste kommentartexten och ett namn vara ifyllda och kryssrutan för regler och villkor måste vara ikryssad.
+    </component>
+    <component group="localizedstrings" name="comments.temporarilyunavailable">För ögonblicket går det inte att kommentera artiklar</component>
+    <component group="localizedstrings" name="comments.closedforwrite">Den här artikeln är redan stängd för kommentering</component>
+    <component group="localizedstrings" name="comments.bethefirsttocomment">Bli den första att kommentera denna artikel!</component>
+    <component group="localizedstrings" name="comments.premoderatedpost">Tack för ditt inlägg, det kommer visas efter att det blivit godkänt av en moderator.</component>
+    <component group="localizedstrings" name="comments.reportabuse">Anmäl</component>
+    <component group="localizedstrings" name="comments.report.title">Anmäl kommentar</component>
+    <component group="localizedstrings" name="comments.report.title.done">Din rapport är skickad!</component>
+    <component group="localizedstrings" name="comments.report.close">Stäng fönstret</component>
+    <component group="localizedstrings" name="comments.report.cancel">Avbryt</component>
+    <component group="localizedstrings" name="comments.report.reason">Beskriv kortfattat varför du tycker att kommentaren ska tas bort:</component>
+    <component group="localizedstrings" name="comments.report.name">Ditt namn:</component>
+    <component group="localizedstrings" name="comments.report.email">Din e-postadress:</component>
+    <component group="localizedstrings" name="comments.report.send">Skicka</component>
+    <component group="localizedstrings" name="comments.report.thanks">
+      Kommentaren har anmälts och kommer att granskas av våra moderatorer. De kommer att ta bort kommentaren om de finner det olämpligt.
+    </component>
+    <component group="localizedstrings" name="comments.status.reported">Anmäld!</component>
+    <component group="localizedstrings" name="comments.report.alreadyreported">Du har redan anmält den här kommentaren.</component>
+    <component group="localizedstrings" name="comments.date.format">d MMMMM yyyy 'kl.' HH:mm</component>
+    <component group="localizedstrings" name="comments.report.email.subject">Ny anmälan av inlägg!</component>
+    <component group="localizedstrings" name="comments.report.email.message">Anmälan:</component>
+    <component group="localizedstrings" name="comments.report.email.postid">Inlägg id:</component>
+    <component group="localizedstrings" name="comments.report.email.authorName">Anmäld av:</component>
+    <component group="localizedstrings" name="comments.report.email.authorEmail">E-post:</component>
+    <component group="localizedstrings" name="comments.typeincharacters">Skriv in de tecken du ser på bilden nedan. Om du har svårt att läsa bokstäverna i bilden kan du klicka på den för att se en ny.</component>
+    <component group="localizedstrings" name="comments.requirescookies">Du måste ha kakor aktiverade för att kunna kommentera.</component>
+    <component group="localizedstrings" name="comments.deleteComment">Radera</component>
+    <component group="localizedstrings" name="comments.confirmDeleteComment">Vill du verkligen ta bort kommentaren?</component>
+    
+    <component group="localizedstrings" name="membership.loginname">E-post/användarnamn</component>
+    <component group="localizedstrings" name="membership.errorEmail">Inte en giltig e-postadress.</component>
+    <component group="localizedstrings" name="membership.badbrowser">Du behöver aktivera javascript i din webbläsare för att kunna använda den här sidan.</component>
+    <component group="localizedstrings" name="membership.errorRequired">Obligatoriskt fält.</component>
+    <component group="localizedstrings" name="membership.errorPasswordMin4">Lösenordet måste vara minst fyra tecken.</component>
+    <component group="localizedstrings" name="membership.errorPasswordNotEqual">Lösenorden är inte lika.</component>
+    <component group="localizedstrings" name="membership.serverdown">Ett fel inträffade. Var god försök igen senare.</component>
+    <component group="localizedstrings" name="resetpassword.subject">Du har fått ett nytt lösenord.</component>
+    <component group="localizedstrings" name="resetpassword.messagepattern"><![CDATA[
+        <html>
+            <head></head>
+            <body>
+                <h3>Kära användare</h3>
+                <p>Ditt nya lösenord har blivit satt till: {0}</p>
+                <p>Var god och logga in och byt lösenord så fort som möjligt.</p>
+                <p>Vänligen<br/>{1}</p>
+            </body>
+        </html>
+    ]]></component>
+    <component group="localizedstrings" name="resetpassword.successheader">Lösenordet återställt!</component>
+    <component group="localizedstrings" name="resetpassword.successbody">Ditt lösenord har blivit återställt. Ett epost-brev innehållande ditt nya, genererade lösenord, har skickats till dig.</component>
+    <component group="localizedstrings" name="resetpassword.resetPasswordHeader">Återställ lösenord</component>
+    <component group="localizedstrings" name="resetpassword.introduction">Var god fyll i din e-postadress i formuläret nedan. Ett e-postmeddelande innehållande ett nytt lösenord kommer skickas till adressen kopplad till ditt konto på Greenfield Times.</component>
+    <component group="localizedstrings" name="resetpassword.reset">Återställ!</component>
+    <component group="localizedstrings" name="resetpassword.invaliduser">Ogiltigt användarnamn</component> 
+    
+    <component group="localizedstrings" name="login.autherror">Felaktigt användarnamn eller lösenord.</component>
+    <component group="localizedstrings" name="login.defaulterror">Fel! Vänligen försök igen.</component>
+    <component group="localizedstrings" name="login.defaultlogin">E-post</component>
+    <component group="localizedstrings" name="login.downerror">Du kan för närvarande tyvärr inte logga in. Var god försök igen om några minuter.</component>
+    <component group="localizedstrings" name="login.usererror">Det verkar vara ett problem med ditt användarkonto. Var vänlig kontakta kundtjänst.</component>
+    <component group="localizedstrings" name="login.login">Logga in</component>
+    <component group="localizedstrings" name="login.logout">Logga ut</component>
+    <component group="localizedstrings" name="login.memberlogin">medlemsinloggning</component>    
+    <component group="localizedstrings" name="login.permerror">Du måste vara inloggad för att kunna se den här sidan.</component>
+    <component group="localizedstrings" name="login.recoverpassword">Glömt ditt lösenord?</component>
+    <component group="localizedstrings" name="login.register">Bli medlem</component>
+    <component group="localizedstrings" name="login.loggedinas">Inloggad som</component>
+    <component group="localizedstrings" name="login.profile">Min profil</component>
+    <component group="localizedstrings" name="video.missingPlayer">Hämta Flash-spelare för att se den här videon.</component>
+    
+    <component group="localizedstrings" name="registration.header">Bli medlem</component>
+    <component group="localizedstrings" name="registration.introduction">Var god använd formuläret nedan för att skapa ett nytt konto på Greenfield Times. Som medlem på Greenfield Times kommer du att få tillgång till personaliserade tjänster såsom bloggar.</component>
+    <component group="localizedstrings" name="registration.password">Lösenord</component>
+    <component group="localizedstrings" name="registration.checkpassword">Bekräfta lösenord</component>
+    <component group="localizedstrings" name="registration.screenname">Smeknamn</component>    
+    <component group="localizedstrings" name="registration.successbody">Du är nu registrerad! Logga in för att komma åt den nya funktionaliteten.</component>
+    <component group="localizedstrings" name="registration.successheader">Grattis!</component>
+    <component group="localizedstrings" name="registration.create">Bli medlem</component>
+    <component group="localizedstrings" name="registration.errorLoginAlreadyExists">Användarnamnet är upptaget.</component>
+    <component group="localizedstrings" name="registration.errorScreenname">Endast A-Ö, 0-9, _, - och mellanslag tillåtna.</component>
+    <component group="localizedstrings" name="registration.passwordstrength.titel">Säkert lösenord:</component>
+    <component group="localizedstrings" name="registration.passwordstrength.tooltip">Visar hur säkert ditt lösenord är.</component>    
+    
+    <component group="localizedstrings" name="captcha.error">Ordverifiering misslyckades</component>
+    <component group="localizedstrings" name="captcha.wordverification">Ordverifierifiering</component>    
+
+    <component group="localizedstrings" name="profile.changePasswordHeader">Ändra lösenord</component>
+    <component group="localizedstrings" name="profile.introduction">Var god använd nedanstående formulär för att ändra ditt lösenord.</component>
+    <component group="localizedstrings" name="profile.successheader">Lösenordet ändrat!</component>
+    <component group="localizedstrings" name="profile.successbody">Nästa gång du loggar in måste du använda ditt nya lösenord. Ditt gamla lösenord är inte längre giltigt och kan inte användas för att logga in.</component>
+    <component group="localizedstrings" name="profile.currentPassword">Nuvarande lösenord</component>
+    <component group="localizedstrings" name="profile.password">Nytt lösenord</component>
+    <component group="localizedstrings" name="profile.checkPassword">Bekräfta nytt lösenord</component>
+    <component group="localizedstrings" name="profile.change">Ändra!</component>    
+    <component group="localizedstrings" name="profile.errorAuthorizationFailed">Felaktigt nuvarande lösenord</component>
+    <component group="localizedstrings" name="profile.invalidNewPassword">Felaktigt nytt lösenord</component>
+    <component group="localizedstrings" name="profile.errorNotLoggedIn">Du måste vara inloggad för att byta lösenord</component> 
+    <component group="localizedstrings" name="profile.notLoggedInBody">Du måste logga in för att använda denna tjänst.</component>    
+    <component group="localizedstrings" name="profile.profileHeader">Min profil</component>
+    
+    <component group="localizedstrings" name="mynewslist.edit">Ändra</component>
+    <component group="localizedstrings" name="mynewslist.save">Spara</component>
+    <component group="localizedstrings" name="mynewslist.error">Fel vid sparning. Var god försök ingen om några minuter.</component>
+    
+    <component group="localizedstrings" name="blog.editNotAllowed">Du måste vara inloggad och ägare till bloggen för att kunna redigera.</component>
+    <component group="localizedstrings" name="blog.downHeading">Tillfälligt fel</component> 
+    <component group="localizedstrings" name="blog.downText">Tjänsten är för tillfället inte tillgänglig, var god försök om några minuter.</component>
+    <component group="localizedstrings" name="blog.myBlogsHeader">Mina bloggar</component>
+    <component group="localizedstrings" name="blog.myBlogsIntroduction">Nedan finner du verktyg som hjälper dig att skapa och hantera dina Greenfield Times-bloggar.</component>
+    <component group="localizedstrings" name="blog.createBlog">Skapa en ny blogg</component>
+    <component group="localizedstrings" name="blog.createBlogHeader">Skapa en ny blogg</component>
+    <component group="localizedstrings" name="blog.createBlogIntroduction">När du skapat din nya blogg kommer den vara tillgänglig i listningen under "Mina bloggar" nedan.</component>
+    <component group="localizedstrings" name="blog.myCurrentBlogsHeader">Mina bloggar</component>
+    <component group="localizedstrings" name="blog.noBlogs">Du har ännu inte skapat några bloggar.</component>
+    <component group="localizedstrings" name="blog.blogName">Bloggens namn</component>
+    <component group="localizedstrings" name="blog.blogDescription">Kort beskrivning</component>
+    <component group="localizedstrings" name="blog.blogAddress">Bloggadress</component>
+    <component group="localizedstrings" name="blog.create">Skapa</component>
+    <component group="localizedstrings" name="blog.save">Spara</component>
+    <component group="localizedstrings" name="blog.cancel">Avbryt</component>
+    <component group="localizedstrings" name="blog.missingFields">Du måste fylla i alla obligatoriska fält.</component>
+    <component group="localizedstrings" name="blog.createNewPost">Nytt inlägg</component>
+    <component group="localizedstrings" name="blog.editPost">Redigera</component>
+    <component group="localizedstrings" name="blog.deletePost">Radera</component>
+    <component group="localizedstrings" name="blog.confirmDeletePost">Vill du verkligen radera inlägget?</component>    
+    <component group="localizedstrings" name="blog.createBlogPostHeading">Skriv nytt blogginlägg</component>
+    <component group="localizedstrings" name="blog.updateBlogPostHeading">Redigera inlägg</component>
+    <component group="localizedstrings" name="blog.blogPostHeading">Rubrik</component>
+    <component group="localizedstrings" name="blog.blogPostText">Inlägg</component>
+    <component group="localizedstrings" name="blog.newerPosts">Nyare inlägg</component>
+    <component group="localizedstrings" name="blog.olderPosts">Äldre inlägg</component>
+    <component group="localizedstrings" name="blog.blogHistory">Tidigare inlägg</component>
+    <component group="localizedstrings" name="blog.nothingHasBeenPostedYet">Ingenting har publicerats ännu</component>
+    <component group="localizedstrings" name="blog.disclaimer">Notera att det kan ta några minuter innan ditt inlägg blir synligt på sajten.</component>
+    <component group="localizedstrings" name="blog.blogSettings">Blogginställningar</component>
+    <component group="localizedstrings" name="blog.blogSettingsSmall">Inställningar</component>
+    <component group="localizedstrings" name="blog.newerComments">Nyare kommentarer</component>
+    <component group="localizedstrings" name="blog.olderComments">Äldre kommentarer</component>
+    <component group="localizedstrings" name="blog.bethefirsttocomment">Bli den första att kommentera detta inlägg!</component>
+    
+    <component group="localizedstrings" name="blog.error.readError">Ett fel uppstod under läsning av blogg.</component>
+    <component group="localizedstrings" name="blog.error.badCaptcha">Ordverifiering misslyckades.</component>
+    <component group="localizedstrings" name="blog.error.createError">Ett fel uppstod under skapande av blogg.</component>
+    <component group="localizedstrings" name="blog.error.webAliasExistsError">Den valda bloggadressen är upptagen.</component>
+    <component group="localizedstrings" name="blog.error.createBlogError">Ett fel uppstod under skapande av blogg.</component>
+    
+    <component group="localizedstrings" name="blog.error.fieldRequiredBlogName">Bloggens namn måste anges.</component>
+    <component group="localizedstrings" name="blog.error.fieldRequiredBlogAddress">Bloggens address måste anges.</component>
+    <component group="localizedstrings" name="blog.error.fieldInvalidBlogAddress">Bloggens address innehåller otillåtna tecken.</component>
+
+    
+    <component group="localizedstrings" name="blog.error.deleteBlogPostError">Ett fel uppstod under radering av blogginlägg.</component>
+    <component group="localizedstrings" name="blog.error.createBlogPostError">Ett fel uppstod under skapande av blogginlägg.</component>
+    <component group="localizedstrings" name="blog.error.updateBlogPostError">Ett fel uppstod under uppdatering av blogginlägg.</component>
+    <component group="localizedstrings" name="blog.error.blogPostNameEmpty">Blogginlägget måste ha en rubrik.</component>
+    <component group="localizedstrings" name="blog.error.permissionDenied">Åtkomst nekad</component>
+    <component group="localizedstrings" name="blog.error.internalServerError">Ett fel har uppstått. Var god försök ingen om några minuter.</component>
+    <component group="localizedstrings" name="blog.error.addCommentError">Ett fel har uppstått. Var god försök ingen om några minuter.</component>
+    <component group="localizedstrings" name="blog.error.deleteCommentError">Ett fel har uppstått. Var god försök ingen om några minuter.</component>
+    <component group="localizedstrings" name="blog.error.commentTextEmpty">Kommentaren måste ha ett innehåll.</component>
+    <component group="localizedstrings" name="blog.error.commentAuthorEmpty">Kommentarens författare måste anges.</component>
+
+    <component group="localizedstrings" name="paywall.warning.youhave">Du har </component>
+    <component group="localizedstrings" name="paywall.warning.comparticle"> artikelvisning kvar.</component>
+    <component group="localizedstrings" name="paywall.warning.comparticles"> artikelvisningar kvar.</component>
+    <component group="localizedstrings" name="paywall.warning.enjoy">Redan besökta artiklar kommer du fortfarande kunna se när dina visningar tagit slut.</component>
+
+    <component group="localizedstrings" name="paywall.userengagement.info">Nedan finner du alla dina åtkomster till premium innehåll och deras slutdatum.</component>
+    <component group="localizedstrings" name="paywall.userengagement.current">Ditt nuvarande engagemang: </component>
+    <component group="localizedstrings" name="paywall.userengagement.validuntil">Giltig till: </component>
+    <component group="localizedstrings" name="paywall.userengagement.noengagement">Du har inga engagemang.</component>
+
+    <component group="localizedstrings" name="paywall.premium.content">Premium</component>
+    <component group="localizedstrings" name="paywall.premium.article">Detta är en premiumartikel, köp ett premiumpaket för att läsa hela</component>
+
+    <component group="localizedstrings" name="paywall.overlay.nomoreviews1">Det verkar som om dina gratis klick tagit slut! Köp tillgång till ett premium paket eller </component>
+    <component group="localizedstrings" name="paywall.overlay.nomoreviews2">vänta i</component>
+    <component group="localizedstrings" name="paywall.overlay.nomoreviews3">dag(ar)</component>
+    <component group="localizedstrings" name="paywall.overlay.nomoreviews4"> för att få fler klick.</component>
+    <component group="localizedstrings" name="paywall.overlay.description"><![CDATA[Detta är en premiumartikel. Registrera dig <b>och</b> köp tillgång till ett av våra premiumpaket nedan för att läsa hela:]]></component>
+    <component group="localizedstrings" name="paywall.overlay.loggedin.description">Detta är en premiumartikel. Du kan få läsa hela genom att köpa något av följande premiumpaket:</component>
+    <component group="localizedstrings" name="paywall.overlay.head">Prenumeration tack!</component>
+    <component group="localizedstrings" name="paywall.overlay.close">Stäng</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.siteengine.LocalizedStrings.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.LocalizedStringsDepartment</externalid>
+      </input-template>
+    </metadata>
+    <contentlist mode="reset">
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>localizedstrings.english</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>localizedstrings.swedish</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+</batch>

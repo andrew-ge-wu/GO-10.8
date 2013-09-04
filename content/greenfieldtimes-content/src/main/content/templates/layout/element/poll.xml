@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.PollElement" label="cm.template.example.PollElement">
+    <policy>example.layout.element.poll.PollElementPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <type>LayoutElement</type>
+        <param name="templateIcon">thermometer.png</param>
+        <param name="renderTemplateIconInSelect">true</param>
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="titleOfNewContent">cm.template.example.PollElement.new</param>
+    <!--
+         The suffix *Field is used to avoid conflicts between the model and single poll policy
+         See SinglePollPolicy.
+    -->
+    <field name="singlePollField" input-template="poll.SinglePoll" />
+    <field name="name" input-template="p.ContentName" label="example.siteengine.singlepoll.name" required="true" />
+    <field name="questionField" input-template="poll.Question" />
+
+    <field name="answerOptionsLayout" input-template="p.RadioButtonGroup"
+           label="example.siteengine.singlepoll.answerOptionsLayout">
+      <param name="label_0">example.siteengine.singlepoll.answerOptionsLayout.horizontal</param>
+      <param name="value_0">Horizontal</param>
+      <param name="label_1">example.siteengine.singlepoll.answerOptionsLayout.vertical</param>
+      <param name="value_1">Vertical</param>
+      <param name="selected">0</param>
+    </field>
+
+    <field name="pollResult" input-template="poll.PollResult" label="example.siteengine.singlepoll.result" />
+
+    <output-templates mode="www">
+      <id>example.PollElement.ot</id>
+    </output-templates>
+  </input-template>
+
+  <!-- Output template -->
+  <output-template name="example.PollElement.ot"
+                   input-template="p.siteengine.ElementOutputTemplate">
+    <content-xml>
+      <contentref group="output/controller" name="selected">
+        <contentid>
+          <externalid>p.siteengine.JavaClassRenderController</externalid>
+        </contentid>
+      </contentref>
+
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <component group="output/controller/selected/renderControllerClass" name="value">example.layout.element.poll.PollElementController</component>
+
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/www/poll.vm</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+     </content-xml>
+   </output-template>
+ </template-definition>

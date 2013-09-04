@@ -1,0 +1,11 @@
+<div class="element teaser">
+  <h1>$!esc.html($content.name)</h1>
+  #if ($content.description.value)
+    <p style="margin-bottom: 8px;">$!esc.html($content.description.value)</p>
+  #end
+  #if($content.videos.list.size() > 0)
+     #foreach($video in $content.videos.list)
+        #render({"content": $video.content, "":""})
+     #end  
+  #end
+</div>

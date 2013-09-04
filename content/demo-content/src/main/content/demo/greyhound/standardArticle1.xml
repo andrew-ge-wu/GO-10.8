@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>extidArticle1</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreyhoundPost.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Greyhound Post goes to Taiwan</component>
+    <component group="polopoly.ContentLists" name="images">images</component>
+    <component group="polopoly.ContentLists" name="topimages">topimages</component>
+    <component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+    <component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+    <component group="associatedSites" name="count">0</component>
+    <component group="body" name="value">
+      <![CDATA[
+      <p>Aliquam aliquet, est a ullamcorper condimentum, tellus nulla fringilla elit, a iaculis nulla turpis sed wisi. Fusce volutpat. Etiam sodales ante id nunc. Proin ornare dignissim lacus.
+      Nunc porttitor nunc a sem. Sed sollicitudin velit eu magna. Aliquam erat volutpat. Vivamus ornare est non wisi. Proin vel quam. Vivamus egestas. Nunc tempor diam vehicula mauris. Nullam sapien
+      eros, facilisis vel, eleifend non, auctor dapibus, pede.</p> <p>Aliquam aliquet, est a ullamcorper condimentum, tellus nulla fringilla elit, a iaculis nulla turpis sed wisi.
+      Fusce volutpat. Etiam sodales ante id nunc. Proin ornare dignissim lacus. Nunc porttitor nunc a sem. Sed sollicitudin velit eu magna. Aliquam erat volutpat. Vivamus ornare est non wisi. Proin
+      vel quam. Vivamus egestas. Nunc tempor diam vehicula mauris. Nullam sapien eros, facilisis vel, eleifend non, auctor dapibus, pede.</p> <p>Aliquam aliquet, est a ullamcorper
+      condimentum, tellus nulla fringilla elit, a iaculis nulla turpis sed wisi. Fusce volutpat. Etiam sodales ante id nunc. Proin ornare dignissim lacus. Nunc porttitor nunc a sem. Sed sollicitudin
+      velit eu magna. Aliquam erat volutpat. Vivamus ornare est non wisi. Proin vel quam. Vivamus egestas. Nunc tempor diam vehicula mauris. Nullam sapien eros, facilisis vel, eleifend non, auctor
+      dapibus, pede.</p>
+    ]]>
+    </component>
+    <component group="lead" name="value">
+      Aliquam aliquet, est a ullamcorper condimentum, tellus nulla fringilla elit, a iaculis nulla turpis sed wisi. Fusce volutpat. Etiam sodales ante id nunc. Proin ornare dignissim lacus. Nunc
+      porttitor nunc a sem. Sed sollicitudin velit eu magna. Aliquam erat volutpat. Vivamus ornare est non wisi. Proin vel quam. Vivamus egestas. Nunc tempor diam vehicula mauris. Nullam sapien eros,
+      facilisis vel, eleifend non, auctor dapibus, pede.
+    </component>
+    <contentlist group="images">
+      <entry>
+        <metadata>
+          <position>0</position>
+          <referredContent>
+            <contentid>
+              <major>Article</major>
+              <externalid>article.image.inthelab</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+</batch>

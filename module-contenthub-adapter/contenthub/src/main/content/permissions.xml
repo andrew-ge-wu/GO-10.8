@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.RootDepartment</externalid>
+      </contentid>
+    </metadata>
+    <acl>
+      <entry>
+        <principal loginname="sysadmin" />
+        <addpermission>1000READ</addpermission>
+      </entry>
+      <entry>
+        <principal principalid="group:all" />
+        <addpermission>1000READ</addpermission>
+      </entry>
+    </acl>
+  </content>
+</batch>

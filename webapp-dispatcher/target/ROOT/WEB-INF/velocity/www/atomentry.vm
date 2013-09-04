@@ -1,0 +1,13 @@
+<entry xmlns="$atomEntry.nameSpace">
+  <title>$atomEntry.title</title>
+  <id>$atomEntry.id</id>
+  #foreach ($link in $atomEntry.links)
+  <link rel="$link.rel" href="$link.href" type="$link.type"/>
+  #end
+  <updated>$atomEntry.updated</updated>
+  #foreach ($author in $atomEntry.authors)
+  <author>
+    <name>$author.name</name>
+  </author>
+  #end
+</entry>

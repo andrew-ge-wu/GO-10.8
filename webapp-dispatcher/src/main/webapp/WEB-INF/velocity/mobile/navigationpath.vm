@@ -1,0 +1,8 @@
+<div class="navpath">
+#set($trailingPath = $m.context.page.contentPath)
+#foreach($contentId in $trailingPath)
+  #set($page = $tool_domain.getModel($contentId)) 
+  #set($pagePath = $trailingPath.getSubPath(0, $velocityCount)) 
+  <span><a href="#link({"path": $pagePath.asArray, "content": $contentId, 'htmlEncodeLink': 'true', "":""})">$page.name</a><span class="separator">/</span></span>
+#end
+</div>

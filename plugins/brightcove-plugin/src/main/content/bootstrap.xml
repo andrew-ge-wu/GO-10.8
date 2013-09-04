@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <!-- This file is only needed if we have circular dependencies between templates and content -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.brightcove.MainElement</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.brightcove.video.MainElement</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.brightcove.Tv</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.brightcove.ListElement</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>com.atex.plugins.brightcove.BrightcoveRelatedContentTemplate</externalid>
+      </contentid>
+    </metadata>
+  </content>
+</batch>

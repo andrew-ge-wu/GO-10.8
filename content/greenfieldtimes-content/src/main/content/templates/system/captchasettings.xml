@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.CaptchaSettings">
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <policy>example.captcha.CaptchaSettingsPolicy</policy>
+    <type>AppConfig</type>
+    <field name="enabled" input-template="p.Checkbox" label="cm.template.example.Blog.captchaSettings.Enabled">
+      <param name="checked">true</param>
+    </field>
+  </input-template>
+</template-definition>

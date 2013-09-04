@@ -1,0 +1,134 @@
+## (c) Polopoly AB (publ).
+## This software is protected by copyright law and international copyright
+## treaties as well as other intellectual property laws and treaties.
+## All title and rights in and to this software and any copies thereof
+## are the sole property of Polopoly AB (publ).
+## Polopoly is a registered trademark of Polopoly AB (publ).
+
+<link rel="stylesheet" type="text/css" href="#file({'contentId': $filesContentId, 'filename':'tv.css', '':''})" />
+
+#set($path = $tool_path.concat($m.context.page.contentPath, $content.contentId))
+#set($view = $m.request.httpRequest.attributes.view)
+#set($tvId = "tv_" + $content.contentId.contentId.contentIdString.replaceAll('\.', ''))
+#set($showSlider = $content.showSlider.checked)
+#set($playerId = $content.player.value)
+#if(!$playerId)
+  #set($playerId = $m.local.playerId)
+#end
+#set($request = $m.request.httpRequest)
+#set($autoPlay = $content.autoPlay.value)
+#set($autoStart = $content.autoStart.selected.value)
+#if($autoStart)
+  #set($autoStartOverwrite = true)
+#end
+#set($firstBcListEle = $m.local.firstBcListEle)
+#set($categorizationOpt = $m.local.categorizationOpt)
+
+## player width
+#if($m.stack.colwidth)
+  #set($widthVal = $m.stack.colwidth)
+  #set($heightVal = $math.toInteger($widthVal) * 3 / 5)
+#else
+  #set($widthVal = "100%")
+  #set($heightVal = "450px")
+#end
+
+## padding to avoid overflow
+## if the element is not paste in right column
+#if($m.stack.colwidth)
+  #if($math.toInteger($m.stack.colwidth) != 300 && $math.toInteger($m.stack.colwidth) != 804)
+    #if($math.toInteger($widthVal) - $math.toInteger($m.stack.colwidth) < 8)
+      #set($widthVal = $math.sub($widthVal, 8))
+    #end
+  #end
+#end
+
+<div class="element tv" id="$!{tvId}">
+
+  <script type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+    <h1>$!{cover.name}</h1>
+    <div id="specialId"></div>
+    <object id="myExperience" class="BrightcoveExperience">
+      <param name="bgcolor" value="#FFFFFF" />
+      <param name="width" value="$widthVal" />
+      <param name="height" value="$heightVal" />
+      <param name="playerID" value="${playerId}" />
+      <param name="isVid" value="true" />
+      <param name="isUI" value="true" />
+      #if($autoStartOverwrite) <param name="autoStart" value="$autoStart" /> #end
+      <param name="includeAPI" value="true" />
+      <param name="templateLoadHandler" value="myTemplateLoaded" />
+      <param name="dynamicStreaming" value="true" />
+      <param name="@videoPlayer" value="$!{cover.id}" />
+    </object>
+    <div class="landingLinks">
+        #if ($categorizationOpt=='categorization')
+          #set($tvRelatedElementId = $m.local.relatedElementId)
+          #render({"content": $tvRelatedElementId, "params":{"view":"tv"}, "":""})
+        #elseif ($categorizationOpt=='videoCategorization')
+          #render({"content": $cover.relatedElementId, "params":{"view":"tv"}, "":""})
+        #end
+    </div>
+    <script type="text/javascript">brightcove.createExperiences();</script>
+    #if($showSlider)
+      #if($firstBcListEle)
+        #render({"content":$firstBcListEle.contentId,"":""})
+      #end
+    #end
+
+
+</div>
+<!-- end div.element.tv -->
+
+  #if($autoPlay == true)
+  <script type="text/javascript"> 
+    var player;
+     
+    var modVP;
+    var modExp;
+    var modCon;
+    var previousVideoID=0;
+    var nextVideo=0;
+    var videos = $!{m.local.jsVideos} ;
+
+    function myTemplateLoaded(experienceID) {
+        player = brightcove.api.getExperience(experienceID);
+        modVP = player.getModule(brightcove.api.modules.APIModules.VIDEO_PLAYER);
+        modExp = player.getModule(brightcove.api.modules.APIModules.EXPERIENCE);
+        modCon = player.getModule(brightcove.api.modules.APIModules.CONTENT);
+        modExp.addEventListener(brightcove.api.events.ExperienceEvent.TEMPLATE_READY, onTemplateReady);
+    }
+
+    function onTemplateReady(evt) {
+        modVP.loadVideoByID(videos[nextVideo]);
+        modVP.addEventListener(brightcove.api.events.MediaEvent.COMPLETE, onMediaComplete);
+        modVP.addEventListener(brightcove.api.events.MediaEvent.CHANGE, onMediaChange);
+    }
+
+    function onMediaComplete() {
+       nextVideo++;
+       if (nextVideo==videos.length) {
+          nextVideo=0;
+       }
+       modVP.loadVideoByID(videos[nextVideo][2]);
+    }
+
+    function onMediaChange(evt) {
+      updateVideoInfo();
+    }
+
+    function updateVideoInfo() {
+      var idSelector = "#$!{tvId}";
+      var landingSelector = idSelector + " div.landingLinks";
+      var relatedSelector = landingSelector + " .related-content.tv";
+      var path = location.origin + location.pathname + "?vid="+ videos[nextVideo][0];
+      // Update title
+      $(idSelector+" h1").html(videos[nextVideo][1]);
+      // Update categorization
+      #if($categorizationOpt=='videoCategorization')
+        $(landingSelector).load(path + " " + relatedSelector);
+      #end
+    }
+
+  </script>
+    #end

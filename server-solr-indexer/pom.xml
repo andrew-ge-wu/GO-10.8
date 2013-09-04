@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <name>greenfieldtimes-example - Solr Indexer Web Application</name>
+
+  <groupId>com.polopoly.sites.greenfieldtimes-example</groupId>
+  <artifactId>server-solr-indexer</artifactId>
+  <packaging>war</packaging>
+
+  <parent>
+    <groupId>com.polopoly.sites.greenfieldtimes-example</groupId>
+    <artifactId>top</artifactId>
+    <version>10.8.0</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.polopoly</groupId>
+      <artifactId>solr-indexer</artifactId>
+      <version>${polopoly.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>greenfieldtimes</artifactId>
+      <groupId>com.polopoly.sites.greenfieldtimes-example</groupId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.0.4</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <finalName>solr-indexer</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.1.1</version>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+          <packagingExcludes>WEB-INF/lib/servlet-api-*.jar</packagingExcludes>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.polopoly.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>${jetty-plugin.version}</version>
+        <configuration>
+          <scanIntervalSeconds>${polopoly.jetty-scanIntervalSeconds}</scanIntervalSeconds>
+          <jettyConfig>${project.parent.basedir}/config/${targetEnv}/jetty-jmx.xml</jettyConfig>
+          <webAppConfig>
+            <contextPath>/solr-indexer</contextPath>
+          </webAppConfig>
+          <systemProperties>
+            <systemProperty>
+              <name>reindexIfEmptyIndex</name>
+              <value>true</value>
+            </systemProperty>
+          </systemProperties>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

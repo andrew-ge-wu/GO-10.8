@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+<!-- http://en.wikinews.org/wiki/Swiss_millionaire_gets_record_speeding_fine -->
+<content clear="true">
+<metadata>
+  <contentid>
+    <major>Article</major>
+    <externalid>example.demo.article.RecordSpeedingFine</externalid>
+  </contentid>
+  <input-template>
+    <major>InputTemplate</major>
+    <externalid>example.StandardArticle</externalid>
+  </input-template>
+  <security-parent>
+    <major>Department</major>
+    <externalid>GreenfieldTimes.d</externalid>
+  </security-parent>
+</metadata>
+<component group="author" name="value">Wikinews</component>
+<component group="polopoly.Content" name="name">Swiss millionaire gets record speeding fine</component>
+<component group="lead" name="value">A court in the eastern Swiss canton of St. Gallen has imposed a world record speeding fine of 299,000 Swiss francs (US$290,000). The repeat offender drove his Ferrari Testarossa through a village at up to 137 km/h (86 mph), when the speed limit was 80 km/h (50 mph).</component>
+<component group="body" name="value">
+<![CDATA[<p>Swiss courts calculate their fines on the principle that they are proportionate to the person's wealth. The driver was assessed to have assets worth 23.3 million francs (US$22.7m), including a villa with a garage containing five luxury cars. He was initially fined 90,000 francs, but claimed to be a diplomat from the Republic of Guinea-Bissau which would have given him diplomatic immunity from prosecution.</p>
+<p>A court accepted his claim and annulled the fine, but when he later failed to provide evidence of his diplomatic status he was summoned to the Cantonal Court of St. Gallen, and consequently was fined 299,000 francs. In its judgement the court stated: “The accused ignored elementary traffic rules with a powerful vehicle out of a pure desire for speed.”</p>
+<p>This fine far exceeds the previous record, imposed on a Porsche driver in Zürich in 2008, of 111,000 francs.</p>
+<p><i>This article was originally published on <a href="http://en.wikinews.org/wiki/Swiss_millionaire_gets_record_speeding_fine">Wikinews</a> and is reproduced here in accordance with <a href="http://creativecommons.org/licenses/by/2.5/">CC-Attribution-Generic 2.5.</a></i></p>
+]]>
+</component>
+<component group="publishedDate" name="date">1262876400000</component>
+<component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+<component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+<component group="polopoly.ContentLists" name="images">images</component>
+<component group="polopoly.ContentLists" name="topimages">topimages</component>
+<component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+<component group="p.Inbox" name="showContent">true</component>
+<component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+<component group="elements/inheritSetting" name="count">1</component>
+<component group="elements/inheritSetting" name="selected_0">default</component>
+<component group="rightColumn/inheritSetting" name="count">1</component>
+<component group="rightColumn/inheritSetting" name="selected_0">default</component>
+<component group="p.Content.state" name="onlineState">true</component>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": [
+        {
+          "id": "Ferrari",
+          "name": "Ferrari",
+          "entities": [],
+          "attributes": []
+        },
+        {
+          "id": "Porsche",
+          "name": "Porsche",
+          "entities": [],
+          "attributes": []
+        }
+      ]
+    },
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-15",
+          "name": "sport",
+          "entities": [],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+<contentref group="images" name="0">
+  <contentid>
+    <externalid>example.demo.image.FerrariPorsche</externalid>
+  </contentid>
+</contentref>
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.RecordSpeedingFine.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.RecordSpeedingFine.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.RecordSpeedingFine.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.RecordSpeedingFine.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.RecordSpeedingFine.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.RecordSpeedingFine.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content>
+</batch>

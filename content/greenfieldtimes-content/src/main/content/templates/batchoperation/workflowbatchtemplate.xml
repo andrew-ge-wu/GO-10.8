@@ -1,0 +1,22 @@
+<template-definition version="1.0"
+  xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  
+  <input-template name="example.ArticleWorkflowSearch">
+  	<editor>com.polopoly.cm.app.search.WorkflowSearch</editor>
+    <viewer>com.polopoly.cm.app.search.WorkflowSearch</viewer>
+  </input-template>
+  	
+  
+  <input-template name="example.WorkflowBatchOperation" label="cm.template.example.WorkflowBatchOperation.it">
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <field name="batchoperation" input-template="p.BatchOperation">
+      <param name="operationClassName">example.content.operation.WorkflowApproveOperation</param>
+      <field name="searchWidget" input-template="example.ArticleWorkflowSearch" label="Workflow resources" >
+		<param name="searchButtonLabel">example.content.operation.WorkflowApproveOperation.searchButtonText</param>
+      	<param name="inputTemplate">example.StandardArticle</param>
+      	<param name="states">NeedApprove, Draft</param>
+      </field>
+    </field>
+  </input-template>
+</template-definition>

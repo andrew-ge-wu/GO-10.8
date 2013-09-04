@@ -1,0 +1,4742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+
+  <!-- Structure bootstrapping -->
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.0.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">News</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.0.0.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.0.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Law reports</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.0.1.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.0.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Obituaries</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.0.2.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.0.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Picture galleries</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.1.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Sports</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.1.0.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.1.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Rugby world cup</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.1.1.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.1.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Cricket</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.1.2.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.1.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Football</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.1.3.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.1.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Basketball</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.1.4.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.1.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Hockey</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.1.5.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.1.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Track &amp; Field</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.1.6.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.1.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Golf</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.1.7.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.1.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Tennis</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.1.8.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.1.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Motor sport</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.2.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Business</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.2.0.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.2.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Business</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.2.1.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.2.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Your money</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.2.2.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.2.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Trading</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.2.3.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.2.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Stock exchange</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.3.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Travel</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.3.0.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.3.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Picture galleries</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.3.1.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.3.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Ask the experts</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.3.2.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.3.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">City breaks</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.3.3.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.3.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Hotels</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.3.4.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.3.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Snow and ski</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.3.5.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.3.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Sun and sea</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.3.6.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.3.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Luxury travel</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.3.7.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.3.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Cruises</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.3.8.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.SubPage.3.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Family holidays</component>
+  </content>
+
+  <!-- End structure bootstrapping -->
+
+  <!-- Articles are here -->
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.AlaskaCruises</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.AlaskaCruises.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.AlaskaCruises</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.AlaskaCruises.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.AlaskaCruises</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.AlaskaCruises.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.AlaskaCruises</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.BusinessStayAfloat</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.BusinessStayAfloat.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.BusinessStayAfloat</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.BusinessStayAfloat.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.BusinessStayAfloat</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.BusinessStayAfloat.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.BusinessStayAfloat</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.CheapTravel</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.CheapTravel.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.CheapTravel</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.CheapTravel.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.CheapTravel</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.CheapTravel.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.CheapTravel</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.ChoosingHotel</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.ChoosingHotel.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.ChoosingHotel</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.ChoosingHotel.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.ChoosingHotel</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.ChoosingHotel.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.ChoosingHotel</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.FamilyHolidayNightmare</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.FamilyHolidayNightmare.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.FamilyHolidayNightmare</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.FamilyHolidayNightmare.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.FamilyHolidayNightmare</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.FamilyHolidayNightmare.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.FamilyHolidayNightmare</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.FormulaFord</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.FormulaFord.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.FormulaFord</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.FormulaFord.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.FormulaFord</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.FormulaFord.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.FormulaFord</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.ImportanceOfCommunication</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.ImportanceOfCommunication.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.ImportanceOfCommunication</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.ImportanceOfCommunication.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.ImportanceOfCommunication</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.ImportanceOfCommunication.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.ImportanceOfCommunication</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.InternetBusiness</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.InternetBusiness.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.InternetBusiness</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.InternetBusiness.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.InternetBusiness</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.InternetBusiness.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.InternetBusiness</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.InternetIsCompetingWithTravelAgents</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.InternetIsCompetingWithTravelAgents.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.InternetIsCompetingWithTravelAgents</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.InternetIsCompetingWithTravelAgents.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.InternetIsCompetingWithTravelAgents</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.InternetIsCompetingWithTravelAgents.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.InternetIsCompetingWithTravelAgents</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.LeanOnAgriculture</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.LeanOnAgriculture.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.LeanOnAgriculture</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.LeanOnAgriculture.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.LeanOnAgriculture</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.LeanOnAgriculture.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.LeanOnAgriculture</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.MathProblemReportedSolved</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.MathProblemReportedSolved.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.MathProblemReportedSolved</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.MathProblemReportedSolved.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.MathProblemReportedSolved</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.MathProblemReportedSolved.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.MathProblemReportedSolved</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.TravelInLuxury</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.TravelInLuxury.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.TravelInLuxury</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.TravelInLuxury.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.TravelInLuxury</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.TravelInLuxury.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.TravelInLuxury</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.WorkingFromHome</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.WorkingFromHome.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.WorkingFromHome</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.WorkingFromHome.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.WorkingFromHome</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.WorkingFromHome.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.WorkingFromHome</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.AmericanFootballVsEuropeanFootball</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.AmericanFootballVsEuropeanFootball.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.AmericanFootballVsEuropeanFootball</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.AmericanFootballVsEuropeanFootball.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.AmericanFootballVsEuropeanFootball</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.AmericanFootballVsEuropeanFootball.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.AmericanFootballVsEuropeanFootball</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.Cricket</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.Cricket.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.Cricket</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.Cricket.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.Cricket</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.Cricket.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.Cricket</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.RecordSpeedingFine</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.RecordSpeedingFine.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.RecordSpeedingFine</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.RecordSpeedingFine.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.RecordSpeedingFine</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.RecordSpeedingFine.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.RecordSpeedingFine</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.Golf</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.Golf.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.Golf</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.Golf.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.Golf</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.Golf.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.Golf</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.Hockey</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.Hockey.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.Hockey</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.Hockey.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.Hockey</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.Hockey.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.Hockey</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.AustralianRugby</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.AustralianRugby.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.AustralianRugby</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.AustralianRugby.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.AustralianRugby</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.AustralianRugby.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.AustralianRugby</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.MakeTheBasketballTeam</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.MakeTheBasketballTeam.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.MakeTheBasketballTeam</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.MakeTheBasketballTeam.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.MakeTheBasketballTeam</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.MakeTheBasketballTeam.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.MakeTheBasketballTeam</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.MostBeautifulCars</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.MostBeautifulCars.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.MostBeautifulCars</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.MostBeautifulCars.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.MostBeautifulCars</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.MostBeautifulCars.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.MostBeautifulCars</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.MotorScooters</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.MotorScooters.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.MotorScooters</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.MotorScooters.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.MotorScooters</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.MotorScooters.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.MotorScooters</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.TrackShoes</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.TrackShoes.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.TrackShoes</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.TrackShoes.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.TrackShoes</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.TrackShoes.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.TrackShoes</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <!-- Images and refmetadata star here -->
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.AlaskaCruises</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.AlaskaCruises</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.BusinessStayAfloat</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.BusinessStayAfloat</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.CheapTravel</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.CheapTravel</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.ChoosingHotel</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.ChoosingHotel</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.FormulaFord</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.FormulaFord</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.GolfPole</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.GolfPole</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.ImportanceOfCommunication</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.ImportanceOfCommunication</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.InternetBusiness</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.InternetBusiness</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.InternetIsCompetingWithTravelAgents</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.InternetIsCompetingWithTravelAgents</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.LeanOnAgriculture</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.LeanOnAgriculture</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.TravelInLuxury</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.TravelInLuxury</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.WorkingFromHome</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.WorkingFromHome</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <!-- Images continue here TODO:dele this comment -->
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.ScootersInChina</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.ScootersInChina</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.AmericanFootball</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.AmericanFootball</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.AstonMartin</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.AstonMartin</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.Basketball</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.Basketball</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.BrazilianFootball</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.BrazilianFootball</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.BugattiVeyron</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.BugattiVeyron</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.Cricket</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.Cricket</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.FerrariDino</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.FerrariDino</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.FerrariEnzo</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.FerrariEnzo</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.FerrariPorsche</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.FerrariPorsche</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.GolfPole</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.GolfPole</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.HockeyNHL</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.HockeyNHL</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.HondaCivicHybrid</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.HondaCivicHybrid</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.IrishRugby</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.IrishRugby</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.JaguarXke</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.JaguarXke</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.PaganiZonda</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.PaganiZonda</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.RollsRoycePhantom</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.RollsRoycePhantom</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.ShelbyMustang</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.ShelbyMustang</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.TalbotLago</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.TalbotLago</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.TennisCourt</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.TennisCourt.Bookmarks</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.TennisCourt</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.TennisCourt.Comments</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.TennisCourt</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.article.TennisCourt.RelatedContent</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Article</major>
+        <externalid>example.demo.article.TennisCourt</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.TennisCourt</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.TennisCourt</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.TrackShoes</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.TrackShoes</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <!-- LayoutElements are here -->
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.imagegallery.business.images</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageGalleryElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+    <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.imagegallery.travel.images</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageGalleryElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.imagegallery.sport.images</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ImageGalleryElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.listelement.newsteasers</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ListElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.0.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.Travel.AlaskaCruises</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.AustralianRugby</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+    <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.Sports.AustralianRugby</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.AmericanFootballVsEuropeanFootball</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.Business.BusinessStayAfloat</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.CheapTravel</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+ <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.Travel.CheapTravel</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.ChoosingHotel</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+<content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.Travel.ChoosingHotel</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.Cricket</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.Sports.Cricket</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.FamilyHolidayNightmare</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.FormulaFord</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.Golf</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+    <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.Sports.Golf</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.Hockey</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+    <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.Sports.Hockey</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.ImportanceOfCommunication</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.InternetBusiness</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.InternetIsCompetingWithTravelAgents</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.Travel.InternetIsCompetingWithTravelAgents</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.LeanOnAgriculture</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.MathProblemReportedSolved</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.MostBeautifulCars</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.MotorScooters</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.TennisCourt</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.Sports.TennisCourt</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.TrackShoes</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.Sports.TrackShoes</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.TravelInLuxury</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.Travel.TravelInLuxury</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.WorkingFromHome</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <!-- Splitter are here -->
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.columnsplitter.business.halv</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ColumnSplitterElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.columnsplitter.business.LeftHeavy</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ColumnSplitterElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.columnsplitter.business.halv.Business</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ColumnSplitterElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.columnsplitter.business.LeftHeavy.Business</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ColumnSplitterElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.columnsplitter.sport.halv</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ColumnSplitterElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.columnsplitter.sport.LeftHeavy</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ColumnSplitterElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.columnsplitter.travel.halv</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ColumnSplitterElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.columnsplitter.travel.LeftHeavy</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ColumnSplitterElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <!-- Publishing Queues are here -->
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.pq.images.business</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.baseline.MetaDataDrivenPublishingQueue</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.pq.images.travel</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.baseline.MetaDataDrivenPublishingQueue</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.pq.images.sport</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.baseline.MetaDataDrivenPublishingQueue</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.pq.newsarticles</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.baseline.MetaDataDrivenPublishingQueue</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.listelement.selectedarticles</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ListElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.pq.selectedarticles</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.baseline.ContentListPublishingQueue</externalid>
+      </input-template>
+      <security-parent>
+        <major>LayoutElement</major>
+        <externalid>example.demo.listelement.selectedarticles</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.listelement.latest</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ListElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.pq.latest</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.baseline.MetaDataDrivenPublishingQueue</externalid>
+      </input-template>
+      <security-parent>
+        <major>LayoutElement</major>
+        <externalid>example.demo.listelement.latest</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>extid7.147</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.LoginElement</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>extid7.148</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.Registration</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.membership.resetpasswordelement</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.ResetPasswordElement</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.membership.profile</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.Profile</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+    
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>extid7.118</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.SearchElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>extid7.119</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ElementGroup</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+    
+  <content>
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.shadesofgreenpoll</externalid>
+      </contentid>
+    </metadata>    
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.linktopolopolycom</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.Link</externalid>
+      </input-template>
+    </metadata>
+  </content>
+  
+     <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.file.pdf.greenfieldTimes</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.File</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>    
+  </content>
+  
+  <content>
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+      <externalid>newextidextidnewexample.tabViewGreenfieldTimes</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.TabViewElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>    
+  </content>
+  
+  <!-- Most read content  -->
+  
+  <content>
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.mostreadtabview</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.TabViewElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>    
+  </content>
+  
+  <content>
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+      <externalid>example.mostreadtodaylist</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.ListElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>LayoutElement</major>
+        <externalid>example.mostreadtabview</externalid>
+      </security-parent>
+    </metadata>    
+  </content>
+  
+  <content>
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+      <externalid>example.mostreadthisweeklist</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.ListElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>LayoutElement</major>
+        <externalid>example.mostreadtabview</externalid>
+      </security-parent>
+    </metadata>    
+  </content>
+  
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.mostreadtodaypq</externalid>
+      </contentid>
+      <input-template>
+        <externalid>com.atex.plugins.baseline.StatisticsDrivenPublishingQueue</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>    
+  </content>
+  
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.mostreadthisweekpq</externalid>
+      </contentid>
+      <input-template>
+        <externalid>com.atex.plugins.baseline.StatisticsDrivenPublishingQueue</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>    
+  </content>
+<!-- end most read -->
+
+<!-- Top blogs  -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.topblogstabview</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.TabViewElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>    
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.blogpagetabview</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.TabViewElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>    
+  </content>
+  
+  <content>
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+      <externalid>example.topblogstodaylist</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.ListElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>LayoutElement</major>
+        <externalid>example.topblogstabview</externalid>
+      </security-parent>
+    </metadata>    
+  </content>
+  
+  <content>
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+      <externalid>example.topblogsthisweeklist</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.ListElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>LayoutElement</major>
+        <externalid>example.topblogstabview</externalid>
+      </security-parent>
+    </metadata>    
+  </content>
+  
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.topblogstodaypq</externalid>
+      </contentid>
+      <input-template>
+        <externalid>com.atex.plugins.baseline.StatisticsDrivenPublishingQueue</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>    
+  </content>
+  
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.topblogsthisweekpq</externalid>
+      </contentid>
+      <input-template>
+        <externalid>com.atex.plugins.baseline.StatisticsDrivenPublishingQueue</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>    
+  </content>
+<!-- end of top blogs -->
+
+<!-- Latest blogged -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+      <externalid>example.latestbloggedlist</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.ListElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>LayoutElement</major>
+        <externalid>newextidextidnewexample.tabViewGreenfieldTimes</externalid>
+      </security-parent>
+    </metadata>    
+  </content>
+  
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.latestbloggedpq</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.LatestBlogPostingsPublishingQueue</externalid>
+      </input-template>
+      <security-parent>
+        <major>LayoutElement</major>
+        <externalid>example.latestbloggedlist</externalid>
+      </security-parent>
+    </metadata>    
+  </content>
+<!-- end latest blogged --> 
+  
+  
+  
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.Blogs.d</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+    </metadata>    
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.EditorialBlogs.d</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+    </metadata>    
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.editorialblog</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.EditorialBlog</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.EditorialBlogs.d</externalid>
+      </security-parent>
+    </metadata>    
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.userBlogsHeading</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.Blogs.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+  <!--  theme -->
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>7</major>
+        <externalid>extid7.227</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.TabViewElement</externalid>
+      </input-template>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>7</major>
+        <externalid>extid7.228</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>7</major>
+        <externalid>extid7.224</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.ImageGalleryElement</externalid>
+      </input-template>
+    </metadata>
+  </content>
+
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>7</major>
+        <externalid>extid7.223</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.ListElement</externalid>
+      </input-template>
+    </metadata>
+  </content>
+
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>extid2.1610</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>p.siteengine.LandingPage</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  <!-- /theme -->
+  
+    <content clear="true">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.editorialblogheader</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.editorialblogteaserheader</externalid>
+      </contentid>
+    </metadata>
+  </content>
+
+  <!-- MNL -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.DomesticPublishingQueue</externalid>
+      </contentid>
+      <input-template>
+        <externalid>com.atex.plugins.baseline.ContentListPublishingQueue</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>    
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.SportsPublishingQueue</externalid>
+      </contentid>
+      <input-template>
+        <externalid>com.atex.plugins.baseline.ContentListPublishingQueue</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>    
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.ForeignPublishingQueue</externalid>
+      </contentid>
+      <input-template>
+        <externalid>com.atex.plugins.baseline.ContentListPublishingQueue</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>    
+  </content>
+  <!-- /MNL -->
+  
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.Business.BusinessStayAfloat</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.Business.ImportanceOfCommunication</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.Business.InternetIsCompetingWithTravelAgents</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+  
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.Business.LeanOnAgriculture</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+  </content>
+</batch>

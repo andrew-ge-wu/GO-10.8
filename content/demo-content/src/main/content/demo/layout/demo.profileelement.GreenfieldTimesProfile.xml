@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content>
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.membership.profile</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.Profile</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">My Profile</component>
+  </content>
+</batch>

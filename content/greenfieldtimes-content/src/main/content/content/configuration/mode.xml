@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <!-- Import of channels www and mobile. (1 of 2) -->
+  <batch>  
+    <content>
+      <metadata>
+        <contentid>
+          <major>Department</major>
+          <externalid>example.modes.www.d</externalid>
+        </contentid>
+        <input-template>
+          <externalid>p.ModeDepartment</externalid>
+        </input-template>
+        <security-parent>
+          <externalid>p.siteengine.ModeConfiguration.d</externalid>
+        </security-parent>
+      </metadata>
+    </content>
+    <content>
+      <metadata>
+        <contentid>
+          <major>Department</major>
+          <externalid>example.modes.mobile.d</externalid>
+        </contentid>
+        <input-template>
+          <externalid>p.ModeDepartment</externalid>
+        </input-template>
+        <security-parent>
+          <externalid>p.siteengine.ModeConfiguration.d</externalid>
+        </security-parent>
+      </metadata>
+    </content>
+  </batch>
+
+  <!-- Import of host and path prefix for mobile channel -->
+  <batch>
+    <content>
+      <metadata>
+        <contentid>
+          <major>Content</major>
+          <externalid>example.modes.mobile.pathPrefix</externalid>
+        </contentid>
+        <input-template>
+          <externalid>p.ModeUrlTranslatorPathPrefix</externalid>
+        </input-template>
+        <security-parent>
+          <externalid>example.modes.mobile.d</externalid>
+        </security-parent>
+      </metadata>
+      <component name="name" group="polopoly.Content">Mobile friendly mode (/mobile prefix)</component>
+      <policy name="pathPrefix">
+        <value name="value">/mobile</value>
+      </policy>
+    </content>
+    <content>
+      <metadata>
+        <contentid>
+          <major>Content</major>
+          <externalid>example.modes.mobile.hostPrefix</externalid>
+        </contentid>
+        <input-template>
+          <externalid>p.ModeUrlTranslatorHostPrefix</externalid>
+        </input-template>
+        <security-parent>
+          <externalid>example.modes.mobile.d</externalid>
+        </security-parent>
+      </metadata>
+      <component name="name" group="polopoly.Content">Mobile friendly mode (mobile.* host name)</component>
+      <policy name="hostPrefix">
+        <value name="value">mobile</value>
+      </policy>
+    </content>
+  </batch>
+    
+  <!-- Import of channels www and mobile. (2 of 2) -->
+  <batch>
+    <content>
+      <metadata>
+        <contentid>
+          <major>Department</major>
+          <externalid>example.modes.www.d</externalid>
+        </contentid>
+      </metadata>
+      <component name="name" group="polopoly.Content">WWW mode</component>
+      <policy name="mode">
+        <value name="value">www</value>
+      </policy>
+    </content>
+    <content>
+      <metadata>
+        <contentid>
+          <major>Department</major>
+          <externalid>example.modes.mobile.d</externalid>
+        </contentid>
+      </metadata>
+      <component name="name" group="polopoly.Content">Mobile mode</component>
+      <policy name="mode">
+        <value name="value">mobile</value>
+      </policy>
+      <contentlist>
+        <entry mode="modify" withMetadata="false">
+          <metadata>
+            <referredContent>
+              <contentid>
+                <externalid>example.modes.mobile.pathPrefix</externalid>
+              </contentid>
+            </referredContent>
+          </metadata>
+        </entry>
+        <!--  
+           Remove the path prefix example above and replace with the following host prefix filter,
+           if you want to see an example the host prefix filter. Note that you have to configure
+           your DNSs to allow for use of the host prefix.
+        -->
+        <!--
+        <entry mode="modify" withMetadata="false">
+          <metadata>
+            <referredContent>
+              <contentid>
+                <externalid>example.modes.mobile.hostPrefix</externalid>
+              </contentid>
+            </referredContent>
+          </metadata>
+        </entry>
+        -->
+      </contentlist>
+    </content>
+  </batch>
+    
+  <!-- Import the new channels into Mode Configuration Department -->
+  <batch>
+    <content>
+      <metadata>
+        <contentid>
+          <major>Department</major>
+          <externalid>p.siteengine.ModeConfiguration.d</externalid>
+        </contentid>
+        <input-template>
+          <externalid>p.ModeConfigurationDepartment</externalid>
+        </input-template>
+      </metadata>
+      <contentlist>
+        <entry mode="modify" withMetadata="false">
+          <metadata>
+            <referredContent>
+              <contentid>
+                <externalid>example.modes.www.d</externalid>
+              </contentid>
+            </referredContent>
+          </metadata>
+        </entry>
+        <entry mode="modify" withMetadata="false">
+          <metadata>
+            <referredContent>
+              <contentid>
+                <externalid>example.modes.mobile.d</externalid>
+              </contentid>
+            </referredContent>
+          </metadata>
+        </entry>
+      </contentlist>
+    </content>
+  </batch>
+</batch>

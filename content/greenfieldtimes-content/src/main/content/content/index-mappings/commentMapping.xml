@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.IndexMapping-example.Comment</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.SolrIndexDefinitionHome</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.IndexMapping</externalid>
+      </input-template>
+    </metadata>
+    <component group="polopoly.Content" name="name">Index mappings for comments</component>
+    <component group="mapping" name="author">text</component>
+    <component group="mapping" name="text">text</component>
+    <component group="mapping" name="moderationState">moderationState</component>
+    <component group="mapping" name="name">lowRelevanceText</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.InternalIndexDefinition</externalid>
+      </contentid>
+    </metadata>
+    <contentref group="mappers" name="example.Comment">
+      <contentid>
+        <externalid>p.IndexMapping-example.Comment</externalid>
+      </contentid>
+    </contentref>
+  </content>
+</batch>

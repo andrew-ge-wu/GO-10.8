@@ -1,0 +1,110 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <name>greenfieldtimes-example - Content Data</name>
+  <artifactId>content</artifactId>
+  <groupId>com.polopoly.sites.greenfieldtimes-example</groupId>
+  <packaging>pom</packaging>
+
+  <parent>
+    <groupId>com.polopoly.sites.greenfieldtimes-example</groupId>
+    <artifactId>top</artifactId>
+    <version>10.8.0</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <modules>
+    <module>greenfieldtimes-content</module>
+    <module>environment-${targetEnv}-content</module>
+  </modules>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.polopoly.sites.greenfieldtimes-example</groupId>
+      <artifactId>greenfieldtimes</artifactId>
+      <version>${project.version}</version>
+      <type>jar</type>
+    </dependency>
+
+    <dependency>
+      <groupId>com.polopoly</groupId>
+      <artifactId>polopoly</artifactId>
+      <version>${polopoly.version}</version>
+      <scope>runtime</scope>
+      <type>jar</type>
+    </dependency>
+
+    <dependency>
+      <groupId>com.polopoly.extensions</groupId>
+      <artifactId>cm-velocity-integration</artifactId>
+      <version>${polopoly.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    <!-- This activates the Inbox -->
+    <dependency>
+      <groupId>com.polopoly</groupId>
+      <artifactId>inbox-control</artifactId>
+      <version>${polopoly.version}</version>
+      <classifier>activate-contentdata</classifier>
+    </dependency>
+
+    <dependency>
+      <groupId>com.atex.plugins</groupId>
+      <artifactId>baseline</artifactId>
+      <version>${baseline.version}</version>
+      <classifier>contentdata</classifier>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.polopoly.extensions</groupId>
+        <artifactId>p-maven-plugin</artifactId>
+        <version>${polopoly.version}</version>
+        <configuration>
+          <failOnMissingContentDataJarFile>true</failOnMissingContentDataJarFile>
+        </configuration>
+        <executions>
+          <execution>
+           <id>pack-content</id>
+            <goals>
+              <goal>pack</goal>
+            </goals>
+            <phase>package</phase>
+            <configuration>
+              <contentDataFileResources>
+                <files>
+                  <directory>${project.basedir}/src/main/content</directory>
+                  <includes>
+                    <include>**</include>
+                  </includes>
+                  <excludes>
+                    <exclude>**/.svn/**</exclude>
+                    <exclude>**/*.xml</exclude>
+                    <exclude>**/*.content</exclude>
+                  </excludes>
+                </files>
+              </contentDataFileResources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  <profiles>
+    <profile>
+      <id>demo</id>
+      <activation>
+        <property>
+          <name>!skipDemo</name>
+        </property>
+      </activation>
+      <modules>
+        <module>demo-content</module>
+      </modules>
+    </profile>
+  </profiles>
+</project>

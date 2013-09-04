@@ -1,0 +1,84 @@
+## (c) Polopoly AB (publ).
+## This software is protected by copyright law and international copyright
+## treaties as well as other intellectual property laws and treaties.
+## All title and rights in and to this software and any copies thereof
+## are the sole property of Polopoly AB (publ).
+## Polopoly is a registered trademark of Polopoly AB (publ).
+
+#set($view = $m.request.httpRequest.attributes.view)
+#if($content.landingPage.list.size() > 0)
+    #set($landingPage = $content.landingPage.list.get(0).content)
+#end
+
+#if($view && $view=='tv')
+  <div class="related-content $!view">
+  #set($countAll = 0)
+    #if($landingPage)
+##set($categorization = $m.request.httpRequest.attributes.categorization)
+##    $categorization
+##    $m.local.categorization
+##          #if(!$categorization) 
+##          #else
+##            #set($dimensions = $categorization.dimensions)
+##          #end
+          #set($dimensions = $m.local.categorization.dimensions)
+          #if($dimensions) 
+            More on : 
+          #end
+          #foreach($dimension in $dimensions)
+            #set($categoriesCount = $dimension.categories.size())
+            #if($categoriesCount > 0)
+              #foreach($category in $dimension.categories)
+                  #if ($countAll>0) 
+                  &nbsp|&nbsp
+                  #end
+                  <a href="#link({"path": $landingPage.parentIds,
+                      "contentId":$landingPage.contentId,
+                      'htmlEncodeLink': 'true',
+                      "contentParams":{ $landingPage.contentId : {"category":$category.id, "dimension":$dimension.id, "":""}, "":"" },
+                      "":""})" title="$!dimension.name">$category.name</a>
+                      #set($countAll = $countAll + 1)
+              #end
+             #end
+          #end
+    #end
+  </div>
+#else
+  <div class="related-content">
+    <h2>$!esc.html($content.name)</h2>
+    #if($landingPage)
+      <ul>
+          #set($dimensions = $m.local.categorization.dimensions)
+          #foreach($dimension in $dimensions)
+            #set($categoriesCount = $dimension.categories.size())
+            #if($categoriesCount > 0)
+                <li class="dimension">
+                  #set($dimensionElementId = "dimension-" + $velocityCount)
+                  <h3><a href="#" onclick="return toogleDimension('$dimensionElementId');">$dimension.name ($categoriesCount)</a></h3>
+                  <ul id="$dimensionElementId" class="categories hide">
+                      #foreach($category in $dimension.categories)
+                          <li class="category">
+                              <a href="#link({"path": $landingPage.parentIds,
+                                              "contentId":$landingPage.contentId,
+                                              'htmlEncodeLink': 'true',
+                                              "contentParams":{ $landingPage.contentId : {"category":$category.id, "dimension":$dimension.id, "":""}, "":"" },
+                                              "":""})">$category.name</a>
+                          </li>
+                      #end
+                  </ul>
+                </li>
+             #end
+          #end
+        </ul>
+    #end
+  </div>
+  <script type="text/javascript">
+      //<![CDATA[
+          function toogleDimension(dimensionElementId) {
+              $('.related-content .categories:not(#' + dimensionElementId + ')').hide('normal');
+              $('#' + dimensionElementId).toggle('normal');
+              return false;
+          }
+      //]]>
+  </script>
+#end

@@ -1,0 +1,167 @@
+<?xml version="1.0" ?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+
+  <!--  Metadata -->
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.IndexMapping-com.atex.plugins.baseline.MetaDataDrivenPublishingQueue</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.SolrIndexDefinitionHome</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.IndexMapping</externalid>
+      </input-template>
+    </metadata>
+    <component group="polopoly.Content" name="name">Index mappings for metadata-driven publishing queues</component>
+    <component group="mapping" name="name">lowRelevanceText</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.InternalIndexDefinition</externalid>
+      </contentid>
+    </metadata>
+    <contentref group="mappers" name="com.atex.plugins.baseline.MetaDataDrivenPublishingQueue">
+      <contentid>
+        <externalid>p.IndexMapping-com.atex.plugins.baseline.MetaDataDrivenPublishingQueue</externalid>
+      </contentid>
+    </contentref>
+  </content>
+  
+
+  <!--  Content list -->
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.IndexMapping-com.atex.plugins.baseline.ContentListPublishingQueue</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.SolrIndexDefinitionHome</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.IndexMapping</externalid>
+      </input-template>
+    </metadata>
+    <component group="polopoly.Content" name="name">Index mappings for content list-driven publishing queues</component>
+    <component group="mapping" name="name">lowRelevanceText</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.InternalIndexDefinition</externalid>
+      </contentid>
+    </metadata>
+    <contentref group="mappers" name="com.atex.plugins.baseline.ContentListPublishingQueue">
+      <contentid>
+        <externalid>p.IndexMapping-com.atex.plugins.baseline.ContentListPublishingQueue</externalid>
+      </contentid>
+    </contentref>
+  </content>
+  
+  
+  <!--  Latest blog postings -->
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.IndexMapping-example.LatestBlogPostingsPublishingQueue</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.SolrIndexDefinitionHome</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.IndexMapping</externalid>
+      </input-template>
+    </metadata>
+    <component group="polopoly.Content" name="name">Index mappings for latest blog postings publishing queues</component>
+    <component group="mapping" name="name">lowRelevanceText</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.InternalIndexDefinition</externalid>
+      </contentid>
+    </metadata>
+    <contentref group="mappers" name="example.LatestBlogPostingsPublishingQueue">
+      <contentid>
+        <externalid>p.IndexMapping-example.LatestBlogPostingsPublishingQueue</externalid>
+      </contentid>
+    </contentref>
+  </content>  
+
+
+  <!--  Statistics -->
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.IndexMapping-com.atex.plugins.baseline.StatisticsDrivenPublishingQueue</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.SolrIndexDefinitionHome</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.IndexMapping</externalid>
+      </input-template>
+    </metadata>
+    <component group="polopoly.Content" name="name">Index mappings for statistics-driven publishing queues</component>
+    <component group="mapping" name="name">lowRelevanceText</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.InternalIndexDefinition</externalid>
+      </contentid>
+    </metadata>
+    <contentref group="mappers" name="com.atex.plugins.baseline.StatisticsDrivenPublishingQueue">
+      <contentid>
+        <externalid>p.IndexMapping-com.atex.plugins.baseline.StatisticsDrivenPublishingQueue</externalid>
+      </contentid>
+    </contentref>
+  </content>  
+
+
+  <!--  Context -->
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.IndexMapping-com.atex.plugins.baseline.ContextDrivenPublishingQueue</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.SolrIndexDefinitionHome</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.IndexMapping</externalid>
+      </input-template>
+    </metadata>
+    <component group="polopoly.Content" name="name">Index mappings for context-driven publishing queues</component>
+    <component group="mapping" name="name">lowRelevanceText</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.InternalIndexDefinition</externalid>
+      </contentid>
+    </metadata>
+    <contentref group="mappers" name="com.atex.plugins.baseline.ContextDrivenPublishingQueue">
+      <contentid>
+        <externalid>p.IndexMapping-com.atex.plugins.baseline.ContextDrivenPublishingQueue</externalid>
+      </contentid>
+    </contentref>
+  </content>    
+</batch>

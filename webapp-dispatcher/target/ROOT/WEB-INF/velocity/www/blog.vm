@@ -1,0 +1,47 @@
+#set($rs = $m.context.site.bean.resources.strings)
+
+<div class="element blog" id="blog">
+#parse("/WEB-INF/velocity/www/blog-header.vm")  
+
+#if($hasBlogError)
+  #parse("/WEB-INF/velocity/www/blog-error.vm")  
+#end
+
+#if($isBlogEdit || $isBlogPostEdit || $isBlogPostCreate)
+  ## EDIT
+  <div class="membershipForm">
+    <div class="membershipFormSection">
+  #if($isBlogEdit)
+    #parse("/WEB-INF/velocity/www/blog-edit.vm")  
+  #elseif ($isBlogPostEdit || $isBlogPostCreate)
+    #parse("/WEB-INF/velocity/www/blogpost-edit.vm")    
+  #end
+    </div>
+  </div>
+#else
+  ## VIEW
+  <div class="postsContainer">  
+  #if($isSinglePostView)
+    #render({"contentId":$blogPostId, "params":{"isSinglePostView":"true"}, "":""})
+  #else
+    #foreach($blogPostId in $posts)
+      #render({"contentId":$blogPostId, "":""})
+    #end
+    <div class="paging">
+    #if($nextIndex)
+      <div class="olderPosts">
+        <a href="#link({"path": $m.request.originalContentPath, 'htmlEncodeLink': 'true', "params":{"index":"$nextIndex"}, "":""})">$rs.blog.olderPosts</a>
+      </div>
+    #end
+    #if($index > 0)
+      #set($prevIndex = $math.max($math.sub($index, $postsLimit), 0) + "")
+      <div class="newerPosts">
+        <a href="#link({"path": $m.request.originalContentPath, 'htmlEncodeLink': 'true', "params":{"index":"$prevIndex"}, "":""})">$rs.blog.newerPosts</a>
+      </div>
+    #end
+    </div>
+  #end
+  </div>
+  #parse("/WEB-INF/velocity/www/blog-sidebar.vm")    
+#end
+</div>

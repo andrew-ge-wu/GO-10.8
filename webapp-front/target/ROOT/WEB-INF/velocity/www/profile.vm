@@ -1,0 +1,287 @@
+#set($rs = $m.context.site.bean.resources.strings)
+#set($tabViewId = "tabs_" + $content.contentId.contentIdString.replaceAll('\.', '_'))
+
+##Velocity workaround
+#set($hash = '#')
+
+<h1>$rs.profile.profileHeader</h1>
+#if ($login-error && $login-error.size() > 0)
+  <div id="userProfileNotLoggedIn" class="warning notification element big">
+    <p>$rs.profile.notLoggedInBody</p>
+  </div>
+#else
+
+<div id="$tabViewId" class="flora">
+  <ul>
+    #if($paywallEnabled)
+        <li><a href="${hash}${tabViewId}_mySubscriptions"><span>My subscriptions</span></a></li>
+    #end
+    <li><a href="${hash}${tabViewId}_myBlogs"><span>$rs.blog.myBlogsHeader</span></a></li>
+    <li><a href="${hash}${tabViewId}_changePassword"><span>$rs.profile.changePasswordHeader</span></a></li>
+  </ul>
+  #if($paywallEnabled)
+  <div id="${tabViewId}_mySubscriptions" class="tab">
+    <p>$!rs.paywall.userengagement.info</p><br/>
+    <b>$!rs.paywall.userengagement.current</b>
+    #foreach($engagement in $engagements)
+    <p>&nbsp; &nbsp; $engagement.product.contentBundle.name $engagement.product.subscriptionType.name
+    <span>
+    #if($engagement.endDate > 0)
+    ($!rs.paywall.userengagement.validuntil $date.format("yyyy-MM-dd HH:mm", $engagement.endDate, $m.context.site.bean.resources.locale))
+    #end
+    </span>
+    </p>
+    #end
+    #if($engagements.size() <= 0)
+        <p>&nbsp; &nbsp; $!rs.paywall.userengagement.noengagement</p>
+    #end
+  </div>
+  #end
+<div id="${tabViewId}_myBlogs" class="tab">
+  <div class="membershipForm">
+    <div id="createBlogToggle">
+      <form>
+        <input class="submit" type="button" onclick="javascript: jQuery('#createBlogSection').toggle(); return false;" value="$rs.blog.createBlog" />
+      </form>
+    </div>
+
+    <h1>$rs.blog.myBlogsHeader</h1>
+
+    <div class="possibleError">
+        #if ($error && $error.size() > 0)
+          <ul>
+            #foreach ($errorKey in $error)
+              <li>$rs.blog.error.get($errorKey)</li>
+            #end
+          </ul>
+
+          #if ($hasCreateError)
+            <script type="text/javascript">
+              jQuery().ready(function() {
+
+                jQuery('#createBlogSection').show();
+
+                jQuery("$hash${tabViewId}_myBlogs ${hash}blog_id").val("$blogForm.blogId");
+                jQuery("$hash${tabViewId}_myBlogs ${hash}blog_name").val("$blogForm.blogName");
+                jQuery("$hash${tabViewId}_myBlogs ${hash}blog_description").val("$blogForm.blogDescription");
+                jQuery("$hash${tabViewId}_myBlogs ${hash}blog_address").val("$blogForm.blogAddress");
+              });
+            </script>
+          #end
+        #end
+    </div>
+
+    <p class="headerIntro">$rs.blog.myBlogsIntroduction</p>
+
+    <div class="membershipFormSection" id="createBlogSection" style="display: none;">
+      <h2>$rs.blog.createBlogHeader</h2>
+
+      <p class="intro">$rs.blog.createBlogIntroduction</p>
+
+      <form method="post" action="#link({"path":$m.request.originalContentPath, 'htmlEncodeLink': 'true', "":""})" id="createBlogForm" name="createBlogForm">
+        <input type="hidden" name="blog_id" id="blog_id" />
+        <div id="createBlogFormContainer">
+              <div class="field">
+                <label for="blog_name">$rs.blog.blogName <span class="required">*</span></label>
+                <input size="42" type="text" name="blog_name" id="blog_name"/>
+              </div>
+              <div class="field">
+                <label for="blog_address">$rs.blog.blogAddress <span class="required">*</span></label>
+                <input size="42" type="text" name="blog_address" id="blog_address"/>
+              </div>
+              <div class="field">
+                <label for="blog_description">$rs.blog.blogDescription</label>
+                <textarea rows="4" cols="48" name="blog_description" id="blog_description"></textarea>
+              </div>
+
+          #set($parentPage = $m.context.site.top.content.membershipConfiguration.blogPage.contentId.contentIdString)
+          #if(!$parentPage)
+            #set($parentPage = $m.context.site.top.content.contentId.contentId.contentIdString)
+          #end
+          <input type="hidden" name="parent_page" value="$parentPage"/>
+
+          <div class="button-set">
+            <input class="submit" type="submit" value="$rs.blog.create" id="submitBlogFormButton"/>
+            <input class="submit" type="button" value="$rs.blog.cancel" id="cancelCreateBlog" onclick="javascript: jQuery('#createBlogSection').toggle(); document.createBlogForm.reset(); return false;" />
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="membershipFormSection">
+      <h2>$rs.blog.myCurrentBlogsHeader</h2>
+
+      ## Note: This should be a synchronous service data refresh
+      ## in the case where you want immediate visibility. In this
+      ## case we are fine with a background job.
+
+      #if ($newBlogId)
+        <script type="text/javascript">
+          jQuery().ready(function() {
+            var blogServiceSettings = polopoly.user.getSessionServiceSettings("ubg", "0");
+            if (blogServiceSettings == undefined) blogServiceSettings = new Array();
+            blogServiceSettings.push("$newBlogId");
+            polopoly.user.setSessionServiceSettings("ubg", "0", blogServiceSettings);
+          });
+        </script>
+      #end
+
+      #if ($blogs && $blogs.size() > 0)
+        <ul class="blogs">
+          #foreach ($blog in $blogs)
+            #set($row = 'even')
+            #if($velocityCount % 2 != 0)
+              #set($row = 'odd')
+            #end
+            <li class="$row">
+              <span style="margin-left: 32px; float: right;"><a href="#link({"path":$blog.parentIds, 'htmlEncodeLink': 'true', "params":{"editBlog":"true"}, "":""})">$rs.blog.blogSettings</a></span>
+              <a href="#link({"path":$blog.parentIds, 'htmlEncodeLink': 'true', "":""})">$blog.name</a>
+            </li>
+          #end
+        </ul>
+      #else
+        $rs.blog.noBlogs
+      #end
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    jQuery().ready(function() {
+      polopoly.service.blog.validateBlogForm(
+        {'blog_name:required':'$rs.blog.error.fieldRequiredBlogName',
+         'blog_address:required':'$rs.blog.error.fieldRequiredBlogAddress'});
+    });
+  </script>
+</div>
+
+<div id="${tabViewId}_changePassword" class="tab">
+  <div class="membershipForm">
+    <div id="badBrowser">$rs.membership.badbrowser</div>
+
+    <div id="userProfileSuccess" class="success notification element big" style="display: none;">
+      <h1>$rs.profile.successheader</h1>
+      <p>$rs.profile.successbody</p>
+    </div>
+
+    <div id="userProfile" class="userProfile" style="display: none;">
+      <h1>$rs.profile.changePasswordHeader</h1>
+      <div class="possibleError"></div>
+
+      <p class="headerIntro">$rs.profile.introduction</p>
+
+      <form method="post" action="/membership/changepassword" id="changepasswordform">
+          <div class="field">
+            <label class="required" for="change_current_password">$rs.profile.currentPassword <span class="required">*</span></label>
+            <input size="42" type="password" name="change_current_password" id="change_current_password"/>
+          </div>
+          <div class="field">
+            <label class="required" for="change_password">$rs.profile.password <span class="required">*</span></label>
+            <input size="42" type="password" name="change_password" id="change_password"/>
+            <div class="password_strength_titel" title="$rs.registration.passwordstrength.tooltip">$rs.registration.passwordstrength.titel</div>
+            <div id="password_strength" class="passwordStrength"></div>
+          </div>
+          <div class="field">
+            <label class="required" for="change_check_password">$rs.profile.checkPassword <span class="required">*</span> <span id="passwordMismatch"></span></label>
+            <input size="42" type="password" name="change_check_password" id="change_check_password"/>
+          </div>
+        </ul>
+        <div class="button-set">
+          <input class="submit" type="submit" value="$rs.profile.change" id="submitProfileChange"/>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    jQuery("#badBrowser").hide();
+
+    jQuery().ready(function() {
+      /* Success? */
+
+      jQuery("#$tabViewId > ul").bind('tabsshow', function(event, ui) {
+        if (ui.panel.id == "${tabViewId}_changePassword") {
+          polopoly.passwordMeter.create("#change_password", "#password_strength");
+          jQuery("#$tabViewId > ul").unbind('tabsshow');
+        }
+      });
+
+      if (polopoly.util.querystringValue("changed")) {
+        jQuery("#userProfileSuccess").show();
+        jQuery("#$tabViewId").tabs().tabs('select', 1);
+      } else {
+
+          jQuery("#userProfile").show();
+          polopoly.passwordMeter.create("#change_password", "#password_strength");
+
+          /* "Error management" */
+          var errorStatus = polopoly.util.querystringValue("changepassword_formerror");
+
+          if (errorStatus != null && errorStatus != "") {
+            jQuery("#$tabViewId").tabs().tabs('select', 1);
+          }
+
+          if ("down" == errorStatus) {
+            jQuery("$hash${tabViewId}_changePassword .possibleError").text("$rs.membership.serverdown");
+          } else if ("auth" == errorStatus) {
+            jQuery("$hash${tabViewId}_changePassword .possibleError").text("$rs.profile.errorAuthorizationFailed");
+          } else if ("login" == errorStatus) {
+            jQuery("$hash${tabViewId}_changePassword .possibleError").text("$rs.profile.errorNotLoggedIn");
+          } else if ("inval" == errorStatus) {
+            jQuery("$hash${tabViewId}_changePassword .possibleError").text("$rs.profile.invalidNewPassword");
+          }
+
+          var validation = {
+            rules: {
+              change_current_password: {
+                required: true,
+                minlength: 4
+              },
+              change_password: {
+                required: true,
+                minlength: 4
+              },
+              change_check_password: {
+                equalTo: "#change_password"
+              }
+            },
+            messages: {
+              change_current_password: {
+                required: "$rs.membership.errorRequired",
+                minlength: "$rs.membership.errorPasswordMin4"
+              },
+              change_password: {
+                required: "$rs.membership.errorRequired",
+                minlength: "$rs.membership.errorPasswordMin4"
+              },
+              change_check_password: {
+                equalTo: "$rs.membership.errorPasswordNotEqual"
+              }
+            },
+            submitHandler: function(form) {
+              jQuery("#submitProfileChange").css("background-color", "#ccc");
+              jQuery("#submitProfileChange").attr("disabled", true);
+              polopoly.util.injectCSRFToken(form);
+              form.submit();
+            }
+          };
+
+          // Clear out to dodge horrible firefox autoremember.
+          jQuery("#changepasswordform :text, #changepasswordform :password").val("");
+
+          var validator = jQuery("#changepasswordform").validate(validation);
+
+          // Check password after password change.
+          jQuery("#change_password").blur(function() {
+            jQuery("#change_check_password").valid();
+          });
+      }
+    });
+  </script>
+
+</div>
+</div>
+<script type="text/javascript">
+  jQuery("#$tabViewId").tabs();
+</script>
+
+#end

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content>
+    <metadata>
+      <contentid>
+        <major>1</major>
+        <externalid>example.demo.article.HybridCars</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+    </metadata>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>1</major>
+        <externalid>example.demo.article.HybridCars</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+    </metadata>
+    <component group="author" name="value"><![CDATA[Wikinews]]></component>
+    <component group="body" name="value"><![CDATA[<p>While hybrid vehicles have found considerable popularity in the United States since their introduction, one difficulty associated with the rollout of a fully electric car has been the comparably high price and poor performance, compared to an internal combustion engine-driven car of similar size. Tesla Motors claims that their Model S, a sedan which runs solely on electricity, will be more affordable. Tesla first entered the automobile market in 2006, with a prototype of an electric vehicle designed on the roadster style. While the car, whose exterior design was based on the Lotus Elise, accelerated well and had considerable range, its cost of US$109,000 was prohibitive for many and to date only 300 have been sold, with a thousand more ordered. Tesla says, however, that the Model S could sell for around $56,400, with the actual price some $7,500 lower after a Federal Government tax credit on electric vehicles. Tesla claims the Model S has a range of up to 450 kilometers (280 miles) without recharging and can reach a top speed of 200 km/h (125 mph). It is powered by a 454 kg (1001 lb) battery pack. Initial plans were to build the car in New Mexico, but instead the Model S will be built near the company's headquarters in San Jose, California.</p> <p><i>This article was originally published on <a href="http://en.wikinews.org/wiki/Southern_California_auto_maker_announces_fully-electric_sedan">Wikinews</a> and is reproduced here in accordance with <a href="http://creativecommons.org/licenses/by/2.5/">CC-Attribution-Generic 2.5.</a></i></p>]]></component>
+    <component group="polopoly.Content" name="name"><![CDATA[Southern California auto maker announces fully-electric sedan]]></component>
+    <component group="lead" name="value"><![CDATA[While hybrid vehicles have found considerable popularity in the United States since their introduction, one difficulty associated with the rollout of a fully electric car has been the comparably high price and poor performance, compared to an internal combustion engine-driven car of similar size. Tesla Motors claims that their Model S, a sedan which runs solely on electricity, will be more affordable.]]></component>
+    <component group="categorization" name="value"><![CDATA[{"dimensions":[{"id":"department.categorydimension.tag.Company","name":"Company","enumerable":false,"entities":[{"id":"","name":"","entities":[],"attributes":[]}]}]}]]></component>
+  </content>
+</batch>

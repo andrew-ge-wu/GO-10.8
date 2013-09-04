@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model typeName="com.polopoly.application.PacemakerComponent">
+
+  <pacemakerSettings>
+    <interval>0.1</interval>
+    <fixedRate>true</fixedRate>
+    <enabled>true</enabled>
+  </pacemakerSettings>
+  
+</model>

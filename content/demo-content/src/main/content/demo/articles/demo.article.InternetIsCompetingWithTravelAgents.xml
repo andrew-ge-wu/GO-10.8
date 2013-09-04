@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- http://en.wikinews.org/wiki/2008_Taiwan_Tourism_Exposition_to_encourage_tourism_industry_after_Sichuan_earthquake -->
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.InternetIsCompetingWithTravelAgents</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.2.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="author" name="value">Wikinews</component>
+    <component group="body" name="value"><![CDATA[<p>The 2nd-annual Taiwan Tourism Exposition 2008, organized by the Taipei Association of Travel Agents, started yesterday (May 16) at the Taipei World Trade Center Exhibition Hall 3. 350 different agencies from local and foreign countries participated in the show. Governments and travel agencies in Taiwan hoped this exhibition could inspire the tourism industry in the light of the recent earthquake in Sichuan Province in China.</p>
+    <p>Before opening day, Peter Ting, Vice Chairman of the Taipei Association of Travel Agents, spoke to Wikinews Journalist Rico Shen about the recent earthquake.</p>
+    <p>"It [the earthquake] wouldn't make a great strike for the [tourism] industry, but it apparently effected us [the industry] in consequence. In fact, we hoped this [Sichuan] earthquake never happened even though it is partial for us. Currently, not only [did] our delegates visit there to gain [perspective of the] current conditions [after the earthquake], but also the Tourism Bureau [of the Republic of China] also did the "Travel Warning" announcement for Sichuan as "No Visiting Place". Besides of this, I think the other places [or nations] would be effected less than Sichuan. Therefore, I hope visitors can choose suitable travel packages after several views for safety issue.," stated Ting.</p>
+    <p>Vincent Siew, the pre-elected Vice President of the Republic of China, was invited to join in the Opening Ceremony yesterday, and commented.</p>
+    <p>"The tourism industry is a potential industry in Taiwan, I hope this industry can be properly promoted with some modifications from our laws after this earthquake to encourage more foreign visitors visit Taiwan," said Siew</p>
+    <p>Because of the "Travel Warning" by the Tourism Bureau, the Straits Exchange Foundation dispatched several travel guide books during the show hours to strengthen traveling risks and conceptions for visitors when choosing any travel package.</p>
+    <p><i>This article was originally published on <a href="http://en.wikinews.org/wiki/2008_Taiwan_Tourism_Exposition_to_encourage_tourism_industry_after_Sichuan_earthquake">Wikinews</a> and is reproduced here in accordance with <a href="http://creativecommons.org/licenses/by/2.5/">CC-Attribution-Generic 2.5.</a></i></p>
+    ]]></component>
+    <component group="polopoly.Content" name="name">2008 Taiwan Tourism Exposition to encourage tourism industry after Sichuan earthquake</component>
+    <component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+    <component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+
+    <component group="polopoly.ContentLists" name="images">images</component>
+    <component group="polopoly.ContentLists" name="topimages">topimages</component>
+    <component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+    <component group="p.Inbox" name="showContent">true</component>
+    <component group="lead" name="value">The 2nd-annual Taiwan Tourism Exposition 2008, organized by the Taipei Association of Travel Agents, started yesterday (May 16) at the Taipei World Trade Center Exhibition Hall 3. 350 different agencies from local and foreign countries participated in the show.</component>
+    <component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+
+    <component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": []
+    }
+  ]
+}   </component>
+    <component group="p.Content.state" name="onlineState">true</component>
+
+    <contentref group="images" name="0">
+      <contentid>
+        <major>ReferenceMetaData</major>
+        <externalid>example.demo.ref.image.InternetIsCompetingWithTravelAgents</externalid>
+      </contentid>
+    </contentref>
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.InternetIsCompetingWithTravelAgents.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.InternetIsCompetingWithTravelAgents.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.InternetIsCompetingWithTravelAgents.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.InternetIsCompetingWithTravelAgents.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.InternetIsCompetingWithTravelAgents.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.InternetIsCompetingWithTravelAgents.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content>
+</batch>

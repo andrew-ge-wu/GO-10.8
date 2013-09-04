@@ -1,0 +1,11 @@
+<jboss-web>
+  <context-root>content-hub</context-root>
+  <depends>jboss.j2ee:jndiName=ejb/CMService,service=EJB</depends>
+  <depends>jboss.j2ee:jndiName=ejb/UserSecurityHandler,service=EJB</depends>
+  <class-loading java2ClassLoadingCompliance="false">
+    <loader-repository>
+      com.atex:archive=content-hub
+      <loader-repository-config>java2ParentDelegation=false</loader-repository-config>
+    </loader-repository>
+  </class-loading>
+</jboss-web>

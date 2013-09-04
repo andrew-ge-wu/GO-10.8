@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.IndexMapping-public-example.Elements</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.SolrIndexDefinitionHome</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.IndexMapping</externalid>
+      </input-template>
+    </metadata>
+    <component group="polopoly.Content" name="name">Public index mappings for elements</component>
+    <component group="mapping" name="name">title</component>
+  </content>
+
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.IndexMapping-internal-example.Elements</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.SolrIndexDefinitionHome</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.IndexMapping</externalid>
+      </input-template>
+    </metadata>
+    <component group="polopoly.Content" name="name">Internal index mappings for elements</component>
+    <component group="mapping" name="name">title</component>
+    <component group="mapping" name="description.value">text</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.PublicIndexDefinition</externalid>
+      </contentid>
+    </metadata>
+    <contentref group="mappers" name="example.ImageGalleryElement">
+      <contentid>
+        <externalid>p.IndexMapping-public-example.Elements</externalid>
+      </contentid>
+    </contentref>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.InternalIndexDefinition</externalid>
+      </contentid>
+    </metadata>
+    <contentref group="mappers" name="example.ImageGalleryElement">
+      <contentid>
+        <externalid>p.IndexMapping-internal-example.Elements</externalid>
+      </contentid>
+    </contentref>
+  </content>
+</batch>

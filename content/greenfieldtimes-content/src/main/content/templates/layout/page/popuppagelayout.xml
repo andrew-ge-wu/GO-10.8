@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.PopupPageLayout">
+    <content-xml>
+      <component group="polopoly.Content" name="name">Popup page layout</component>
+    </content-xml>
+    <policy>com.polopoly.siteengine.standard.content.ContentBasePolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+
+    <layout name="menu" input-template="p.AjaxPageMenu">
+      <layout name="mainpage" input-template="p.Page" label="Main column">
+        <layout name="mainsec" input-template="p.LabeledSection" label="Main column">
+          <field name="main" input-template="p.siteengine.layout.Slot.it" />
+        </layout>
+      </layout>
+      <layout name="leftoverspage" input-template="p.Page" label="cm.template.p.siteengine.LeftOvers.UnassignedContent">
+        <layout name="leftoverssec" input-template="p.LabeledSection" label="cm.template.p.siteengine.LeftOvers.UnassignedContent">
+          <field name="leftOvers" input-template="p.siteengine.LeftOvers" label="" />
+        </layout>
+      </layout>
+    </layout>
+    <output-templates mode="www">
+      <id>example.PopupPageLayout.ot</id>
+    </output-templates>
+  </input-template>
+  <output-template name="example.PopupPageLayout.ot" input-template="p.siteengine.PageLayoutOutputTemplate">
+    <content-xml>
+      <component group="polopoly.Content" name="name">Popup page layout</component>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/www/popuppagelayout.vm</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+    </content-xml>
+  </output-template>
+</template-definition>

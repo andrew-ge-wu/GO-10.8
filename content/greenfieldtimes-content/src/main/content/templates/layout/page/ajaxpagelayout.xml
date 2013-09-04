@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.AjaxPageLayout">
+    <content-xml>
+      <component group="polopoly.Content" name="name">Ajax page layout</component>
+    </content-xml>
+    <policy>com.polopoly.siteengine.standard.content.ContentBasePolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <output-templates mode="www">
+      <id>example.AjaxPageLayout.ot</id>
+    </output-templates>
+  </input-template>
+  <output-template name="example.AjaxPageLayout.ot" input-template="p.siteengine.PageLayoutOutputTemplate">
+    <content-xml>
+      <component group="polopoly.Content" name="name">Ajax page layout</component>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/www/ajaxpagelayout.vm</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+    </content-xml>
+  </output-template>
+</template-definition>

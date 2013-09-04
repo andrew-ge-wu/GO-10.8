@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <name>greenfieldtimes-example - Data API Webapp</name>
+
+  <parent>
+    <groupId>com.polopoly.sites.greenfieldtimes-example</groupId>
+    <artifactId>top</artifactId>
+    <version>10.8.0</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <groupId>com.polopoly.sites.greenfieldtimes-example</groupId>
+  <artifactId>server-data-api</artifactId>
+  <packaging>war</packaging>
+
+  <dependencies>
+    <dependency>
+      <artifactId>greenfieldtimes</artifactId>
+      <groupId>com.polopoly.sites.greenfieldtimes-example</groupId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <artifactId>integration-data-api</artifactId>
+      <groupId>com.polopoly</groupId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <finalName>data-api</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.1.1</version>
+        <configuration>
+          <packagingExcludes>WEB-INF/lib/servlet-api-*.jar</packagingExcludes>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.polopoly.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>${jetty-plugin.version}</version>
+        <configuration>
+          <scanIntervalSeconds>${polopoly.jetty-scanIntervalSeconds}</scanIntervalSeconds>
+          <jettyConfig>${project.parent.basedir}/config/${targetEnv}/jetty-jmx.xml</jettyConfig>
+          <webAppConfig>
+            <contextPath>/data-api</contextPath>
+          </webAppConfig>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

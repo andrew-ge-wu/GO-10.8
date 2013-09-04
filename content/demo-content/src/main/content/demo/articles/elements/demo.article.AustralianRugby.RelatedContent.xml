@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+<content clear="true">
+<metadata>
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.AustralianRugby.RelatedContent</externalid>
+  </contentid>
+  <input-template>
+    <major>InputTemplate</major>
+    <externalid>example.RelatedContentElement</externalid>
+  </input-template>
+  <security-parent>
+    <major>Article</major>
+    <externalid>example.demo.article.AustralianRugby</externalid>
+  </security-parent>
+</metadata>
+<component group="polopoly.Content" name="name">Related content</component>
+<component group="polopoly.ContentLists" name="landingPage">landingPage</component>
+<contentref group="landingPage" name="0">
+  <contentid>
+    <major>Department</major>
+    <externalid>extid2.1610</externalid>
+  </contentid>
+</contentref>
+</content>
+</batch>

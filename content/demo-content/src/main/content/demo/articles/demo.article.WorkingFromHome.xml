@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- http://en.wikinews.org/wiki/Study_shows_that_Canadians_enjoy_daily_commute_to_work -->
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+
+<content clear="true">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.WorkingFromHome</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.2.d</externalid>
+      </security-parent>
+    </metadata>
+<component group="body" name="value"><![CDATA[
+<p>A new study by Statistics Canada shows that 38 per cent of Canadians enjoy their daily commute to work. One in six workers, about 16 per cent even said that they liked commuting a lot and 30 per cent do not.</p>
+<p>The average commute for people from Burlington to Toronto takes about 45 minutes.</p>
+<p>The shorter the distance to work, the more enjoyable the commute is. Most commuters who travel to work by bike enjoy the trip the most. "People taking public transit get the least amount of enjoyment out of the commute, which could be because their trips are often longer," said Martin Turcotte, the author of the study. "Baby boomers like commuting more than younger people," he said.</p>
+<p>"The time alone is therapeutic," said a 33-year-old, who has been commuting for seven years. "I am alone in my car and I can control all the elements. I can have it hot or cold, have the music on or off and I can choose to take phone calls or not."</p>
+<p>"It's also an opportunity to exercise that I otherwise wouldn't have," said Chris Heysel, who cycles 21 kilometres from Stoney Creek to McMaster University in Hamilton.</p>
+<p>More workers said that they disliked chores like cleaning the house and grocery shopping more than they did commuting to work.</p>
+
+ <p><i>This article was originally published on <a href="http://en.wikinews.org/wiki/Study_shows_that_Canadians_enjoy_daily_commute_to_work">Wikinews</a> and is reproduced here in accordance with <a href="http://creativecommons.org/licenses/by/2.5/">CC-Attribution-Generic 2.5.</a></i></p>
+
+]]>
+</component>
+<component group="polopoly.Content" name="name">Study shows that Canadians enjoy daily commute to work</component>
+<component group="p.Inbox" name="showContent">true</component>
+<component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+<component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+<component group="polopoly.ContentLists" name="images">images</component>
+
+<component group="polopoly.ContentLists" name="topimages">topimages</component>
+<component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+<component group="lead" name="value">A new study by Statistics Canada shows that 38 per cent of Canadians enjoy their daily commute to work. One in six workers, about 16 per cent even said that they liked commuting a lot and 30 per cent do not</component>
+<component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+<component group="elements/inheritSetting" name="count">1</component>
+<component group="elements/inheritSetting" name="selected_0">default</component>
+
+<component group="author" name="value">Emily Malone</component>
+<component group="rightColumn/inheritSetting" name="count">1</component>
+<component group="rightColumn/inheritSetting" name="selected_0">default</component>
+<component group="p.Content.state" name="onlineState">true</component>
+
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-09",
+          "name": "labour",
+          "entities": [
+            {
+              "id": "subject-09013",
+              "name": "health and safety at work",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+<contentref group="images" name="0">
+<contentid>
+<major>ReferenceMetaData</major>
+<externalid>example.demo.ref.image.WorkingFromHome</externalid>
+</contentid>
+</contentref>
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.WorkingFromHome.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.WorkingFromHome.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.WorkingFromHome.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.WorkingFromHome.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.WorkingFromHome.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.WorkingFromHome.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content>  
+</batch>

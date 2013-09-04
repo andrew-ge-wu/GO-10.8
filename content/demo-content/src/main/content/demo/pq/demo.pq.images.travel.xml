@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.pq.images.travel</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.baseline.MetaDataDrivenPublishingQueue</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Image PQ</component>
+    <component group="associatedSites" name="count">0</component>
+    <component group="type" name="count">1</component>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-10",
+          "name": "lifestyle and leisure",
+          "entities": [
+            {
+              "id": "subject-10006",
+              "name": "tourism",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+    <contentref group="type" name="reference0">
+      <contentid>
+        <major>Department</major>
+        <externalid>p.templatecategory.image</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="type" name="reference_parent0">
+      <contentid>
+        <major>Department</major>
+        <externalid>p.templatecategory.media</externalid>
+      </contentid>
+    </contentref>
+
+  </content>
+</batch>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+<!-- http://en.wikinews.org/wiki/India_wraps_up_Test_cricket_series_win_in_England -->
+<content clear="true">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.Cricket</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+<component group="author" name="value">Wikinews</component>
+<component group="polopoly.Content" name="name">India wraps up Test cricket series win in England</component>
+<component group="lead" name="value">India have drawn the third Test cricket match against England at The Oval, London, England. The draw means that India win the Test series in England 1-0. This is India's first series win in England since 1986 and England's first home series loss since 2001.</component>
+<component group="body" name="value"><![CDATA[
+<p>In the first Test at Lord's, England started off the match with a first innings of 298, then bowling India out for 201. England then followed that up with a score of 282. India then worked their way to 282/9 before the weather turned for the worse and rain came to their rescue and ended the first test as a draw.</p>
+<p>The second Test proved a better one for India where the left-arm seamers dominated. After England had been shot out for 198, India took the advantage by starting their innings with a 147 run opening partnership, and India didn't look back. They ended their innings with a score of 481. There could have been centuries had it not been for two horrible umpiring decisions which left Tendulkar on 91 after being wrongly adjudged lbw and Sourav Ganguly was left on 79 after missing a ball going down the leg-side but which the umpire thought he nicked. After England had been bowled out for 355, India went in for the kill and won the Test. There were also several behavioral problems, including Sreesanth's shoulder barge into Michael Vaughan which cost Sreesanth half of his match fee and the jelly bean scandal in which the England players allegedly put jelly beans on the pitch to distract Zaheer Khan. This would prove costly however, as Zaheer Khan got fired up and then went on to take 9 wickets in the match.</p>
+<p>The third Test proved to be a closer game. Having won the toss and chosen to bat, India racked up a massive 664 in their first innings which included eight half-century partnerships, a first in Tests, and Anil Kumble's maiden Test century. England were then bowled out for 345, well short of the total needed to avoid a possible follow-on, with Ian Bell top scoring with 63. Paul Collingwood and Alastair Cook followed with 62 and 61 respectively.</p>
+<p>India though, did not enforce the follow-on and opted to bat again. India stuttered to 11/3, losing both opening batsmen within the first four overs, followed by the wicket of Sachin Tendulkar for just one run. Sourav Ganguly and Rahul Dravid however steadied the innings. Ganguly had the highest score of the innings with 57 while Dravid was uncharacteristically slow and scored 12 runs off 96 balls.</p>
+<p>India declared on 180/6, setting England a massive target of 500 runs. England then batted out the remaining 110 overs of the match to score 369/6, including a century from Kevin Pietersen, ending the match as a draw.</p>
+<p>A seven-match One-Day International series will be played between the two countries following the Test series, with the first to take place at the Rose Bowl, Hampshire on 21st August.</p>
+<p><i>This article was originally published on <a href="http://en.wikinews.org/wiki/India_wraps_up_Test_cricket_series_win_in_England">Wikinews</a> and is reproduced here in accordance with <a href="http://creativecommons.org/licenses/by/2.5/">CC-Attribution-Generic 2.5.</a></i></p>
+]]>
+</component>
+<component group="publishedDate" name="date">1187010000467</component>
+<component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+<component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+<component group="polopoly.ContentLists" name="images">images</component>
+<component group="polopoly.ContentLists" name="topimages">topimages</component>
+<component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+<component group="p.Inbox" name="showContent">true</component>
+<component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+<component group="p.Content.state" name="onlineState">true</component>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-15",
+          "name": "sport",
+          "entities": [
+            {
+              "id": "subject-15017",
+              "name": "cricket",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+<contentref group="images" name="0">
+  <contentid>
+    <externalid>example.demo.image.Cricket</externalid>
+  </contentid>
+</contentref>
+
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.Cricket.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.Cricket.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.Cricket.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.Cricket.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.Cricket.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.Cricket.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content>
+</batch>

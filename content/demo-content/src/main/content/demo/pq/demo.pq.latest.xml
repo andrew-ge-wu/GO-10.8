@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.pq.latest</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.baseline.MetaDataDrivenPublishingQueue</externalid>
+      </input-template>
+      <security-parent>
+        <major>LayoutElement</major>
+        <externalid>example.demo.listelement.latest</externalid>
+      </security-parent>
+    </metadata>
+   <component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    }
+  ]
+}   </component>
+    <component group="polopoly.Content" name="name">Latest</component>
+    <component group="associatedSites" name="count">0</component>
+    <component group="type" name="count">1</component>
+    <contentref group="type" name="reference0">
+      <contentid>
+        <externalid>p.templatecategory.article</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="type" name="reference_parent0">
+      <contentid>
+        <externalid>p.StandardResourceCategorization</externalid>
+      </contentid>
+    </contentref>
+  </content>
+</batch>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.Sports.Hockey</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+	<component group="articles" name="contentListMaxSize">1</component> 
+	<component group="breakingNews" name="value">false</component> 
+	<component group="image" name="selected">landscape</component> 
+	<component group="image" name="landscape_height">365</component> 
+	<component group="image" name="landscape_x">0</component> 
+	<component group="image" name="landscape_y">0</component> 
+	<component group="image" name="landscape_width">500</component> 
+	<component group="polopoly.ContentLists" name="articles">articles</component> 
+    <contentref group="articles" name="0">
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.Hockey</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="image" name="image">
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.HockeyNHL</externalid>
+      </contentid>
+    </contentref>
+  </content>
+</batch>

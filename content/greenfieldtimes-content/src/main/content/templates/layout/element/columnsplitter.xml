@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.ColumnSplitterElement" label="cm.template.p.siteengine.layout.ColumnSplitterElement.it">
+    <policy>example.layout.element.ElementPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <type>LayoutElement</type>
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="titleOfNewContent">cm.template.p.siteengine.layout.ColumnSplitterElement.it.new</param>
+    <param name="templateIcon">column_add_after.png</param>
+    <param name="renderTemplateIconInSelect">true</param>
+    <editor contextName="orchid_TOCENTRY">example.layout.element.columnsplitter.OColumnSplitterListEntryPolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">example.layout.element.columnsplitter.OColumnSplitterListEntryPolicyWidget</viewer>
+    <field name="name" input-template="p.ContentName" label="cm.label.Name" required="true" />
+    <field name="ratio" input-template="p.Select" label="cm.template.p.siteengine.layout.ColumnSplitterElement.it.ColumnRatio">
+      <param name="size">1</param>
+      <param name="selected">1</param>
+      <param name="multivalued">false</param>
+      <param name="label_0">cm.template.p.siteengine.layout.ColumnSplitterElement.it.ColumnRatio.leftHeavy</param>
+      <param name="value_0">leftHeavy</param>
+      <param name="label_1">50/50</param>
+      <param name="value_1">half</param>
+      <param name="label_2">cm.template.p.siteengine.layout.ColumnSplitterElement.it.ColumnRatio.rightHeavy</param>
+      <param name="value_2">rightHeavy</param>
+    </field>
+    <layout name="columns" input-template="p.ColumnHolder">
+      <layout name="mainSlotColumn" input-template="p.Column" label="cm.template.p.siteengine.layout.ColumnSplitterElement.it.LeftColumn">
+        <layout name="leftcolcomment" input-template="p.Comment" label="cm.template.p.siteengine.layout.ColumnSplitterElement.it.LeftColumn">
+          <param name="comment">cm.template.p.siteengine.layout.ColumnSplitterElement.it.LeftColumn.comment</param>
+        </layout>
+        <field name="leftSlot" input-template="p.siteengine.layout.Slot.it" label="cm.template.p.siteengine.layout.ColumnSplitterElement.it.LeftColumn" />
+      </layout>
+      <layout name="teaserSlotPage" input-template="p.Column" label="cm.template.p.siteengine.layout.ColumnSplitterElement.it.RightColumn">
+        <layout name="rightcolcomment" input-template="p.Comment" label="cm.template.p.siteengine.layout.ColumnSplitterElement.it.RightColumn">
+          <param name="comment">cm.template.p.siteengine.layout.ColumnSplitterElement.it.RightColumn.comment</param>
+        </layout>
+        <field name="rightSlot" input-template="p.siteengine.layout.Slot.it" label="cm.template.p.siteengine.layout.ColumnSplitterElement.it.RightColumn" />
+      </layout>
+    </layout>
+    <output-templates mode="www">
+      <id>example.ColumnSplitterElement.ot</id>
+    </output-templates>
+    <output-templates mode="mobile">
+      <id>example.MobileColumnSplitterElement.ot</id>
+    </output-templates>
+  </input-template>
+  <output-template name="example.ColumnSplitterElement.ot" input-template="p.siteengine.ElementOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/www/columnsplitter.vm</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+    </content-xml>
+  </output-template>
+  <output-template name="example.MobileColumnSplitterElement.ot" input-template="p.siteengine.ElementOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/mobile/columnsplitter.vm</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+    </content-xml>
+  </output-template>
+</template-definition>

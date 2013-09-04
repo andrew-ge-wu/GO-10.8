@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+<!-- http://en.wikinews.org/wiki/Donald_Trump_plans_%C2%A3300m_%22golfing_paradise%22_for_rural_Scotland -->
+<content clear="true">
+<metadata>
+  <contentid>
+    <major>Article</major>
+    <externalid>example.demo.article.Golf</externalid>
+  </contentid>
+  <input-template>
+    <major>InputTemplate</major>
+    <externalid>example.StandardArticle</externalid>
+  </input-template>
+  <security-parent>
+    <major>Department</major>
+    <externalid>GreenfieldTimes.d</externalid>
+  </security-parent>
+</metadata>
+<component group="author" name="value">Wikinews</component>
+<component group="polopoly.Content" name="name">Donald Trump plans £300m "golfing paradise" for rural Scotland</component>
+<component group="lead" name="value">American multi-billionaire Donald Trump has announced plans to build a massive golf complex on an 800-acre site just north of Aberdeen, Scotland.</component>
+<component group="body" name="value">
+<![CDATA[
+<p>Speaking last night from the Trump Tower in New York, Trump said that the development will be akin to a "homecoming" for him. The ginger-haired property tycoon's mother is from the Western Isles of Scotland.</p>
+<p>The £300m project at Menie in Aberdeenshire will include both a links course and an inland course, and a 400-bedroom hotel as well as a golfing academy and holiday homes. The facilities are being built with the intention of attracting the Open Championship to the site, officially dubbed Trump International Golf Links, Scotland.</p>
+<p>Fields and sand-dunes make up the landscape of the coastal site. Trump said of the location, <cite>"As soon as I saw it there was no question about it. I looked at 211 fantastic sites all over Europe, but here it is - the dune size and the ocean front. There is no piece of land that I have ever seen that is comparable to this."</cite> The billionaire claims that the complex, set to be his only development outside the United States, will be the <cite>"best course in the world."</cite></p>
+<p>Local and national political figures, including Scottish First Minister Jack McConnell, have welcomed the announcement with open arms, as the project is expected to bring in an additional £157m to the region's economy within the first ten years. Scottish tourism company VisitScotland is also optimistic, expecting an influx of international visitors to play on (or simply visit) the site. Plans to expand the A90 road running past the site in the near future will enable more road traffic to and around the area. An £60m expansion of Aberdeen Airport will also allow for vastly increased international air links, akin to those operated using Boeing 767 aircraft.</p>
+<p>Work on the golf complex itself is set to begin in September this year, with the Trump Organisation hopeful for a Spring 2008 opening date.</p>
+<p><i>This article was originally published on <a href="http://en.wikinews.org/wiki/Donald_Trump_plans_%C2%A3300m_%22golfing_paradise%22_for_rural_Scotland">Wikinews</a> and is reproduced here in accordance with <a href="http://creativecommons.org/licenses/by/2.5/">CC-Attribution-Generic 2.5.</a></i></p>
+]]>
+</component>
+<component group="publishedDate" name="date">1143903600000</component>
+<component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+<component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+<component group="polopoly.ContentLists" name="images">images</component>
+<component group="polopoly.ContentLists" name="topimages">topimages</component>
+<component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+<component group="p.Inbox" name="showContent">true</component>
+<component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+<component group="p.Content.state" name="onlineState">true</component>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-15",
+          "name": "sport",
+          "entities": [],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+<contentref group="images" name="0">
+  <contentid>
+    <externalid>example.demo.image.GolfPole</externalid>
+  </contentid>
+</contentref>
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.Golf.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.Golf.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.Golf.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.Golf.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.Golf.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.Golf.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content> 
+</batch>

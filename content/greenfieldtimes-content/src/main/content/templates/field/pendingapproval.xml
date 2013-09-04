@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.WorkflowApproval">
+    <policy>com.polopoly.cm.policy.PolicyImplBase</policy>
+    <editor>com.polopoly.cm.app.widget.OComplexFieldTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OComplexFieldTopPolicyWidget</viewer>
+    <field name="standardSearch" input-template="p.CategorizedSearch" label="cm.template.example.WorkfowApproval.DraftsPendingApproval">
+      <param name="itemContextName">orchid_WORKFLOWAPPROVALITEM</param>
+      <param name="listControllerClassName">com.polopoly.cm.app.orchid.widget.impl.list.OListControllerNoControls</param>
+      
+      <!-- Here you specify search widgets (they will be assigned to a search group depending
+        on mapping) -->
+      <param name="SearchWidget[0]">com.polopoly.cm.app.search.searchwidget.ODraftContentSearchWidget</param>
+      <param name="SearchWidget[1]">com.polopoly.cm.app.search.searchwidget.OWorkingSitesSearchWidget</param>
+      <param name="SearchWidget[2]">com.polopoly.cm.app.search.searchwidget.OArticleMajorSearchWidget</param>
+
+      <!-- approveActions are the actions that an editor should perform to approve an article in a 
+           workflow. This is used to verify which articles an editor may approve (by comparing to the
+           ACL). 
+           
+           Should be given as a comma-separated list, e.g.
+                <param name="approveActions">a, b, c</param> 
+                
+           This is currently configured against the p.SimpleWorkFlow work flow type.     
+      -->
+      <param name="approveActions">approve</param>
+
+      <!-- draftStates are the states in which an article can reside, in which it is still considered 
+           a draft. This is used to narrow the search to the index to only the states residing here.
+           
+           Should be given as a comma-separated list, e.g.
+                <param name="draftStates">a, b, c</param>
+                
+           This is currently configured against the p.SimpleWorkFlow work flow type.
+       -->
+      <param name="draftStates">draft</param>
+
+      <!-- Here you specify the widgets to render (either group search widget or
+        an index to a previosly defined search widget). Widgets will be rendered in the 
+        order specified. -->
+      <param name="render0">0</param>
+      <param name="render1">1</param>
+      <param name="render2">2</param>
+
+      <param name="searchResultLabel">cm.template.example.WorkfowApproval.SearchResultLabel</param>
+      <param name="searchButtonLabel">cm.template.example.WorkfowApproval.SearchButtonLabel</param>
+    </field>
+  </input-template>
+</template-definition>
+

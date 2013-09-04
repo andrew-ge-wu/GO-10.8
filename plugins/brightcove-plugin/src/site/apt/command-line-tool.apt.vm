@@ -1,0 +1,45 @@
+Introduction
+
+  Brightcove plugin include one command line tool to enable user to setup a cron job to periodically fetch videos from Brightcove
+  and create as Polopoly content.
+
+Download
+
+  To download the executable jar, please go to
+  {{{http://maven.polopoly.com/nexus/content/groups/polopoly-plugins/com/atex/plugins/brightcove-plugin}Polopoly Maven Site}}
+  and login with your support site credential.
+  From the list of the versions, navigate to correct version based on your project.
+  Then download jar with name brightcove-<VERSION>-exe.jar
+
+  <<Note:>> This jar only available since version 1.1.0.
+
+Build your own
+
+  To build your own executable jar, checkout the code from github
+  {{{http://github.com/atex-polopoly/brightcove-plugin.git}Brightcove Plugin}}.
+  run "git clone http://github.com/atex-polopoly/brightcove-plugin.git"
+  Go to the folder that cloned from github, run "mvn package -P deploy".
+  The "deploy" profile is necessary in order for the executable jar to work.
+  There should be file brightcove-<VERSION>-exe.jar in the target folder if build successful.
+
+Usage
+
+  - <<url>>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ The URL of the connection properties file, default is <<http://localhost:8081/connection-properties/connection.properties>>
+  
+  - <<securityParent>> Where should the newly created content belong to, default is <<GreenfieldTimes.d>>
+  
+  - <<user>>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Which user used to import create content, default is <<sysadmin>>
+  
+  - <<minutes>>\ \ \ \ \ \ \ \ \ \ \ \ The past time in minute used to find modified content from Brightcove, default is <<1 day ago>>
+  
+  - <<limit>>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ The limit of the result return by Brightove when find modified content, default value is <<100>>
+  
+  - <<siteId>>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ The site id of the brightcove configuration to be use, default value is <<null>> (follow the first configuration in the configuration list)
+  
+Example
+
+  The following example will use <<myproject.d>> as the content's security parent and point 
+  the connection properties URL to <<http://cmserver:8080/connection-properties/connection.properties>>.
+  
+  java -jar <<-Durl=http://cmserver:8080/connection-properties/connection.properties -DsecurityParent=myproject.d>> brightcove-${project.version}-exe.jar
+

@@ -1,0 +1,37 @@
+#set($rs = $m.context.site.bean.resources.strings)
+#set($elementId = $content.contentId.minor)
+#set($isBlogPostMode = true)
+
+#if($m.request.httpRequest.getParameter("comments"))
+  #parse("/WEB-INF/velocity/www/comments-view.vm")
+#else
+<div class="post">
+  <div class="header">
+    <form class="requiresBlogOwner" action="$m.stack.blogUrl/$content.contentId.contentId.contentIdString">
+      <input type="hidden" name="editPost" value="$content.contentId.contentId.contentIdString" />
+      <input type="submit" class="submit" value="$rs.blog.editPost" />
+    </form>    
+    <form class="requiresBlogOwner" action="$m.stack.blogUrl"
+          method="POST" onsubmit="return polopoly.service.blog.confirm(this,'$rs.blog.confirmDeletePost')" >
+      <input type="hidden" name="action" value="DELETE_BLOG_POST"/>
+      <input type="hidden" name="blogPostId" value="$content.contentId.contentId.contentIdString" />
+      <input type="submit" class="submit" name="delete" value="$rs.blog.deletePost" />
+    </form>
+    <h2><a href="#link({"path": $content.parentIds, 'htmlEncodeLink': 'true', "":""})">$content.name</a></h2>
+    <div class="footer">$date.format("d MMMM yyyy HH:mm", $content.publishingDateTime, $m.context.site.bean.resources.locale)</div>
+  </div>  
+  <div class="clearfix">$parsedbody</div> 
+</div>
+#if($isSinglePostView)
+  <div class="articleComments" id="comment">
+  #parse("/WEB-INF/velocity/www/comments-input.vm")
+  <div id="commentsField-$elementId"></div>
+  <script type="text/javascript">
+  jQuery().ready(function() {  
+      polopoly.comments.get("$m.stack.blogUrl/$content.contentId.contentId.contentIdString", 0, "#commentsField-$elementId");
+  });    
+  </script>
+  </div>
+#end
+
+#end

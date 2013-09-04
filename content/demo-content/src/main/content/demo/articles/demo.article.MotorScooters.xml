@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- http://en.wikinews.org/wiki/The_Next_Consortium_of_ITRI_launches_%27RoboScooter%27 -->
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+
+<content clear="true">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.MotorScooters</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="author" name="value">Wikinews</component>
+<component group="body" name="value"><![CDATA[
+    <p>At the Pavilion of Taiwan Automotive Research Consortium during the AutoTronics Taipei 2008, in Taipei Time, the Next Consortium of Industrial Technology Research Institute (ITRI) unveiled a brand-new environmental-concept vehicle named "RoboScooter". It was jointly designed by the Creativity Lab of ITRI, SYM Motors, and the Media Lab of Massachusetts Institute of Technology. This announcement was approved by industrial, governmental, and academical executives, but not just in Taiwan.</p>
+
+    <p>The ability for R&D to manufacture the electronic vehicles and bicycles was concerning to several automobile-related industries. There was concern not only from several trade shows, but also international competitions related to the design after winning several prizes back in Taiwan to establish the industrial position and brand image of "Made in Taiwan". Since several industries like automobile are transformed to high-value industries, "creativity" progressively became a key element before unveiling any new products.</p>
+
+    <p>As of this sector, Wen-jean Hsueh (ITRI Creativity Lab General Director) hoped companies could do proper transformations on its R&D nature from "Made in Taiwan" to "Created in Taiwan" for best practice. This not only echoed "OBM" theory discussed at 2007 Taiwan Brands' Trend Forum but also blended with a key element of production - "creativity".</p>
+
+    <p>On the other side of SYM Motors, to solve the transportation problem for TWTC Nangang, SYM Motors Taiwan imported manufacturing technology from Kinglong Bus Co., Ltd. to manufacture several 4th-cycle low floor buses and sell them to Chung-hsing Bus Co., Ltd. and Kwang-huang Bus Co., Ltd. In this launch, the SYM Motors Taiwan hope this vehicle is energy-efficiency, easily-parked, and has creative functions which can improve the transportation habits of individuals.</p>
+
+    <p><i>This article was originally published on <a href="http://en.wikinews.org/wiki/The_Next_Consortium_of_ITRI_launches_%27RoboScooter%27">Wikinews</a> and is reproduced here in accordance with <a href="http://creativecommons.org/licenses/by/2.5/">CC-Attribution-Generic 2.5.</a></i></p>
+    ]]>
+</component>
+<component group="polopoly.Content" name="name">The Next Consortium of ITRI launches 'RoboScooter'</component>
+<component group="lead" name="value">At the Pavilion of Taiwan Automotive Research Consortium during the AutoTronics Taipei 2008, in Taipei Time, the Next Consortium of Industrial Technology Research Institute (ITRI) unveiled a brand-new environmental-concept vehicle named "RoboScooter".</component>
+<component group="p.Inbox" name="showContent">true</component>
+<component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+<component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+<component group="polopoly.ContentLists" name="images">images</component>
+<component group="polopoly.ContentLists" name="topimages">topimages</component>
+<component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+<component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": []
+    }
+  ]
+}</component>
+<component group="p.Content.state" name="onlineState">true</component>
+<contentref group="images" name="0">
+<contentid>
+<externalid>example.demo.image.ScootersInChina</externalid>
+</contentid>
+</contentref>
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MotorScooters.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MotorScooters.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MotorScooters.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MotorScooters.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MotorScooters.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MotorScooters.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content>  
+</batch>

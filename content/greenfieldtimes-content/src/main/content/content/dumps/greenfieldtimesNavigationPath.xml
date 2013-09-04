@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>elem.navpath</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.NavigationPathElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Navigation path</component>
+  </content>
+</batch>

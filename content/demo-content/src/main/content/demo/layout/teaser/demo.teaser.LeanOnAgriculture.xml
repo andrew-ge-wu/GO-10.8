@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.LeanOnAgriculture</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="titleFontSize" name="value">20</component> 
+	<component group="articles" name="contentListMaxSize">1</component> 
+	<component group="polopoly.Content" name="name">UN Tackles World Hunger</component> 
+	<component group="teaser" name="value">The director general of the U.N. Food and Agriculture Organization is calling for more investment in agriculture in the developing world to tackle the problem of food insecurity.</component> 
+	<component group="image" name="selected">landscape</component> 
+	<component group="image" name="landscape_height">262</component> 
+	<component group="image" name="landscape_x">21</component> 
+	<component group="image" name="landscape_y">142</component> 
+	<component group="image" name="landscape_width">1003</component> 
+	<component group="polopoly.ContentLists" name="articles">articles</component> 
+	<component group="breakingNews" name="value">false</component>
+    <contentref group="articles" name="0">
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.LeanOnAgriculture</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="image" name="image">
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.LeanOnAgriculture</externalid>
+      </contentid>
+    </contentref>
+  </content>
+</batch>

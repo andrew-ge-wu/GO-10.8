@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content>
+    <metadata>
+      <contentid>
+        <externalid>p.DefaultModelMapping</externalid>
+      </contentid>
+    </metadata>
+    <component group="mapping_greenfield" name="default">com.polopoly.data.StandardPolicyController</component>
+
+    <component group="mapping_mt_greenfield" name="example.greenfieldtimes.adapter.ImageBean">example.greenfieldtimes.adapter.ImageModelController</component>
+
+    <component group="mapping_greenfield" name="example.Image">example.greenfieldtimes.adapter.ImageModelController</component>
+
+    <!-- READ -->
+    <component group="variant_greenfield" name="from_example.StandardArticle">example.data.ArticleMapper</component>
+
+    <!-- CREATE PT I -->
+    <component group="variant_greenfield" name="majorName_example.greenfield.adaptertimes.ArticleBean">ARTICLE</component>
+    <component group="variant_greenfield" name="defaultSecurityParent_example.greenfieldtimes.adapter.ArticleBean">GreenfieldTimes.d</component>
+    <component group="variant_greenfield" name="inputTemplate_example.greenfieldtimes.adapter.ArticleBean">example.StandardArticle</component>
+
+    <!-- UPDATE & CREATE PT II -->
+    <component group="apply_example.greenfieldtimes.adapter.ArticleBean" name="to_example.StandardArticle">example.data.ArticleMapper</component>
+
+  </content>
+</batch>

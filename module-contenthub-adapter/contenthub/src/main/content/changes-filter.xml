@@ -1,0 +1,30 @@
+<!-- Imports and publishes the mandatory system content -->
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content>
+    <metadata>
+      <contentid>
+        <externalid>p.ChangesService.InputTemplateFilter</externalid>
+      </contentid>
+    </metadata>
+    <contentlist>
+      <entry withMetadata="false" mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.contenthub.StandardArticle</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry withMetadata="false" mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.contenthub.Image</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+</batch>

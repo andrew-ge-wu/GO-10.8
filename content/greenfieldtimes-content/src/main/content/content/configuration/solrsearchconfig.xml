@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+
+  <!--Default configuration content for solr facet search settings-->
+  <!--The p.SearchArea field takes a parameter: solrSearchSettingsContent -->
+  <!--that specifies the externalid for the configuration content to use. -->
+  <!--The default one is p.InternalSolrSearchSettings-->
+  <!-- -->
+  <!--group: must be "facet" -->
+  <!--name: solr field to facet on -->
+  <!--value <true/false>: present the facets in the searh result with the -->
+  <!--                    contentname instead of contentid-->  
+  <!-- -->
+  <!--The facets displaynames are stored in the localized files with the labels: -->
+  <!--cm.facets.<solr field> -->
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <externalid>p.InternalSolrSearchSettings</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.SolrSearchSettingsTemplate</externalid>
+      </input-template>
+    </metadata>
+    
+    <component group="facets" name="inputTemplate">true</component>    
+    <component group="facets" name="page">true</component>
+    <component group="facets" name="tag_department.categorydimension.tag.Person">false</component>
+    <component group="facets" name="tag_department.categorydimension.tag.Company">false</component>
+    <component group="facets" name="tag_department.categorydimension.tag.Tag">false</component>
+    <component group="facets" name="tag_department.categorydimension.tag.Organization">false</component>
+    <component group="facets" name="tag_department.categorydimension.tag.Location">false</component>
+    
+  </content>
+  
+</batch>

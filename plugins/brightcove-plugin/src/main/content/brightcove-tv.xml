@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+
+  <input-template name="com.atex.plugins.brightcove.ListElementContentListWrapper">
+    <content-list-wrapper>com.polopoly.cm.app.policy.ConfigurableContentListWrapper</content-list-wrapper>
+    <idparam-list name="allowedInputTemplates">
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.brightcove.ListElement</externalid>
+      </contentid>
+    </idparam-list>
+  </input-template>
+
+  <input-template name="com.atex.plugins.brightcove.Tv" label="com.atex.plugins.brightcove.tv.name">
+
+    <type>LayoutElement</type>
+
+    <policy>com.atex.plugins.brightcove.TVPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="renderTemplateIconInSelect">true</param>
+
+    <content-list name="videos" input-template="com.atex.plugins.brightcove.ListElementContentListWrapper">
+    </content-list>
+
+    <layout name="menu" input-template="p.PageMenu">
+      <layout name="standard" input-template="p.Page" label="cm.general.General">
+        <layout name="brightcovecolumholder" input-template="p.ColumnHolder">
+          <layout name="brightcovecolumn" input-template="p.Column">
+            <field name="name" input-template="p.ContentName" label="com.atex.plugins.brightcove.name" required="true" />
+            <field name="player" input-template="p.TextInput" label="com.atex.plugins.brightcove.player" />
+            <field name="autoStart" input-template="p.SelectableSubField" label="com.atex.plugins.brightcove.tv.autoStart">
+              <param name="inlineHelp">true</param>
+              <help>com.atex.plugins.brightcove.tv.autoStart.help</help>
+              <field name="autoStartCloudSetting" input-template="p.TextOutput" label="com.atex.plugins.brightcove.tv.autoStartCloudSetting">
+                <param name="inlineHelp">true</param>
+                <help>com.atex.plugins.brightcove.tv.autoStart.cloudSettingHelp</help>
+              </field>
+              <field name="autoStartCmGui" input-template="p.Checkbox" label="com.atex.plugins.brightcove.tv.autoStartCmGui">
+                <param name="inlineHelp">true</param>
+                <help>com.atex.plugins.brightcove.tv.autoStart.cmGuiHelp</help>
+              </field>
+            </field>
+            <field name="showSlider" input-template="p.Checkbox" label="com.atex.plugins.brightcove.tv.showSlider" />
+            <field name="videos" input-template="p.ContentListEntryContainer" label="com.atex.plugins.brightcove.tv.list">
+              <param name="contentListName">videos</param>
+            </field>
+            <field name="autoPlay" input-template="p.Checkbox" label="com.atex.plugins.brightcove.tv.autoPlay">
+              <param name="checked">true</param>
+              <param name="inlineHelp">true</param>
+              <help>com.atex.plugins.brightcove.tv.autoPlay.help</help>
+            </field>
+          </layout>
+        </layout>
+        <layout name="metadataColumns" input-template="p.ColumnHolder">
+          <layout name="categorySelectorColumn" input-template="p.Column">
+            <layout name="metadataSection" input-template="p.LabeledSection" label="cm.general.Categorization">
+              <param name="cssClass">p_section</param>
+              <layout name="categorizationPadding" input-template="p.Group">
+                <param name="showLabel">false</param>
+                <param name="showFieldset">false</param>
+                <param name="cssClass">p_padding</param>
+                <field name="categorizationOption" input-template="p.SelectableSubField" label="com.atex.plugins.brightcove.tv.categorizationOption">
+                  <param name="inlineHelp">true</param>
+                  <help>com.atex.plugins.brightcove.tv.categorizationOption.help</help>
+                  <field name="videoCategorization" input-template="com.atex.plugins.brightcove.empty" label="com.atex.plugins.brightcove.tv.categorizationOption.video"/>
+                  <field name="categorization" input-template="p.siteengine.Content.Categorization" label="com.atex.plugins.brightcove.tv.categorizationOption.tv">
+                    <param name="categoryDimensionsAlias">sites</param>
+                  </field>
+                  <field name="hideRelatedLink" input-template="com.atex.plugins.brightcove.empty" label="com.atex.plugins.brightcove.tv.categorizationOption.hide"/>
+                </field>
+              </layout>
+            </layout>
+            <field name="relatedContent" input-template="p.AutoContentCreator">
+              <idparam name="templateContentId">
+                <externalid>com.atex.plugins.brightcove.BrightcoveRelatedContentTemplate</externalid>
+              </idparam>
+              <param name="insertionContentListName">elements/slotElements</param>
+              <param name="showFieldset">false</param>
+            </field>
+          </layout>
+        </layout>
+      </layout>
+      <layout name="elements" input-template="p.Page" label="cm.template.p.siteengine.StandardArticle.it.Elements">
+        <param name="lazyInit">true</param>
+        <layout name="columns" input-template="p.ColumnHolder">
+          <layout name="mainColumn" input-template="p.Column">
+            <layout name="mainColumnSection" input-template="p.LabeledSection" label="cm.template.p.siteengine.StandardArticle.it.Elements.MainColumn">
+              <param name="cssClass">p_section</param>
+              <field name="elements" input-template="p.siteengine.layout.Slot.it" />
+            </layout>
+          </layout>
+        </layout>
+      </layout>
+    </layout>
+    <output-templates mode="www">
+      <id>com.atex.plugins.brightcove.Tv.ot</id>
+    </output-templates>
+  </input-template>
+</template-definition>

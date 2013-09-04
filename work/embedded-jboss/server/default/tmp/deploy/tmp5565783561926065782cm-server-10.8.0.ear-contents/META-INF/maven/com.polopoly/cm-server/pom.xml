@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- project info ======================================================= -->
+  <name>public - cm-server.ear</name>
+  <artifactId>cm-server</artifactId>
+  <packaging>ear</packaging>
+
+  <parent>
+    <groupId>com.polopoly</groupId>
+    <artifactId>public</artifactId>
+    <version>10.8.0</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <!-- dependencies ======================================================= -->
+  <dependencies>
+    <dependency>
+      <groupId>com.polopoly.core</groupId>
+      <artifactId>service-ejb-impl</artifactId>
+      <version>${project.version}</version>
+      <type>ejb</type>
+    </dependency>
+    <dependency>
+      <groupId>com.polopoly.assemblies</groupId>
+      <artifactId>repository-service-war</artifactId>
+      <version>${project.version}</version>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.polopoly.assemblies</groupId>
+      <artifactId>repository-service-war</artifactId>
+      <version>${project.version}</version>
+      <type>pom</type>
+    </dependency>
+
+    <dependency>
+      <groupId>xerces</groupId>
+      <artifactId>xmlParserAPIs</artifactId>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+  <!-- build ============================================================== -->
+  <build>
+    <finalName>cm-server</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-ear-plugin</artifactId>
+	<version>2.6</version>
+        <configuration>
+          <modules>
+            <ejbModule>
+              <groupId>com.polopoly.core</groupId>
+              <artifactId>service-ejb-impl</artifactId>
+            </ejbModule>
+            <webModule>
+              <groupId>com.polopoly.assemblies</groupId>
+              <artifactId>repository-service-war</artifactId>
+              <context-root>/repositoryservice</context-root>
+            </webModule> 
+          </modules>
+          <jboss>
+            <version>4</version>
+            <loader-repository>com.polopoly:loader=cm-server.ear</loader-repository>
+          </jboss>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

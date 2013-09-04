@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.BlogPost" label="cm.template.example.BlogPost.it">
+    <policy>example.blog.BlogPostPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <editor contextName="orchid_SEARCHITEM">example.widget.OSearchItemBaseWidget</editor>
+    <viewer contextName="orchid_SEARCHITEM">example.widget.OSearchItemBaseWidget</viewer>
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+    <type>Community</type>
+    <param name="templateIcon">note.png</param>
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">false</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">false</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="ViewState_copy">true</param>
+    <param name="cloneSecurityParent">currentOrHome</param>
+    <param name="titleOfNewContent">cm.template.example.BlogPost.it.new</param>
+    <field name="contentVersionLimiter" input-template="p.ContentVersionLimiter">
+      <param name="maxVersions">4</param>
+    </field>
+    <field name="name" input-template="p.ContentName" label="cm.label.Heading" />
+    <field name="text" input-template="p.TextArea" label="cm.label.Text" />
+    
+    <field name="images" input-template="p.ImageManager" label="cm.template.example.Images" required="false">
+      <param name="mode">multipleUploadNoSelect</param>
+      <param name="allowEdit">false</param>
+      <param name="showPasteButton">false</param>
+      <param name="openEditorOnUpload">false</param>
+      <param name="openEditorOnSelect">false</param>
+      <param name="maxNofPixels">8000000</param>
+      <param name="abortNofPixels">12000000</param>
+    </field>
+    
+    <field name="deleteState" input-template="p.DeleteState" label="cm.field.DeleteState.Label" />
+    
+    <field name="comments" input-template="p.CommentBrowser" label="cm.template.p.comment.comments"/>
+    
+    <output-templates mode="www">
+      <id>example.BlogPost.ot</id>
+    </output-templates>
+    <output-templates mode="mobile">
+      <id>example.MobileBlogPost.ot</id>
+    </output-templates>
+  </input-template>
+  <output-template name="example.BlogPost.ot" input-template="p.siteengine.ArticleOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/www/blogpost.vm</component>
+      <contentref group="output/controller" name="selected">
+        <contentid>
+          <externalid>p.siteengine.JavaClassRenderController</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/controller/selected/renderControllerClass" name="value">example.blog.RenderControllerBlogPost</component>
+    </content-xml>
+  </output-template>
+  <output-template name="example.MobileBlogPost.ot" input-template="p.siteengine.ArticleOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/mobile/blogpost.vm</component>
+      <contentref group="output/controller" name="selected">
+        <contentid>
+          <externalid>p.siteengine.JavaClassRenderController</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/controller/selected/renderControllerClass" name="value">example.blog.RenderControllerBlogPost</component>
+    </content-xml>
+  </output-template>
+</template-definition>

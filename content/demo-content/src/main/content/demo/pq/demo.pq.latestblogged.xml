@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.latestbloggedpq</externalid>
+      </contentid>
+
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.LatestBlogPostingsPublishingQueue</externalid>
+      </input-template>
+
+      <security-parent>
+        <major>LayoutElement</major>
+        <externalid>example.latestbloggedlist</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Latest blogs</component>
+    <component group="associatedSites" name="count">0</component>
+  </content>
+
+</batch>

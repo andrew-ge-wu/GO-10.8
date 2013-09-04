@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.topblogstodaypq</externalid>
+      </contentid>
+      
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.baseline.StatisticsDrivenPublishingQueue</externalid>
+      </input-template>
+
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+
+    <component group="polopoly.Content" name="name">Top blogs today</component>
+    <component group="analyzerName" name="selected_0">bloganalyzer</component>
+    <component group="associatedSites" name="count">0</component>
+    <component group="resolution" name="selected_0">DAY</component>
+    <component group="resolution" name="count">1</component>
+    <component group="department" name="count">1</component>
+    
+    <contentref group="department" name="reference0">
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </contentid>
+    </contentref>
+  </content>
+</batch>

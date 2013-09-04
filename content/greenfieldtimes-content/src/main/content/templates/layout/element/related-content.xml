@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.RelatedContentElement" label="cm.template.example.RelatedContentElement">
+
+    <policy>example.layout.element.ElementPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+
+    <type>LayoutElement</type>
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="titleOfNewContent">cm.template.example.RelatedContentElement.new</param>
+    <param name="templateIcon">web.png</param>
+    <param name="renderTemplateIconInSelect">true</param>
+
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+
+    <content-list name="landingPage" input-template="p.siteengine.SingleLandingPageContentListWrapper" />
+
+    <field name="name" input-template="p.ContentName" label="cm.label.Name" />
+    <field name="landingPage" input-template="p.ContentListEntryContainer" label="cm.template.example.RelatedContentElement.relatedContent">
+      <param name="contentListName">landingPage</param>
+      <param name="showActionButtonsInViewMode">false</param>
+    </field>
+
+    <output-templates mode="www">
+      <id>example.RelatedContentElement.ot</id>
+    </output-templates>
+  </input-template>
+
+  <output-template name="example.RelatedContentElement.ot" input-template="p.siteengine.ElementOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/www/related-content.vm</component>
+      <contentref group="output/controller" name="selected">
+        <contentid>
+          <externalid>p.siteengine.JavaClassRenderController</externalid>
+        </contentid>
+      </contentref>
+     <component group="output/controller/selected/renderControllerClass" name="value">example.layout.element.RenderControllerRelatedContentElement</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+    </content-xml>
+  </output-template>
+</template-definition>

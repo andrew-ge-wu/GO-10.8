@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<restrict>
+
+  <commands>
+    <command>search</command>
+  </commands>
+
+  <allow>
+    <mbean>
+      <name>com.polopoly:application=solr-indexer,*</name>
+      <operation>*</operation>
+      <attribute>*</attribute>
+    </mbean>
+  </allow>
+
+</restrict>

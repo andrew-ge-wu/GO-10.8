@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+<content clear="true">
+<!-- http://en.wikinews.org/wiki/2007_Taipei_International_Travel_Fair:_Bigger_than_ever_before_it_even_begins -->
+<metadata>
+  <contentid>
+    <major>Article</major>
+    <externalid>example.demo.article.CheapTravel</externalid>
+  </contentid>
+  <input-template>
+    <major>InputTemplate</major>
+    <externalid>example.StandardArticle</externalid>
+  </input-template>
+  <security-parent>
+    <major>Department</major>
+    <externalid>GreenfieldTimes.d</externalid>
+  </security-parent>
+</metadata>
+<component group="author" name="value">Wikinews</component>
+<component group="polopoly.Content" name="name">Taipei International Travel Fair: Bigger than ever before it even begins</component>
+<component group="lead" name="value">The Taipei International Travel Fair (Taipei TVF), founded in 1987 by Taiwan Visitors Association (TVA), is now in its 15th year. This show will start on December 14 and be open through December 17 at the Taipei World Trade Center with participants from 62 countries and 861 tourism companies and organizations. This year's fair is larger than ever.</component>
+<component group="body" name="value">
+<![CDATA[
+<p>At the press conference yesterday, TVA invited some exhibitors including Taiwan, as well as countries from Southeast Asia, Europe, and Oceania to promote their traveling packs for media. The TVA recruited local citizen journalists to cover the event, which they also did last year, and awarded honorary press accreditions for the selected 16 nominees.</p>
+<p>Before the press conference, Wikinews reporter Rico Shen had a brief interview with Honorary Chairman of TVA Stanley Chang-shou Yen about their policy on citizen journalism. Stanley said:</p>
+<p><cite>The internet is a useful tool that everyone needs. In the past, there was only TV, print, and broadcasting media in Taiwan. But recently, with the great impacts of blogs, personal websites, and discussion forums, we [TVA] think that citizens play a great role in the e-Century. With those trends and impacts, we finally decided to recruit bloggers to participate in our fair with citizen journalists, it is the first ever that the other organizers or exhibitions never did before. I hope those elected bloggers with interests on tourism can play a suitable role to promote our show properly with different opinions than mass media.</cite></p>
+<p>Besides of some traditional displays by exhibitors at the press conference, Cross-Strait Tourism Exchange Association also introduced the tourism industry of China at this conference. With the 2008 Summer Olympics to be held in Beijing, the Cross-Strait Pavilion of Taipei ITF will be a focus of the media in Taiwan, Hong Kong, and China.</p>
+<p><i>This article was originally published on <a href="http://en.wikinews.org/wiki/2007_Taipei_International_Travel_Fair:_Bigger_than_ever_before_it_even_begins">Wikinews</a> and is reproduced here in accordance with <a href="http://creativecommons.org/licenses/by/2.5/">CC-Attribution-Generic 2.5.</a></i></p>
+]]>
+</component>
+<component group="publishedDate" name="date">1197644400000</component>
+<component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+<component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+<component group="polopoly.ContentLists" name="images">images</component>
+<component group="polopoly.ContentLists" name="topimages">topimages</component>
+<component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+<component group="p.Inbox" name="showContent">true</component>
+<component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+<component group="p.Content.state" name="onlineState">true</component>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-10",
+          "name": "lifestyle and leisure",
+          "entities": [
+            {
+              "id": "subject-10006",
+              "name": "tourism",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+<contentref group="images" name="0">
+  <contentid>
+    <major>ReferenceMetaData</major>
+    <externalid>example.demo.ref.image.CheapTravel</externalid>
+  </contentid>
+</contentref>
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.CheapTravel.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.CheapTravel.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.CheapTravel.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.CheapTravel.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.CheapTravel.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.CheapTravel.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content>
+</batch>

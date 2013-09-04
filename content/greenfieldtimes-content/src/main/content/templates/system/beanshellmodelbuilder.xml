@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="p.siteengine.templates.model.BeanShellModelBuilder" label="cm.template.p.siteengine.templates.model.BeanShellModelBuilder">
+    <policy>com.polopoly.siteengine.mvc.model.ModelBuilderBeanShellPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <layout name="layout.menu" input-template="p.AjaxPageMenu" label="cm.general.Menu">
+      <layout name="layout.default" input-template="p.Page" label="cm.template.p.siteengine.templates.model.BeanShellModelBuilder.BeanshellCode">
+        <field name="bshscript" input-template="p.siteengine.editor.CodeMirror">
+          <param name="width">700</param>
+          <param name="height">325</param>
+          <!-- editorParameters is deprecated and will be ignored by widget -->
+          <!--<param name="editorParameters">javascript</param>-->
+          <param name="modeParameters">{mode: "javascript", lineNumbers: true}</param>
+        </field>
+        <field name="compiler" input-template="p.siteengine.templates.beanshell.BeanShellCompiler">
+          <param name="relativeSourcePolicyPath">../bshscript</param>
+        </field>
+      </layout>
+    </layout>
+    <content-xml>
+      <component group="polopoly.Content" name="name">BeanShell model builder</component>
+    </content-xml>
+  </input-template>
+</template-definition>

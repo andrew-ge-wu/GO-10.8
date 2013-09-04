@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+ <content clear="true">
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.EditorialBlogs.d</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.SubPage.0.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Editorial Blogs</component>
+    
+    <contentref group="pageLayout/selected/main/slotElements" name="0">
+      <contentid>
+        <major>Article</major>
+        <externalid>example.editorialblog</externalid>
+      </contentid>
+    </contentref>
+  </content>
+</batch>

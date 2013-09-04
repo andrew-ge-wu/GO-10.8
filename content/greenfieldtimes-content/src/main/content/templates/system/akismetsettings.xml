@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.AkismetSettings">
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <policy>com.polopoly.cm.policy.ContentPolicy</policy>
+    <type>AppConfig</type>
+    <field name="apiKey" input-template="p.TextInput"
+           label="cm.template.example.Blog.akismetSettings.apiKey">
+      <param name="inlineHelp">true</param>
+      <help>cm.template.example.Blog.akismetSettings.apiKey.help</help>
+      <policy>example.akismet.AkismetKeyPolicy</policy>
+    </field>
+    <field name="apiKeyVerification" input-template="example.AkismetKeyVerification" label="cm.template.example.Blog.akismetSettings.KeyVerification" />
+    <field name="maxPermits" input-template="p.TextInput" label="cm.template.example.Blog.akismetSettings.maxPermits">
+      <help>cm.template.example.Blog.akismetSettings.maxPermits.help</help>
+      <param name="default">5</param>
+    </field>
+    <field name="socketTimeout" input-template="p.TextInput" label="cm.template.example.Blog.akismetSettings.socketTimeout">
+      <help>cm.template.example.Blog.akismetSettings.socketTimeout.help</help>
+      <param name="default">5000</param>
+    </field>
+    <field name="connectionTimeout" input-template="p.TextInput" label="cm.template.example.Blog.akismetSettings.connectionTimeout">
+      <help>cm.template.example.Blog.akismetSettings.connectionTimeout.help</help>
+      <param name="default">5000</param>
+    </field>
+    <layout name="hr" input-template="p.Comment">
+      <param name="comment"><![CDATA[<hr />]]></param>
+    </layout>
+    <layout name="proxyIntro" input-template="p.Comment" label="cm.template.example.Blog.akismetSettings.proxyIntro">
+      <param name="comment">cm.template.example.Blog.akismetSettings.proxyIntro.help</param>
+    </layout>
+    <field name="proxyHost" input-template="p.TextInput" label="cm.template.example.Blog.akismetSettings.proxyHost" />
+    <field name="proxyPort" input-template="p.TextInput" label="cm.template.example.Blog.akismetSettings.proxyPort" />
+    <field name="proxyUsername" input-template="p.TextInput" label="cm.template.example.Blog.akismetSettings.proxyUsername" />
+    <field name="proxyPassword" input-template="p.TextInput" label="cm.template.example.Blog.akismetSettings.proxyPassword" />
+  </input-template>
+</template-definition>

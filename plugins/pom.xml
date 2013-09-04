@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <!-- project info ======================================================= -->
+  <modelVersion>4.0.0</modelVersion>
+
+  <name>greenfieldtimes - plugins</name>
+
+  <artifactId>plugins</artifactId>
+  <groupId>com.polopoly.sites</groupId>
+  <version>10.8.0</version>
+  <packaging>pom</packaging>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>polopoly-public</id>
+      <name>Polopoly Public</name>
+      <url>http://maven.polopoly.com/nexus/content/groups/polopoly-public</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+
+  <repositories>
+    <repository>
+      <id>polopoly-public</id>
+      <name>Polopoly Public</name>
+      <url>http://maven.polopoly.com/nexus/content/groups/polopoly-public</url>
+    </repository>
+    <repository>
+      <id>polopoly-plugins</id>
+      <name>Polopoly Plugins</name>
+      <url>http://maven.polopoly.com/nexus/content/groups/polopoly-plugins</url>
+    </repository>
+  </repositories>
+
+  <!-- dependencies  ====================================================== -->
+  <!-- These dependencies are subject to change. Artifact and group
+       ids may change in a future release. -->
+  <dependencies>
+    <dependency>
+      <groupId>com.polopoly.extensions</groupId>
+      <artifactId>cm-velocity-integration</artifactId>
+      <version>10.8.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.polopoly</groupId>
+      <artifactId>polopoly</artifactId>
+      <version>10.8.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.atex.plugins</groupId>
+      <artifactId>baseline</artifactId>
+      <version>3.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.atex.plugins</groupId>
+      <artifactId>baseline</artifactId>
+      <classifier>contentdata</classifier>
+      <version>3.0.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+      <version>4.8.1</version>
+    </dependency>
+
+  </dependencies>
+
+  <!-- reports ============================================================ -->
+  <reporting>
+    <plugins>
+
+      <!-- maven apache reports -->
+      <plugin>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+	<version>2.4</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.5</version>
+        <configuration>
+          <quiet>true</quiet>
+          <doctitle>${project.name} - API specification</doctitle>
+          <links>
+            <link>http://java.sun.com/j2se/1.5.0/docs/api/</link>
+            <link>http://java.sun.com/j2ee/1.4/docs/api/</link>
+          </links>
+          <javadocVersion>1.5</javadocVersion>
+          <docfilessubdirs>true</docfilessubdirs>
+          <maxmemory>512m</maxmemory>
+        </configuration>
+      </plugin>
+
+      <!-- maven codehaus reports -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+	<version>2.3.3</version>
+        <configuration>
+          <xmlOutput>true</xmlOutput>
+          <threshhold>Medium</threshhold>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>cobertura-maven-plugin</artifactId>
+        <version>2.3</version>
+        <configuration>
+          <formats>
+            <format>xml</format>
+            <format>html</format>
+          </formats>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>surefire-report-maven-plugin</artifactId>
+	<version>2.10</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jxr-plugin</artifactId>
+	<version>2.3</version>
+        <configuration>
+          <linkXref>true</linkXref>
+          <javadocDir>site/apidocs</javadocDir>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>dashboard-maven-plugin</artifactId>
+	<version>1.0.0-beta-1</version>
+      </plugin>
+    </plugins>
+
+  </reporting>
+
+  <!-- build definition  ================================================== -->
+  <build>
+    <plugins>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+	<version>2.3.2</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+
+      <!-- enable polopoly plugin -->
+      <plugin>
+        <artifactId>p-maven-plugin</artifactId>
+        <groupId>com.polopoly.extensions</groupId>
+        <version>10.8.0</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>pack</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  
+  <!-- gt plugins  ======================================================== -->
+  <modules>
+    <module>brightcove-plugin</module>
+  </modules>
+
+</project>

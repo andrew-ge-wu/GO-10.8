@@ -1,0 +1,46 @@
+# This file shows examples on how to set necessary properties
+# for installing polopoly. This file should be copied
+# to <polopoly.dir>/custom/config/Environment.properties before
+# installation
+
+# Note that this file, and especially the memory settings are 
+# intended for developers. Do not use these in a production environment!
+
+# Mysql
+db.created=true
+db.clear=true
+
+# JBoss
+ref.instances.ejbcontainer=JBoss
+default.jmsserver.external=true
+default.JBoss.jboss.home=/home/polopoly/jboss
+
+default.JBoss.jboss.tomcat.basePort=8081
+
+# Tomcat
+ref.instances.webappcontainer=Tomcat
+default.WebAppContainer.external=true
+default.WebAppContainer.warDir=/home/polopoly/tomcat/webapps
+
+# Uncomment the following if running a version of Tomcat EARLIER than 6.0.
+# Libraries such as commons-logging is no longer bundled in these versions.
+
+#default.WebAppContainer.excludeCommonsLogging=true
+
+# Run in split mode
+ref.instances.rmiregistry=SUNRMIRegistry
+ref.instances.managementgui=Mx4jManagementGui
+
+# Memory defaults for the Polopoly servers
+# for a developer configuration
+default.IndexServer.maxJVMHeap=256m
+default.XMLServer.maxJVMHeap=128m
+default.PollServer.maxJVMHeap=128m
+default.StatisticsApplication.maxJVMHeap=128m
+
+#If useing pomme style project the lucene index server is not used by default 
+#indexserver.present=false
+#If you still want to use the lucene indexserver but without the solR indexer
+#ref.instances.solrindexermodule=
+#In case you do not deploy solr to the default webapp
+#paf.index.solrServerUrl.url=http://localhost:8080/solr

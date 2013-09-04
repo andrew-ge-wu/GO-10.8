@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- http://en.wikinews.org/wiki/NBA:_LeBron_James_announces_that_he_will_join_the_Miami_Heat -->
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+
+<content clear="true">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.MakeTheBasketballTeam</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="author" name="value">Wikinews</component>
+<component group="body" name="value"><![CDATA[<p>LeBron James announced today that he will "take his talents to South Beach and join the Miami Heat," after spending six years as the star player for the Cleveland Cavaliers. Anticipation over LeBron's future team had been simmering for weeks as NBA teams tried to lure the free agent to their rosters. LeBron had met with representatives from the Cavaliers, Heat, Chicago Bulls, New York Knicks, New Jersey Nets, and Los Angeles Clippers.</p>
+    <p>In an interview televised by ESPN, James said that the Heat would give him "the best opportunity to win now and to win in the future also." However, James admitted, "I can't say it was always in my plans, because I never thought it was possible," and that he had changed his mind repeatedly in the days leading up to the announcement. He emphasized, "It's not about individuals. It's about a team." James also said in the interview that "the things that the Miami Heat franchise have done, to free up cap space and be able to put themselves in a position this summer to have all three of us, it was hard to turn down. Those are two great players (Dwayne Wade and Chris Bosh), two of the greatest players that we have in this game today."</p>
+    <p>Referring to his fans in Ohio, James said, "They can have mixed emotions, of course," and that his hometown of Akron in the state will "always be home for me."</p>
+    <p>Though Cleveland had offered James more money, to James and new teammates Dwayne Wade and Chris Bosh, winning seemed to be more important. Both Wade and Bosh settled for less cash, instead fitting James into Miami's salary cap space.</p>
+    <p>Wade had announced Wednesday that he would be continuing to play in Miami, while Bosh decided to move to Florida from the Toronto Raptors. The three were drafted in 2003 and were teammates in the 2008 US Olympic basketball team. Wade said that playing with James and Bosh was "going to be crazy," while Bosh tweeted, "Yeeeeeeeeeeeaaaaaaaaaaaa!!!!!!!!!!!!!!!!!!!!!!!" Fans in Miami honked horns outside the Heat's home arena, while television images from Cleveland showed LeBron James's jerseys being burned. Prior to the announcement, amid rumors that James would sign with the Heat, Heat season tickets had sold out.</p>
+    <p><i>This article was originally published on <a href="http://en.wikinews.org/wiki/NBA:_LeBron_James_announces_that_he_will_join_the_Miami_Heat">Wikinews</a> and is reproduced here in accordance with <a href="http://creativecommons.org/licenses/by/2.5/">CC-Attribution-Generic 2.5.</a></i></p>
+    ]]></component>
+<component group="polopoly.Content" name="name">NBA: LeBron James announces that he will join the Miami Heat</component>
+<component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+<component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+
+<component group="polopoly.ContentLists" name="images">images</component>
+<component group="polopoly.ContentLists" name="topimages">topimages</component>
+<component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+<component group="p.Inbox" name="showContent">true</component>
+<component group="lead" name="value">LeBron James announced today that he will "take his talents to South Beach and join the Miami Heat," after spending six years as the star player for the Cleveland Cavaliers. Anticipation over LeBron's future team had been simmering for weeks as NBA teams tried to lure the free agent to their rosters.</component>
+<component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+
+<component group="p.Content.state" name="onlineState">true</component>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-15",
+          "name": "sport",
+          "entities": [],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+<contentref group="images" name="0">
+<contentid>
+<externalid>example.demo.image.Basketball</externalid>
+</contentid>
+</contentref>
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MakeTheBasketballTeam.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MakeTheBasketballTeam.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MakeTheBasketballTeam.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MakeTheBasketballTeam.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MakeTheBasketballTeam.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MakeTheBasketballTeam.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content>
+</batch>

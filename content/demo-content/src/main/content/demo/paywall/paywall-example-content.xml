@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.PaywallConfiguration.d</externalid>
+      </contentid>
+    </metadata>
+    <component name="value" group="referrerWhitelist">^https?://(www\.google|www\.bing|.*search.yahoo)\..{2,6}/.*$</component>
+    <component name="value" group="userAgentWhitelist">googlebot|bingbot|yahoo! slurp</component>
+  </content>
+  <!-- Subscription types -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.subscriptionType.articleaccess</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.PaywallConfiguration.d</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.PaywallSubscriptionType</externalid>
+      </input-template>
+    </metadata>
+    <component name="name" group="polopoly.Content">Article access</component>
+    <component group="capabilities" name="count">1</component>
+    <contentref group="capabilities" name="reference0">
+      <contentid>
+        <externalid>p.OnlineAccessCapability</externalid>
+      </contentid>
+    </contentref>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.PaywallConfiguration.d</externalid>
+      </contentid>
+    </metadata>
+    <contentlist group="subscriptionTypes">
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.subscriptionType.articleaccess</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+  <!-- Subscription durations -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.subscriptionDuration.oneMonth</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.PaywallConfiguration.d</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.PaywallDuration</externalid>
+      </input-template>
+    </metadata>
+    <component name="name" group="polopoly.Content">One month</component>
+    <component name="value" group="nofDays">31</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.subscriptionDuration.threeMonths</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.PaywallConfiguration.d</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.PaywallDuration</externalid>
+      </input-template>
+    </metadata>
+    <component name="name" group="polopoly.Content">Three months</component>
+    <component name="value" group="nofDays">93</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.subscriptionDuration.sixMonths</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.PaywallConfiguration.d</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.PaywallDuration</externalid>
+      </input-template>
+    </metadata>
+    <component name="name" group="polopoly.Content">Six months</component>
+    <component name="value" group="nofDays">186</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.PaywallConfiguration.d</externalid>
+      </contentid>
+    </metadata>
+    <contentlist group="durations">
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.subscriptionDuration.oneMonth</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.subscriptionDuration.threeMonths</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.subscriptionDuration.sixMonths</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+  <!-- Content bundles -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.contentBundle.business</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.PaywallConfiguration.d</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.PaywallContentBundle</externalid>
+      </input-template>
+    </metadata>
+    <component name="name" group="polopoly.Content">Business</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.contentBundle.sports</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.PaywallConfiguration.d</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.PaywallContentBundle</externalid>
+      </input-template>
+    </metadata>
+    <component name="name" group="polopoly.Content">Sports</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.contentBundle.travel</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.PaywallConfiguration.d</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.PaywallContentBundle</externalid>
+      </input-template>
+    </metadata>
+    <component name="name" group="polopoly.Content">Travel</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.PaywallConfiguration.d</externalid>
+      </contentid>
+    </metadata>
+    <contentlist group="contentBundles">
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.contentBundle.business</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.contentBundle.sports</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.contentBundle.travel</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+</batch>

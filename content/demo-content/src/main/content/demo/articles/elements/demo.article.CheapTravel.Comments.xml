@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+<content clear="true">
+<metadata>
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.CheapTravel.Comments</externalid>
+  </contentid>
+  <input-template>
+    <major>InputTemplate</major>
+    <externalid>example.CommentsElement</externalid>
+  </input-template>
+  <security-parent>
+    <major>Article</major>
+    <externalid>example.demo.article.CheapTravel</externalid>
+  </security-parent>
+</metadata>
+<component group="polopoly.Content" name="name">Comments</component>
+</content>
+</batch>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<anti-samy-rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="antisamy.xsd">
+    
+    <directives>
+        <directive name="omitXmlDeclaration" value="true"/>
+        <directive name="omitDoctypeDeclaration" value="true"/>
+        <directive name="maxInputSize" value="100000"/>
+        <directive name="useXHTML" value="true"/>
+        <directive name="formatOutput" value="true"/>
+        <directive name="embedStyleSheets" value="false"/>
+    </directives>
+    
+    <common-regexps>
+    </common-regexps>
+    
+    <common-attributes>
+    </common-attributes>
+    
+    <global-tag-attributes>
+    </global-tag-attributes>
+
+    <tag-rules>
+        <tag name="script" action="remove"/>
+        <tag name="noscript" action="remove"/>
+        <tag name="iframe" action="remove"/>
+        <tag name="frameset" action="remove"/>
+        <tag name="frame" action="remove"/>
+        <tag name="noframes" action="remove"/>
+        <tag name="style" action="remove"/>
+        <tag name="p" action="filter"/>
+        <tag name="div" action="filter"/>     
+        <tag name="i" action="filter"/>
+        <tag name="b" action="filter"/>
+        <tag name="em" action="filter"/>
+        <tag name="blockquote" action="filter"/>
+        <tag name="tt" action="filter"/>
+        <tag name="strong" action="filter"/>
+        <tag name="br" action="truncate"/>
+        <tag name="a" action="filter"/>
+        <tag name="ul" action="filter"/>
+        <tag name="ol" action="filter"/>
+        <tag name="li" action="filter"/>
+    </tag-rules>
+
+    <css-rules>
+    </css-rules>
+</anti-samy-rules>

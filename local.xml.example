@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<project name="local">
+    <!-- Overrides location of polopoly installation root. -->
+    <property name="polopoly.dir" location="/opt/polopoly" />
+    <!--property name="enable-plugins" value="true"/-->
+    <!--property name="skip.demo.content" value="true"/-->
+</project>

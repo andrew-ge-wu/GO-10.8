@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content>
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.SearchConfigSettings</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.config.SearchConfig</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>p.SystemDepartment</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Search settings</component>
+    <component group="wildCardSearch" name="value">true</component>
+    <component group="autoSearch" name="value">true</component>
+    <component group="autoSearchDelay" name="value">300</component>
+    <component group="timeOfSave" name="selected_0">noFilter</component>
+    <component group="timeOfSave" name="count">1</component>
+  </content>
+</batch>

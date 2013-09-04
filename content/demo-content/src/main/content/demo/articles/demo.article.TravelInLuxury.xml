@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- http://en.wikinews.org/wiki/Oscar_Di%C3%B6s_tells_Wikinews_about_his_hostel_within_a_Boeing_747 -->
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+
+<content clear="true">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.TravelInLuxury</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+<component group="author" name="value">Wikinews</component>
+<component group="body" name="value">&lt;p&gt;However, his intention is not to start an airline, and the jet is not intended for flight. Instead, he plans to convert the airliner into a unique business which he calls the 'Jumbo Hostel'. The 450-seat widebodied jetliner will have 25 rooms sleeping a total of 85 people, including some in a luxury suite in the cockpit, and will sit at the entrance to Stockholm-Arlanda Airport.&lt;/p&gt;&#13;
+&lt;p&gt;Built in 1976, the aircraft was an "old wreck" when acquired, according to Oscar. The aircraft was being offered for sale at Stolkholm-Arlanda after previous owner Transjet became bankrupt. The airframe has then been completely gutted and is being fitted with a new, modernised interior. Each room contains three bunk beds. A cafe and a walkway across the left wing are also featured.&lt;/p&gt;&#13;
+&lt;p&gt;The airliner will sit on a concrete platform at the airport's entrance, with its landing gear secured in steel cradles. It is intended to offer a good view of the day-to-day operation of the airport.&lt;/p&gt;&#13;
+&lt;p&gt;The hostel, which is to open in December, is aimed at families with children, aviation enthusiasts, low-budget travelers and people catching early morning flights who wish to leave it as late as possible before rising to get to check-in - unlike its competitors, the Jumbo Hostel is ten minutes walk from the check-in desks.&lt;/p&gt;&#13;
+&lt;p&gt;&lt;i&gt;This article was originally published on &lt;a href="http://en.wikinews.org/wiki/Oscar_Di%C3%B6s_tells_Wikinews_about_his_hostel_within_a_Boeing_747"&gt;Wikinews&lt;/a&gt; and is reproduced here in accordance with &lt;a href="http://creativecommons.org/licenses/by/2.5/"&gt;CC-Attribution-Generic 2.5.&lt;/a&gt;&lt;/i&gt;&lt;/p&gt;</component>
+<component group="polopoly.Content" name="name">Oscar Diös tells Wikinews about his hostel within a Boeing 747</component>
+
+<component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+<component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+<component group="polopoly.ContentLists" name="images">images</component>
+<component group="polopoly.ContentLists" name="topimages">topimages</component>
+<component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+<component group="p.Inbox" name="showContent">true</component>
+<component group="lead" name="value">Oscar Diös is a Swedish  businessman looking to invest in a new project within the aviation community. He's already bought the venture's first airliner, a Boeing 747-200.</component>
+<component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+
+<component group="p.Content.state" name="onlineState">true</component>
+
+<component group="titleFontSize" name="value">34</component>
+
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-10",
+          "name": "lifestyle and leisure",
+          "entities": [
+            {
+              "id": "subject-10007",
+              "name": "travel and commuting",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+<contentref group="topimages" name="0">
+<contentid>
+<major>ReferenceMetaData</major>
+<externalid>example.demo.ref.image.TravelInLuxury</externalid>
+</contentid>
+</contentref>
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.TravelInLuxury.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.TravelInLuxury.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.TravelInLuxury.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.TravelInLuxury.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.TravelInLuxury.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.TravelInLuxury.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content>
+</batch>

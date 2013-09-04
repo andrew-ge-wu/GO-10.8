@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.LatestBlogPostingsPublishingQueue" label="cm.template.example.pq.LatestBlogPosts.label">
+    <policy>example.collection.searchbased.LatestBlogPostingsPublishingQueue</policy>
+    <editor>com.polopoly.cm.app.widget.OAjaxTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OAjaxTopPolicyWidget</viewer>
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+    <type>Article</type>
+
+    <param name="templateIcon">index.png</param>
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">true</param>
+    <param name="EditNewState_saveAndFastInsert">false</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="ViewState_copy">true</param>
+    
+    <layout name="menu" input-template="p.AjaxPageMenu">
+
+      <!-- main page -->
+      <layout name="content" input-template="p.Page" label="cm.general.Content">
+        <field name="name" input-template="p.ContentName" label="cm.label.Name" required="true" />
+        <field name="default" input-template="com.atex.plugins.baseline.RefreshableSearchBasedPublishingQueueContainer" label="com.atex.plugins.baseline.pq.listContents">
+          <param name="contentListName">default</param>
+        </field>
+      </layout>
+
+      <!-- settings page -->
+      <layout name="settings" input-template="p.Page" label="cm.general.Settings">
+        <field name="securityparent" input-template="p.SecurityParentSelect" label="cm.general.HomePage">
+          <help>cm.ithelp.securityparentselect</help>
+          <param name="inlineHelp">true</param>
+          <idparam name="rootContent">
+            <externalid>p.siteengine.Sites.d</externalid>
+          </idparam>
+          <param name="width">314</param>
+          <param name="height">120</param>
+        </field>
+        <field name="associatedSites" input-template="p.siteengine.SiteSelector" label="cm.general.AssociatedSites">
+          <param name="showLabel">true</param>
+          <param name="multipleSelect">true</param>
+          <param name="allowDepartments">true</param>
+          <param name="allowArticles">false</param>
+          <param name="height">250</param>
+          <param name="width">400</param>
+          <idparam name="rootContent">
+            <externalid>p.siteengine.Sites.d</externalid>
+          </idparam>
+        </field>
+      </layout>
+    </layout>
+  </input-template>
+</template-definition>

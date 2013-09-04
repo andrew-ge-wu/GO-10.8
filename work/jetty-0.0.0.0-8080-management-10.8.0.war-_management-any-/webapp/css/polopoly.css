@@ -1,0 +1,620 @@
+/* Polopoly Troubleshooter CSS */
+
+/* @group Skeleton */
+
+body {
+	background-color: #fff;
+	padding: 0;
+	margin: 0;
+}
+
+.padder {
+	margin-left: auto;
+	margin-right:  auto;
+	width: 1024px;
+	padding-left:  4px;
+	padding-right:  4px;
+	
+}
+
+.bigframe {
+	background-color: #529b00;
+	paddding: 0;
+	float: left;
+	width: 1024px;
+	border-bottom:  8px solid #529b00;	
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+	-moz-box-shadow: 0px 0px 6px #82cb30;
+	-webkit-box-shadow: 0px 0px 6px #82cb30;
+}
+
+/* @end */
+
+/* @group Header */
+
+.bigframe .header {
+	background: url(../img/top-bg.gif);
+	height: 25px;
+	float:  left;
+	display:  block;
+	width:  100%;
+	padding:  4px;
+	padding-left:  0;
+	padding-right:  0;
+	margin:  0;
+}
+
+.bigframe .header img {
+	float:  left;
+	margin-top:  -4px;
+	margin-left:  4px;
+}
+
+.bigframe .header ul {
+	display:  inline;
+	float:  right;
+	margin:  0;
+	padding:  0;
+	margin-top:  5px;
+	margin-right:  8px;
+}
+
+.bigframe .header ul li {
+	max-width: 200px;
+	display: inline-table;
+	font: 11px Lucida Grande, Verdana;
+	height: 27px;
+	padding-top:  5px;
+}
+
+.bigframe .header ul li a {
+	padding: 4px;
+	margin-top: 2px;
+	color: #fff;
+}
+
+.bigframe .header a:link:hover, .header a:visited:hover {
+	text-decoration: underline;
+}
+
+.bigframe .header a:link, .header a:visited {
+	text-decoration: none;
+}
+
+.bigframe .header ul li.selected {
+	background-color: #fff;
+	-moz-border-radius-topleft: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-webkit-border-top-right-radius: 5px;
+}
+
+.bigframe .header ul li.selected  a {
+	color:  #000;
+}
+
+/* @end */
+
+/* @group Body styling */
+
+.bigframe .outerbody {
+	width:  100%;
+	background-color:  #529b00;
+}
+
+.bigframe .body {
+	margin-left:  8px;
+	margin-right:  8px;
+	margin-top: 0px;
+	background-color:  #fff;
+	padding: 3px;
+	float:  left;
+	font: 11px Lucida Grande, Verdana;
+	line-height:  1.6;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    width:1002px;
+}
+
+/* @end */
+
+/* @group Body components */
+
+.bigframe .body .panel {
+	min-width:  450px;
+	float:  left;
+	margin:  0px 1px;
+	margin-bottom: 4px;
+	padding:  0;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color:  #eee;
+}
+
+.bigframe .body .panel h2 {
+	margin:  0;
+	text-shadow: #000 0px 1px 1px;
+	padding:  0;
+	font-size:  11px;
+	background:  #555;
+	color:  #fff;
+	font-weight:  bold;
+	padding: 3px;
+	-moz-border-radius-topleft: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-webkit-border-top-right-radius: 5px;
+}
+
+.bigframe .body .panel:hover h2 {
+	text-shadow: #083a00 0px 1px 1px;
+	background:  #529b00;
+}
+
+.bigframe .body .small.panel, .bigframe .body .small {
+	width:  500px;
+}
+
+.bigframe .body .smaller.panel {
+	min-width:  200px;
+	width:  249px;
+}
+
+.bigframe .body .small {
+	float:  left;
+}
+
+.bigframe .body .big.panel {
+	width: 100%;
+}
+
+.bigframe .body .panel .panelbody {
+	padding:  10px;
+}
+
+.bigframe .body .panel .panelbody p {
+	margin-top:  0;
+}
+
+.bigframe .body .panel .panelbody.description {
+	line-height: 1.5;
+}
+
+/* @end */
+
+/* @group Tables */
+
+table {
+	width: 100%;
+	padding:  0px;
+	margin: 0;
+}
+
+thead th {
+	text-align: right;
+	padding: 1px 3px;
+	cursor: pointer;
+}
+
+thead th.primaryKey {
+	text-align:  left;
+}
+
+tr.even {
+	background-color:  #e0e0e0;
+}
+tbody th {
+	text-align: left;
+	font-weight: normal;
+	padding-left: 3px;
+	overflow: hidden;
+}
+
+tbody td {
+	text-align: right;
+	padding: 1px;
+	padding-right: 3px;
+	margin:  0;
+}
+
+table.config tbody td {
+    text-align: left;
+}
+
+table.config thead th {
+    text-align: left;
+    padding: 1px;
+}
+
+tbody tr:hover {
+	background-color:  #555;
+	color: #fff;
+}
+
+tr.error {
+	background-color: #faa;
+}
+
+.table-header-asc {
+	padding-right: 9px;
+	background: url(../img/arrow_up.gif) no-repeat right 7px;
+}
+
+
+.table-header-desc {
+	padding-right: 9px;
+	background: url(../img/arrow_down.gif) no-repeat right 7px;
+}
+
+.primaryKey.table-header-asc, .primaryKey.table-header-desc {
+	padding-right: 3px;
+	background: none;
+}
+
+/* @end */
+
+/* @group Slider */
+.ui-slider { 
+	position: relative; 
+	text-align: left; 
+	height: .9em; 
+	border:  1px solid #bbb;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+.ui-slider:hover .ui-slider-handle {
+		background-color:  #529b00;
+}
+.ui-slider:hover  {
+		background-color:  #fafafa;
+
+}
+.ui-slider .ui-slider-handle { 
+	position: absolute; 
+	z-index: 2; 
+	width: 0.8em; 
+	height: 1.3em; 
+	cursor: pointer; 
+	top: -.2em; 
+	margin-left: -.4em;
+	background-color:  #555;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+.ui-slider .ui-slider-range { 
+	position: absolute; 
+	z-index: 1; 
+	font-size: .7em; 
+	display: block; 
+	border: 0; 
+	top: 0; 
+	height:  100%; 
+}
+.ui-slider .ui-slider-range-min { 
+	left: 0; 
+}
+.ui-slider .ui-slider-range-max { 
+	right: 0; 
+}
+
+/* @end */
+
+/* @group Lucene query panel */
+.active {
+	margin-right: 6px;
+	background: #eee url(../img/ajax-loader.gif) no-repeat right center;
+}
+
+div.button, a.button, span.button {
+	display: inline-table;
+	padding:  3px 6px;
+	background: #555;
+	color:  #fff;
+	text-decoration: none;
+	cursor: pointer;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+}
+
+span.button.triggered, div.button.triggered, a.button.triggered {
+	background: #2A0;
+}
+
+div.button.disabled, span.button.disabled {
+	color: #999;
+}
+
+div.button:hover, a.button:hover {
+	background: #777;
+}
+
+div.button.triggered, a.button.triggered:hover {
+	background: #ad0;
+}
+
+#lucene-start-panel div {
+	margin-top:  4px;
+}
+
+/* @end */
+
+/* @group Lucene histogram */
+#lucene-host .total-histogram-values { 
+	padding: 4px; 
+	text-align: center;
+	cursor: pointer;
+	display: block;
+}
+
+tr.fullKey td, tr.fullKey td:hover, tr.fullVal td {
+	text-align: left;
+	font-size: 10px;
+	background-color: #ffffc7;
+	padding:  4px 12px;
+	border:  1px solid #eedd55;
+	color:  #330;
+	cursor: text;
+}
+
+
+#lucene-host .total-histogram-values span {
+	padding: 4px 8px;
+}
+
+#lucene-host .total-histogram-values span:hover {
+	background: #555;
+	color: #fff;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+}
+
+#lucene-host .histogram {
+	width:  100%;
+	height: 300px;
+	background-color: #000;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	clear:  both;
+	float:  left;
+	margin:  0 auto;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #222), color-stop(0.8, #000));
+}
+
+#lucene-host .histogram div {
+	width:  16px;
+	float:  left;
+	margin-right:  0px;
+	border-right: 1px solid #222;
+}
+
+#lucene-host .histogram div span {
+	display:  none;
+}
+
+#lucene-host tbody tr {
+	cursor: pointer;
+}
+
+#lucene-host .histogram div:hover span {
+	display: block;
+	color:  #fff;
+	text-shadow: 1px 1px 2px #000;
+	position: absolute;
+	margin-top:  10px;
+}
+
+#lucene-host .histogram div div {
+	background: #60db36;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.9, #52b900), color-stop(0.0, #70eb46));
+}
+
+#lucene-host .histogram div:hover div {
+	background: #f40;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.9, #910), color-stop(0.0, #f40));
+	
+	z-index: 5;
+
+}
+
+/* @end */
+
+/* @group Lucene histogram */
+
+.timetree-host .toolbar {
+	float: left;
+	background-color: #ccc;
+	clear: both;
+	width: 100%;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.99, #c5c5c5), color-stop(0.8, #ccc));
+	border-bottom: 1px solid #b0b0b0;
+	
+}
+
+.timetree-host .toolbar div {
+	float: right;
+	padding: 3px;
+}
+
+
+.timetree-host .toolbar div div, .timetree-host .toolbar .track { 
+	float: left;
+	display: inline-table;
+	padding: 1px 3px;
+	font-size: 9px;
+	color: #444;
+}
+
+.timetree-host .toolbar .next, .timetree-host .toolbar .previous, .timetree-host .toolbar .showall {
+	cursor: pointer;
+}
+
+.timetree-host .toolbar .next:hover, 
+.timetree-host .toolbar .previous:hover, 
+.timetree-host .toolbar .showall:hover {
+	background-color: #555;
+	color: #fff;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+}
+
+ .timetree-host .treeview {
+	clear: both;
+	border-top: 1px solid #ddd;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ .timetree-host .treeview h3 {
+	margin: 0;
+	font-size: 10px;
+	font-weight: normal;
+	padding: 6px;
+	cursor: pointer;
+}
+
+.timetree-host .treeview li.odd h3 {
+	background-color: #d0d0d0;
+}
+
+
+.timetree-host div.stackHeader:hover, .timetree-host .treeview h3:hover, .timetree-host .treeview li.odd h3:hover {
+	background-color: #555;
+	color: #fff;
+}
+
+.timetree-host .treeview pre {
+	background-color: #fff;
+	margin: 0; 
+	padding: 0;
+	padding-left: 6px;
+	display: none;
+	max-height: 300px;
+	overflow: scroll;
+	font-size: 90%;
+}
+
+#requestwatcher-tab .configuration div.configElement {
+	display: inline-block;
+	width: 150px;
+}
+
+#requestwatcher-tab a.link {
+	text-decoration: underline;
+	cursor: pointer;	
+}
+
+#requestwatcher-tab .configuration div.configElement p {
+	margin: 0px;
+	padding: 0px;
+	display: inline-block;
+	width: 150px;
+}
+
+#requestwatcher-tab h2 {
+	position: relative;
+}
+
+#requestwatcher-requestcount {
+	position: absolute;
+	right: 5px;	
+}
+
+#requestwatcher-maxtimemillis {
+	width: 60px;
+}
+
+#requestwatcher-savedlogsize {
+	width: 70px;
+}
+		
+#requestwatcher-trigger {
+	width: 35px;
+	text-align: center;
+}
+
+div.stackRoot {
+	margin: 0;
+	font-size: 10px;
+	font-weight: normal;
+	padding: 2px;
+	padding-left: 14px;
+	cursor: pointer;
+}
+
+#requestwatcher-list .treeview .stackTree {
+	display: none;
+}
+
+#requestwatcher-list .treeview div.pinner {
+	float: right;
+	display: block;
+	width: 16px;
+	height: 16px;
+	border-style: dashed;
+	border-width: 1px;
+}
+
+#requestwatcher-list .treeview div.pinner:hover {
+	border-style: dotted;
+}
+
+#requestwatcher-list .treeview div.pinner.pinned {
+	border-style: solid;
+}
+
+#requestwatcher-list .treeview div.pinner img {
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+}
+
+#requestwatcher-list .treeview div.pinner.pinned img {
+	opacity: 0.9;
+}
+
+
+#requestwatcher-list .treeview .stackTree pre {
+	background-color: #fff;
+	margin: 0; 
+	padding: 0;
+	padding-left: 26px;
+	display: none;
+	max-height: 300px;
+	overflow: scroll;
+	font-size: 90%;
+	cursor: auto;
+}
+
+div.treeview h3 {
+	background-color: #DDDDDD;
+}
+
+div.activeRequest h3 {
+	background-color: #ccffcc;
+}
+
+div.pinned h3 {
+	background-color: #FFCCCC;
+}
+
+div.loaderIcon {
+	float: right;
+	display: block;
+	background-color: #fff;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #888888;
+	margin: 0px 5px 0px 10px;
+	height: 16px;
+	width: 16px;
+}
+
+div.loaderIcon img.loaderIcon {
+	height: 100%;
+	width: 100%;
+}
+
+/* @end */
+

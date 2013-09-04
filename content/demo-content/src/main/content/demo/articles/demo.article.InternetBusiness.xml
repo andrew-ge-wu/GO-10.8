@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+<!-- http://en.wikinews.org/wiki/China's_economy_surpasses_Japan's_in_second_quarter -->
+<content clear="true">
+<metadata>
+  <contentid>
+    <major>Article</major>
+    <externalid>example.demo.article.InternetBusiness</externalid>
+  </contentid>
+  <input-template>
+    <major>InputTemplate</major>
+    <externalid>example.StandardArticle</externalid>
+  </input-template>
+  <security-parent>
+    <major>Department</major>
+    <externalid>GreenfieldTimes.d</externalid>
+  </security-parent>
+</metadata>
+<component group="author" name="value">Wikinews</component>
+<component group="polopoly.Content" name="name">China's economy surpasses Japan's in second quarter</component>
+<component group="lead" name="value">China's economy surpassed Japan's during the second quarter of 2010, and now is the second largest world economic power. China's economy already is larger than Japan's in the fourth quarter of most years, and many expect that the world's most populous country will soon cement its place as the world's second largest economy all year round.</component>
+<component group="body" name="value">
+<![CDATA[
+<p>From April to June of this year, China's Gross Domestic Product (GDP) was USD 1.337 trillion, bigger than the Japanese GDP at USD 1.288 trillion. But Japan's GDP still remains larger than the Chinese one in the first half of 2010. China's annual GDP was $4.9 trillion, less than Japan's $5.07 trillion.</p>
+<p>Japan's growth is slowing, because of the drop of the sales and the private investments. Meanwhile, China is showing resistance against the financial crisis and grew more than 10 per cent last year. However Japan's per capita GDP still is ten times bigger than the Chinese one, and the United States has a per capita GDP 12.5 times larger than China's comparable figures.</p>
+<p>During the last three decades, despite officially remaining a communist state, China has developed a market economy. The first economic reforms were made under the leadership of Deng Xiaoping. Since then, China's economic size has grown by 90 times. For the first time, last year China exported more cars than Germany and surpassed the United States as the biggest market for this industry. China's GDP could be larger than the United States within two decades.</p>
+<p><i>This article was originally published on <a href="http://en.wikinews.org/wiki/China's_economy_surpasses_Japan's_in_second_quarter">Wikinews</a> and is reproduced here in accordance with <a href="http://creativecommons.org/licenses/by/2.5/">CC-Attribution-Generic 2.5.</a></i></p>
+]]>
+</component>
+<component group="publishedDate" name="date">1282057200000</component>
+<component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+<component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+<component group="polopoly.ContentLists" name="images">images</component>
+<component group="polopoly.ContentLists" name="topimages">topimages</component>
+<component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+<component group="p.Inbox" name="showContent">true</component>
+<component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+<component group="p.Content.state" name="onlineState">true</component>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": [
+        {
+          "id": "China Japan",
+          "name": "China Japan",
+          "entities": [],
+          "attributes": []
+        }
+      ]
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-04",
+          "name": "economy, business and finance",
+          "entities": [
+            {
+              "id": "subject-04018",
+              "name": "business (general)",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+<contentref group="images" name="0">
+  <contentid>
+    <major>ReferenceMetaData</major>
+    <externalid>example.demo.ref.image.InternetBusiness</externalid>
+  </contentid>
+</contentref>
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.InternetBusiness.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.InternetBusiness.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.InternetBusiness.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.InternetBusiness.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.InternetBusiness.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.InternetBusiness.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content>
+</batch>

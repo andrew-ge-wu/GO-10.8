@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.IndexMapping-public-example.StandardArticle</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.SolrIndexDefinitionHome</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.IndexMapping</externalid>
+      </input-template>
+    </metadata>
+    <component group="polopoly.Content" name="name">Public index mappings for articles</component>
+    <component group="mapping" name="name">title</component>
+    <component group="mapping" name="lead.value">text</component>
+    <component group="mapping" name="body.value">text</component>
+    <component group="mapping" name="onlineOnly.checked">webOnly</component>
+  </content>
+
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.IndexMapping-internal-example.StandardArticle</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.SolrIndexDefinitionHome</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.IndexMapping</externalid>
+      </input-template>
+    </metadata>
+    <component group="polopoly.Content" name="name">Internal index mappings for articles</component>
+    <component group="mapping" name="name">title</component>
+    <component group="mapping" name="lead.value">text</component>
+    <component group="mapping" name="body.value">text</component>
+    <component group="mapping" name="author">byline</component>
+    <component group="mapping" name="onlineOnly.checked">webOnly</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.PublicIndexDefinition</externalid>
+      </contentid>
+    </metadata>
+    <contentref group="mappers" name="example.StandardArticle">
+      <contentid>
+        <externalid>p.IndexMapping-public-example.StandardArticle</externalid>
+      </contentid>
+    </contentref>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.InternalIndexDefinition</externalid>
+      </contentid>
+    </metadata>
+    <contentref group="mappers" name="example.StandardArticle">
+      <contentid>
+        <externalid>p.IndexMapping-internal-example.StandardArticle</externalid>
+      </contentid>
+    </contentref>
+  </content>
+</batch>

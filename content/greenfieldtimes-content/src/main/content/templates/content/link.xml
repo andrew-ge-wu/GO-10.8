@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  
+  <input-template name="example.Link.External">
+    <policy>example.content.ContentBasePolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>    
+    <field name="href" input-template="p.TextInput"
+           label="cm.template.example.Link.External.Href"
+           required="true">
+      <param name="maxlength">2048</param>
+      <param name="inlineHelp">true</param>
+      <help>cm.template.example.Link.External.help</help>
+    </field>
+  </input-template>
+
+  <input-template name="example.Link.Internal">
+    <policy>example.content.ContentBasePolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <field name="content" input-template="p.ContentSingleSelect"
+           label="cm.template.example.Link.Internal.Content" required="true">
+      <param name="allowArticles">true</param>
+      <idparam name="rootContent"><externalid>p.siteengine.Sites.d</externalid></idparam>
+      <param name="hierarchyModel">com.polopoly.cm.app.model.ContentListHierarchyModel</param>      
+      <param name="inlineHelp">true</param>
+      <help>cm.template.example.Link.Internal.help</help>
+    </field>    
+  </input-template>
+  
+  <input-template name="example.Link" label="cm.template.example.Link">
+    <policy>example.content.link.LinkResourcePolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <editor contextName="orchid_SEARCHITEM">example.content.OResourceContentSearchItem</editor>
+    <viewer contextName="orchid_SEARCHITEM">example.content.OResourceContentSearchItem</viewer>
+    <editor contextName="orchid_TOCENTRY">example.content.OResourceContentListEntryPolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">example.content.OResourceContentListEntryPolicyWidget</viewer>
+    <type>Article</type>
+    <param name="templateIcon">link.png</param>
+    <param name="renderTemplateIconInSelect">true</param>
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">true</param>
+    <param name="EditNewState_saveAndFastInsert">false</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="titleOfNewContent">cm.template.example.Link.new</param>
+    <param name="ViewState_copy">true</param>
+    <param name="cloneSecurityParent">currentOrHome</param>
+    <layout name="menu" input-template="p.PageMenu">
+      <layout name="standard" input-template="p.Page" label="cm.general.General">
+
+        <field name="name" input-template="p.ContentName" label="cm.template.example.Link.Text">
+          <param name="inlineHelp">true</param>
+          <help>cm.template.example.Link.Text.help</help>
+        </field>
+        
+        <!-- link resource -->
+        <field name="link" input-template="p.SelectableSubField" label="cm.template.example.Link.LinkType">
+          <param name="inlineHelp">true</param>
+          <help>cm.template.example.Link.LinkType.help</help>
+          <field name="external" input-template="example.Link.External"
+                 label="cm.template.example.Link.ExternalLink" />
+          <field name="internal" input-template="example.Link.Internal"
+                 label="cm.template.example.Link.InternalLink" />
+        </field>
+        
+        <field name="title" input-template="p.TextInput"
+               label="cm.template.example.Link.Title">
+          <param name="maxlength">1024</param>
+          <param name="inlineHelp">true</param>
+          <help>cm.template.example.Link.Title.help</help>
+        </field>
+        
+        <!-- ordinary resource stuff -->
+
+        <field name="categorization" input-template="p.Metadata" label="cm.general.Categorization">
+          <param name="inlineHelp">true</param>
+          <help>cm.template.example.Link.Categorization.help</help>
+        </field>
+      </layout>
+      <layout name="advanced" input-template="p.Page" label="cm.general.Advanced">
+        <field name="parent" input-template="p.SecurityParentSelect" label="cm.label.HomeDepartment">
+          <param name="inlineHelp">true</param>
+          <help>cm.template.example.Link.HomeDepartment.help</help>
+        </field>        
+      </layout>
+    </layout>
+    <output-templates mode="www">
+      <id>example.Link.ot</id>
+    </output-templates>
+    <output-templates mode="mobile">
+      <id>example.Link.ot</id>
+    </output-templates>
+    <output-templates mode="link">
+      <id>example.LinkLink.ot</id>
+    </output-templates>    
+  </input-template>
+  <output-template name="example.Link.ot" input-template="p.siteengine.ArticleOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/www/link.vm</component>
+      <contentref group="output/controller" name="selected">
+        <contentid>
+          <externalid>p.siteengine.JavaClassRenderController</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/controller/selected/renderControllerClass" name="value">example.content.link.RenderControllerLinkResource</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+    </content-xml>
+  </output-template>
+  <output-template name="example.LinkLink.ot" input-template="p.siteengine.ArticleOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/link/link.vm</component>
+      <contentref group="output/controller" name="selected">
+        <contentid>
+          <externalid>p.siteengine.JavaClassRenderController</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/controller/selected/renderControllerClass" name="value">example.content.link.RenderControllerLinkResource</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+    </content-xml>
+  </output-template>
+</template-definition>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+  <!-- Add config here if needed. -->
+
+  <solrSearchClientSettings>
+    <postCutOff>2048</postCutOff>
+  </solrSearchClientSettings>
+</model>

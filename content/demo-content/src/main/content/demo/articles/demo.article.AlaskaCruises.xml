@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- http://en.wikinews.org/wiki/Alaskan_cruise_ship_evacuated -->
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+<content clear="true">
+<metadata>
+  <contentid>
+    <major>Article</major>
+    <externalid>example.demo.article.AlaskaCruises</externalid>
+  </contentid>
+  <input-template>
+    <major>InputTemplate</major>
+    <externalid>example.StandardArticle</externalid>
+  </input-template>
+  <security-parent>
+    <major>Department</major>
+    <externalid>GreenfieldTimes.d</externalid>
+  </security-parent>
+</metadata>
+<component group="author" name="value">Wikinews</component>
+<component group="polopoly.Content" name="name">Alaskan cruise ship evacuated</component>
+<component group="lead" name="value">The Alaskan cruise ship "Empress of the North" was given the order to evacuate at 2 AM Alaska Time this morning after striking an underwater rock and taking on water. All 281 passengers and 29 crew are unharmed and the passengers have been evacuated, though the ship is listing roughly 8 degrees. The US Coast Guard has stated the ship is in no danger of sinking, but tell news reporters that the captain of the ship gave the order to evacuate to be safe. The ship's current location is 24 km (15 miles) southeast of Juneau, Alaska in an area of the Eastern peninsula known as the Icy Strait. Though it is unknown exactly what penetrated the ship's hull at this time, it is suspected by the captain and US Coast Guard that it was an underwater rock. This all occurred during the night hours on the second day of a seven day long cruise through the Alexander Archipelago and Inside Passage in southeastern Alaska.</component>
+<component group="body" name="value">
+<![CDATA[
+<p>Dan Miller, representative for "Majestic America" has said the ship <cite>"is stable and is under its own power and as soon as all the guests and crew are transferred off, she will make her way under her own power over to Juneau where we will assess the damage."</cite></p>
+<p>Several civilian pleasure-craft arrived at the scene and have taken some passengers off of the ship. The ships involved in this rescue operation were a commercial tugboat, a barge, 6 pleasurecraft, an Alaska Marine Highway ferry, and another cruise ship.</p>
+<p>As of 1:00 PM Eastern Time, all of the passengers have been transferred to an Alaskan Ferry, heading back to Juneau. The 29 crew members have stated they will remain on board to help bring the ship back to port in Juneau for investigation and repairs.</p>
+<p>The 109-meter long Empress of the North is owned by "Majestic America", a division of Ambassadors Cruise Group, which is in turn, a wholly owned subsidiary of Ambassadors International.</p>
+<p><i>This article was originally published on <a href="http://en.wikinews.org/wiki/Alaskan_cruise_ship_evacuated">Wikinews</a> and is reproduced here in accordance with <a href="http://creativecommons.org/licenses/by/2.5/">CC-Attribution-Generic 2.5.</a></i></p>
+]]>
+</component>
+<component group="publishedDate" name="date">1179154800000</component>
+<component group="p.Inbox" name="showContent">true</component>
+<component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+<component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+<component group="polopoly.ContentLists" name="images">images</component>
+<component group="polopoly.ContentLists" name="topimages">topimages</component>
+<component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+<component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+<component group="p.Content.state" name="onlineState">true</component>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-10",
+          "name": "lifestyle and leisure",
+          "entities": [
+            {
+              "id": "subject-10007",
+              "name": "travel and commuting",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+<contentref group="images" name="0">
+  <contentid>
+    <major>ReferenceMetaData</major>
+    <externalid>example.demo.ref.image.AlaskaCruises</externalid>
+  </contentid>
+</contentref>
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.AlaskaCruises.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.AlaskaCruises.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.AlaskaCruises.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.AlaskaCruises.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.AlaskaCruises.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.AlaskaCruises.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content>
+</batch>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+
+  <input-template name="com.atex.plugins.brightcove.video.pull">
+    <editor>com.atex.plugins.brightcove.widget.OBrightcoveSyncWidget</editor>
+    <viewer>com.atex.plugins.brightcove.widget.OBrightcoveSyncWidget</viewer>
+  </input-template>
+
+  <input-template name="com.atex.plugins.brightcove.video.viewer">
+    <policy>com.polopoly.siteengine.standard.content.ContentBasePolicy</policy>
+    <editor>com.atex.plugins.brightcove.widget.OBrightCoveVideoViewer</editor>
+    <viewer>com.atex.plugins.brightcove.widget.OBrightCoveVideoViewer</viewer>
+  </input-template>
+
+  <input-template name="com.atex.plugins.brightcove.RelatedContentListWrapper">
+    <content-list-wrapper>com.polopoly.cm.app.policy.ConfigurableContentListWrapper</content-list-wrapper>
+    <idparam-list name="allowedInputTemplates">
+      <contentid>
+        <externalid>com.atex.plugins.brightcove.video.MainElement</externalid>
+      </contentid>
+    </idparam-list>
+  </input-template>
+
+  <input-template name="com.atex.plugins.brightcove.video.MainElement" label="com.atex.plugins.brightcove.video.MainElement">
+    <policy>com.atex.plugins.brightcove.BrightcoveVideoPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <editor contextName="orchid_SEARCHITEM">example.widget.OSearchItemBaseWidget</editor>
+    <viewer contextName="orchid_SEARCHITEM">example.widget.OSearchItemBaseWidget</viewer>
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+    <editor contextName="orchid_THUMBENTRY">com.atex.plugins.brightcove.widget.OSearchThumbBrightcoveVideo</editor>
+    <viewer contextName="orchid_THUMBENTRY">com.atex.plugins.brightcove.widget.OSearchThumbBrightcoveVideo</viewer>
+
+    <content-list name="default" input-template="com.atex.plugins.brightcove.RelatedContentListWrapper" />
+
+    <type>Article</type>
+    <param name="renderTemplateIconInSelect">true</param>
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">true</param>
+    <param name="EditNewState_saveAndFastInsert">false</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="titleOfNewContent">com.atex.plugins.brightcove.video.new</param>
+    <param name="ViewState_copy">true</param>
+    <layout name="menu" input-template="p.PageMenu">
+      <layout name="standard" input-template="p.Page" label="cm.general.General">
+        <layout name="brightcovecolumholder" input-template="p.ColumnHolder">
+          <layout name="brightcovecolumn" input-template="p.Column">
+            <field name="name" input-template="p.ContentName" label="cm.label.Title" required="true" />
+            <field name="video" input-template="p.TextInput" label="com.atex.plugins.brightcove.videoId" required="true" />
+            <field name="sync" input-template="com.atex.plugins.brightcove.video.pull" />
+            <field name="imageType" input-template="p.SelectableSubField" label="com.atex.plugins.brightcove.video.PreviewImageType" required="false">
+              <param name="inlineHelp">true</param>
+              <help>com.atex.plugins.brightcove.video.PreviewImage.help</help>
+              <field name="image" input-template="p.ImageManager" label="com.atex.plugins.brightcove.video.PreviewImageType.image" required="false" 
+                     externalid="example.Video.ImageManager">
+                <param name="mode">singleUploadSingleSelect</param>
+                <param name="staticFilename">image</param>
+                <param name="allowEdit">true</param>
+                <param name="maxNofPixels">2073600</param>
+                <param name="showPasteButton">false</param>
+                <param name="openEditorOnUpload">true</param>
+                <param name="openEditorOnSelect">true</param>
+                <param name="appletWidth">640</param>
+                <param name="appletHeight">480</param>
+                <param name="appletState">
+                <![CDATA[
+                  <imageapplet>
+                    <buttonset name="zoombuttons">
+                    <button label="Zoom In" icon="zoom_in.png" action="ZoomInImageAppletAction"/>
+                    <button label="Zoom Out" icon="zoom_out.png" action="ZoomOutImageAppletAction"/>
+                    </buttonset>
+                    <buttonset name="rotatemirrorbuttons">
+                    <button label="Rotate" icon="rotate_cw.png" action="ClockwiseRotateImageAppletAction"/>
+                    <button label="Mirror" icon="mirror.png" action="HorizontalMirrorImageAppletAction"/>
+                    </buttonset>
+                    <editmode name="previewEdit" label="Preview" description="Used as preview image for this movie">
+                    <buttonset name="gallerybs">
+                    <includebuttonset name="rotatemirrorbuttons"/>
+                    <button label="Crop" icon="crop.png" action="CropEditImageAppletAction"/>
+                    <button label="Scramble" icon="photo_portrait.png" action="ScrambleEditImageAppletAction"/>
+                    <separator/>
+                    <includebuttonset name="zoombuttons"/>
+                    </buttonset>
+                    <derivative name="preview_320" label="Preview 320px">
+                    <postprocess>
+                    <transform code="resize2maxw320h240"/>
+                    </postprocess>
+                    </derivative>
+                    </editmode>
+                    </imageapplet>
+                ]]>
+                </param>
+              </field>
+            </field>
+            <field name="upload" input-template="com.atex.plugins.brightcove.video.upload" label="com.atex.plugins.brightcove.video.upload.label">
+            </field>
+            <field name="lead" input-template="p.TextArea" label="com.atex.plugins.brightcove.video.ShortDescription">
+              <param name="rows">3</param>
+              <param name="cols">50</param>
+              <param name="inlineHelp">true</param>
+              <help>com.atex.plugins.brightcove.video.Description.help</help>
+            </field>
+          </layout>
+          <layout name="previewcolumn" input-template="p.Column">
+          <field name="preview" input-template="com.atex.plugins.brightcove.video.viewer" label="com.atex.plugins.brightcove.label.preview" />
+        </layout>
+        </layout>
+        <field name="body" input-template="p.FCKEditor" label="com.atex.plugins.brightcove.video.LongDescription">
+          <param name="fieldsetClass">field text</param>
+          <param name="width">-1</param>
+          <param name="height">300</param>
+          <param name="cols">50</param>
+          <param name="rows">30</param>
+          <param name="showPasteButton">false</param>
+          <param name="tabIndex">3</param>
+        </field>
+        <layout name="metadataColumns" input-template="p.ColumnHolder">
+          <layout name="categorySelectorColumn" input-template="p.Column">
+            <layout name="metadataSection" input-template="p.LabeledSection" label="cm.general.Categorization">
+              <param name="cssClass">p_section</param>
+              <layout name="categorizationPadding" input-template="p.Group">
+                <param name="showLabel">false</param>
+                <param name="showFieldset">false</param>
+                <param name="cssClass">p_padding</param>
+                <field name="categorization" input-template="p.siteengine.Content.Categorization" label="cm.general.Categorization">
+                  <param name="categoryDimensionsAlias">sites</param>
+                  <param name="inlineHelp">true</param>
+                  <help>com.atex.plugins.brightcove.video.Categorization.help</help>
+                </field>
+              </layout>
+            </layout>
+          </layout>
+          <layout name="relatedArticlesColumn" input-template="p.Column">
+            <layout name="relatedArticlesSection" input-template="p.LabeledSection" label="cm.general.RelatedArticles">
+              <param name="cssClass">p_section</param>
+              <field name="related" input-template="p.ContentListEntryContainer" label="">
+                <param name="contentListName">default</param>
+              </field>
+            </layout>
+          </layout>
+        </layout>
+        <field name="relatedContent" input-template="p.AutoContentCreator">
+          <idparam name="templateContentId">
+            <externalid>com.atex.plugins.brightcove.BrightcoveRelatedContentTemplate</externalid>
+          </idparam>
+          <param name="insertionContentListName">elements/slotElements</param>
+          <param name="showFieldset">false</param>
+        </field>
+      </layout>
+      <layout name="elements" input-template="p.Page" label="cm.template.p.siteengine.StandardArticle.it.Elements">
+        <param name="lazyInit">true</param>
+        <layout name="columns" input-template="p.ColumnHolder">
+          <layout name="mainColumn" input-template="p.Column">
+            <layout name="mainColumnSection" input-template="p.LabeledSection" label="cm.template.p.siteengine.StandardArticle.it.Elements.MainColumn">
+              <param name="cssClass">p_section</param>
+              <field name="elements" input-template="p.siteengine.layout.Slot.it" />
+            </layout>
+          </layout>
+        </layout>
+      </layout>
+      <layout name="advanced" input-template="p.Page" label="cm.general.Advanced">
+        <field name="parent" input-template="p.SecurityParentSelect" label="cm.label.HomeDepartment">
+          <param name="inlineHelp">true</param>
+          <help>com.atex.plugins.brightcove.video.HomeDepartment.help</help>
+        </field>
+        <field name="timestate" input-template="p.TimeState" label="cm.general.TimeState">
+          <help>com.atex.plugins.brightcove.video.it.TimeStateHelp</help>
+          <param name="inlineHelp">true</param>
+          <param name="showYear">true</param>
+          <param name="showMonth">true</param>
+          <param name="showDay">true</param>
+          <param name="showHour">true</param>
+          <param name="showMinute">true</param>
+          <param name="showSecond">false</param>
+          <param name="show12HourFormat">false</param>
+          <param name="format">yyyyMMddHHmmss</param>
+          <param name="startYear">1970</param>
+          <param name="endYear">2050</param>
+        </field>
+      </layout>
+    </layout>
+    <output-templates mode="www">
+      <id>com.atex.plugins.brightcove.Video.ot</id>
+    </output-templates>
+  </input-template>
+</template-definition>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <!-- Articles -->
+  <input-template name="example.ArticleContentListWrapper">
+    <content-list-wrapper>com.polopoly.cm.app.policy.ConfigurableContentListWrapper</content-list-wrapper>
+    <idparam-list name="allowedInputTemplates">
+      <contentid>
+        <externalid>example.StandardArticle</externalid>
+      </contentid>
+    </idparam-list>
+  </input-template>
+  <input-template name="example.TeaserImageInitContentListWrapper">
+    <content-list-wrapper>example.collection.TeaserImageInitContentListWrapper</content-list-wrapper>
+    <idparam-list name="allowedInputTemplates">
+      <contentid>
+        <externalid>example.StandardArticle</externalid>
+      </contentid>
+    </idparam-list>
+    <param name="maxSize">1</param>
+  </input-template>
+  <input-template name="p.siteengine.SingleLandingPageContentListWrapper">
+    <content-list-wrapper>example.collection.ContentListWrapperLimited</content-list-wrapper>
+    <idparam-list name="allowedInputTemplates">
+      <contentid>
+        <externalid>p.siteengine.LandingPage</externalid>
+      </contentid>
+    </idparam-list>
+    <param name="maxSize">1</param>
+  </input-template>
+  <!-- Images -->
+  <input-template name="example.ImageContentListWrapper">
+    <content-list-wrapper>com.polopoly.cm.app.policy.ConfigurableContentListWrapper</content-list-wrapper>
+    <param name="addReferenceMetaDataAutomatically">true</param>
+    <idparam-list name="allowedInputTemplates">
+      <contentid>
+        <externalid>example.Image</externalid>
+      </contentid>
+      <contentid>
+        <externalid>example.ImageRefMeta</externalid>
+      </contentid>
+      <contentid>
+        <externalid>example.ImageRefMetaInContext</externalid>
+      </contentid>
+    </idparam-list>
+    <idparam name="referenceMetaDataInputTemplate">
+      <major>InputTemplate</major>
+      <externalid>example.ImageRefMeta</externalid>
+    </idparam>
+  </input-template>
+  
+  <!-- Elements -->
+  <input-template name="p.ElementContentListWrapper">
+    <content-list-wrapper>com.polopoly.cm.app.policy.ConfigurableContentListWrapper</content-list-wrapper>   
+    <idparam-list name="disallowedInputTemplates">
+      <contentid>
+        <externalid>p.siteengine.Stylesheet</externalid>
+      </contentid>
+      <contentid>
+        <externalid>p.siteengine.Site</externalid>
+      </contentid>
+      <contentid>
+        <externalid>p.siteengine.Page</externalid>
+      </contentid>
+    </idparam-list>
+  </input-template>
+  
+  <input-template name="example.SingleEntryContentListWrapper">
+    <content-list-wrapper>example.collection.ContentListWrapperLimited</content-list-wrapper>
+    <param name="maxSize">1</param>
+  </input-template>
+  <input-template name="p.siteengine.StructureContentListWrapper.it">
+    <content-list-wrapper>com.polopoly.cm.app.policy.ConfigurableContentListWrapper</content-list-wrapper>
+    <idparam-list name="allowedInputTemplates">
+      <contentid>
+        <externalid>p.siteengine.Page</externalid>
+      </contentid>
+      <contentid>
+        <externalid>p.siteengine.Site</externalid>
+      </contentid>      
+      <contentid>
+        <externalid>example.StandardArticle</externalid>
+      </contentid>      
+      <contentid>
+        <externalid>example.Link</externalid>
+      </contentid>
+      <contentid>
+        <externalid>p.siteengine.LandingPage</externalid>
+      </contentid>      
+    </idparam-list>
+  </input-template>  
+  <!-- Structure -->  
+</template-definition>

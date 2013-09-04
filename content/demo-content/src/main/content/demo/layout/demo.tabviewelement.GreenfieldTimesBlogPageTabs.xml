@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+<content>
+  <metadata>
+    <contentid>
+      <major>LayoutElement</major>
+      <externalid>example.blogpagetabview</externalid>
+    </contentid>
+    
+    <input-template>
+      <major>InputTemplate</major>
+      <externalid>example.TabViewElement</externalid>
+    </input-template>
+    
+    <security-parent>
+      <major>Department</major>
+      <externalid>GreenfieldTimes.d</externalid>
+    </security-parent>
+  </metadata>
+
+  <component group="polopoly.Content" name="name">Top blogs tab view</component>
+  <component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+  <component group="elements/inheritSetting" name="selected_0">default</component>
+  <component group="elements/inheritSetting" name="count">1</component>
+
+  <contentref group="elements/slotElements" name="-256">
+    <contentid>
+      <major>LayoutElement</major>
+      <externalid>example.topblogstodaylist</externalid>
+    </contentid>
+  </contentref>
+
+  <contentref group="elements/slotElements" name="0">
+    <contentid>
+      <major>LayoutElement</major>
+      <externalid>example.latestbloggedlist</externalid>
+    </contentid>
+  </contentref>
+</content>
+</batch>

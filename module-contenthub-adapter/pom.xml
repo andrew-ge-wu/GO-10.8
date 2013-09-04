@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <name>greenfieldtimes-example - Content Hub Adapter Module</name>
+
+  <artifactId>contenthub-adapter-module</artifactId>
+  <groupId>com.polopoly.sites.greenfieldtimes-example.contenthub</groupId>
+  <packaging>pom</packaging>
+
+  <parent>
+    <groupId>com.polopoly.sites.greenfieldtimes-example</groupId>
+    <artifactId>top</artifactId>
+    <version>10.8.0</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <modules>
+    <!-- This module is needed by the installation that is to be adapted into a Content Hub -->
+    <module>adapter</module>
+    <!-- This module is needed by the installation that another Greenfield Times is adapted into -->
+    <module>contenthub</module>
+  </modules>
+</project>

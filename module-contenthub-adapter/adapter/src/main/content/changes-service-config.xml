@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content>
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.ChangesServiceConfig</externalid>
+      </contentid>
+    </metadata>
+    <component group="p.Config" name="acceptedMajors">1,4</component>
+    <component group="p.Config" name="filterClass">com.polopoly.cm.client.filter.InputTemplateFilter</component>
+  </content>
+</batch>

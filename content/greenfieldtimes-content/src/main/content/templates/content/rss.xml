@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.Rss" label="p.siteengine.rss.template">
+    <policy>com.polopoly.siteengine.standard.content.ContentBasePolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <!--  Remove preview button -->
+    <param name="ViewState_preview">false</param>
+    <param name="EditState_preview">false</param>
+    <param name="EditNewState_preview">false</param>
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">true</param>
+    <param name="EditNewState_saveAndFastInsert">false</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="ViewState_copy">true</param>
+    <param name="cloneSecurityParent">currentOrHome</param>
+    <param name="titleOfNewContent">p.siteengine.rss.template.new</param>
+    <editor contextName="orchid_SEARCHITEM">example.widget.OSearchItemBaseWidget</editor>
+    <viewer contextName="orchid_SEARCHITEM">example.widget.OSearchItemBaseWidget</viewer>
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+    <type>Article</type>
+    <param name="templateIcon">rss.png</param>
+    <layout name="rssColumnHolder" input-template="p.ColumnHolder" label="">
+      <layout name="content" input-template="p.Column" label="">
+        <!-- Feed title -->
+        <field name="title" input-template="p.ContentName" label="p.siteengine.rss.channel.title" required="true" />
+        <!-- Feed description -->
+        <field name="description" input-template="p.TextArea" label="p.siteengine.rss.channel.description" />
+        <!--  Feed source -->
+        <field name="publishingQueues" input-template="p.ContentListEntryContainer" label="cm.general.PublishingQueue">
+            <param name="contentListName">articleQueues</param>
+            <param name="showActionButtonsInViewMode">false</param>
+        </field>
+      </layout>
+      <layout name="settings" input-template="p.Column" label="">
+        <param name="width">30</param>
+        <param name="widthRelative">true</param>
+        <!-- Feed image -->
+        <field name="image" input-template="p.ImageManager" label="p.siteengine.rss.channel.image">
+          <param name="mode">singleUploadSingleSelect</param>
+          <param name="staticFilename">image</param>
+          <param name="showPasteButton">false</param>
+          <param name="maxFileSize">10000</param>
+          <param name="maxNofPixels">5000000</param>
+          <param name="abortNofPixels">10000000</param>
+          <param name="allowEdit">false</param>
+          <param name="appletWidth">480</param>
+          <param name="appletHeight">480</param>
+          <param name="appletState">
+            <![CDATA[<?xml version="1.0" encoding="iso-8859-1"?>
+		                    <imageapplet>
+		                        <buttonset name="basebs">
+		                            <button label="Rotate" icon="rotate_cw.png" action="ClockwiseRotateImageAppletAction"/>
+		                            <button label="Mirror" icon="mirror.png" action="HorizontalMirrorImageAppletAction"/>
+		                            <button label="Crop" icon="crop.png" action="CropEditImageAppletAction"/>
+		                            <button label="Scramble" icon="photo_portrait.png" action="ScrambleEditImageAppletAction"/>
+		                            <button label="Zoom In" icon="zoom_in.png" action="ZoomInImageAppletAction"/>
+		                            <button label="Zoom Out" icon="zoom_out.png" action="ZoomOutImageAppletAction"/>
+		                        </buttonset>
+		                        <editmode name="default">
+		                            <buttonset>
+		                                <includebuttonset name="basebs"/>
+		                            </buttonset>
+		                            <derivative name="default" label="Default" description="Default"/>
+		                        </editmode>
+		                    </imageapplet>
+		                ]]>
+          </param>
+        </field>
+        <!-- Feed category -->
+        <field name="categories" input-template="p.Metadata" label="cm.general.Categorization"></field>
+        <!-- Feed language -->
+        <field name="language" input-template="p.Select" label="p.siteenginge.rss.channel.language">
+          <param name="hasNoneOption">true</param>
+          <param name="size">1</param>
+          <param name="label_0">Afrikaans</param>
+          <param name="value_0">af</param>
+          <param name="label_1">Albanian</param>
+          <param name="value_1">sq</param>
+          <param name="label_2">Basque</param>
+          <param name="value_2">eu</param>
+          <param name="label_3">Belarusian</param>
+          <param name="value_3">be</param>
+          <param name="label_4">Bulgarian</param>
+          <param name="value_4">bg</param>
+          <param name="label_5">Catalan</param>
+          <param name="value_5">ca</param>
+          <param name="label_6">Chinese (Simplified)</param>
+          <param name="value_6">zh-cn</param>
+          <param name="label_7">Chinese (Traditional)</param>
+          <param name="value_7">zh-tw</param>
+          <param name="label_8">Croatian</param>
+          <param name="value_8">hr</param>
+          <param name="label_9">Czech</param>
+          <param name="value_9">cs</param>
+          <param name="label_10">Danish</param>
+          <param name="value_10">da</param>
+          <param name="label_11">Dutch</param>
+          <param name="value_11">nl</param>
+          <param name="label_12">Dutch (Belgium)</param>
+          <param name="value_12">nl-be</param>
+          <param name="label_13">Dutch (Netherlands)</param>
+          <param name="value_13">nl-nl</param>
+          <param name="label_14">English</param>
+          <param name="value_14">en</param>
+          <param name="label_15">English (Australia)</param>
+          <param name="value_15">en-au</param>
+          <param name="label_16">English (Belize)</param>
+          <param name="value_16">en-bz</param>
+          <param name="label_17">English (Canada)</param>
+          <param name="value_17">en-ca</param>
+          <param name="label_18">English (Ireland)</param>
+          <param name="value_18">en-ie</param>
+          <param name="label_19">English (Jamaica)</param>
+          <param name="value_19">en-jm</param>
+          <param name="label_20">English (New Zealand)</param>
+          <param name="value_20">en-nz</param>
+          <param name="label_21">English (Phillipines)</param>
+          <param name="value_21">en-ph</param>
+          <param name="label_22">English (South Africa)</param>
+          <param name="value_22">en-za</param>
+          <param name="label_23">English (Trinidad)</param>
+          <param name="value_23">en-tt</param>
+          <param name="label_24">English (United Kingdom)</param>
+          <param name="value_24">en-gb</param>
+          <param name="label_25">English (United States)</param>
+          <param name="value_25">en-us</param>
+          <param name="label_26">English (Zimbabwe)</param>
+          <param name="value_26">en-zw</param>
+          <param name="label_27">Estonian</param>
+          <param name="value_27">et</param>
+          <param name="label_28">Faeroese</param>
+          <param name="value_28">fo</param>
+          <param name="label_29">Finnish</param>
+          <param name="value_29">fi</param>
+          <param name="label_30">French</param>
+          <param name="value_30">fr</param>
+          <param name="label_31">French (Belgium)</param>
+          <param name="value_31">fr-be</param>
+          <param name="label_32">French (Canada)</param>
+          <param name="value_32">fr-ca</param>
+          <param name="label_33">French (France)</param>
+          <param name="value_33">fr-fr</param>
+          <param name="label_34">French (Luxembourg)</param>
+          <param name="value_34">fr-lu</param>
+          <param name="label_35">French (Monaco)</param>
+          <param name="value_35">fr-mc</param>
+          <param name="label_36">French (Switzerland)</param>
+          <param name="value_36">fr-ch</param>
+          <param name="label_37">Galician</param>
+          <param name="value_37">gl</param>
+          <param name="label_38">Gaelic</param>
+          <param name="value_38">gd</param>
+          <param name="label_39">German</param>
+          <param name="value_39">de</param>
+          <param name="label_40">German (Austria)</param>
+          <param name="value_40">de-at</param>
+          <param name="label_41">German (Germany)</param>
+          <param name="value_41">de-de</param>
+          <param name="label_42">German (Liechtenstein)</param>
+          <param name="value_42">de-li</param>
+          <param name="label_43">German (Luxembourg)</param>
+          <param name="value_43">de-lu</param>
+          <param name="label_44">German (Switzerland)</param>
+          <param name="value_44">de-ch</param>
+          <param name="label_45">Greek</param>
+          <param name="value_45">el</param>
+          <param name="label_46">Hawaiian</param>
+          <param name="value_46">haw</param>
+          <param name="label_47">Hungarian</param>
+          <param name="value_47">hu</param>
+          <param name="label_48">Icelandic</param>
+          <param name="value_48">is</param>
+          <param name="label_49">Indonesian</param>
+          <param name="value_49">in</param>
+          <param name="label_50">Irish</param>
+          <param name="value_50">ga</param>
+          <param name="label_51">Italian</param>
+          <param name="value_51">it</param>
+          <param name="label_52">Italian (Italy)</param>
+          <param name="value_52">it-it</param>
+          <param name="label_53">Italian (Switzerland)</param>
+          <param name="value_53">it-ch</param>
+          <param name="label_54">Japanese</param>
+          <param name="value_54">ja</param>
+          <param name="label_55">Korean</param>
+          <param name="value_55">ko</param>
+          <param name="label_56">Macedonian</param>
+          <param name="value_56">ml</param>
+          <param name="label_57">Norwegian</param>
+          <param name="value_57">no</param>
+          <param name="label_58">Polish</param>
+          <param name="value_58">pl</param>
+          <param name="label_59">Portuguese</param>
+          <param name="value_59">pt</param>
+          <param name="label_60">Portuguese (Brazil)</param>
+          <param name="value_60">pt-br</param>
+          <param name="label_61">Portuguese (Portugal)</param>
+          <param name="value_61">pt-pt</param>
+          <param name="label_62">Romanian</param>
+          <param name="value_62">ro</param>
+          <param name="label_63">Romanian (Moldova)</param>
+          <param name="value_63">ro-mo</param>
+          <param name="label_64">Romanian (Romania)</param>
+          <param name="value_64">ro-ro</param>
+          <param name="label_65">Russian</param>
+          <param name="value_65">ru</param>
+          <param name="label_66">Russian (Moldova)</param>
+          <param name="value_66">ru-mo</param>
+          <param name="label_67">Russian (Russia)</param>
+          <param name="value_67">ru-ru</param>
+          <param name="label_68">Serbian</param>
+          <param name="value_68">sr</param>
+          <param name="label_69">Slovak</param>
+          <param name="value_69">sk</param>
+          <param name="label_70">Slovenian</param>
+          <param name="value_70">sl</param>
+          <param name="label_71">Spanish</param>
+          <param name="value_71">es</param>
+          <param name="label_72">Spanish (Argentina)</param>
+          <param name="value_72">es-ar</param>
+          <param name="label_73">Spanish (Bolivia)</param>
+          <param name="value_73">es-bo</param>
+          <param name="label_74">Spanish (Chile)</param>
+          <param name="value_74">es-cl</param>
+          <param name="label_75">Spanish (Colombia)</param>
+          <param name="value_75">es-co</param>
+          <param name="label_76">Spanish (Costa Rica)</param>
+          <param name="value_76">es-cr</param>
+          <param name="label_77">Spanish (Dominican Republic)</param>
+          <param name="value_77">es-do</param>
+          <param name="label_78">Spanish (Ecuador)</param>
+          <param name="value_78">es-ec</param>
+          <param name="label_79">Spanish (El Salvador)</param>
+          <param name="value_79">es-sv</param>
+          <param name="label_80">Spanish (Guatemala)</param>
+          <param name="value_80">es-gt</param>
+          <param name="label_81">Spanish (Honduras)</param>
+          <param name="value_81">es-hn</param>
+          <param name="label_82">Spanish (Mexico)</param>
+          <param name="value_82">es-mx</param>
+          <param name="label_83">Spanish (Nicaragua)</param>
+          <param name="value_83">es-ni</param>
+          <param name="label_84">Spanish (Panama)</param>
+          <param name="value_84">es-pa</param>
+          <param name="label_85">Spanish (Paraguay)</param>
+          <param name="value_85">es-py</param>
+          <param name="label_86">Spanish (Peru)</param>
+          <param name="value_86">es-pe</param>
+          <param name="label_87">Spanish (Puerto Rico)</param>
+          <param name="value_87">es-pr</param>
+          <param name="label_88">Spanish (Spain)</param>
+          <param name="value_88">es-es</param>
+          <param name="label_89">Spanish (Uruguay)</param>
+          <param name="value_89">es-uy</param>
+          <param name="label_90">Spanish (Venezuela)</param>
+          <param name="value_90">es-ve</param>
+          <param name="label_91">Swedish</param>
+          <param name="value_91">sv</param>
+          <param name="label_92">Swedish (Finland)</param>
+          <param name="value_92">sv-fi</param>
+          <param name="label_93">Swedish (Sweden)</param>
+          <param name="value_93">sv-se</param>
+          <param name="label_94">Turkish</param>
+          <param name="value_94">tr</param>
+          <param name="label_95">Ukranian</param>
+          <param name="value_95">uk</param>
+        </field>
+        <!-- Feed item length -->
+        <field name="length" input-template="p.TextInput" label="p.siteengine.rss.channel.length">
+          <policy>com.polopoly.cm.app.policy.NumberInputPolicy</policy>
+          <param name="type">int</param>
+          <param name="default">20</param>
+          <param name="size">3</param>
+        </field>
+      </layout>
+    </layout>
+    <output-templates mode="www">
+      <id>example.Rss.ot</id>
+    </output-templates>
+    <output-templates mode="link">
+      <id>example.RssLink.ot</id>
+    </output-templates>
+  </input-template>
+  <output-template name="example.RssLink.ot" input-template="p.siteengine.BaseOutputTemplate">
+    <content-xml>
+      <component group="isCacheable" name="value">true</component>
+      <!-- Note that link tag omits "/" at the end to conform to HTML 4.01 Strict. -->
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/link/rss.vm</component>     
+      <contentref group="output/controller" name="selected">
+        <contentid>
+          <externalid>p.siteengine.JavaClassRenderController</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/controller/selected/renderControllerClass" name="value">example.content.rss.RenderControllerRssLink</component>
+    </content-xml>
+  </output-template>
+  <output-template name="example.Rss.ot" input-template="p.siteengine.XmlOutputTemplate">
+    <content-xml>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/www/rss.vm</component>     
+      <contentref group="output/controller" name="selected">
+        <contentid>
+          <externalid>p.siteengine.JavaClassRenderController</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/controller/selected/renderControllerClass" name="value">example.content.rss.RenderControllerRssArticle</component>
+    </content-xml>
+  </output-template>
+  <input-template name="p.siteengine.FeedContentListWrapper">
+    <content-list-wrapper>com.polopoly.cm.app.policy.ConfigurableContentListWrapper</content-list-wrapper>
+    <idparam-list name="allowedInputTemplates">
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.Rss</externalid>
+      </contentid>
+    </idparam-list>
+  </input-template>
+</template-definition>

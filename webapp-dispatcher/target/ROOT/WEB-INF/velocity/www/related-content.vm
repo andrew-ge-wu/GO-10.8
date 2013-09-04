@@ -1,0 +1,41 @@
+#if($content.landingPage.list.size() > 0)
+    #set($landingPage = $content.landingPage.list.get(0).content)
+#end
+
+<div class="related-content">
+  <h2>$!esc.html($content.name)</h2>
+  #if($landingPage)
+    <ul>
+        #set($dimensions = $m.local.metadata.dimensions)
+        #foreach($dimension in $dimensions)
+          #set($entitiesCount = $dimension.entities.size())
+          #if($entitiesCount > 0)
+              <li class="dimension">
+                #set($dimensionElementId = "dimension-" + $velocityCount)
+                <h3><a href="#" onclick="return toogleDimension('$dimensionElementId');">$dimension.name ($entitiesCount)</a></h3>
+                <ul id="$dimensionElementId" class="categories hide">
+                    #foreach($entity in $dimension.entities)
+                        <li class="category">
+                            <a href="#link({"path": $landingPage.parentIds,
+                                            "contentId":$landingPage.contentId,
+                                            'htmlEncodeLink': 'true',
+                                            "contentParams":{ $landingPage.contentId : {"category":$entity.id, "dimension":$dimension.id, "":""}, "":"" },
+                                            "":""})">$entity.name</a>
+                        </li>
+                    #end
+                </ul>
+              </li>
+           #end
+        #end
+      </ul>
+  #end
+</div>
+<script type="text/javascript">
+    //<![CDATA[
+        function toogleDimension(dimensionElementId) {
+            $('.related-content .categories:not(#' + dimensionElementId + ')').hide('normal');
+            $('#' + dimensionElementId).toggle('normal');
+            return false;
+        }
+    //]]>
+</script>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <!--
+          The external id must start with service definition domain name
+          'siteengine.ServiceDefinition' and end with the service name i.e.
+          '.mnl'. This to enable the service manager to find (look up) the
+          service definition for a service.
+        -->
+        <externalid>siteengine.ServiceDefinition.ubg</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.siteengine.ServiceDefinitions.d</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.siteengine.ServiceDefinition</externalid>
+      </input-template>
+    </metadata>
+    <component group="polopoly.Content" name="name">User Blogs Service</component>
+    <component group="serviceName" name="value">ubg</component>
+    <component group="serviceClass" name="value">example.blog.UserBlogsData</component>
+    <component group="serviceEnabled" name="value">true</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.siteengine.ServiceDefinitions.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.Configuration</externalid>
+      </input-template>
+    </metadata>
+    <contentlist mode="modify">
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>siteengine.ServiceDefinition.ubg</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+</batch>

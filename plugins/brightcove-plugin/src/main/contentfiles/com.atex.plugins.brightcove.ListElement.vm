@@ -1,0 +1,17 @@
+## only include once
+#if(!$m.global.brightcovecss)
+  #set($m.global.brightcovecss = true)
+ <link rel="stylesheet" type="text/css" href="#file({'contentId': $filesContentId, 'filename':'brightcove.css', '':''})" />
+#end
+
+#if($display != "ownDept")
+  #set($path = $tool_path.getPathToRoot($department))
+#end
+
+<div id="$id" class="element brightcove">
+  #if($content.mode.selectedName == 'teaser')
+    #parse("com.atex.plugins.brightcove.teaser.ot")
+  #else
+    #parse("com.atex.plugins.brightcove.slide.ot")
+  #end
+</div>

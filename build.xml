@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project name="Greenfield Times" default="compile" basedir="." xmlns:polopoly="http://www.polopoly.com/ANT1.6">
+
+  <!-- ======================================================================
+       Properties
+       ====================================================================== -->
+
+  <!-- To override properties in this installation. -->
+  <import optional="true" file="./local.xml" />
+  <!-- Overrides application name and heading. application.name
+       is used when building jar files and application.heading is used as
+       heading for e.g. javadoc.
+       Note that "application.name" must work as a file name. -->
+  <property name="application.name" value="greenfieldtimes" />
+  <property name="application.heading" value="Greenfield Times" />
+
+  <property name="version" value="10.8.0" />
+
+  <!-- User/password used at imports -->
+  <property name="import.user" value="sysadmin" />
+  <property name="import.password" value="sysadmin" />
+
+  <!-- Project base directories. -->
+  <property name="target.dir" location="${basedir}/build" />
+  <property name="target.classes.dir" location="${target.dir}/classes" />
+  <property name="target.dist.dir" location="${target.dir}/dist" />
+
+  <property name="docs.dir" location="${basedir}/docs"/>
+  <property name="docs.javadoc.dir" location="${docs.dir}/javadoc"/>
+
+  <property name="application.jar" value="${target.dir}/${application.name}.jar" />
+
+  <property name="lib.dir" location="${basedir}/lib" />
+  <property name="compile.lib.dir" location="${basedir}/lib-not-dist" />
+  <property name="content.dir" location="${basedir}/content" />
+  <property name="config.dir" location="${basedir}/config" />
+  <property name="src.content.dir" location="${content.dir}/src/main/content" />
+  <property name="gt.src.content.dir" location="${content.dir}/greenfieldtimes-content/src/main/content" />
+  <property name="demo.src.content.dir" location="${content.dir}/demo-content/src/main/content" />
+  <property name="src.dir" location="${basedir}/src" />
+  <property name="src.config.dir" location="${src.dir}/config" />
+  <property name="src.java.dir" location="${basedir}/module-greenfieldtimes/src/main/java" />
+  <property name="test.src.java.dir" location="${basedir}/module-greenfieldtimes/src/test/java" />
+  <property name="src.web.dir" location="${src.dir}/web" />
+  <property name="src.web.polopoly.dir" location="${basedir}/webapp-polopoly/src/main/webapp" />
+  <property name="src.web.dispatcher.dir" location="${basedir}/webapp-dispatcher/src/main/webapp" />
+  <property name="src.web.dispatcher.config.dir" location="${basedir}/webapp-dispatcher/config" />
+  <property name="src.web.front.dir" location="${basedir}/webapp-front/src/main/webapp" />
+
+  <property name="polopoly.dir" location="${basedir}/../polopoly" />
+  <property name="polopoly.lib.dir" location="${polopoly.dir}/install/lib" />
+  <property name="polopoly.config.dir" location="${polopoly.dir}/pear/config" />
+  <property name="polopoly.connection-properties" value="http://localhost:8040/connection.properties"/>
+
+  <!-- Build properties. -->
+  <property name="javac.target.version" value="1.6" />
+  <property name="javac.source.version" value="1.6" />
+  <property name="javac.deprecation" value="off" />
+  <property name="javadoc.windowtitle" value="'${application.heading} API'" />
+  <property name="javadoc.doctitle" value="${javadoc.windowtitle}" />
+  <property name="javadoc.header" value="${javadoc.windowtitle}" />
+
+  <!-- Needed for bundled JBoss installation -->
+  <property environment="env" />
+  <property name="polopoly.java.home" value="${env.JAVA_HOME}" />
+
+  <!-- Decide what target environment to use -->
+  <condition property="targetEnv" value="${env.targetEnv}" else="prod">
+    <isset property="env.targetEnv" />
+  </condition>
+  <condition property="targetEnv" value="${targetEnv}" else="prod">
+    <isset property="targetEnv" />
+  </condition>
+  <echo message="Target environment is: ${targetEnv}" />
+
+  <property name="plugins.dir" value="${basedir}/plugins"/>
+  <property name="plugins.pom" value="${plugins.dir}/pom.xml"/>
+  <property name="plugins.args" value="" />
+
+  <condition property="has-plugin-support">
+    <equals arg1="${enable-plugins}" arg2="true"/>
+  </condition>
+
+  <condition property="skip.demo.content.flag">
+    <istrue value="${skip.demo.content}"/>
+  </condition>
+
+  <!-- ======================================================================
+       Classpaths
+       ====================================================================== -->
+
+  <!-- Init classpaths. -->
+  <target name="init-classpaths" depends="init-baseline">
+    <path id="build.classpath">
+      <pathelement path="../../core/solr/target/classes" />
+      <pathelement path="${target.classes.dir}" />
+      <fileset dir="${polopoly.lib.dir}">
+        <include name="*.jar" />
+      </fileset>
+      <fileset dir="${lib.dir}">
+        <include name="*.jar" />
+      </fileset>
+      <fileset dir="${compile.lib.dir}">
+        <include name="*.jar" />
+	<exclude name="baseline-*.jar"/>
+      </fileset>
+    </path>
+
+    <path id="cm.client.classpath">
+      <path refid="build.classpath" />
+      <fileset dir="${polopoly.dir}/pear/jar-repository">
+        <include name="**/*.jar" />
+        <include name="**/*.zip" />
+      </fileset>
+    </path>
+
+    <path id="test.classpath">
+      <path refid="cm.client.classpath" />
+      <pathelement path="${target.test.classes.dir}" />
+    </path>
+
+  </target>
+
+
+  <!-- ======================================================================
+       Install and stop/start targets
+       ====================================================================== -->
+
+  <!-- Installs Polopoly with the application. Builds application, installs Polopoly and imports templates and content. -->
+  <target name="install" depends="-check-already-installed, chmod-executables, deploy-application"
+          description="Installs Polopoly with this application deployed.">
+    <ant antfile="${polopoly.dir}/bin/install.xml" target="all" dir="${polopoly.dir}/bin">
+      <property name="install.start.skip.extra" value="indexserver, polopoly, dispatcher" />
+    </ant>
+
+    <antcall target="import-all" />
+
+    <!-- Start the indexserver. -->
+    <ant antfile="${polopoly.dir}/bin/pear.xml" target="start-java" dir="${polopoly.dir}/bin">
+      <property name="module.name" value="indexserver" />
+    </ant>
+
+    <ant antfile="${polopoly.dir}/bin/tools.xml" target="reindex-solr" dir="${polopoly.dir}/bin" />
+
+    <!-- Deploy the polopoly webapp -->
+    <ant antfile="${polopoly.dir}/bin/pear.xml" target="deploy-web" dir="${polopoly.dir}/bin">
+      <property name="module.name" value="polopoly" />
+    </ant>
+
+    <!-- Deploy the dispatcher webapp  -->
+    <ant antfile="${polopoly.dir}/bin/pear.xml" target="deploy-web" dir="${polopoly.dir}/bin">
+      <property name="module.name" value="dispatcher" />
+    </ant>
+
+    <echo>Install complete</echo>
+  </target>
+
+  <!-- Checks if polopoly is already installed by checking if pear directory in installation is present. -->
+  <target name="-check-already-installed">
+    <available file="${polopoly.config.dir}" property="polopoly.present" />
+    <fail message="Cannot install since Polopoly is already installed. Remove ${polopoly.dir}/pear before reinstalling.">
+      <condition>
+        <equals arg1="${polopoly.present}" arg2="true" />
+      </condition>
+    </fail>
+  </target>
+
+  <!-- Reconfigure polopoly. -->
+  <target name="polopoly-reconfigure" depends="deploy-application"
+          description="Deploys application and reconfigures polopoly.">
+    <ant antfile="${polopoly.dir}/bin/pear.xml" target="reconfigure" dir="${polopoly.dir}/bin">
+    </ant>
+  </target>
+
+  <!-- Start polopoly. -->
+  <target name="polopoly-start" description="Starts polopoly.">
+    <ant antfile="${polopoly.dir}/bin/pear.xml" target="start" dir="${polopoly.dir}/bin" />
+  </target>
+
+  <!-- Stop polopoly. -->
+  <target name="polopoly-stop" description="Stops polopoly.">
+    <ant antfile="${polopoly.dir}/bin/pear.xml" target="stop" dir="${polopoly.dir}/bin">
+    </ant>
+  </target>
+
+  <!-- Chmod files in the polopoly distribution. -->
+  <target name="chmod-executables">
+    <chmod file="${polopoly.dir}/bin/polopoly" perm="+x" />
+    <chmod file="${polopoly.dir}/ant/bin/ant" perm="+x" />
+  </target>
+
+  <!-- ======================================================================
+       Build targets
+       ====================================================================== -->
+
+  <!-- Clean and deploy -->
+  <target name="web-all-clean-and-deploy"
+          description="Cleans webapps dir and deploys both dispatcher and polopoly webapps."
+          depends="clean, clean-webapps-dir, web-dispatcher-deploy, web-polopoly-deploy" />
+
+  <!-- Clean -->
+  <target name="clean" depends="clean-plugins, clean-greenfieldtimes" />
+  <target name="clean-greenfieldtimes" description="Removes all built files.">
+    <delete dir="${target.dir}" />
+    <delete dir="${polopoly.dir}/custom/lib" />
+    <delete dir="${polopoly.dir}/custom/web" />
+    <delete dir="${polopoly.dir}/init-content" />
+    <delete dir="${polopoly.dir}/config-content" />
+  </target>
+
+  <!-- Compile java sources. -->
+
+  <target name="compile" depends="compile-greenfieldtimes, compile-plugins" />
+
+  <target name="compile-greenfieldtimes" description="Compiles all java source files." depends="init-classpaths">
+    <mkdir dir="${target.classes.dir}" />
+    <echo message="polopoly.lib.dir=${polopoly.lib.dir}"/>
+    <javac deprecation="${javac.deprecation}" destdir="${target.classes.dir}"
+           compiler="modern" fork="yes" memoryMaximumSize="256m"
+           target="${javac.target.version}" source="${javac.source.version}" debug="on">
+      <compilerarg compiler="javac1.6" value="-Xlint:unchecked" />
+      <src path="${src.java.dir}" />
+      <src path="${test.src.java.dir}" />
+      <classpath refid="build.classpath" />
+      <classpath refid="baseline.classpath" />
+      <include name="**/*.java" />
+    </javac>
+  </target>
+
+  <!-- Compiles source and creates jar file(s). -->
+  <target name="jar" depends="compile-greenfieldtimes">
+    <jar destfile="${application.jar}" index="true" compress="false">
+      <fileset dir="${target.classes.dir}">
+        <include name="**/*.class" />
+      </fileset>
+    </jar>
+  </target>
+
+  <!-- Assembles application jar files. -->
+  <target name="assemble-application" depends="jar, assemble-baseline, assemble-plugins">
+
+    <mkdir dir="${target.dist.dir}" />
+    <!-- The project depends on the velocity extension. -->
+    <copy todir="${target.dir}" file="${polopoly.lib.dir}/extensions/polopoly-extension-velocity.jar" />
+    <!-- Jars. -->
+    <copy todir="${target.dist.dir}/custom/lib">
+      <fileset dir="${lib.dir}">
+        <include name="*.jar" />
+      </fileset>
+      <fileset dir="${target.dir}">
+        <include name="*.jar" />
+        <exclude name="additionalClasspath.jar" />
+      </fileset>
+    </copy>
+    <copy todir="${target.dist.dir}/custom/client-lib">
+      <fileset dir="${lib.dir}">
+        <include name="*.jar" />
+      </fileset>
+      <fileset dir="${target.dir}">
+        <include name="*.jar" />
+        <exclude name="additionalClasspath.jar" />
+      </fileset>
+    </copy>
+
+    <!-- Config. -->
+    <copy todir="${target.dist.dir}">
+      <fileset dir="${src.config.dir}" />
+    </copy>
+
+    <mkdir dir="${target.dist.dir}/custom/solr"/>
+    <copy todir="${target.dist.dir}/custom/solr">
+      <fileset dir="${config.dir}/${targetEnv}/solr" />
+    </copy>
+
+    <!-- Webapps. Concatenate front and dispatcher into the format expected by pear. -->
+    <mkdir dir="${target.dist.dir}/custom/web/dispatcher" />
+    <copy todir="${target.dist.dir}/custom/web/dispatcher">
+      <fileset dir="${src.web.front.dir}" />
+    </copy>
+
+    <!-- First, copy files from the targetEnv config -->
+    <copy todir="${src.web.dispatcher.dir}/WEB-INF/classes" overwrite="true">
+      <fileset dir="${src.web.dispatcher.config.dir}/${targetEnv}" />
+    </copy>
+    <copy todir="${target.dist.dir}/custom/web/dispatcher" overwrite="true">
+      <fileset dir="${src.web.dispatcher.dir}" />
+    </copy>
+
+    <!-- Pear packing should still produce servlet 2.4-compatible jars, unlike Nitro which requires 3.0 -->
+    <copy tofile="${target.dist.dir}/custom/web/dispatcher/WEB-INF/web.xml" file="${src.web.dispatcher.dir}/WEB-INF/web.xml" overwrite="true">
+      <filterchain>
+        <tokenfilter>
+          <replaceregex
+            pattern='web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0"'
+            replace='web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4"' />
+        </tokenfilter>
+      </filterchain>
+    </copy>
+    <copy tofile="${target.dist.dir}/custom/web/dispatcher/WEB-INF/front_web.xml" file="${src.web.front.dir}/WEB-INF/web.xml">
+      <filterchain>
+        <tokenfilter>
+          <replaceregex
+            pattern='web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0"'
+            replace='web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4"' />
+        </tokenfilter>
+      </filterchain>
+    </copy>
+
+    <mkdir dir="${target.dist.dir}/custom/web/polopoly" />
+    <copy todir="${target.dist.dir}/custom/web/polopoly">
+      <fileset dir="${src.web.polopoly.dir}" />
+    </copy>
+  </target>
+
+  <!-- Copy config and built jars to the unpacked polopoly. -->
+  <target name="deploy-application" depends="assemble-application"
+          description="Deploys application jar files into the polopoly lib directory.">
+    <copy todir="${polopoly.dir}">
+      <fileset dir="${target.dist.dir}" />
+    </copy>
+  </target>
+
+  <!-- Builds a distribution jar of the application to use when installing. -->
+  <target name="pack-application-dist" depends="assemble-application">
+    <jar destfile="${target.dir}/${application.name}-dist.jar" index="false" compress="false">
+      <fileset dir="${target.dist.dir}" />
+    </jar>
+  </target>
+
+  <!-- Build the javadoc for this application. -->
+  <target name="javadoc" depends="init-classpaths" description="Builds javadoc.">
+    <javadoc splitindex="true" use="true" version="true" access="protected" nodeprecated="true"
+             destdir="${docs.javadoc.dir}" windowtitle="${javadoc.windowtitle}"
+             doctitle="${javadoc.doctitle}" header="${javadoc.header}" maxmemory="128m">
+      <classpath refid="build.classpath" />
+      <classpath refid="baseline.classpath" />
+      <packageset dir="${src.java.dir}" defaultexcludes="yes">
+        <include name="**" />
+      </packageset>
+    </javadoc>
+  </target>
+
+  <!-- ======================================================================
+       Development shortcuts
+       ====================================================================== -->
+
+  <!-- Deploy polopoly web. -->
+  <target name="web-polopoly-deploy" depends="deploy-application" description="Deploys the polopoly webapp.">
+    <ant antfile="${polopoly.dir}/bin/pear.xml" target="repack" dir="${polopoly.dir}/bin">
+      <property name="module.name" value="polopoly" />
+    </ant>
+    <ant antfile="${polopoly.dir}/bin/pear.xml" target="deploy-web" dir="${polopoly.dir}/bin">
+      <property name="module.name" value="polopoly" />
+    </ant>
+  </target>
+
+  <!-- Deploy dispatcher web. -->
+  <target name="web-dispatcher-deploy" depends="deploy-application" description="Deploys the dispatcher webapp.">
+    <ant antfile="${polopoly.dir}/bin/pear.xml" target="repack" dir="${polopoly.dir}/bin">
+      <property name="module.name" value="dispatcher" />
+    </ant>
+    <ant antfile="${polopoly.dir}/bin/pear.xml" target="deploy-web" dir="${polopoly.dir}/bin">
+      <property name="module.name" value="dispatcher" />
+    </ant>
+  </target>
+
+  <!-- Copy application files into the exploded deployed ROOT web. -->
+  <target name="web-dispatcher-deploy-files" description="Copies webapp files into the deployed dispatcher webapp.">
+    <property file="${polopoly.dir}/pear/config/webappcontainer.properties" />
+
+    <available property="war.dest" file="${config.warDir}" value="${config.warDir}"/>
+    <property name="war.dest" value="${polopoly.dir}/pear/${config.warDir}" />
+
+    <available property="war.dest.root" file="${war.dest}/ROOT" value="${war.dest}/ROOT"/>
+    <property name="war.dest.root" value="${war.dest}/ROOT.war" />
+
+    <copy todir="${war.dest.root}">
+      <fileset dir="${src.web.dispatcher.dir}" />
+    </copy>
+  </target>
+
+  <!-- Copy application files into the exploded deployed polopoly web. -->
+  <target name="web-polopoly-deploy-files" description="Copies webapp files into the deployed polopoly webapp.">
+    <property file="${polopoly.dir}/pear/config/webappcontainer.properties" />
+
+    <available property="war.dest" file="${config.warDir}" value="${config.warDir}"/>
+    <property name="war.dest" value="${polopoly.dir}/pear/${config.warDir}" />
+
+    <available property="war.dest.polopoly" file="${war.dest}/polopoly" value="${war.dest}/polopoly"/>
+    <property name="war.dest.polopoly" value="${war.dest}/polopoly.war" />
+
+    <copy todir="${war.dest.polopoly}">
+      <fileset dir="${src.web.polopoly.dir}" />
+    </copy>
+  </target>
+
+  <!-- Clear the webapps dir pointed to by the webapp container. -->
+  <target name="clean-webapps-dir">
+    <property file="${polopoly.dir}/pear/config/webappcontainer.properties" />
+    <available property="war.dest" file="${config.warDir}" value="${config.warDir}"/>
+    <property name="war.dest" value="${polopoly.dir}/pear/${config.warDir}" />
+    <delete>
+      <fileset dir="${war.dest}">
+        <include name="polopoly.war" />
+        <include name="ROOT.war" />
+      </fileset>
+    </delete>
+    <delete dir="${war.dest}/polopoly" />
+    <delete dir="${war.dest}/ROOT" />
+    <delete dir="${war.dest}/polopoly.war" />
+    <delete dir="${war.dest}/ROOT.war" />
+  </target>
+
+  <!-- ======================================================================
+       Importing of templates and content.
+       ====================================================================== -->
+
+  <!-- Import a file or dir. -->
+  <!-- Specify the file/dir name relative to src/resources/content with import. Example: ant -Dimport=site.xml. -->
+  <!-- Path should be relative to basedir. -->
+  <target name="import" description="Imports a file or directory using ant -Dimport= (relative to ${basedir}).">
+
+    <available file="${basedir}/${import}" type="file" property="file.import" />
+
+    <antcall target="-import-single" />
+    <antcall target="-import-dir" />
+  </target>
+
+  <target name="-import-single" if="file.import">
+    <echo message="Importing '${basedir}/${import}'." />
+    <ant antfile="${polopoly.dir}/bin/xmlio.xml" target="import" dir="${polopoly.dir}/bin">
+      <property name="XML_FILE" value="${basedir}/${import}" />
+      <property name="user" value="${import.user}" />
+      <property name="password" value="${import.password}" />
+    </ant>
+  </target>
+
+  <target name="-import-dir" unless="file.import">
+    <jar-import-directory dir="${src.content.dir}/${import}" />
+  </target>
+
+  <!-- Import template and content -->
+
+  <target name="import-all" description="Imports all templates and content"
+          depends="import-configuration, import-templates, import-template-content, import-categorization,
+                   import-images, import-paywall, import-site, import-site-empty-dumps, import-site-dumps, import-plugin-data, import-gui-languages" />
+
+  <target name="import-templates" depends="import-baseline" description="Imports example templates.">
+  	<antcall target="import">
+      <param name="import" value="src/antbootstrap/templates_bootstrap.xml"/>
+  	</antcall>
+    <jar-import-directory dir="${gt.src.content.dir}/templates">
+
+      <!-- Since we want to import bootstrap.xml and fields.xml before the
+           other files, we specify them in the manifest. Note that the rest of
+           files will also be imported, but in an undefined order. -->
+
+      <attribute name="Document-0" value="field/fields.xml" />
+      <attribute name="Document-1" value="contentlistwrappers.xml" />
+    </jar-import-directory>
+  </target>
+
+  <!-- Import images. -->
+  <target name="import-template-content" description="Imports template contents.">
+    <jar-import-directory dir="${gt.src.content.dir}/content/template" />
+  </target>
+
+
+  <!-- Import images. -->
+  <target name="import-images" description="Imports images.">
+    <jar-import-directory dir="${gt.src.content.dir}/content/images" />
+  </target>
+
+  <!-- Import paywall. -->
+  <target name="import-paywall" description="Imports paywall.">
+    <jar-import-directory dir="${gt.src.content.dir}/content/paywall" />
+  </target>
+
+  <!-- Import site. -->
+  <target name="import-site" description="Imports site contents.">
+  	<antcall target="import">
+      <param name="import" value="src/antbootstrap/siteengine_bootstrap.xml"/>
+  	</antcall>
+    <jar-import-directory dir="${gt.src.content.dir}/content/siteengine" />
+  </target>
+
+  <!-- Import site. -->
+  <target name="import-site-empty-dumps" description="Imports empty site dump.">
+  	<antcall target="import">
+      <param name="import" value="src/antbootstrap/dumps_bootstrap.xml"/>
+  	</antcall>
+    <jar-import-directory dir="${gt.src.content.dir}/content/dumps" />
+  </target>
+
+  <target name="import-site-dumps"
+          description="Imports demo content. Skip using -Dskip.demo.content=true (during install) or run the target import-site-empty-dumps to remove from site."
+          unless="skip.demo.content.flag">
+    <antcall target="import">
+      <param name="import" value="src/antbootstrap/demo_bootstrap.xml"/>
+    </antcall>
+
+    <antcall target="import">
+      <param name="import" value="src/antbootstrap/demo_greyhound_bootstrap.xml"/>
+    </antcall>
+
+    <antcall target="import-users"/>
+    <antcall target="init-groups" />
+    <jar-import-directory dir="${demo.src.content.dir}/demo">
+      <attribute name="Document-0" value="blog/example.blog.xml" />
+    </jar-import-directory>
+  </target>
+
+  <!-- Import site. -->
+  <target name="import-users" description="Imports users.">
+    <jar-import-directory dir="${gt.src.content.dir}/content/users" />
+  </target>
+
+  <!-- Import categories. -->
+  <target name="import-categorization" description="Imports categorization.">
+    <!-- Core xml part does not include categories -->
+    <property name="import-prefix" value="categories" />
+  	<jar-import-directory dir="${gt.src.content.dir}/content/categorization">
+      <attribute name="Document-0" value="standard_categorization.xml" />
+      <attribute name="Document-1" value="subject/iptc_categories.xml" />
+  	</jar-import-directory>
+  </target>
+
+  <target name="import-configuration" description="Imports content-based configuration.">
+    <antcall target="import">
+      <param name="import" value="src/antbootstrap/configuration_bootstrap.xml"/>
+    </antcall>
+    <ant antfile="${polopoly.dir}/bin/xmlio.xml" target="import" dir="${polopoly.dir}/bin">
+      <property name="XML_FILE" value="${polopoly.dir}/install/initxml/inbox/inbox-activate.xml" />
+      <property name="user" value="${import.user}" />
+      <property name="password" value="${import.password}" />
+    </ant>
+    <jar-import-directory dir="${gt.src.content.dir}/content/configuration" />
+    <jar-import-directory dir="${gt.src.content.dir}/content/index-mappings" />
+  </target>
+
+  <!-- Import site. -->
+  <target name="import-gui-languages" description="Imports extra GUI languages.">
+    <jar-import-directory dir="${gt.src.content.dir}/content/gui-languages"/>
+  </target>
+
+  <target name="init-groups" description="Imports groups">
+    <jar-import-directory dir="${gt.src.content.dir}/content/groups">
+      <attribute name="Document-0" value="groups.xml" />
+      <attribute name="Document-1" value="permissions.xml" />
+    </jar-import-directory>
+  </target>
+
+  <!-- Macro to jar-import all content in a direcotry. -->
+  <macrodef name="jar-import-directory">
+    <attribute name="dir" />
+    <element name="attribute-elements" implicit="true" optional="true" />
+    <sequential>
+      <echo message="Importing all in '@{dir}'." />
+
+      <tempfile property="import.jar" prefix="tmp_import_" suffix=".jar" />
+      <jar destfile="${import.jar}" index="false" compress="false">
+        <manifest>
+          <attribute-elements />
+        </manifest>
+        <fileset dir="@{dir}" />
+      </jar>
+
+      <ant antfile="${polopoly.dir}/bin/xmlio.xml" target="import" dir="${polopoly.dir}/bin">
+        <property name="XML_FILE" value="${import.jar}" />
+        <property name="user" value="${import.user}" />
+        <property name="password" value="${import.password}" />
+      </ant>
+      <delete file="${import.jar}" />
+
+    </sequential>
+  </macrodef>
+
+  <target name="-init-client-classpath">
+    <path id="client.classpath">
+      <fileset dir="${polopoly.dir}/custom/client-lib">
+        <include name="**/*.jar" />
+        <include name="**/*.zip" />
+      </fileset>
+      <fileset file="${polopoly.dir}/install/lib">
+        <include name="**/*.jar" />
+      </fileset>
+      <fileset dir="${polopoly.dir}/pear/jar-repository">
+        <include name="**/*.jar" />
+        <include name="**/*.zip" />
+      </fileset>
+      <fileset dir="${basedir}/lib-not-dist">
+        <include name="**/*.jar" />
+        <include name="**/*.zip" />
+      </fileset>
+    </path>
+
+    <!-- We construct a jar with a manifest pointing out the
+         the client classpath. This is because we cannot fit
+         full classpath on the command line (Windows, I'm looking
+         at you). -->
+    <manifestclasspath property="client.manifest.classpath"
+      jarfile="${target.dir}/additionalClasspath.jar"
+      maxParentLevels="10000">
+      <classpath refid="client.classpath" />
+    </manifestclasspath>
+
+    <jar destfile="${target.dir}/additionalClasspath.jar">
+      <manifest>
+        <attribute name="Class-Path" value="${client.manifest.classpath}"/>
+      </manifest>
+    </jar>
+  </target>
+
+  <!-- Updates content. Creates new versions of the content in order
+       to run lifecycle methods, e.g. creating image versions if the
+       template has changed. -->
+  <target name="content-update" depends="-init-client-classpath"
+          description="Updates content that use a specific template, specified by -Dtemplateid=.">
+    <fail unless="templateid"
+          message="A template id must be specified. Do e.g. ant update-content -Dtemplateid=example.Image." />
+    <echo>Finding contents using template ${templateid}.</echo>
+    <antcall target="-run-update-content">
+      <param name="action" value="find" />
+    </antcall>
+    <input message="About to update content. Continue?" validargs="y,n" addproperty="do.update" />
+    <condition property="do.abort">
+      <equals arg1="n" arg2="${do.update}" />
+    </condition>
+    <fail if="do.abort">Update aborted.</fail>
+    <antcall target="-run-update-content">
+      <param name="action" value="update" />
+    </antcall>
+  </target>
+
+  <target name="-run-update-content">
+    <java classname="example.util.ContentUpdater" dir="${polopoly.config.dir}" fork="true" classpathref="client.classpath">
+      <arg value="http://localhost:8040/connection.properties" />
+      <arg value="${import.user}" />
+      <arg value="${import.password}" />
+      <arg value="${templateid}" />
+      <arg value="${action}" />
+      <jvmarg value="-Djava.util.logging.config.file=${logging.properties}" />
+    </java>
+  </target>
+
+  <target name="content-export" depends="-init-client-classpath"
+          description="Exports content structure. Root id specified by -Dcontentid=.">
+    <fail unless="contentid" message="A content id must be specified. Do e.g. ant content-export -Dcontentid=2.274." />
+    <mkdir dir="${target.dir}" />
+    <property name="exportfile" value="${target.dir}/${contentid}.xml" />
+    <echo>Exporting contents of ${contentid} to ${target.dir}/${contentid}.xml</echo>
+    <java classname="com.polopoly.cm.xml.io.ExportForUpdate" dir="${polopoly.config.dir}"
+          fork="true" classpathref="client.classpath">
+      <arg value="polopolyclient.properties" />
+      <arg value="${import.user}" />
+      <arg value="${import.password}" />
+      <arg value="${contentid}" />
+      <arg value="${exportfile}" />
+      <arg value="extid" />
+      <jvmarg value="-Djava.util.logging.config.file=${logging.properties}" />
+    </java>
+  </target>
+
+  <!-- ======================================================================
+       Baseline target and properties
+       ====================================================================== -->
+
+  <target name="baseline-ok-plugins" if="has-plugin-support">
+    <property name="baseline.ok" value="true"/>
+  </target>
+
+  <target name="baseline-ok-exists" unless="has-plugin-support">
+    <fileset dir="${compile.lib.dir}" includes="baseline-*.jar" id="baseline-file" />
+    <fileset dir="${compile.lib.dir}" includes="baseline-*-contentdata*.jar" id="baseline-contentdata-file" />
+
+    <condition property="baseline.ok">
+      <and>
+        <not>
+	  <equals arg1="${toString:baseline-file}" arg2=""/>
+        </not>
+        <not>
+	  <equals arg1="${toString:baseline-contentdata-file}" arg2=""/>
+        </not>
+      </and>
+    </condition>
+  </target>
+
+  <target name="baseline-verify" depends="baseline-ok-exists, baseline-ok-plugins" unless="baseline.ok">
+    <fail message="One of the required baseline jars (code, contentdata) is not present in dist (lib-not-dist). Building without plugin support does not support building from git checkout!"/>
+  </target>
+
+  <target name="init-baseline-maven" depends="-set-maven-command" if="has-plugin-support">
+    <exec executable="${mvn.command}" failonerror="true">
+      <arg line="-B -f ${plugins.pom} dependency:resolve" />
+    </exec>
+
+    <!-- Resolve baseline code jar -->
+
+    <exec executable="${mvn.command}" failonerror="true" >
+      <arg line="-N -B -f ${plugins.pom} org.apache.maven.plugins:maven-dependency-plugin:2.4:build-classpath -DincludeGroupIds=com.atex.plugins -DincludeArtifactIds=baseline -DexcludeClassifiers=contentdata -Dmdep.outputFile=${target.dir}/baseline.classpath" />
+    </exec>
+
+    <loadfile srcFile="${target.dir}/baseline.classpath" property="baseline.location" />
+
+    <path id="baseline.classpath">
+      <pathelement path="${baseline.location}" />
+    </path>
+
+    <echo message="Using Maven baseline ${toString:baseline.classpath}..."/>
+
+    <!-- Resolve baseline contentdata jar -->
+
+    <exec executable="${mvn.command}" failonerror="true">
+      <arg line="-B -N -f ${plugins.pom} org.apache.maven.plugins:maven-dependency-plugin:2.4:build-classpath -DincludeGroupIds=com.atex.plugins -DincludeArtifactIds=baseline -DincludeClassifiers=contentdata -Dmdep.outputFile=${target.dir}/baseline.contentdata.path" />
+    </exec>
+
+    <loadfile srcFile="${target.dir}/baseline.contentdata.path" property="baseline.contentdata.location" />
+    <echo message="Will import baseline contentdata from ${baseline.contentdata.location}..." />
+  </target>
+
+  <target name="init-baseline-dist" unless="has-plugin-support">
+    <path id="baseline.classpath">
+      <fileset dir="${compile.lib.dir}">
+        <include name="baseline-*.jar" />
+        <exclude name="baseline-*-contentdata*.jar" />
+      </fileset>
+    </path>
+
+    <path id="baseline.dist-contentdata.location">
+      <fileset dir="${compile.lib.dir}">
+        <include name="baseline-*-contentdata*.jar" />
+      </fileset>
+    </path>
+
+    <property name="baseline.contentdata.location" value="${toString:baseline.dist-contentdata.location}" />
+    <echo message="using dist baseline ${toString:baseline.classpath}"/>
+  </target>
+
+  <target name="init-baseline" depends="baseline-verify, init-baseline-maven, init-baseline-dist" />
+
+  <target name="import-baseline" description="Imports baseline templates and content" depends="init-baseline">
+    <ant antfile="${polopoly.dir}/bin/xmlio.xml" target="import" dir="${polopoly.dir}/bin">
+      <property name="XML_FILE" value="${baseline.contentdata.location}" />
+      <property name="user" value="${import.user}" />
+      <property name="password" value="${import.password}" />
+    </ant>
+  </target>
+
+  <target name="assemble-baseline" depends="baseline-verify" unless="has-plugin-support">
+    <copydir src="${compile.lib.dir}" dest="${target.dir}" includes="baseline-*.jar" />
+  </target>
+
+  <!-- ======================================================================
+       GT plugin support
+       ====================================================================== -->
+
+  <target name="clean-plugins" description="Cleans all plugins" depends="-set-maven-command" if="has-plugin-support">
+    <exec executable="${mvn.command}" failonerror="true">
+      <arg line="-f ${plugins.pom} ${plugins.args} clean"/>
+    </exec>
+  </target>
+
+  <target name="compile-plugins" description="Compiles all plugins" depends="-set-maven-command, jar" if="has-plugin-support">
+    <exec executable="${mvn.command}" failonerror="true">
+      <arg line="-f ${plugins.pom} ${plugins.args} install"/>
+    </exec>
+  </target>
+
+  <target name="import-plugin-data" description="Imports plugin data." depends="compile-plugins,-init-client-classpath" if="has-plugin-support">
+    <exec executable="${mvn.command}" failonerror="true">
+      <arg line="-f ${plugins.pom} ${plugins.args} -Dimport.username=${import.user} -Dimport.password=${import.password} com.polopoly.extensions:p-maven-plugin:import-scan -DscanIntervalSeconds=0 -DadditionalImportClasspathElements='${target.dir}/additionalClasspath.jar' -DconnectionPropertiesUrl=${polopoly.connection-properties}"/>
+    </exec>
+  </target>
+
+  <target name="assemble-plugins" depends="jar, compile-plugins, download-plugin-dependencies" if="has-plugin-support">
+    <copy todir="${target.dist.dir}/custom/lib" flatten="true">
+      <fileset dir="${plugins.dir}">
+        <!-- globstar (**) is off by default in ubuntu bash. might be ant version related. explicitly exclude from dep dir -->
+        <include name="**/target/dependency/*.jar" />
+        <include name="**/target/*.jar" />
+        <exclude name="**/target/dependency/*-contentdata.jar" />
+        <exclude name="**/target/dependency/*-tests.jar" />
+        <exclude name="**/target/*-contentdata.jar" />
+        <exclude name="**/target/*-tests.jar" />
+      </fileset>
+    </copy>
+    <copy todir="${target.dist.dir}/custom/client-lib" flatten="true">
+      <fileset dir="${plugins.dir}">
+        <include name="**/target/dependency/*.jar" />
+        <include name="**/target/*.jar" />
+        <exclude name="**/target/dependency/*-contentdata.jar" />
+        <exclude name="**/target/dependency/*-tests.jar" />
+        <exclude name="**/target/*-contentdata.jar" />
+        <exclude name="**/target/*-tests.jar" />
+      </fileset>
+    </copy>
+  </target>
+
+  <target name="download-plugin-dependencies"
+          description="Makes sure plugin dependencies has been locally downloaded."
+          depends="-set-maven-command, jar"
+          if="has-plugin-support">
+    <exec executable="${mvn.command}" failonerror="true">
+      <arg line="-f ${plugins.pom} ${plugins.args} dependency:copy-dependencies" />
+      <arg line="-DincludeScope=runtime" />
+    </exec>
+  </target>
+
+  <!-- Test if maven and the polopoly maven plugin have been correctly installed -->
+  <target name="test-plugin-support"
+          depends="-detect-plugin-support"
+          if="detected-plugin-support"
+          description="Detect whether installation has support plugins">
+    <echo>Successfully detected plugin support</echo>
+    <echo>To make plugins part of the installation set 'enable-plugins property' in local.xml to 'true'</echo>
+    <echo>The current value of 'enable-plugins' is '${enable-plugins}'</echo>
+  </target>
+
+  <target name="-detect-plugin-support" depends="-set-maven-command">
+    <echo message="${plugins.pom}"/>
+    <exec executable="${mvn.command}" failonerror="true" resultproperty="plugin-support-result">
+      <arg line="-f ${plugins.pom} ${plugins.args} p:version" />
+    </exec>
+    <condition property="detected-plugin-support">
+      <equals arg1="${plugin-support-result}" arg2="0" />
+    </condition>
+  </target>
+
+  <target name="-set-maven-command" unless="mvn.command">
+    <condition property="mvn.command" value="mvn">
+      <not><os family="windows"/></not>
+    </condition>
+    <condition property="mvn.command" value="mvn.bat">
+      <os family="windows"/>
+    </condition>
+  </target>
+
+</project>

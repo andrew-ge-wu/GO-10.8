@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+<!-- http://en.wikinews.org/wiki/Travel_chaos_as_fog_descends_on_United_Kingdom  -->
+<content clear="true">
+<metadata>
+  <contentid>
+    <major>Article</major>
+    <externalid>example.demo.article.FamilyHolidayNightmare</externalid>
+  </contentid>
+  <input-template>
+    <major>InputTemplate</major>
+    <externalid>example.StandardArticle</externalid>
+  </input-template>
+  <security-parent>
+    <major>Department</major>
+    <externalid>GreenfieldTimes.d</externalid>
+  </security-parent>
+</metadata>
+<component group="author" name="value">Wikinews</component>
+<component group="polopoly.Content" name="name">Travel chaos as fog descends on United Kingdom</component>
+<component group="lead" name="value">Travellers in many parts of the United Kingdom face chaos after thick fog enveloped major parts of the southern UK. London's Gatwick and Heathrow international airports have been severely affected and all British Airways domestic flights from Heathrow have been cancelled. On Thursday 350 flights from Heathrow were cancelled.</component>
+<component group="body" name="value">
+<![CDATA[
+<p>Road travel has also been affected as visibility in some areas dropped down to less than 50 feet. Fog has caused several road accidents across the UK, there was one death when an accident caused a four lorry pile-up on the M40 motorway near Banbury in between junctions 11 and 10. This caused traffic chaos across the town as traffic was diverted onto much smaller roads towards Oxford.</p>
+<p>Weather reports suggest that the fog will slowly move north-west over the weekend.</p>
+<p>Gatwick Airport re-opened on Friday, while Heathrow flights are still affected. Three hundred flights have been cancelled so far and 3,000 people have been transported to their UK destinations by coach.</p>
+<p>BA has said that it aims to fly 95% of passengers in and out of Heathrow as planned tomorrow, Saturday.</p>
+<p>The railways have become congested coping with the number of passengers both trying to get home and to domestic destinations, but most tickets are sold out.</p>
+<p>There were, however, no cancellations at London's third airport, Stansted.</p>
+<p><i>This article was originally published on <a href="http://en.wikinews.org/wiki/Travel_chaos_as_fog_descends_on_United_Kingdom">Wikinews</a> and is reproduced here in accordance with <a href="http://creativecommons.org/licenses/by/2.5/">CC-Attribution-Generic 2.5.</a></i></p>
+]]>
+</component>
+<component group="publishedDate" name="date">1166799600000</component>
+<component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+<component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+<component group="polopoly.ContentLists" name="images">images</component>
+<component group="polopoly.ContentLists" name="topimages">topimages</component>
+<component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+<component group="p.Inbox" name="showContent">true</component>
+<component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+<component group="p.Content.state" name="onlineState">true</component>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-10",
+          "name": "lifestyle and leisure",
+          "entities": [
+            {
+              "id": "subject-10007",
+              "name": "travel and commuting",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.FamilyHolidayNightmare.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.FamilyHolidayNightmare.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.FamilyHolidayNightmare.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.FamilyHolidayNightmare.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.FamilyHolidayNightmare.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.FamilyHolidayNightmare.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content>
+</batch>

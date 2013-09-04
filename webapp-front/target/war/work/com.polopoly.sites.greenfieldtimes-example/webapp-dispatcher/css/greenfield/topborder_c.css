@@ -1,0 +1,37 @@
+.topBorderLayout.header {
+	width: 993px;
+	padding: 4px 14px;
+	background: url(/img/greenfield/pattern_green.gif);
+	font-size: 11px;	
+	color: white;
+	margin: 0 auto;
+	position: relative;
+}
+.topBorderLayout.header A {
+	color: white;
+}
+.topBorderLayout IMG {
+	float: left;
+	margin: 0 3px 0 0;
+}
+.topBorderLayout.header SPAN.date {
+	position: absolute;
+	right: 14px;
+	font-weight: bold;
+}
+
+.topBorderLayout.footer {
+	width: 993px;
+	padding: 14px;
+
+	background: #333;
+	font-size: 11px;	
+	color: white;
+	margin: 0 auto;
+	
+	position: relative;
+	border-top: 7px solid #e8ecd7;
+}
+.topBorderLayout.footer A {
+	color: rgb(0, 158, 255);
+}

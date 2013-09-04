@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>extidTeaser1</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreyhoundPost.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">The Greyhound Post Online</component>
+    <component group="polopoly.ContentLists" name="articles">articles</component>
+    <component group="image" name="selected">landscape</component>
+    <component group="teaser" name="value">
+      Vivamus ornare est non wisi. Proin vel quam. Vivamus egestas. Nunc tempor diam vehicula mauris. Nullam sapien eros, facilisis vel, eleifend non, auctor dapibus, pede. Aliquam erat volutpat.
+      Vivamus ornare est non wisi. Proin vel quam.
+    </component>
+    <contentref group="polopoly.Content" name="inputTemplateId">
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="articles" name="0">
+      <contentid>
+        <externalid>extidArticle1</externalid>
+      </contentid>
+    </contentref>
+
+    <contentref group="image" name="image">
+      <contentid>
+        <externalid>article.image.mit</externalid>
+      </contentid>
+    </contentref>
+
+  </content>
+</batch>

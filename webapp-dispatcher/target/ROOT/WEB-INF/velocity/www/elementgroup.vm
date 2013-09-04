@@ -1,0 +1,21 @@
+#set($cssClass = "")
+#if ($content.cssClass.value)
+  #set($cssClass = " class='" + $content.cssClass.value + "'")
+#end
+
+#set($cssStyle = "")
+#if ($content.cssStyle.value)
+  #set($cssStyle = " style='" + $content.cssStyle.value + "'")
+#end
+
+<div$cssStyle$cssClass>
+  #if ($content.beforeElementsIncludeHTML.value)
+    $content.beforeElementsIncludeHTML.value
+  #end
+
+  #render({"content": $content.elements, "":""})
+
+  #if ($content.afterElementsIncludeHTML.value)
+    $content.afterElementsIncludeHTML.value
+  #end
+</div>

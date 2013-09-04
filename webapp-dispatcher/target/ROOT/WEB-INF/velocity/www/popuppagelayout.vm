@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Greenfield Times</title>
+    <link rel="stylesheet" type="text/css" href="/css/commons/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/greenfield/ui_green.css">
+    <link rel="stylesheet" type="text/css" href="/css/greenfield/ui_tabs.css">
+    <link rel="stylesheet" type="text/css" href="/css/greenfield/popuppagelayout.css">
+    <link rel="stylesheet" type="text/css" href="/css/greenfield/poll.css">   
+    <script type="text/javascript" src="/js/poll.js"></script>
+  </head>
+  <body id="popupPageLayout">
+    <div class="popupBorderLayout">
+        #render({"content": $m.context.page.pathAfterPage.get(0), "params":{"view":"article"}, "":""})
+    </div>
+  </body>
+</html>

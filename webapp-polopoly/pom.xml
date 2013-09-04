@@ -1,0 +1,90 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <name>greenfieldtimes-example - Polopoly Admin GUI Web Application</name>
+
+  <groupId>com.polopoly.sites.greenfieldtimes-example</groupId>
+  <artifactId>webapp-polopoly</artifactId>
+  <packaging>war</packaging>
+
+  <parent>
+    <groupId>com.polopoly.sites.greenfieldtimes-example</groupId>
+    <artifactId>top</artifactId>
+    <version>10.8.0</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.polopoly</groupId>
+      <artifactId>admin-gui</artifactId>
+      <version>${polopoly.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>greenfieldtimes</artifactId>
+      <groupId>com.polopoly.sites.greenfieldtimes-example</groupId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.polopoly</groupId>
+      <artifactId>polopoly-development</artifactId>
+      <version>${polopoly.version}</version>
+      <type>jar</type>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.0.4</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <finalName>polopoly</finalName>
+
+    <resources>
+      <resource>
+        <directory>${basedir}/config/${targetEnv}</directory>
+      </resource>
+    </resources>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.1.1</version>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+          <packagingExcludes>WEB-INF/lib/servlet-api-*.jar</packagingExcludes>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.polopoly.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>${jetty-plugin.version}</version>
+        <configuration>
+          <jettyConfig>${project.parent.basedir}/config/${targetEnv}/jetty-jmx.xml</jettyConfig>
+          <scanIntervalSeconds>${polopoly.jetty-scanIntervalSeconds}</scanIntervalSeconds>
+          <webAppConfig>
+            <contextPath>/polopoly</contextPath>
+          </webAppConfig>
+          <systemProperties>
+            <systemProperty>
+              <name>clientCacheBaseDir</name>
+              <value>${project.build.directory}/tmp</value>
+            </systemProperty>
+            <systemProperty>
+              <name>p.connectionPropertiesUrl</name>
+              <value>${polopoly.connection-properties}</value>
+            </systemProperty>
+          </systemProperties>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

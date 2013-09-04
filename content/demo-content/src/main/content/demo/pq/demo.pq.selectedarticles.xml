@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+<content>
+  <metadata>
+    <contentid>
+      <major>Article</major>
+      <externalid>example.demo.pq.selectedarticles</externalid>
+    </contentid>
+    <input-template>
+      <major>InputTemplate</major>
+      <externalid>com.atex.plugins.baseline.ContentListPublishingQueue</externalid>
+    </input-template>
+    <security-parent>
+      <major>LayoutElement</major>
+      <externalid>example.demo.listelement.selectedarticles</externalid>
+    </security-parent>
+  </metadata>
+  <component group="polopoly.Content" name="name">Selected articles</component>
+  <component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+  <component group="associatedSites" name="count">0</component>
+  <contentref group="polopoly.Toc" name="512">
+    <contentid>
+      <major>Article</major>
+      <externalid>example.demo.article.AlaskaCruises</externalid>
+    </contentid>
+  </contentref>
+  <contentref group="polopoly.Toc" name="0">
+    <contentid>
+      <major>Article</major>
+      <externalid>example.demo.article.RecordSpeedingFine</externalid>
+    </contentid>
+  </contentref>
+  <contentref group="polopoly.Toc" name="768">
+    <contentid>
+      <major>Article</major>
+      <externalid>example.demo.article.ImportanceOfCommunication</externalid>
+    </contentid>
+  </contentref>
+  <contentref group="polopoly.Toc" name="256">
+    <contentid>
+      <major>Article</major>
+      <externalid>example.demo.article.WorkingFromHome</externalid>
+    </contentid>
+  </contentref>
+</content>
+</batch>

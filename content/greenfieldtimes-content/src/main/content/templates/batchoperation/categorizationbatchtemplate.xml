@@ -1,0 +1,13 @@
+<template-definition version="1.0"
+  xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.CategorizationBatchOperation" label="cm.template.example.CategorizatioBatchOperation.it">
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <field name="batchoperation" input-template="p.BatchOperation">
+      <param name="operationClassName">example.content.operation.SetCategoryOperation</param>
+      <field name="searchWidget" input-template="p.solr.LocalContentSearch" label=" " >
+        <param name="showCopyButtons">false</param>
+      </field>
+    </field>
+  </input-template>
+</template-definition>

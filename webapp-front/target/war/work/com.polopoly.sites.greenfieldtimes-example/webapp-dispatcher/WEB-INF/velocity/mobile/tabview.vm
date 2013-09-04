@@ -1,0 +1,13 @@
+<div class="element">
+#set($tabViewId = "tabs_" + $content.contentId.contentIdString.replaceAll('\.', '_'))
+    <div id="$tabViewId" class="flora">
+      <ul>
+      #foreach($entry in $content.elements.slotElements.list)
+        <li>
+            <h3>$entry.content.name</h3>
+            <div>#render({"content": $entry.content, "":""})</div>
+        </li>
+      #end
+      </ul>  
+    </div>
+</div>

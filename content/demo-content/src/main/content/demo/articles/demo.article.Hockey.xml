@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+<!-- http://en.wikinews.org/wiki/Ice_Hockey:_Blackhawks_take_first_2010_Stanley_Cup_Finals_game_in_11-goal_thriller -->
+<content clear="true">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.Hockey</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+<component group="author" name="value">Wikinews</component>
+<component group="polopoly.Content" name="name">Blackhawks take first 2010 Stanley Cup Finals game in 11-goal thriller</component>
+<component group="lead" name="value">Tomáš Kopecký scored the game-winning goal for the Chicago Blackhawks 8:25 into the third period to lift the Blackhawks over the Philadelphia Flyers in Game 1 of the 2010 Stanley Cup Finals Saturday night in Chicago, United States. The game started exciting, with five goals each in the first two periods, but Kopecký's game-winner was the sole third-period goal.</component>
+<component group="body" name="value">
+<![CDATA[
+<p>Ville Leino opened the scoring for the Flyers at the 6:38 mark of the first period with Chicago's Troy Brouwer answered back just 68 seconds later. After teammate Patrick Kane was sent off for slashing, Chicago's Dave Bolland scored a short-handed goal to but the Blackhawks ahead. Six minutes later, Brian Campbell was sent off for high-sticking and the Flyers converted on the power play with Scott Hartnell lighting the lamp for Philadelphia. Daniel Brière put the Flyers 3–2 up going into the first intermission with just 27 seconds left in the period.</p>
+<p>With the second period just 71 seconds old, Patrick Sharp evened the score at three. Blackhawk Adam Burish was sent off for boarding at the 4:59 mark, but the Flyers could not extend their lead, ending up converting one of their four power plays (Ben Eager was sent off for cross checking early in the first period). Blair Betts gave the Flyers their final lead of the game with a shot at the 7:20 mark of the period. The Blackhawks' Kris Versteeg responded two minutes later and at 15:18 mark the Brouwer completed his three-point night with his second goal. Philadelphia's Arron Asham evened the score at five a-piece to complete the period.</p>
+<p>The third period was a relatively quiet one, with just 14 shots compared to to 26 and 24 shots in the first two periods, respectively. Each team had 32 shots. Kopecký's goal was the lone action as the Slovak national slipped the puck past Flyers goalkeeper Brian Boucher, who had 11 saves in 24 minutes on the ice. Boucher replaced Michael Leighton, who stopped 15 of 20 shots. Blackhawk counterpart Antti Niemi collected 27 of 32 shots.</p>
+<p>The game was the Blackhawks' first Finals victory since 1973. In 1992, they were swept by the Pittsburg Penguins.</p>
+<p>Chicago and Philadelphia continue the best-of-seven series on Monday night at Chicago's United Center. The Stanley Cup will determine the 2009-10 National Hockey League champion after the top 16 teams earn the right to compete in the postseason. The NHL has 30 teams in the United States and Canada and attracts many international players.</p>
+<p><i>This article was originally published on <a href="http://en.wikinews.org/wiki/Ice_Hockey:_Blackhawks_take_first_2010_Stanley_Cup_Finals_game_in_11-goal_thriller">Wikinews</a> and is reproduced here in accordance with <a href="http://creativecommons.org/licenses/by/2.5/">CC-Attribution-Generic 2.5.</a></i></p>
+]]>
+</component>
+<component group="publishedDate" name="date">1275225420297</component>
+<component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+<component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+<component group="polopoly.ContentLists" name="images">images</component>
+<component group="polopoly.ContentLists" name="topimages">topimages</component>
+<component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+<component group="p.Inbox" name="showContent">true</component>
+<component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+<component group="p.Content.state" name="onlineState">true</component>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-15",
+          "name": "sport",
+          "entities": [
+            {
+              "id": "subject-15031",
+              "name": "ice hockey",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+<contentref group="topimages" name="0">
+<contentid>
+<externalid>example.demo.image.HockeyNHL</externalid>
+</contentid>
+</contentref>
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.Hockey.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.Hockey.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.Hockey.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.Hockey.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.Hockey.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.Hockey.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content>
+</batch>

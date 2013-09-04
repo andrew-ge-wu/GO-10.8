@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<jboss-web>
+  <class-loading java2ClassLoadingCompliance='false'>
+    <loader-repository>
+      polopoly.web:loader=management
+      <loader-repository-config>
+        java2ParentDelegaton=false
+      </loader-repository-config>
+    </loader-repository>
+  </class-loading>
+</jboss-web>

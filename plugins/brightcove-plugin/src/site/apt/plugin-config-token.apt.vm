@@ -1,0 +1,48 @@
+Brightcove Configuration
+
+  Select <<Brightcove Configuration>> from Plugin Configurations
+
+[images/howtoconfig-1.png]
+
+* General Configuration
+
+[images/howtoconfig-2a.png]
+
+  To create configuration for a specific site, click <<Create configuration for site>> button. 
+
+[images/howtoconfig-2b.png]
+
+  Select the root <site> that this configuration belongs to.
+  Enter a <Publisher Id>, <Read token>, <Read token (url access)>, <Write token> and <video player id>, default webTv <Department> and click <<Insert>> button.
+
+[images/howtoconfig-2c.png]
+
+  Click <<Save and View>> to save the configuration list.
+
+[images/howtoconfig-2d.png]
+
+  If there are sites that use different brightcove account, please repeat the steps.
+
+ <<Note:>> This plugin required minimum one configuration. If there is no configuration available for a specific site, the plugin will use the first entry from the configuration list.
+  If more than one configuration is available for the same site, this plugin will use the last occurrence from the list.
+
+* Advanced Configuration
+
+  You can configure the Brightcove Custom Fields mapping to Polopoly's metadata field via <<Advanced>> tab.
+  The following list shows the available categorization:
+
+  [[1]] Person
+
+  [[2]] Organization
+
+  [[3]] Company
+
+  [[4]] Location
+
+ <<Note:>> The Polopoly Tag will copy from normal Brightcove Tag while 
+ the above categorization will copy from Brightcove Custom Fields.
+
+
+** Example configuration
+
+[images/howtoconfig-3.png]

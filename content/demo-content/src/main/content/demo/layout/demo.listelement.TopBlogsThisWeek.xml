@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+
+  <content xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.topblogsthisweeklist</externalid>
+      </contentid>
+
+      <input-template>
+        <externalid>example.ListElement</externalid>
+      </input-template>
+
+      <security-parent>
+        <major>LayoutElement</major>
+        <externalid>example.topblogstabview</externalid>
+      </security-parent>
+    </metadata>
+
+    <component group="polopoly.Content" name="name">Top blogs this week</component>
+    <component group="polopoly.ContentLists" name="publishingQueue">publishingQueue</component>
+    <component group="viewMode" name="selected">link</component>
+    
+    <contentref group="publishingQueue" name="0">
+      <contentid>
+        <major>Article</major>
+        <externalid>example.topblogsthisweekpq</externalid>
+      </contentid>
+    </contentref>
+  </content>
+</batch>

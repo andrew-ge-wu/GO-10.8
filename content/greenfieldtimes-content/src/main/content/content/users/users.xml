@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content>
+    <metadata>
+      <contentid>
+        <major>UserData</major>
+        <externalid>3000</externalid><!-- A unique integer value -->
+      </contentid>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <value name="loginName">edmund</value>
+    <value name="password">edmund</value>
+    <component name="isCMUser" group="CMUser">true</component>
+    <component name="value" group="FirstName">Edmund</component>
+    <component name="value" group="LastName">Green</component>
+    <component name="locale" group="polopoly.Client">en_US</component>
+    <contentref name="inputTemplateId" group="polopoly.Content">
+      <contentid>
+        <externalid>p.UserEditor</externalid>
+      </contentid>
+    </contentref>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>UserData</major>
+        <externalid>3002</externalid><!-- A unique integer value -->
+      </contentid>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <value name="loginName">edith</value>
+    <value name="password">edith</value>
+    <component name="isCMUser" group="CMUser">true</component>
+    <component name="value" group="FirstName">Edith</component>
+    <component name="value" group="LastName">Green</component>
+    <component name="locale" group="polopoly.Client">en_US</component>
+    <contentref name="inputTemplateId" group="polopoly.Content">
+      <contentid>
+        <externalid>p.UserEditor</externalid>
+      </contentid>
+    </contentref>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>UserData</major>
+        <externalid>3001</externalid><!-- A unique integer value -->
+      </contentid>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <value name="loginName">adrian</value>
+    <value name="password">adrian</value>
+    <component name="isCMUser" group="CMUser">true</component>
+    <component name="value" group="FirstName">Adrian</component>
+    <component name="value" group="LastName">Green</component>
+    <component name="locale" group="polopoly.Client">en_US</component>
+    <contentref name="inputTemplateId" group="polopoly.Content">
+      <contentid>
+        <externalid>p.UserEditor</externalid>
+      </contentid>
+    </contentref>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>UserData</major>
+        <externalid>3003</externalid><!-- A unique integer value -->
+      </contentid>
+      <security-parent>
+        <externalid>GreyhoundPost.d</externalid>
+      </security-parent>
+    </metadata>
+    <value name="loginName">emma</value>
+    <value name="password">emma</value>
+    <component name="isCMUser" group="CMUser">true</component>
+    <component name="value" group="FirstName">Emma</component>
+    <component name="value" group="LastName">Grey</component>
+    <component name="locale" group="polopoly.Client">en_US</component>
+    <contentref name="inputTemplateId" group="polopoly.Content">
+      <contentid>
+        <externalid>p.UserEditor</externalid>
+      </contentid>
+    </contentref>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>UserData</major>
+        <externalid>3004</externalid><!-- A unique integer value -->
+      </contentid>
+      <security-parent>
+        <externalid>GreyhoundPost.d</externalid>
+      </security-parent>
+    </metadata>
+    <value name="loginName">eddy</value>
+    <value name="password">eddy</value>
+    <component name="isCMUser" group="CMUser">true</component>
+    <component name="value" group="FirstName">Eddy</component>
+    <component name="value" group="LastName">Grey</component>
+    <component name="locale" group="polopoly.Client">en_US</component>
+    <contentref name="inputTemplateId" group="polopoly.Content">
+      <contentid>
+        <externalid>p.UserEditor</externalid>
+      </contentid>
+    </contentref>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>UserData</major>
+        <externalid>3005</externalid><!-- A unique integer value -->
+      </contentid>
+      <security-parent>
+        <externalid>GreyhoundPost.d</externalid>
+      </security-parent>
+    </metadata>
+    <value name="loginName">amber</value>
+    <value name="password">amber</value>
+    <component name="isCMUser" group="CMUser">true</component>
+    <component name="value" group="FirstName">Amber</component>
+    <component name="value" group="LastName">Grey</component>
+    <component name="locale" group="polopoly.Client">en_US</component>
+    <contentref name="inputTemplateId" group="polopoly.Content">
+      <contentid>
+        <externalid>p.UserEditor</externalid>
+      </contentid>
+    </contentref>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>UserData</major>
+        <externalid>4000</externalid><!-- A unique integer value -->
+      </contentid>
+      <security-parent>
+        <major>Department</major>
+        <minor>0</minor>
+      </security-parent>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>p.UserEditor</externalid>
+      </input-template>
+    </metadata>
+    <value name="loginName">adrian@greenfieldtimes.com</value>
+    <value name="password">adrian</value>
+    <component group="screenName" name="value">Adrian GT</component>
+  </content>
+  <!-- sysadmin workingSites for the inbox -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>UserData</major>
+        <externalid>98</externalid>
+      </contentid>
+    </metadata>
+    <policy name="workingSitesProvider/workingSitesSelect">
+      <value name="addSelection">GreenfieldTimes.d</value>
+    </policy>
+    <policy name="workingSitesProvider/workingSitesSelect">
+      <value name="addSelection">GreyhoundPost.d</value>
+    </policy>
+  </content>
+</batch>

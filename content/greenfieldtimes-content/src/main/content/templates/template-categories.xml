@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <!-- Global content creator -->
+  <content>
+    <metadata>
+      <contentid>
+        <externalid>p.ArticleTemplates</externalid>
+      </contentid>
+    </metadata>
+    <contentlist mode="reset">
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <major>InputTemplate</major>
+              <externalid>example.StandardArticle</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <major>InputTemplate</major>
+              <externalid>example.Image</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <major>InputTemplate</major>
+              <externalid>example.Video</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <major>InputTemplate</major>
+              <externalid>example.File</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <major>InputTemplate</major>
+              <externalid>p.siteengine.Stylesheet</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+  
+     <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.QuickCreate.AvailableTemplateRepository</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  
+   <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.QuickCreate.DefaultTemplateRepository</externalid>
+      </contentid>
+    </metadata>
+   </content>  
+  
+  
+  
+  <!-- Quick Create Repositories -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.QuickCreate.AvailableContentTemplates</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.TemplateCategory</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>p.QuickCreate.AvailableTemplateRepository</externalid>
+      </security-parent>
+    </metadata>
+    <component name="name" group="polopoly.Content">Article</component>
+    <component name="categoryMajor" group="polopoly.Client">Article</component>
+    <contentlist mode="reset">
+      <entry mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.StandardArticle</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.Image</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.QuickCreate.AvailableTemplateRepository</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.TemplateRoot</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>p.sitengine.ContentCreatorTemplates.d</externalid>
+      </security-parent>
+    </metadata>
+    <contentlist>
+      <entry mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>p.QuickCreate.AvailableContentTemplates</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.QuickCreate.DefaultContentTemplates</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.TemplateCategory</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>p.QuickCreate.DefaultTemplateRepository</externalid>
+      </security-parent>
+    </metadata>
+    <component name="name" group="polopoly.Content">Article</component>
+    <component name="categoryMajor" group="polopoly.Client">Article</component>
+    <contentlist mode="reset">
+      <entry mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.StandardArticle</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.QuickCreate.DefaultTemplateRepository</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.TemplateRoot</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>p.sitengine.ContentCreatorTemplates.d</externalid>
+      </security-parent>
+    </metadata>
+    <contentlist>
+      <entry mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>p.QuickCreate.DefaultContentTemplates</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+  
+  <!-- Content repository -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.siteengine.ContentRepositoryArticleTemplates</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.TemplateCategory</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>p.siteengine.ContentRepositoryTemplates</externalid>
+      </security-parent>
+    </metadata>
+    <component name="name" group="polopoly.Content">Article</component>
+    <component name="categoryMajor" group="polopoly.Client">Article</component>
+    <contentlist mode="reset">
+      <entry mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.StandardArticle</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.EditorialBlog</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.siteengine.ContentRepositoryTemplates</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.TemplateRoot</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>p.sitengine.ContentCreatorTemplates.d</externalid>
+      </security-parent>
+    </metadata>
+    <contentlist>
+      <entry mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>p.siteengine.ContentRepositoryArticleTemplates</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+  <!-- Publishing queue repository -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.siteengine.PublishingQueueContentRepositoryTemplates</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.TemplateCategory</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>p.siteengine.ContentRepositoryTemplates</externalid>
+      </security-parent>
+    </metadata>
+    <contentlist>
+      <entry mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>com.atex.plugins.baseline.ContentListPublishingQueue</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>com.atex.plugins.baseline.MetaDataDrivenPublishingQueue</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>com.atex.plugins.baseline.ContextDrivenPublishingQueue</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>com.atex.plugins.baseline.StatisticsDrivenPublishingQueue</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.LatestBlogPostingsPublishingQueue</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+  <!--  Feeds content creator -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.siteengine.FeedTemplateCategory</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.TemplateCategory</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>p.siteengine.FeedTemplates</externalid>
+      </security-parent>
+    </metadata>
+    <component name="name" group="polopoly.Content">Feeds</component>
+    <component name="categoryMajor" group="polopoly.Client">Article</component>
+    <contentlist>
+      <entry mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.Rss</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+  <!-- Element content creator -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.siteengine.ElementLayoutTemplates.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.TemplateCategory</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>p.siteengine.StructureTemplates.d</externalid>
+      </security-parent>
+    </metadata>
+    <contentlist>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.TeaserElement</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.SiteGraphicsElement</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.ImageGalleryElement</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.VideoElement</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.HtmlElement</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.BookmarkElement</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.ListElement</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.ColumnSplitterElement</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.ElementGroup</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.TabViewElement</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.CommentsElement</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.PollElement</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.SearchElement</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.NavigationElement</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.NavigationPathElement</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.LoginElement</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.MyNewsListElement</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.TableElement</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.RelatedContentElement</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+     </contentlist>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.siteengine.BannerElementLayoutTemplates.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.TemplateCategory</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>p.siteengine.StructureTemplates.d</externalid>
+      </security-parent>
+    </metadata>
+    <contentlist>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.BannerElement</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <externalid>p.siteengine.StructureArticleTemplates.d</externalid>
+      </contentid>
+    </metadata>
+    <contentlist>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.Link</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+</batch>

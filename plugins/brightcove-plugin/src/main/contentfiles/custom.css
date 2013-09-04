@@ -1,0 +1,10 @@
+.customSearchBrightcoveVideo img.brightcoveVideoImage {
+    float: left;
+    margin: 0 5px 5px 0;
+    border: 1px solid #EEE;
+    width: 96px;
+}
+
+.customSearchBrightcoveVideo .lead {
+    line-height: 1.2em;
+}

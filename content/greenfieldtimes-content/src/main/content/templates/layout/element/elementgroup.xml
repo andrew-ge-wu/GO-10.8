@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.ElementGroup" label="cm.template.example.ElementGroup">
+    <policy>example.layout.element.ElementPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <type>LayoutElement</type>
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="titleOfNewContent">cm.template.example.ElementGroup.new</param>
+    <param name="templateIcon">elements2.png</param>
+    <param name="renderTemplateIconInSelect">true</param>
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+    <layout name="menu" input-template="p.AjaxPageMenu">
+      <layout name="main" input-template="p.Page" label="cm.template.example.ElementGroup.Content">
+        <field name="name" input-template="p.ContentName" label="cm.label.Name" required="true" />
+        <layout name="elementscomment" input-template="p.Comment" label="cm.template.example.ElementGroup.Elements"></layout>
+        <field name="elements" input-template="p.siteengine.layout.Slot.it" />
+      </layout>
+      <layout name="styles" input-template="p.Page" label="cm.template.example.ElementGroup.styles">
+        <field name="cssStyle" input-template="p.TextInput" label="cm.template.example.ElementGroup.CSSStyle">
+          <param name="size">50</param>
+          <param name="maxlength">100</param>
+        </field>
+        <field name="cssClass" input-template="p.TextInput" label="cm.template.example.ElementGroup.CSSClass">
+          <param name="size">50</param>
+          <param name="maxlength">100</param>
+        </field>
+        <field name="beforeElementsIncludeHTML" input-template="p.TextArea" label="cm.template.example.ElementGroup.StartHTML">
+          <param name="rows">5</param>
+          <param name="cols">75</param>
+        </field>
+        <field name="afterElementsIncludeHTML" input-template="p.TextArea" label="cm.template.example.ElementGroup.EndHTML">
+          <param name="rows">5</param>
+          <param name="cols">75</param>
+        </field>
+      </layout>
+    </layout>
+    <output-templates mode="www">
+      <id>example.ElementGroup.ot</id>
+    </output-templates>
+    <output-templates mode="mobile">
+      <id>example.ElementGroup.ot</id>
+    </output-templates>
+  </input-template>
+  <output-template name="example.ElementGroup.ot" input-template="p.siteengine.ElementOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/www/elementgroup.vm</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+    </content-xml>
+  </output-template>
+</template-definition>

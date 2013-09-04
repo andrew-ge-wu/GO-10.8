@@ -1,0 +1,75 @@
+#set($request = $m.request.httpRequest)
+  #if($content.displayTitle.value=="true")
+  <h1>$content.name</h1>
+  #end
+<div class="gallery">
+  <div class="items">
+    #foreach($videos in $items)
+      <div class="item">
+        <ul>
+          #foreach($video in $videos)
+            <li>
+              #if($display == "ownDept")
+              <a href="#link({"path": $video.parentIds, 'htmlEncodeLink': 'true', "":""})">
+              #else
+              <a href="#link({"path": $path, 'htmlEncodeLink': 'true', "":""})?vid=$video.contentId.contentId.contentIdString">
+              #end
+                <div class="videoThumbnail">
+				#if($video.getUrl($request))
+                  <img src="$!{video.getUrl($request)}" alt="$video.shortDescription" title="$video.shortDescription" />
+				#else
+                  <img style="background-image:url(#file({'contentId': $filesContentId, 'filename':'imagena.png', '':''}));background-repeat: no-repeat;background-position: center;background-size: auto 100%;min-height: 67px;" alt="$video.shortDescription" title="$video.shortDescription" />
+				#end
+				  <div class="playIconContainer"> <div class="playIconCircleBorder"> <div class="playIconCircleInnerBorder">
+                    <div class="playIconChar">&nbsp;</div>
+                  </div> </div> </div>
+                </div>
+                <div class="caption">$video.name</div>
+              </a>
+            </li>
+          #end
+        </ul>
+      </div>
+    #end
+  </div>
+  <!-- end div.items -->
+  <a href="#" class="control left" data-slide="prev">&lsaquo;</a>
+  <a href="#" class="control right" data-slide="next">&rsaquo;</a>
+</div>
+<!-- end div.gallery -->
+
+<script type="text/javascript">
+  $(".playIconChar").css('background-image', "url(#file({'contentId': $filesContentId, 'filename':'playbutton.png', '':''}))");
+
+  $("#$id .items .item:first").addClass("active");
+  $("#$id .control.left").click(function() {
+    var element = $("#$id .items .item.active");
+    element.removeClass("active");
+    if(element.prev().length == 0) {
+      $("#$id .items .item:last").addClass("active");
+    } else {
+      element.prev().addClass("active");
+    }
+    return false;
+  });
+
+  $("#$id .control.right").click(function() {
+    var element = $("#$id .items .item.active");
+    element.removeClass("active");
+    if(element.next().length == 0) {
+      $("#$id .items .item:first").addClass("active");
+    } else {
+      element.next().addClass("active");
+    }
+    return false;
+  });
+  var max = 0;
+  $("#$id .item li .caption").each(function() {
+    if($(this).height() > max) {
+      max = $(this).height();
+    }
+  });
+  $("#$id .item li .caption").each(function() {
+    $(this).css("min-height", max);
+  });
+</script>

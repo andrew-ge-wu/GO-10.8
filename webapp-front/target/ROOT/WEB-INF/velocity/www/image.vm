@@ -1,0 +1,19 @@
+## Image content may come from params or local controller
+#set($imageContent = $params.content)
+#if(!$imageContent)
+  #set($imageContent = $m.local.content)
+#end
+
+## Get derivative key from params map or local model
+#set($derivativeName = $params.derivative)
+#if(!$derivativeName)
+  #set($derivativeName = $m.local.imageDerivativeKey)
+#end
+
+#imageresource({"style": $params.style,
+                "class": $params.cssClass,
+                "contentId": $imageContent.contentId,
+                "derivative": $derivativeName,
+                "alt": $params.alttext,
+                "title": $params.title,
+                "":""})

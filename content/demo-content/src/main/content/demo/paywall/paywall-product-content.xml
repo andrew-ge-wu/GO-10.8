@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <!-- Products -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.product.business-articleaccess</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.PaywallConfiguration.d</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.PaywallProduct</externalid>
+      </input-template>
+    </metadata>
+    <component group="subscriptionType" name="count">1</component>
+    <contentref group="subscriptionType" name="reference0">
+      <contentid>
+        <externalid>example.subscriptionType.articleaccess</externalid>
+      </contentid>
+    </contentref>
+    <component group="contentBundle" name="count">1</component>
+    <contentref group="contentBundle" name="reference0">
+      <contentid>
+        <externalid>example.contentBundle.business</externalid>
+      </contentid>
+    </contentref>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.PaywallConfiguration.d</externalid>
+      </contentid>
+    </metadata>
+    <contentlist group="products">
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.product.business-articleaccess</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+</batch>

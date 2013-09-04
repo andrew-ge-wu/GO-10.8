@@ -1,0 +1,72 @@
+#set ($colwidth = $math.toInteger($m.stack.colwidth))
+#set($galleryId = "gallery_" + $m.local.controllerContext.renderId + "_" + $content.contentId.contentId.contentIdString.replaceAll('\.', '_'))
+#set($derivative = $m.local.imageDerivativeKey)
+
+<div id="$galleryId" class="gallery">
+
+  ## Check that publishing queue contains content
+  #if($content.publishingQueue.list.size() > 0)
+    #set($publishingQueue = $content.publishingQueue.list.get(0).content)
+  #end
+
+  #if($publishingQueue)
+    #set($first = true)
+
+
+    #foreach ($entry in $publishingQueue.contentList)
+      #set($rawImage = $entry.content)
+
+
+      ## Only images are rendered
+
+      #if($rawImage)
+
+        ## Check if external images (external images is absolute)
+        #if($rawImage.derivatives.landscape_490.isAbsolute)
+            #set($fullSrc = $rawImage.derivatives.landscape_490.path)
+        #else
+            #set($fullSrc = "#file({'filename': $rawImage.derivatives.landscape_490.path, 'contentId': $entry.contentId, '':''})")
+        #end
+
+        #if($fullSrc && $fullSrc.length() > 0)
+          #if($first)
+            ## Only the first image is rendered visibly, see below for other images
+
+            <div>
+
+              <a class="galleryitem" href="$fullSrc" title="$!esc.html($rawImage.name)">
+                #imageresource({"contentId": $rawImage.contentId,
+                                "derivative": $derivative,
+                                "":""})
+
+
+              #if($content.name)
+                <span>
+                  $!esc.html($content.name)
+                </span>
+              #end
+              </a>
+            </div>
+            #set($first = false)
+          #else
+            ## Images after the first are rendered as hidden links so lightbox can find the image
+            <a style="display:none" class="galleryitem" href="$fullSrc" title="$!esc.html($rawImage.name)"></a>
+          #end
+        #end
+      #end ## if($rawImage)
+    #end ## foreach
+  #end ## if($publishingQueue)
+
+## Add Lightbox script
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery('#$galleryId a.galleryitem').lightBox({
+      imageLoading: '/img/lightbox/lightbox-ico-loading.gif',
+      imageBtnClose: '/img/lightbox/lightbox-btn-close.gif',
+      imageBtnPrev: '/img/lightbox/lightbox-btn-prev.gif',
+      imageBtnNext: '/img/lightbox/lightbox-btn-next.gif',
+      imageBlank: '/img/lightbox/lightbox-blank.gif'
+    });
+  });
+</script>
+</div>

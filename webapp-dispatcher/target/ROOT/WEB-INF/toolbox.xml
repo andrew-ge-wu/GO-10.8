@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<toolbox>
+  <!-- Polopoly tools -->
+  <tool>
+    <key>tool_domain</key>
+    <scope>application</scope>
+    <class>example.util.ModelDomainUtil</class>
+  </tool>
+  <tool>
+    <key>tool_path</key>
+    <scope>request</scope>
+    <class>example.util.PathUtil</class>
+  </tool>
+  <tool>
+    <key>tool_preview</key>
+    <scope>request</scope>
+    <class>example.util.PreviewUtilTool</class>
+  </tool>
+  <!-- Generic tools -->
+  <tool>
+    <key>date</key>
+    <scope>application</scope>
+    <class>org.apache.velocity.tools.generic.DateTool</class>
+  </tool>
+  <tool>
+    <key>render</key>
+    <scope>request</scope>
+    <class>org.apache.velocity.tools.generic.RenderTool</class>
+  </tool>
+  <tool>
+    <key>esc</key>
+    <scope>application</scope>
+    <class>org.apache.velocity.tools.generic.EscapeTool</class>
+  </tool>
+  <tool>
+    <key>math</key>
+    <scope>application</scope>
+    <class>org.apache.velocity.tools.generic.MathTool</class>
+  </tool>
+</toolbox>

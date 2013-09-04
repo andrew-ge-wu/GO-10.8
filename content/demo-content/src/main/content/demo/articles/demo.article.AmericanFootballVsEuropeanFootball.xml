@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+
+<content clear="true">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.AmericanFootballVsEuropeanFootball</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+<component group="body" name="value">&lt;p&gt;Class of 2010 Hall of Famer Emmitt Smith did the coin toss. The Saints won toss and elected to receive. It was the thirteenth straight time that the NFC won the Super Bowl coin toss. The Saints got the ball first inside the 25, and went three and out. The Colts' first play was a first down pass to Dallas Clark. The first penalty comes with 8:36 left in first quarter, a false start on the Colts. Their third 3rd down of the drive failed, and kicker Matt Stover's 38 yard field goal was good, giving the Colts the first score of the game, 3-0.&lt;/p&gt;&#13;
+&lt;p&gt;Courtney Roby fumbled the kick return, but the Saints recovered it. Drew Brees threw a complete pass to Reggie Bush on third down for their first 1st down of the game. The Saints only got to midfield, and after nearly being picked off the Saints punted. The punt landed at the four yard line, where the Colts started their next drive. The Colts mixed run and pass plays, including several third down conversions, and made it all the way to the end zone, where Pierre Garcon caught a nineteen-yard pass on third down for the first touchdown of the game, making the score 10-0 Colts. The 96-yard drive tied the longest drive in Super Bowl history. Another kickoff return by the Saints ended inside the 25 as the first quarter ended.&lt;/p&gt;&#13;
+&lt;p&gt;The Saints move the ball down inside the Colts’ 30 yard line when, on third down, Dwight Freeney sacked Brees. After the sack on third down, kicker Garrett Hartley kicks a 46 yard field goal making the score Colts 10, Saints 3. The Colts get the ball returned to around the 20 yard line, but went three and out. Bush fair catches the punt inside the 30 yard line. Using mainly passing plays, the Saints moved down the field all the way to the 22 until a reverse play ended up as a seven yard loss. The next play, a pass to Marques Colston, however, was a 27 yard gain down to the three yard line.&lt;/p&gt;&#13;
+&lt;p&gt;After the two minute warning, the Saints had 20 plays in the quarter to the Colts' three. They were stopped short on third down. On 4th and goal on the one yard line, the Saints went for it and Pierre Thomas was stopped short after being tackled by Gary Brackett. The Colts get the ball on the one, but are stopped short on 3rd down, and had to punt after going three and out with under a minute left. Bush returned the punt to around midfield. Another field goal by Hartley was good as the score became 10-6 at halftime.&lt;/p&gt;&#13;
+&lt;p&gt;After the halftime show featuring The Who, the Colts were to get the ball to start the second half. The Saints attempted an onside kick which, after both teams crowded around the pile, the refs ruled that the Saints got the ball. After moving down the field, a 15-yard touchdown run by Pierre Thomas, thanks to breaking several tackles, gave the Saints a 13-10 lead. The Colts got the ball back on the kickoff return on the 24 yard line. After driving down the field, the Colts finished the drive with a five yard touchdown run by Joseph Addai, giving the Colts the lead, 17-13. The Saints got the ball back and moved across midfield with five minutes left in the third quarter. Several plays later, the Saints kicked another 40+ yard field goal, this one at 47 yards, moving the Saints to within one at 17-16. Hartley became the first kicker to kick three field goals for 40 or more yards in a Super Bowl. The Colts got the ball back around the 11 yard line and began running the ball, bringing the ball to the 29 yard line as time expired, ending the third quarter.&lt;/p&gt;&#13;
+&lt;p&gt;As the fourth quarter began, the Colts moved to around midfield and were faced with a 4th and 2. They went for it, and converted on a completion to Reggie Wayne. A second third down conversion failed, and the field goal by Matt Stover was no good, keeping the score at 17-16. The Saints continued utilizing their passing game, moving down inside the 10. After a run by Thomas, Brees completed a two yard pass to Jeremy Shockey for the touchdown. The Saints went for the two point conversion and failed on an incomplete pass by Lance Moore, making the score 22-17 with 5:42 left. The Saints challenged the play, stating he had possession in the end zone, though he did lose control as he rolled in the end zone. The play was overturned and the challenge successful, making the score 24-17 in favor of the Saints.&lt;/p&gt;&#13;
+&lt;p&gt;Starting on the 30 yard line, the Colts moved to midfield through the air. A few plays later, Manning threw an interception to Tracy Porter, who returned the ball 74 yards for a touchdown, moving the Saints ahead by two touchdowns, 31-17. With less than three minutes left, the Colts had to reach the end zone twice to keep it tied. A long pass to bring it to the two minute warning was completed to Austin Collie, who nearly fumbled it. The Colts moved to inside the five yard line, but a pass interference penalty led to a ten yard loss. A pass to Addai moved them back to where they were. They were stopped on third down, and turned the ball over on downs after an incomplete pass on fourth down. Brees took a knee to run out the clock, ending the game.&lt;/p&gt;&#13;
+&lt;p&gt;&lt;i&gt;This article was originally published on &lt;a href="http://en.wikinews.org/wiki/Super_Bowl_XLIV:_Saints_defeat_Colts,_31-17"&gt;Wikinews&lt;/a&gt; and is reproduced here in accordance with &lt;a href="http://creativecommons.org/licenses/by/2.5/"&gt;CC-Attribution-Generic 2.5.&lt;/a&gt;&lt;/i&gt;&lt;/p&gt;</component> 
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-15",
+          "name": "sport",
+          "entities": [],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+<component group="polopoly.Content" name="name">Super Bowl XLIV: Saints defeat Colts, 31-17</component> 
+<component group="lead" name="value">In the National Football League, the New Orleans Saints defeated the Indianapolis Colts, 31-17, to win Super Bowl XLIV.&#13;
+</component> 
+<component group="author" name="value">Wikinews</component> 
+<component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+<component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+
+<component group="polopoly.ContentLists" name="images">images</component>
+<component group="polopoly.ContentLists" name="topimages">topimages</component>
+<component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+<component group="p.Inbox" name="showContent">true</component>
+<component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+
+<contentref group="images" name="0">
+<contentid>
+<externalid>example.demo.image.AmericanFootball</externalid>
+</contentid>
+</contentref>
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.AmericanFootballVsEuropeanFootball.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.AmericanFootballVsEuropeanFootball.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.AmericanFootballVsEuropeanFootball.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.AmericanFootballVsEuropeanFootball.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.AmericanFootballVsEuropeanFootball.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.AmericanFootballVsEuropeanFootball.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content>
+</batch>

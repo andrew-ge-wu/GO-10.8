@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>article.image.potion</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component name="name" group="polopoly.Content">Potion</component>
+    <component name="value" group="byline">Steve Jurvetson</component>
+    <component name="value" group="contact">http://flickr.com/people/jurvetson/</component>
+    <component name="value" group="licenseurl">http://creativecommons.org/licenses/by/2.0/</component>
+    <component name="value" group="keywords">chemistry, blue fluid, lab</component>
+    <file name="image/6627153_b917bc176b_b.jpg" encoding="relative">files/6627153_b917bc176b_b.jpg</file>
+    <component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-04",
+          "name": "economy, business and finance",
+          "entities": [
+            {
+              "id": "subject-04002",
+              "name": "chemicals",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>article.image.instrument</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component name="name" group="polopoly.Content">Instrument</component>
+    <component name="value" group="byline">Hey Paul</component>
+    <component name="value" group="contact">http://flickr.com/people/heypaul/</component>
+    <component name="value" group="licenseurl">http://creativecommons.org/licenses/by/2.0/</component>
+    <component name="value" group="keywords">chemistry, lab</component>
+    <file name="image/2288308_6d2289cafd_o.jpg" encoding="relative">files/2288308_6d2289cafd_o.jpg</file>
+    <component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-04",
+          "name": "economy, business and finance",
+          "entities": [
+            {
+              "id": "subject-04002",
+              "name": "chemicals",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>article.image.creation</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component name="name" group="polopoly.Content">Creation</component>
+    <component name="value" group="byline">Ariana Rose Taylor-Stanley</component>
+    <component name="value" group="contact">http://flickr.com/people/arts/</component>
+    <component name="value" group="licenseurl">http://creativecommons.org/licenses/by/2.0/</component>
+    <component name="value" group="keywords">chemistry, molecules</component>
+    <file name="image/62554955_e310463a86_b.jpg" encoding="relative">files/62554955_e310463a86_b.jpg</file>
+    <component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-04",
+          "name": "economy, business and finance",
+          "entities": [
+            {
+              "id": "subject-04002",
+              "name": "chemicals",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>article.image.gauge</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component name="name" group="polopoly.Content">Gauge</component>
+    <component name="value" group="byline">Hey Paul</component>
+    <component name="value" group="contact">http://flickr.com/people/heypaul/</component>
+    <component name="value" group="licenseurl">http://creativecommons.org/licenses/by/2.0/</component>
+    <component name="value" group="keywords">chemistry, lab</component>
+    <file name="image/2288182_01d72f0ec8_o.jpg" encoding="relative">files/2288182_01d72f0ec8_o.jpg</file>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-04",
+          "name": "economy, business and finance",
+          "entities": [
+            {
+              "id": "subject-04002",
+              "name": "chemicals",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>article.image.destillation</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component name="name" group="polopoly.Content">Destillation</component>
+    <component name="value" group="byline">Pål Berge</component>
+    <component name="value" group="contact">http://flickr.com/people/paalb/</component>
+    <component name="value" group="licenseurl">http://creativecommons.org/licenses/by/2.0/</component>
+    <component name="value" group="keywords">chemistry, lab</component>
+    <file name="image/42994524_40073a7b89_b.jpg" encoding="relative">files/42994524_40073a7b89_b.jpg</file>
+    <component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-04",
+          "name": "economy, business and finance",
+          "entities": [
+            {
+              "id": "subject-04002",
+              "name": "chemicals",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>article.image.pipette</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component name="name" group="polopoly.Content">Pipette</component>
+    <component name="value" group="byline">Dasha</component>
+    <component name="value" group="contact">http://flickr.com/people/dshot/</component>
+    <component name="value" group="licenseurl">http://creativecommons.org/licenses/by/2.0/</component>
+    <component name="value" group="keywords">chemistry, lab</component>
+    <file name="image/401593_33124990c1_b.jpg" encoding="relative">files/401593_33124990c1_b.jpg</file>
+    <component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-04",
+          "name": "economy, business and finance",
+          "entities": [
+            {
+              "id": "subject-04002",
+              "name": "chemicals",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>article.image.inthelab</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component name="name" group="polopoly.Content">In the lab</component>
+    <component name="value" group="byline">Adrian Sampson</component>
+    <component name="value" group="contact">http://flickr.com/people/adrian_s/</component>
+    <component name="value" group="licenseurl">http://creativecommons.org/licenses/by/2.0/</component>
+    <component name="value" group="keywords">chemistry, lab</component>
+    <file name="image/56181054_bf69538457_b.jpg" encoding="relative">files/56181054_bf69538457_b.jpg</file>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-04",
+          "name": "economy, business and finance",
+          "entities": [
+            {
+              "id": "subject-04002",
+              "name": "chemicals",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>article.image.scope</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component name="name" group="polopoly.Content">Scope</component>
+    <component name="value" group="byline">Hey Paul</component>
+    <component name="value" group="contact">http://flickr.com/people/heypaul/</component>
+    <component name="value" group="licenseurl">http://creativecommons.org/licenses/by/2.0/</component>
+    <component name="value" group="keywords">chemistry, microscope</component>
+    <file name="image/2288181_5f5c44c33d_o.jpg" encoding="relative">files/2288181_5f5c44c33d_o.jpg</file>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-04",
+          "name": "economy, business and finance",
+          "entities": [
+            {
+              "id": "subject-04002",
+              "name": "chemicals",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>article.image.erlenmeyerflask</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component name="name" group="polopoly.Content">Erlenmeyer Flask</component>
+    <component name="value" group="byline">Terry Johnston</component>
+    <component name="value" group="contact">http://flickr.com/people/powerbooktrance/</component>
+    <component name="value" group="licenseurl">http://creativecommons.org/licenses/by/2.0/</component>
+    <component name="value" group="keywords">chemistry, lab</component>
+    <file name="image/86984801_c5b12b3971_b.jpg" encoding="relative">files/86984801_c5b12b3971_b.jpg</file>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-04",
+          "name": "economy, business and finance",
+          "entities": [
+            {
+              "id": "subject-04002",
+              "name": "chemicals",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>article.image.chemistry</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component name="name" group="polopoly.Content">Chemistry</component>
+    <component name="value" group="byline">Terry Johnston</component>
+    <component name="value" group="contact">http://flickr.com/people/powerbooktrance/</component>
+    <component name="value" group="licenseurl">http://creativecommons.org/licenses/by/2.0/</component>
+    <component name="value" group="keywords">chemistry, building</component>
+    <file name="image/111578598_5b389c3f84_b.jpg" encoding="relative">files/111578598_5b389c3f84_b.jpg</file>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-04",
+          "name": "economy, business and finance",
+          "entities": [
+            {
+              "id": "subject-04002",
+              "name": "chemicals",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>article.image.forresterhq</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component name="name" group="polopoly.Content">Forrester HQ</component>
+    <component name="value" group="byline">Tjeerd Wiersma</component>
+    <component name="value" group="contact">http://flickr.com/people/tjeerd/</component>
+    <component name="value" group="licenseurl">http://creativecommons.org/licenses/by/2.0/</component>
+    <component name="value" group="keywords">building, campus</component>
+    <file name="image/5199906_04ff1b68b7_b.jpg" encoding="relative">files/5199906_04ff1b68b7_b.jpg</file>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>article.image.mit</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.Image</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <!-- This image should be readable by anyone - simple
+         permissions demo when content file servlet permission
+         checking is on -->
+    <acl>
+      <entry>
+        <principal principalid="group:all"/>
+        <addpermission>
+          <contentpermission>
+            <major>Article</major>
+            <permission>READ</permission>
+          </contentpermission>
+        </addpermission>
+      </entry>
+    </acl>
+    <component name="name" group="polopoly.Content">MIT and Boston</component>
+    <component name="value" group="byline">David Wiley</component>
+    <component name="value" group="contact">http://flickr.com/people/davidwiley/</component>
+    <component name="value" group="licenseurl">http://creativecommons.org/licenses/by/2.0/</component>
+    <component name="value" group="keywords">building, campus</component>
+    <file name="image/118814370_2e5496cb18_o.jpg" encoding="relative">files/118814370_2e5496cb18_o.jpg</file>
+  </content>
+</batch>

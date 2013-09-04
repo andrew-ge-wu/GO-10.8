@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-fragment metadata-complete="true" version="3.0"
+          xmlns="http://java.sun.com/xml/ns/javaee"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-fragment_3_0.xsd">
+
+  <context-param>
+    <param-name>indexServerEnabled</param-name>
+    <param-value>false</param-value>
+  </context-param>
+
+<!--
+    These parameters control the present of diffrent
+    statistics related clients in the Polopoly GUI.
+
+  <context-param>
+    <param-name>udpLogMsgClientEnabled</param-name>
+    <param-value>false</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>statisticsServerEnabled</param-name>
+    <param-value>false</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>pollServerEnabled</param-name>
+    <param-value>false</param-value>
+  </context-param>
+-->
+</web-fragment>

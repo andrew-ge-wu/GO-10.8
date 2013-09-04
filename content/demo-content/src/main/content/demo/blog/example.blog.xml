@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  
+  <content>
+    <metadata>
+      <contentid>
+        <major>Content</major>
+        <externalid>UserData-4000</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.SiteUserData</externalid>
+      </input-template>
+    </metadata>
+  </content>
+  
+  <content>
+    <metadata>
+      <contentid>
+        <major>Content</major>
+        <externalid>example.adrian.blog.list</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.DefaultContentTemplate</externalid>
+      </input-template>
+    </metadata>
+    <component group="polopoly.Content" name="name">List storage content for blog ContentId(example.adrian.blog)</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.Blog</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>UserData-4000</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">The Example Blog</component>
+    <component group="description" name="value">A simple example blog for Adrian about nothing.</component>
+    <component group="pathsegment" name="value">adrian</component>
+    <component group="owners" name="0">4000</component>
+    <contentref group="polopoly.Parent" name="insertParentId">
+      <contentid>
+        <externalid>GreenfieldTimes.Blogs.d</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="polopoly.BlogPostList" name="listRootId">
+      <contentid>
+        <externalid>example.adrian.blog.list</externalid>
+      </contentid>
+    </contentref>    
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Content</major>
+        <externalid>ubg-0-adrian</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.DefaultContentTemplate</externalid>
+      </input-template>
+    </metadata>
+    <component group="" name="p.mt">example.blog.UserBlogsData</component>
+    <component group="blogs/0" name="p.mt">java.lang.String</component>
+    <component group="blogs" name="p.mt">java.util.ArrayList</component>
+    <component group="blogs" name="size">1</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <externalid>UserData-4000</externalid>
+      </contentid>
+    </metadata>
+    <component group="screenName" name="value">Adrian GT</component>
+    <component group="service_state" name="ubg-0">ENABLED</component>
+    <contentref group="service" name="ubg-0">
+      <contentid>
+        <externalid>ubg-0-adrian</externalid>
+      </contentid>
+    </contentref>
+  </content>
+
+  <!-- Blog Posts -->
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post01</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #1 - June 2004</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post02</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #02 - January 2006</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post03</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #03 - September 2008</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post04</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #04 - September 2008</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post05</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #05 - September 2008</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post06</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #06 - October 2008</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post07</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #07 - October 2008</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post08</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #08 - November 2008</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post09</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #09 - November 2008</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post10</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #10 - November 2008</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post11</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #11 - November 2008</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post12</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #12 - November 2008</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post13</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #13 - November 2008</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post14</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #14 - November 2008</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post15</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #15 - November 2008</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post16</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #16 - November 2008</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post17</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #17 - November 2008</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post18</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #18 - November 2008</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post19</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #19 - December 2008</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post20</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #20 - January 2009</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post21</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #21 - March 2009</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post22</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #22 - March 2009</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+  
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post23</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #23 - January 2010</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+  
+  <content>
+    <metadata>
+      <contentid>
+        <major>Community</major>
+        <externalid>example.adrian.blog.post24</externalid>
+      </contentid>
+      <input-template>
+        <externalid>example.BlogPost</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>example.adrian.blog</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Daily Post #24 - January 2010</component>
+    <component group="text" name="value">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</component>
+    <component group="images" name="templateAppletStateChecksum">0</component>
+  </content>
+
+
+  <!-- Add posts to list. -->
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Content</major>
+        <externalid>example.adrian.blog.list</externalid>
+      </contentid>
+    </metadata>
+
+    <component group="polopoly.BlogPostList" name="nextIndex">24</component>
+    <component group="polopoly.BlogPostList" name="childrenPerNode">100</component>
+    <component group="polopoly.BlogPostList/theMonth" name="2010-01">22</component>
+    <component group="polopoly.BlogPostList/theMonth" name="2009-03">20</component>
+    <component group="polopoly.BlogPostList/theMonth" name="2009-01">19</component>
+    <component group="polopoly.BlogPostList/theMonth" name="2008-12">18</component>
+    <component group="polopoly.BlogPostList/theMonth" name="2008-11">7</component>
+    <component group="polopoly.BlogPostList/theMonth" name="2008-10">5</component>
+    <component group="polopoly.BlogPostList/theMonth" name="2008-09">2</component>
+    <component group="polopoly.BlogPostList/theMonth" name="2006-01">1</component>
+    <component group="polopoly.BlogPostList/theMonth" name="2004-06">0</component>
+    <contentref group="polopoly.BlogPostList/theList" name="0"> <contentid><externalid>example.adrian.blog.post01</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="1"> <contentid><externalid>example.adrian.blog.post02</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="2"> <contentid><externalid>example.adrian.blog.post03</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="3"> <contentid><externalid>example.adrian.blog.post04</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="4"> <contentid><externalid>example.adrian.blog.post05</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="5"> <contentid><externalid>example.adrian.blog.post06</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="6"> <contentid><externalid>example.adrian.blog.post07</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="7"> <contentid><externalid>example.adrian.blog.post08</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="8"> <contentid><externalid>example.adrian.blog.post09</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="9"> <contentid><externalid>example.adrian.blog.post10</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="10"><contentid><externalid>example.adrian.blog.post11</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="11"><contentid><externalid>example.adrian.blog.post12</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="12"><contentid><externalid>example.adrian.blog.post13</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="13"><contentid><externalid>example.adrian.blog.post14</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="14"><contentid><externalid>example.adrian.blog.post15</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="15"><contentid><externalid>example.adrian.blog.post16</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="16"><contentid><externalid>example.adrian.blog.post17</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="17"><contentid><externalid>example.adrian.blog.post18</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="18"><contentid><externalid>example.adrian.blog.post19</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="19"><contentid><externalid>example.adrian.blog.post20</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="20"><contentid><externalid>example.adrian.blog.post21</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="21"><contentid><externalid>example.adrian.blog.post22</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="22"><contentid><externalid>example.adrian.blog.post23</externalid></contentid></contentref>
+    <contentref group="polopoly.BlogPostList/theList" name="23"><contentid><externalid>example.adrian.blog.post24</externalid></contentid></contentref>
+  </content>
+  
+  
+</batch>
+

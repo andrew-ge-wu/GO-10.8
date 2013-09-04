@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <!-- System templates -->
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>p.siteengine.VelocityRenderer</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>p.siteengine.VelocityFileRenderer</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <!-- Content input templates -->
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.EditorialBlogPosting</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.EditorialBlog</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.Image</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMeta</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.ImageRefMetaInContext</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.Rss</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>OutputTemplate</major>
+        <externalid>example.Rss.ot</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>OutputTemplate</major>
+        <externalid>example.RssLink.ot</externalid>
+      </contentid>
+    </metadata>
+  </content>  
+  <!-- Collection templates -->
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.baseline.UpdateSearchButton</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.baseline.RefreshableSearchBasedPublishingQueueContainer</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.baseline.MetaDataDrivenPublishingQueue</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.baseline.ContextDrivenPublishingQueue</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.baseline.ContentListPublishingQueue</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.baseline.StatisticsDrivenPublishingQueue</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <!-- Element types -->
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.CommentsElement</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.ColumnSplitterElement</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>OutputTemplate</major>
+        <externalid>example.ColumnSplitterElement.ot</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.ElementGroup</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>OutputTemplate</major>
+        <externalid>example.ElementGroup.ot</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.BannerElement</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>OutputTemplate</major>
+        <externalid>example.BannerElement.ot</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>OutputTemplate</major>
+        <externalid>example.TeaserElement.ot</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>OutputTemplate</major>
+        <externalid>example.ElementGroup.ot</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.ElementGroup</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.HtmlElement</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>OutputTemplate</major>
+        <externalid>example.HtmlElement.ot</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.BookmarkElement</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>OutputTemplate</major>
+        <externalid>example.BookmarkElement.ot</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.LoginElement</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.SearchElement</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>OutputTemplate</major>
+        <externalid>example.SearchElement.ot</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.NavigationElement</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>OutputTemplate</major>
+        <externalid>example.NavigationElement.ot</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.NavigationPathElement</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>OutputTemplate</major>
+        <externalid>example.NavigationPathElement.ot</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.SiteGraphicsElement</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>OutputTemplate</major>
+        <externalid>example.SiteGraphicsElement.ot</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.ListElement</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>OutputTemplate</major>
+        <externalid>example.ListElement.ot</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.TabViewElement</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>OutputTemplate</major>
+        <externalid>example.TabViewElement.ot</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <!-- Page layouts -->
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.DefaultPageLayout</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.PopupPageLayout</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.BlogPageLayout</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <!-- Resources -->
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.Link</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>OutputTemplate</major>
+        <externalid>example.Link.ot</externalid>
+      </contentid>
+    </metadata>
+  </content>  
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>OutputTemplate</major>
+        <externalid>example.LinkLink.ot</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.AkismetSettings</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.CaptchaSettings</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.MyNewsListElement</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>OutputTemplate</major>
+        <externalid>example.MyNewsListElement.ot</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.WorkflowBatchOperation</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.CategorizationBatchOperation</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="true">
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>example.TemplateContents.d</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.RelatedContentElement</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>OutputTemplate</major>
+        <externalid>example.RelatedContentElement.ot</externalid>
+      </contentid>
+    </metadata>
+  </content>
+  <content updateIfExists="false">
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>extid2.1610</externalid>
+      </contentid>
+    </metadata>
+  </content>
+</batch>

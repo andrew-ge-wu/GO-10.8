@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:camel="http://camel.apache.org/schema/spring"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+                           http://camel.apache.org/schema/spring
+                           http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+  <!-- Example configuration of a Camel context with routes set up to import content files from the directory '/opt/polopoly/integration-inbox'. -->
+
+  <!--
+  <camel:camelContext id="example-route" xmlns="http://camel.apache.org/schema/spring">
+    <camel:errorHandler id="inboxErrorHandler" redeliveryPolicyRef="inboxRedeliveryPolicy" />
+
+    <camel:redeliveryPolicyProfile id="inboxRedeliveryPolicy" maximumRedeliveries="3"
+                                                              redeliveryDelay="5000"
+                                                              useExponentialBackOff="true"
+                                                              backOffMultiplier="3"
+                                                              maximumRedeliveryDelay="60000" />
+
+    <camel:route errorHandlerRef="inboxErrorHandler">
+      <camel:from uri="file:/opt/polopoly/integration-inbox?recursive=true&amp;initialDelay=10000&amp;delay=2000&amp;readLock=changed&amp;readLockMinLength=0&amp;delete=true&amp;moveFailed=../inbox-failed-imports/${date:now:yyyy.MM.dd.HH.mm.ss}-${file:name}&amp;include=.*\.xml" />
+      <camel:to uri="polopoly://sysadmin:sysadmin@content-xml" />
+    </camel:route>
+
+    <camel:route errorHandlerRef="inboxErrorHandler">
+      <camel:from uri="file:/opt/polopoly/integration-inbox?recursive=true&amp;initialDelay=10000&amp;delay=2000&amp;readLock=changed&amp;readLockMinLength=0&amp;delete=true&amp;moveFailed=../inbox-failed-imports/${date:now:yyyy.MM.dd.HH.mm.ss}-${file:name}&amp;include=.*\.jar" />
+      <camel:to uri="polopoly://sysadmin:sysadmin@content-jar" />
+    </camel:route>
+
+    <camel:route errorHandlerRef="inboxErrorHandler">
+      <camel:from uri="file:/opt/polopoly/integration-inbox?recursive=true&amp;initialDelay=10000&amp;delay=2000&amp;readLock=changed&amp;readLockMinLength=0&amp;delete=true&amp;moveFailed=../inbox-failed-imports/${date:now:yyyy.MM.dd.HH.mm.ss}-${file:name}&amp;include=.*\.content" />
+      <camel:to uri="polopoly://sysadmin:sysadmin@content-dot-content" />
+    </camel:route>
+
+  </camel:camelContext>
+  -->
+</beans>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+ <content>
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.PublicIndexDefinition</externalid>
+      </contentid>
+    </metadata>
+    <!--
+      We can reuse the standard article mapper since we have a
+      virtually identical input template, and use the same policy.
+    -->
+    <contentref group="mappers" name="example.contenthub.StandardArticle">
+      <contentid>
+        <externalid>p.IndexMapping-public-example.StandardArticle</externalid>
+      </contentid>
+    </contentref>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.InternalIndexDefinition</externalid>
+      </contentid>
+    </metadata>
+    <contentref group="mappers" name="example.contenthub.StandardArticle">
+      <contentid>
+        <externalid>p.IndexMapping-internal-example.StandardArticle</externalid>
+      </contentid>
+    </contentref>
+  </content>
+</batch>

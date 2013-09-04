@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  
+  <!-- moderation -->
+  <input-template name="example.mydesktop.moderation.incontext" label="example.mydesktop.moderation">
+    <policy>com.polopoly.cm.policy.ContentPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OContextTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OContextTopPolicyWidget</viewer>
+    <type>Content</type>
+    <field name="moderation" input-template="example.Moderation" label="example.mydesktop.moderation" />
+  </input-template>
+  
+  <input-template name="example.mydesktop.moderation" label="example.mydesktop.moderation">
+    <policy>com.polopoly.cm.policy.ContentPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <type>Content</type>
+    <idparam name="contextInputTemplate:orchid_TOCENTRY">
+      <externalid>example.mydesktop.moderation.incontext</externalid>
+    </idparam>
+     <idparam name="contextInputTemplate:orchid_TOCITEM">
+      <externalid>example.mydesktop.moderation.incontext</externalid>
+    </idparam>
+    <idparam name="contextInputTemplate:orchid_CONTENTCREATOR">
+      <externalid>example.mydesktop.moderation.incontext</externalid>
+    </idparam>
+    <field name="moderation" input-template="example.Moderation" label="example.mydesktop.moderation" />
+  </input-template>
+  <!-- /moderation -->
+  
+</template-definition>

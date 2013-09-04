@@ -1,0 +1,9 @@
+id:.
+major:Article
+inputtemplate:example.Image
+securityparent:GreenfieldTimes.d
+name:Honda Civic Hybrid
+component:licenseurl:value:http\://creativecommons.org/licenses/by/2.0/
+component:contact:value:http\://www.flickr.com/photos/rogerwo/
+component:byline:value:Roger Wo
+file:image/image.jpg:example.demo.image.HondaCivicHybrid.jpg

@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>External payment provider</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="../js/jquery-1.7.2.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+body {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.container-narrow {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.container-narrow>hr {
+  margin: 30px 0;
+}
+
+.jumbotron {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.jumbotron h1 {
+  font-size: 72px;
+  line-height: 1;
+}
+
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+#product {
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+  <div class="container-narrow">
+
+    <div class="jumbotron">
+      <h1>External Payment Provider</h1>
+      <p class="lead">
+        <br /> Do you want to buy <span id="product"></span>?
+      </p>
+      <br />
+      <br />
+      <a class="btn btn-large btn-success" style="color: green;" href="#">Yes please!</a> <a
+        class="btn btn-large btn-danger" style="color: red;" href="#">No thanks...</a>
+    </div>
+
+    <hr />
+
+    <div class="footer">
+      <p>© Company 2013</p>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+            function getURLParameter(name) {
+                return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [ , "" ])[1].replace(/\+/g, '%20')) || null;
+            }
+            var redirectURL = getURLParameter("url");
+            var subscriptionId = getURLParameter("subscriptionId");
+            var articleId = getURLParameter("articleId");
+            redirectURL += "?subscriptionId=" + subscriptionId;
+            if (articleId != null) {
+                redirectURL += "&articleId=" + articleId;
+            } else if (document.referrer != null) {
+                redirectURL += "&referrer=" + document.referrer;
+            }
+            $('#product').html(subscriptionId);
+            $('a.btn-success').click(function() {
+                if (redirectURL != undefined && redirectURL != "") {
+                    window.location = redirectURL + "&action=success";
+                }
+                return false;
+            });
+            $('a.btn-danger').click(function() {
+                if (redirectURL != undefined && redirectURL != "") {
+                    window.location = redirectURL;
+                }
+                return false;
+            });
+        </script>
+
+</body>
+</html>

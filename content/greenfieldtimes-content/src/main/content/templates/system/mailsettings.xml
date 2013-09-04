@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.MailSettings">
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <policy>example.membership.MailSettingsPolicy</policy>
+    <type>AppConfig</type>
+    
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditState_saveAndEdit">false</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">false</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="ViewState_copy">false</param>    
+    
+    <layout name="introductionComment" input-template="p.Comment" label="cm.template.example.MailSettings.Introduction">
+      <param name="comment">cm.template.example.MailSettings.Introduction.Comment</param>
+    </layout>
+    
+    <field name="smtpServerHostname" input-template="p.TextInput" label="cm.template.example.MailSettings.SmtpServerHostname" />
+    <field name="smtpServerPort" input-template="p.TextInput" label="cm.template.example.MailSettings.SmtpServerPort" />
+    <field name="smtpServerUsername" input-template="p.TextInput" label="cm.template.example.MailSettings.SmtpServerUsername" />
+    <field name="smtpServerPassword" input-template="p.TextInput" label="cm.template.example.MailSettings.SmtpServerPassword" />
+    <field name="smtpServerSocketTimeout" input-template="p.TextInput" label="cm.template.example.MailSettings.SmtpServerSocketTimeout">
+      <help>cm.template.example.MailSettings.SmtpServerConnectionTimeout.help</help>
+    </field>
+    <field name="smtpServerConnectionTimeout" input-template="p.TextInput" label="cm.template.example.MailSettings.SmtpServerConnectionTimeout">
+      <help>cm.template.example.MailSettings.SmtpServerConnectionTimeout.help</help>
+    </field>
+    
+  </input-template>
+</template-definition>

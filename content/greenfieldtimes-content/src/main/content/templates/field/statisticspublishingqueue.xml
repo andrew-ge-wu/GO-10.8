@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="com.atex.plugins.baseline.pq.StatisticsDrivenPublishingQueue.analyzerName">
+    <policy>com.polopoly.cm.app.policy.SelectPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OSelectPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OSelectPolicyWidget</viewer>
+    <param name="size">1</param>
+    <param name="selected">0</param>
+    <param name="multivalued">false</param>
+    <param name="label_0">cm.label.Articles</param>
+    <param name="value_0">article</param>
+    <param name="label_1">example.label.Blogs</param>
+    <param name="value_1">bloganalyzer</param>
+  </input-template>
+</template-definition>

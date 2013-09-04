@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- http://en.wikinews.org/wiki/India_approves_symbol_for_currency -->
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+<content clear="true">
+<metadata>
+  <contentid>
+    <major>Article</major>
+    <externalid>example.demo.article.ImportanceOfCommunication</externalid>
+  </contentid>
+  <input-template>
+    <major>InputTemplate</major>
+    <externalid>example.StandardArticle</externalid>
+  </input-template>
+  <security-parent>
+    <major>Department</major>
+    <externalid>GreenfieldTimes.SubPage.2.d</externalid>
+  </security-parent>
+</metadata>
+<component group="author" name="value">Wikinews</component>
+<component group="polopoly.Content" name="name">India approves symbol for currency</component>
+<component group="lead" name="value">A symbol for the Indian Rupee was approved by the Government of India today. The Indian currency had previously lacked a distinctive symbol like those associated with the US dollar, euro, pound sterling and the yen.</component>
+<component group="body" name="value">
+<![CDATA[
+<p>Minister for Information and Broadcasting of India, Ambika Soni announced the symbol chosen for the currency. <cite>"The symbol for the rupee would lend a distinctive character and identity to the currency and further highlight the strength and robustness of the Indian economy as a favored destination for global investments,"</cite> Soni stated.</p>
+<p>A competition was held to select the symbol, which drew more than 3,000 entries. After evaluation by the head of the Reserve Bank of India, artists and designers, five were shortlisted. The winning design came from a post-graduate student, D Udaya Kumar, who won 250,000 (US$5,400).</p>
+<p>The government announced that the symbol will not be printed on currency notes or coins, but would be added to the Unicode Standard and other scripts used in the world. Soni said the symbol would be adopted in India by the next two quarters and globally within a year and a half to two years. She mentioned that it would soon feature in worldwide keyboards for easy use.</p>
+<p>The symbol is a blend of the Devanagari and Latin scripts. <cite>"It is a perfect blend of Indian and Roman letters -- capital 'R' and 'Ra' [र] which represents rupaiah, to appeal to international and Indian audiences [...] My design is based on the tricolour, with two lines at the top and white space in between,"</cite> Kumar, the designer of the symbol said.</p>
+<p><i>This article was originally published on <a href="http://en.wikinews.org/wiki/India_approves_symbol_for_currency">Wikinews</a> and is reproduced here in accordance with <a href="http://creativecommons.org/licenses/by/2.5/">CC-Attribution-Generic 2.5.</a></i></p>
+]]>
+</component>
+<component group="publishedDate" name="date">1279206000000</component>
+<component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+<component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+<component group="polopoly.ContentLists" name="images">images</component>
+<component group="polopoly.ContentLists" name="topimages">topimages</component>
+<component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+<component group="p.Inbox" name="showContent">true</component>
+<component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+<component group="elements/inheritSetting" name="count">1</component>
+<component group="elements/inheritSetting" name="selected_0">default</component>
+<component group="rightColumn/inheritSetting" name="count">1</component>
+<component group="rightColumn/inheritSetting" name="selected_0">default</component>
+<component group="p.Content.state" name="onlineState">true</component>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": [
+        {
+          "id": "Ambika Soni",
+          "name": "Ambika Soni",
+          "entities": [],
+          "attributes": []
+        }
+      ]
+    },
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": [
+        {
+          "id": "India",
+          "name": "India",
+          "entities": [],
+          "attributes": []
+        }
+      ]
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.subject",
+      "name": "Sujbect",
+      "enumerable": true,
+      "entities": [
+        {
+          "id": "subject-04",
+          "name": "economy, business and finance",
+          "entities": [
+            {
+              "id": "subject-04018",
+              "name": "business (general)",
+              "entities": [],
+              "attributes": []
+            }
+          ],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+<contentref group="images" name="0">
+  <contentid>
+    <major>ReferenceMetaData</major>
+    <externalid>example.demo.ref.image.ImportanceOfCommunication</externalid>
+  </contentid>
+</contentref>
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.ImportanceOfCommunication.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.ImportanceOfCommunication.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.ImportanceOfCommunication.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.ImportanceOfCommunication.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.ImportanceOfCommunication.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.ImportanceOfCommunication.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content>
+</batch>

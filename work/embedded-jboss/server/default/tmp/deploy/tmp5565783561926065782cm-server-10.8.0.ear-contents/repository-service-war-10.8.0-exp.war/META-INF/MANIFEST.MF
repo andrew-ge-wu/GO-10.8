@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Class-Path: service-ejb-api-10.8.0.jar common-10.8.0.jar guava-13.0.1.
+ jar cm-service-api-10.8.0.jar cm-service-legacy-10.8.0.jar user-api-1
+ 0.8.0.jar content-api-10.8.0.jar annotations-1.2.jar service-ejb-impl
+ -10.8.0.jar cm-service-j2se-10.8.0.jar metrics-10.8.0.jar statistics-
+ internal-j2se-10.8.0.jar legacy-util-10.8.0.jar jaxen-1.1.1.jar dom4j
+ -1.6.1.jar jdom-1.0.jar xom-1.0.jar icu4j-2.6.1.jar statistics-v8-mix
+ ed-j2se-10.8.0.jar jfreechart-1.0.0.jar jcommon-1.0.0.jar commons-lan
+ g-2.4.jar application-10.8.0.jar model-mixed-j2se-10.8.0.jar model-pu
+ blic-api-10.8.0.jar guice-3.0.jar javax.inject-1.jar aopalliance-1.0.
+ jar management-10.8.0.jar gson-2.2.2.jar junit-4.8.1.jar xalan-2.7.1.
+ jar serializer-2.7.1.jar xercesImpl-2.9.1.jar
+Build-Jdk: 1.6.0_24
+Built-By: polopoly
+Created-By: Apache Maven
+Archiver-Version: Plexus Archiver
+

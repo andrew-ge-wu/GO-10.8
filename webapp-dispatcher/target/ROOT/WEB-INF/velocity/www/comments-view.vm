@@ -1,0 +1,59 @@
+## Show comments.
+#set($rs = $m.context.site.bean.resources.strings)
+
+#if ($comments && $comments.size() > 0)
+  #if($isBlogPostMode)
+  <script type="text/javascript">
+      jQuery().ready(function() {
+          polopoly.service.blog.init();
+      });
+  </script>
+  #end
+  <div class="commentList">
+
+    #foreach($comment in $comments)
+      #set($row = 'even')
+      #if($velocityCount % 2 != 0)
+        #set($row = 'odd')
+      #end
+      #if ($showComment && $comment == $showComment)
+            #set($commentParagraphId = 'id="shownComment"')
+        #else
+            #set($commentParagraphId = '')
+        #end
+      <div class="row $row clearfix" $commentParagraphId>
+        <p>$comment.text</p>
+        <em class="left">$rs.comments.writtenby $comment.author, $date.format("d MMMM yyyy HH:mm", $comment.publishingDateTime, $m.context.site.bean.resources.locale)</em>
+        #if($isBlogPostMode)
+          <form class="requiresBlogOwner right" action="#link({"path": $m.request.originalContentPath, 'htmlEncodeLink': 'true', "":""})" method="POST" onsubmit="return polopoly.service.blog.confirm(this, '$rs.comments.confirmDeleteComment')" >
+            <input type="hidden" name="action" value="DELETE_COMMENT"/>
+            <input type="hidden" name="commentId" value="$comment.contentId.contentId.contentIdString" />
+            <input type="hidden" name="blogPostId" value="$content.contentId.contentId.contentIdString" />
+            <input type="submit" class="submit" name="delete" value="$rs.comments.deleteComment" />
+          </form>
+        #end
+      </div>
+    #end
+
+    <div class="paging">
+    #if($m.request.httpRequest.getParameter("showCommentId"))
+        #set($commentsIdParam = " , undefined, $m.request.httpRequest.getParameter('showCommentId')")
+    #else
+        #set($commentsIdParam = "")
+    #end
+    #if($commentsNextIndex)
+      <div class="olderPosts">
+        <a href="#commentsField-$elementId" onclick="polopoly.comments.get('#link({"path":$m.request.originalContentPath, 'htmlEncodeLink': 'true', "":""})', $commentsNextIndex, '#commentsField-$elementId'$commentsIdParam);">$rs.blog.olderComments</a>
+      </div>
+    #end
+    #if($commentsIndex > 0)
+      #set($commentsPrevIndex = $math.max($math.sub($commentsIndex, $commentsLimit), 0) + "")
+      <div class="newerPosts">
+        <a href="#commentsField-$elementId" onclick="polopoly.comments.get('#link({"path":$m.request.originalContentPath, 'htmlEncodeLink': 'true', "":""})', $commentsPrevIndex, '#commentsField-$elementId'$commentsIdParam);">$rs.blog.newerComments</a>
+      </div>
+    #end
+    </div>
+  </div>
+#elseif($isBlogPostMode)
+  <p style="margin-top: 12px;">$rs.blog.bethefirsttocomment</p>
+#end

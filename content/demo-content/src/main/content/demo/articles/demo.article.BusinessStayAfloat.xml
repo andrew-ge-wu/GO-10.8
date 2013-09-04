@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- http://en.wikinews.org/wiki/Bush_addresses_nation_on_economic_crisis;_Congress_debates_bailout -->
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+<content clear="true">
+<metadata>
+  <contentid>
+    <major>Article</major>
+    <externalid>example.demo.article.BusinessStayAfloat</externalid>
+  </contentid>
+  <input-template>
+    <major>InputTemplate</major>
+    <externalid>example.StandardArticle</externalid>
+  </input-template>
+  <security-parent>
+    <major>Department</major>
+    <externalid>GreenfieldTimes.SubPage.2.d</externalid>
+  </security-parent>
+</metadata>
+<component group="author" name="value">Wikinews</component>
+<component group="polopoly.Content" name="name">Bush addresses nation on economic crisis; Congress debates bailout</component>
+<component group="lead" name="value">United States President George W. Bush addressed the nation on the economic financial crisis from inside the White House saying the economic situation is "serious" and is "in danger" of becoming "a long and painful recession."</component>    
+<component group="body" name="value">
+<![CDATA[
+<p><cite>"We are in the midst of a serious financial crisis and the federal government is responding with decisive action,"</cite> Bush said in his televised speech.</p>
+<p>Bush called for the United States Congress to pass a US$700 billion bill intended to keep struggling companies afloat. He asked the two presidential candidates along with leaders from both parties of Congress to join him for a conference on Thursday.</p>
+<p>Last Friday, Treasury Secretary Henry Paulson called for a bailout plan that would allow for the United States government to purchase devalued mortgage backed securities, resulting from the subprime mortgage crisis, from troubled financial institutions. Paulson has said that the plan could cost up to $700 billion. Congressional leaders have said that some form of the plan will pass; however, there is considerable debate over several key issues.</p>
+<p>White House spokeswoman Dana Perino said that Bush <cite>"believes it is important for the American people to fully understand the depth of the crisis in our financial markets, how that crisis affects them, and the urgent need to agree on a solution."</cite> Bush has been criticized for waiting too long to speak in prime time.</p>
+<p>John McCain suspended his campaign to return to Washington and work on the bailout bill. Barack Obama has called for another form of the bill to pass and said that Congress should not package the bailout bill with any other bills — such as an economic stimulus plan.</p>
+<p>Meanwhile, Congress has held a second round of hearings on the proposed bailout bill. Paulson and Chairman of the Federal Reserve Ben Bernanke testified in front of the House Financial Services Committee. They felt it was a serious problem in need of an immediate solution.</p>
+<p>Rep. Barney Frank, Chairman of House Financial Services Committee, says it is "clear" that the financial bailout bill will pass.</p>
+<p>Director of the Congressional Budget Office Peter R. Orsza said while testifying before Congress that <cite>"ironically, the intervention could even trigger additional failures of large institutions, because some institutions may be carrying troubled assets on their books at inflated values."</cite></p>
+<p>The bailout plan has been called a "blank check" by many, with members of both parties divided on the issue.</p>
+<p><i>This article was originally published on <a href="http://en.wikinews.org/wiki/Bush_addresses_nation_on_economic_crisis;_Congress_debates_bailout">Wikinews</a> and is reproduced here in accordance with <a href="http://creativecommons.org/licenses/by/2.5/">CC-Attribution-Generic 2.5.</a></i></p>
+]]>
+</component>
+<component group="publishedDate" name="date">1222354800000</component>
+<component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+<component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+<component group="polopoly.ContentLists" name="images">images</component>
+<component group="polopoly.ContentLists" name="topimages">topimages</component>
+<component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+<component group="p.Inbox" name="showContent">true</component>
+<component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": [
+        {
+          "id": "George W. Bush",
+          "name": "George W. Bush",
+          "entities": [],
+          "attributes": []
+        }
+      ]
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": [
+        {
+          "id": "USA",
+          "name": "USA",
+          "entities": [],
+          "attributes": []
+        }
+      ]
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    }
+  ]
+}</component>
+<component group="publishedDate" name="defaultFormat">2010-08-10 15:15</component>
+<component group="p.Content.state" name="onlineState">true</component>
+<contentref group="images" name="0">
+  <contentid>
+    <major>ReferenceMetaData</major>
+    <externalid>example.demo.ref.image.BusinessStayAfloat</externalid>
+  </contentid>
+</contentref>
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.BusinessStayAfloat.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.BusinessStayAfloat.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.BusinessStayAfloat.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.BusinessStayAfloat.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.BusinessStayAfloat.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.BusinessStayAfloat.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content>
+</batch>

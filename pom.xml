@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <name>greenfieldtimes-example - Project Top</name>
+
+  <groupId>com.polopoly.sites.greenfieldtimes-example</groupId>
+  <artifactId>top</artifactId>
+  <packaging>pom</packaging>
+
+  <description>This is the Greenfield Times example Project</description>
+
+  <organization>
+    <name>Atex</name>
+    <url>http://www.atex.com</url>
+  </organization>
+
+  <licenses>
+    <license>
+      <name>Atex Polopoly Source Code License</name>
+      <url>http://support.polopoly.com/confluence/display/GREENHOUSE/APSCL</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>products</id>
+      <name>Polopoly Products</name>
+      <email>support@polopoly.com</email>
+      <organization>Atex</organization>
+      <organizationUrl>http://www.atex.com</organizationUrl>
+    </developer>
+  </developers>
+
+  <issueManagement>
+    <system>JIRA</system>
+    <url>http://support.polopoly.com/jira/browse/GO</url>
+  </issueManagement>
+
+  <scm>
+    <connection>scm:git:git.polopoly.com/git/greenfield-online.git</connection>
+    <developerConnection>scm:git:git@github.com:atex-polopoly/greenfield-online.git</developerConnection>
+    <url>https://github.com/atex-polopoly/greenfield-online</url>
+  </scm>
+
+  <properties>
+    <import.password>sysadmin</import.password>
+    <import.username>sysadmin</import.username>
+    <jboss-plugin.version>1.27</jboss-plugin.version>
+    <jboss-slim.version>1.7</jboss-slim.version>
+    <jboss.web.port>8081</jboss.web.port>
+    <jetty-plugin.version>7.4.5-polopoly-1.13</jetty-plugin.version>
+    <jetty.port>8080</jetty.port>
+    <baseline.version>3.0.0</baseline.version>
+    <polopoly-db.version>${polopoly.version}</polopoly-db.version>
+    <polopoly.connection-properties>${polopoly.jboss-web}/connection-properties/connection.properties</polopoly.connection-properties>
+    <polopoly.jboss-web>http://localhost:${jboss.web.port}</polopoly.jboss-web>
+    <polopoly.import-scanIntervalSeconds>2</polopoly.import-scanIntervalSeconds>
+    <polopoly.jetty-scanIntervalSeconds>2</polopoly.jetty-scanIntervalSeconds>
+    <polopoly.version>${project.version}</polopoly.version>
+    <polopoly.web>http://localhost:${jetty.port}</polopoly.web>
+    <polopoly.work-dir>${basedir}/work</polopoly.work-dir>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <parent>
+    <groupId>com.polopoly</groupId>
+    <artifactId>public</artifactId>
+    <version>10.8.0</version>
+    <relativePath>../../public-artifacts</relativePath>
+  </parent>
+
+  <modules>
+    <module>config</module>
+    <module>content</module>
+    <module>server-solr-indexer</module>
+    <module>server-statistics</module>
+    <module>server-integration</module>
+    <module>server-content-hub</module>
+    <module>server-data-api</module>
+    <module>module-greenfieldtimes</module>
+    <module>module-integration-server</module>
+    <module>webapp-dispatcher</module>
+    <module>webapp-polopoly</module>
+    <module>webapp-front</module>
+    <module>webapp-moderation</module>
+    <!--Example: how to use a plugin as a source plugin -->
+    <!--To use a plugin as a SOURCE PLUGIN:
+        * copy the source code of the plugin and place it as a module in your project
+        * modify the plugin pom by updating all dependency versions (e.g. polopoly version,
+          p-maven-plugin version, baseline version) to those used by your project
+        * uncomment the following comment block
+        * add a dependency (see the <dependencies> tag) -->
+    <!--
+    <module>carousel-plugin</module>
+    -->
+  </modules>
+
+  <repositories>
+    <repository>
+      <id>polopoly-public</id>
+      <name>Polopoly Public</name>
+      <url>http://maven.polopoly.com/nexus/content/groups/polopoly-public</url>
+    </repository>
+    <repository>
+      <id>polopoly-plugins</id>
+      <name>Polopoly Plugins</name>
+      <url>http://maven.polopoly.com/nexus/content/groups/polopoly-plugins</url>
+    </repository>
+  </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>polopoly-public</id>
+      <name>Polopoly Public</name>
+      <url>http://maven.polopoly.com/nexus/content/groups/polopoly-public</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.polopoly</groupId>
+        <artifactId>bom</artifactId>
+        <version>${polopoly.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.polopoly</groupId>
+        <artifactId>polopoly</artifactId>
+        <version>${polopoly.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.atex.plugins</groupId>
+        <artifactId>baseline</artifactId>
+        <version>${baseline.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.polopoly.extensions</groupId>
+        <artifactId>cm-velocity-integration</artifactId>
+        <version>${polopoly.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-collections</groupId>
+        <artifactId>commons-collections</artifactId>
+        <version>3.1</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>servlet-api</artifactId>
+        <version>2.5</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <!--Example: how to use a plugin as a BINARY PLUGIN or a SOURCE PLUGIN. Uncomment the following: -->
+    <!--
+    <dependency>
+      <groupId>com.atex.plugins</groupId>
+      <artifactId>carousel-plugin</artifactId>
+      <version>2.0</version>
+    </dependency>
+    -->
+    <!-- For SOURCE PLUGINS, also see the <modules> tag -->
+
+    <!--Example: to use a plugin as a BINARY PLUGIN, also uncomment the following comment block: -->
+    <!--
+    <dependency>
+      <groupId>com.atex.plugins</groupId>
+      <artifactId>carousel-plugin</artifactId>
+      <version>2.0</version>
+      <classifier>contentdata</classifier>
+    </dependency>
+    -->
+    <!-- Alternatively, you can also choose to place these dependencies in the specific modules that need them -->
+
+    <dependency>
+      <groupId>com.atex.plugins</groupId>
+      <artifactId>imagegallery-plugin</artifactId>
+      <version>1.2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.atex.plugins</groupId>
+      <artifactId>department-driven-publishing-queue-plugin</artifactId>
+      <version>2.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.atex.plugins</groupId>
+      <artifactId>brightcove-plugin</artifactId>
+      <version>2.0.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.polopoly.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>${jetty-plugin.version}</version>
+        <configuration>
+          <jettyConfig>${basedir}/config/${targetEnv}/jetty-jmx.xml</jettyConfig>
+          <excludedWebApps>
+            <webApp>webapp-front</webApp>
+            <webApp>server-content-hub</webApp>
+          </excludedWebApps>
+          <connectors>
+            <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
+              <port>${jetty.port}</port>
+              <maxIdleTime>60000</maxIdleTime>
+            </connector>
+          </connectors>
+          <scanIntervalSeconds>${polopoly.jetty-scanIntervalSeconds}</scanIntervalSeconds>
+          <loggingPropertiesFile>${basedir}/config/${targetEnv}/logging.properties</loggingPropertiesFile>
+          <systemProperties>
+            <systemProperty>
+              <name>polopoly.forcePreviewWithoutGui</name>
+              <value>true</value>
+            </systemProperty>
+            <systemProperty>
+              <name>clientCacheBaseDir</name>
+              <value>${polopoly.work-dir}/tmp</value>
+            </systemProperty>
+            <systemProperty>
+              <name>statisticsBaseDirectory</name>
+              <value>${polopoly.work-dir}/stats</value>
+            </systemProperty>
+            <systemProperty>
+              <name>solr.solr.home</name>
+              <value>${polopoly.work-dir}/solr</value>
+            </systemProperty>
+            <systemProperty>
+              <name>reindexIfEmptyIndex</name>
+              <value>true</value>
+            </systemProperty>
+            <systemProperty>
+              <name>p.connectionPropertiesUrl</name>
+              <value>${polopoly.connection-properties}</value>
+            </systemProperty>
+          </systemProperties>
+          <externalArtifactContextHandlers>
+            <contextHandler implementation="org.mortbay.jetty.plugin.JettyWebAppContext">
+              <warArtifact>
+                <groupId>org.apache.solr</groupId>
+                <artifactId>solr</artifactId>
+                <version>${solr.version}</version>
+                <type>war</type>
+              </warArtifact>
+              <contextPath>/solr</contextPath>
+            </contextHandler>
+            <contextHandler
+              implementation="org.mortbay.jetty.plugin.JettyWebAppContext">
+              <warArtifact>
+                <groupId>com.polopoly</groupId>
+                <artifactId>management</artifactId>
+                <version>${polopoly.version}</version>
+                <type>war</type>
+              </warArtifact>
+              <contextPath>/management</contextPath>
+            </contextHandler>
+          </externalArtifactContextHandlers>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.polopoly.extensions</groupId>
+        <artifactId>p-maven-plugin</artifactId>
+        <version>${polopoly.version}</version>
+        <configuration>
+          <workDirectory>${polopoly.work-dir}</workDirectory>
+          <generatePluginXml>false</generatePluginXml>
+          <failOnMissingContentDataJarFile>false</failOnMissingContentDataJarFile>
+          <username>${import.username}</username>
+          <password>${import.password}</password>
+          <logImport>true</logImport>
+          <connectionPropertiesUrl>${polopoly.connection-properties}</connectionPropertiesUrl>
+          <scanIntervalSeconds>${polopoly.import-scanIntervalSeconds}</scanIntervalSeconds>
+          <deployments>
+            <deployment>
+              <name>cm</name>
+              <description>Backend Application Server Deployments</description>
+              <artifacts>
+                <artifact>
+                  <groupId>com.polopoly</groupId>
+                  <artifactId>cm-server</artifactId>
+                  <version>${polopoly.version}</version>
+                  <type>ear</type>
+                </artifact>
+                <artifact>
+                  <groupId>com.polopoly</groupId>
+                  <artifactId>connection-properties</artifactId>
+                  <version>${polopoly.version}</version>
+                  <type>war</type>
+                </artifact>
+                <artifact>
+                  <groupId>${project.groupId}</groupId>
+                  <artifactId>server-content-hub</artifactId>
+                  <version>${project.version}</version>
+                  <name>content-hub</name>
+                  <type>war</type>
+                </artifact>
+              </artifacts>
+            </deployment>
+            <deployment>
+              <name>servers</name>
+              <description>Backend Servlet Container Deployments</description>
+              <artifacts>
+                <artifact>
+                  <groupId>${project.groupId}</groupId>
+                  <artifactId>server-solr-indexer</artifactId>
+                  <version>${project.version}</version>
+                  <name>solr-indexer</name>
+                  <type>war</type>
+                </artifact>
+                <artifact>
+                  <groupId>${project.groupId}</groupId>
+                  <artifactId>server-statistics</artifactId>
+                  <version>${project.version}</version>
+                  <name>statistics-server</name>
+                  <type>war</type>
+                </artifact>
+                <artifact>
+                  <groupId>${project.groupId}</groupId>
+                  <artifactId>server-integration</artifactId>
+                  <version>${project.version}</version>
+                  <name>integration-server</name>
+                  <type>war</type>
+                </artifact>
+                <artifact>
+                  <groupId>${project.groupId}</groupId>
+                  <artifactId>server-data-api</artifactId>
+                  <version>${project.version}</version>
+                  <name>data-api</name>
+                  <type>war</type>
+                </artifact>
+                <artifact>
+                  <groupId>org.apache.solr</groupId>
+                  <artifactId>solr</artifactId>
+                  <version>${solr.version}</version>
+                  <name>solr</name>
+                  <type>war</type>
+                </artifact>
+              </artifacts>
+            </deployment>
+            <deployment>
+              <name>polopoly-gui</name>
+              <description>The Polopoly GUI Deployments</description>
+              <artifacts>
+                <artifact>
+                  <groupId>${project.groupId}</groupId>
+                  <artifactId>webapp-polopoly</artifactId>
+                  <version>${project.version}</version>
+                  <name>polopoly</name>
+                  <type>war</type>
+                </artifact>
+                <artifact>
+                  <groupId>${project.groupId}</groupId>
+                  <artifactId>webapp-dispatcher</artifactId>
+                  <version>${project.version}</version>
+                  <name>ROOT</name>
+                  <type>war</type>
+                </artifact>
+                <artifact>
+                  <groupId>${project.groupId}</groupId>
+                  <artifactId>webapp-moderation</artifactId>
+                  <version>${project.version}</version>
+                  <name>moderation</name>
+                  <type>war</type>
+                </artifact>
+                <artifact>
+                  <groupId>org.apache.solr</groupId>
+                  <artifactId>solr</artifactId>
+                  <version>${solr.version}</version>
+                  <name>solr</name>
+                  <type>war</type>
+                </artifact>
+              </artifacts>
+            </deployment>
+            <deployment>
+              <name>front</name>
+              <description>Front Machine Deployments</description>
+              <artifacts>
+                <artifact>
+                  <groupId>${project.groupId}</groupId>
+                  <artifactId>webapp-front</artifactId>
+                  <version>${project.version}</version>
+                  <name>ROOT</name>
+                  <type>war</type>
+                </artifact>
+                <artifact>
+                  <groupId>org.apache.solr</groupId>
+                  <artifactId>solr</artifactId>
+                  <version>${solr.version}</version>
+                  <name>solr</name>
+                  <type>war</type>
+                </artifact>
+              </artifacts>
+            </deployment>
+            <deployment>
+              <name>config</name>
+              <description>Configuration</description>
+              <artifacts>
+                <artifact>
+                  <groupId>${project.groupId}</groupId>
+                  <artifactId>config-${targetEnv}</artifactId>
+                  <version>${project.version}</version>
+                  <classifier>solr-home</classifier>
+                  <name>solr-home</name>
+                  <type>zip</type>
+                </artifact>
+                <artifact>
+                  <groupId>${project.groupId}</groupId>
+                  <artifactId>config-${targetEnv}</artifactId>
+                  <version>${project.version}</version>
+                  <classifier>config</classifier>
+                  <name>config</name>
+                  <type>zip</type>
+                </artifact>
+              </artifacts>
+            </deployment>
+            <deployment>
+              <name>management</name>
+              <description>Management web application</description>
+              <artifacts>
+                <artifact>
+                  <groupId>com.polopoly</groupId>
+                  <artifactId>management</artifactId>
+                  <version>${polopoly.version}</version>
+                  <name>management</name>
+                  <type>war</type>
+                </artifact>
+              </artifacts>
+            </deployment>
+          </deployments>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.polopoly.jboss</groupId>
+        <artifactId>jboss-maven-plugin</artifactId>
+        <version>${jboss-plugin.version}</version>
+        <configuration>
+          <environments>
+            <environment>
+              <name>connectionPropertiesFile</name>
+              <value>${basedir}/config/${targetEnv}/connection.properties</value>
+            </environment>
+            <environment>
+              <name>p.ejbConfigurationUrl</name>
+              <value>${project.baseUri}/config/${targetEnv}/ejb-configuration.properties</value>
+            </environment>
+          </environments>
+          <startOptions>-Djboss.web.port=${jboss.web.port}</startOptions>
+          <jbossHome>${polopoly.work-dir}/embedded-jboss</jbossHome>
+          <logToConsole>true</logToConsole>
+          <jbossDistribution>
+            <groupId>com.polopoly.jboss</groupId>
+            <artifactId>slim-jboss-4.0.5</artifactId>
+            <version>${jboss-slim.version}</version>
+            <type>zip</type>
+          </jbossDistribution>
+          <serverPatches>
+            <serverPatch>
+              <groupId>com.polopoly</groupId>
+              <artifactId>jboss-derby-database</artifactId>
+              <version>${polopoly-db.version}</version>
+              <type>zip</type>
+            </serverPatch>
+          </serverPatches>
+          <deployments>
+            <deployment>
+              <groupId>com.polopoly</groupId>
+              <artifactId>cm-server</artifactId>
+              <version>${polopoly.version}</version>
+              <type>ear</type>
+            </deployment>
+            <deployment>
+              <groupId>com.polopoly</groupId>
+              <artifactId>connection-properties</artifactId>
+              <version>${polopoly.version}</version>
+              <type>war</type>
+            </deployment>
+            <deployment>
+              <groupId>${project.groupId}</groupId>
+              <artifactId>server-content-hub</artifactId>
+              <version>${project.version}</version>
+              <type>war</type>
+            </deployment>
+          </deployments>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.5</version>
+        <inherited>false</inherited>
+        <executions>
+          <execution>
+            <id>copy-resources</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${polopoly.work-dir}/solr</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>config/${targetEnv}/solr</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <profiles>
+    <!--
+    The following Maven build profiles are utilized by e.g. 'p:assemble-dist' when assembling the complete
+    project distribution, where the inclusion of certain resources (such as content-XML and configuration) in
+    web applications and other artifacts depend on the currently active profile(s).
+
+    Please see the Nitro documentation at http://support.polopoly.com/confluence/display/Polopoly1080/Nitro, section
+    [How-to's > How to work with profiles] in order to change the profile configuration used in this project.
+
+    Please see the Maven documentation at http://maven.apache.org/guides/introduction/introduction-to-profiles.html
+    for more general information on build profiles.
+    -->
+
+    <profile>
+      <id>run-acceptance-tests</id>
+      <modules>
+        <module>test-acceptance</module>
+      </modules>
+      <properties>
+        <targetEnv>dev</targetEnv>
+      </properties>
+    </profile>
+    <profile>
+      <id>dev</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+        <property>
+          <name>targetEnv</name>
+          <value>dev</value>
+        </property>
+      </activation>
+      <properties>
+        <targetEnv>dev</targetEnv>
+      </properties>
+    </profile>
+    <profile>
+      <id>prod</id>
+      <activation>
+        <property>
+          <name>targetEnv</name>
+          <value>prod</value>
+        </property>
+      </activation>
+      <properties>
+        <targetEnv>prod</targetEnv>
+      </properties>
+    </profile>
+  </profiles>
+</project>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <!-- Add template categories and input templates to the system template category department -->
+  <content>
+    <metadata>
+      <contentid>
+        <externalid>p.templatecategory.standardarticle</externalid>
+      </contentid>
+    </metadata>
+    <contentlist>
+     <entry withMetadata="false" mode="modify">
+       <metadata>
+         <referredContent>
+           <contentid>
+             <externalid>example.StandardArticle</externalid>
+           </contentid>
+         </referredContent>
+       </metadata>
+     </entry>
+    </contentlist>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <externalid>p.templatecategory.image</externalid>
+      </contentid>
+    </metadata>
+    <contentlist>
+     <entry withMetadata="false" mode="modify">
+       <metadata>
+         <referredContent>
+           <contentid>
+             <externalid>example.Image</externalid>
+           </contentid>
+         </referredContent>
+       </metadata>
+     </entry>
+    </contentlist>    
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <externalid>p.templatecategory.video</externalid>
+      </contentid>
+    </metadata>
+    <contentlist>
+     <entry withMetadata="false" mode="modify">
+       <metadata>
+         <referredContent>
+           <contentid>
+             <externalid>example.Video</externalid>
+           </contentid>
+         </referredContent>
+       </metadata>
+     </entry>
+    </contentlist>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <externalid>p.templatecategory.flash</externalid>
+      </contentid>
+    </metadata>
+    <contentlist>
+     <entry withMetadata="false" mode="modify">
+       <metadata>
+         <referredContent>
+           <contentid>
+             <externalid>example.Flash</externalid>
+           </contentid>
+         </referredContent>
+       </metadata>
+     </entry>
+    </contentlist>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <externalid>p.templatecategory.links</externalid>
+      </contentid>
+    </metadata>
+    <contentlist>
+     <entry withMetadata="false" mode="modify">
+       <metadata>
+         <referredContent>
+           <contentid>
+             <externalid>example.Link</externalid>
+           </contentid>
+         </referredContent>
+       </metadata>
+     </entry>
+    </contentlist>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <externalid>p.templatecategory.files</externalid>
+      </contentid>
+    </metadata>
+    <contentlist>
+     <entry withMetadata="false" mode="modify">
+       <metadata>
+         <referredContent>
+           <contentid>
+             <externalid>example.File</externalid>
+           </contentid>
+         </referredContent>
+       </metadata>
+     </entry>
+    </contentlist>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <externalid>p.siteengine.ResourceArticleTemplates.d</externalid>
+      </contentid>
+    </metadata>
+    <contentlist>
+      <entry withMetadata="false" mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.StandardArticle</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry withMetadata="false" mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.EditorialBlog</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.Image</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.Video</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.File</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.Flash</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.Link</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>p.siteengine.Stylesheet</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <externalid>p.siteengine.MyDesktopTemplateCategory.d</externalid>
+      </contentid>
+    </metadata>
+    <contentlist>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.mydesktop.moderation</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+
+</batch>

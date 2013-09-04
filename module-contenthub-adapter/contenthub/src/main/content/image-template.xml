@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+
+  <input-template name="example.contenthub.Image" label="cm.template.p.siteengine.Image.it">
+    <policy>example.content.image.ImagePolicy</policy>
+
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <type>Article</type>
+
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+    <editor contextName="orchid_THUMBENTRY">example.widget.OSearchThumbImage</editor>
+    <viewer contextName="orchid_THUMBENTRY">example.widget.OSearchThumbImage</viewer>
+
+    <param name="templateIcon">photo_scenery.png</param>
+    <param name="renderTemplateIconInSelect">true</param>
+
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">true</param>
+    <param name="EditNewState_saveAndFastInsert">false</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="PrepareInsertionState_abortAndClose">false</param>
+    <param name="PrepareInsertionState_abortAndView">true</param>
+    <param name="ViewState_copy">true</param>
+    <param name="cloneSecurityParent">currentOrHome</param>
+    <param name="titleOfNewContent">cm.template.p.siteengine.Image.it.new</param>
+
+    <field name="mainContent" input-template="p.ContentReference">
+      <param name="referenceGroup">p.AspectContent</param>
+      <param name="referenceName">mainContent</param>
+    </field>
+
+    <layout name="headerNameGroup" input-template="p.Group">
+      <param name="fieldsetClass">field p_resizable_text </param>
+      <field name="name" input-template="p.ContentName" label="cm.label.Name" required="true">
+        <param name="fieldsetClass">field text</param>
+        <param name="size">30</param>
+        <param name="inlineHelp">true</param>
+        <help>cm.template.p.siteengine.Image.it.NameHelp</help>
+        <param name="defaultUntilChanged">true</param>
+        <param name="defaultModelPath">mainContent.content.name</param>
+      </field>
+    </layout>
+    <layout name="headerDescriptionGroup" input-template="p.Group">
+      <param name="fieldsetClass">field p_resizable_text</param>
+      <field name="description" input-template="p.TextArea" label="cm.general.Description">
+        <param name="fieldsetClass">field text</param>
+        <param name="rows">2</param>
+        <param name="inlineHelp">true</param>
+        <help>cm.template.p.siteengine.Image.it.NameHelp</help>
+        <param name="defaultUntilChanged">true</param>
+        <param name="defaultModelPath">mainContent.content.description</param>
+      </field>
+    </layout>
+
+    <layout name="imagecolumns" input-template="p.ColumnHolder">
+      <layout name="imagecolumn" input-template="p.Column">
+        <layout name="imageSection" input-template="p.LabeledSection" label="cm.general.Image">
+          <layout name="imagesectionPadding" input-template="p.Group">
+            <param name="showLabel">false</param>
+            <param name="showFieldset">false</param>
+            <param name="cssClass">p_padding</param>
+            <!-- The selectable subfield is used only to work with GO out of the box. -->
+            <field name="imageType" input-template="p.SelectableSubField" label="cm.template.example.Image.ImageType" required="true">
+              <field name="image" input-template="p.FileReferenceImageManager" label="cm.general.Image" required="true">
+                <param name="referenceGroup">p.AspectContent</param>
+                <param name="referenceName">mainContent</param>
+                <param name="imageNamePath">image/filePath</param>
+                <param name="mode">singleUploadSingleSelect</param>
+                <param name="staticFilename">image</param>
+                <param name="extractExif">true</param>
+                <param name="extractIptc">true</param>
+                <param name="allowEdit">true</param>
+                <param name="maxNofPixels">8000000</param>
+                <param name="showPasteButton">false</param>
+                <param name="openEditorOnUpload">true</param>
+                <param name="openEditorOnSelect">true</param>
+                <param name="appletWidth">640</param>
+                <param name="appletHeight">480</param>
+                <!-- About the image formats: There are two edit modes, one for landscape style images and one for box style images. The landscape versions
+                  are for use in top of teaser elements and have widths that match the column widths. There are four versions depending on if the column is split using the
+                  column splitter element. Full width is considered the width of the main column (490px). Box style versions are for use inline with the text and are about
+                  thirds of the column width. -->
+                <param name="appletState">
+                <![CDATA[
+                    <imageapplet>
+                      <buttonset name="zoombuttons">
+                        <button label="Zoom In" icon="zoom_in.png" action="ZoomInImageAppletAction"/>
+                        <button label="Zoom Out" icon="zoom_out.png" action="ZoomOutImageAppletAction"/>
+                      </buttonset>
+                      <buttonset name="rotatemirrorbuttons">
+                          <button label="Rotate" icon="rotate_cw.png" action="ClockwiseRotateImageAppletAction"/>
+                          <button label="Mirror" icon="mirror.png" action="HorizontalMirrorImageAppletAction"/>
+                      </buttonset>
+                      <editmode name="landscapeEdit" label="Landscape style format" description="Landscape">
+                        <buttonset name="bs-landscapeEdit">
+                          <includebuttonset name="rotatemirrorbuttons"/>
+                          <button label="Crop" icon="crop.png" action="CropEditImageAppletAction" />
+                          <button label="Scramble" icon="photo_portrait.png" action="ScrambleEditImageAppletAction"/>
+                          <separator/>
+                          <includebuttonset name="zoombuttons"/>
+                        </buttonset>
+                        <derivative name="landscape_804" label="804px">
+                          <postprocess>
+                            <transform code="resizew804"/>
+                          </postprocess>
+                        </derivative>
+                        <derivative name="landscape_490" label="490px">
+                          <postprocess>
+                            <transform code="resizew490"/>
+                          </postprocess>
+                        </derivative>
+                        <derivative name="landscape_300" label="300px">
+                          <postprocess>
+                            <transform code="resizew300"/>
+                          </postprocess>
+                        </derivative>
+1                        <derivative name="landscape_240" label="240px">
+                          <postprocess>
+                            <transform code="resizew240"/>
+                          </postprocess>
+                        </derivative>
+                        <derivative name="landscape_174" label="174px">
+                          <postprocess>
+                            <transform code="resizew174"/>
+                          </postprocess>
+                        </derivative>
+                      </editmode>
+                      <editmode name="boxEdit" label="Box style image" description="Box editing with fixed proportios crop">
+                        <buttonset name="bs-teaserLargeRectangleEdit">
+                          <includebuttonset name="rotatemirrorbuttons"/>
+                          <button label="Crop" icon="crop.png" action="CropEditImageAppletAction">
+                            <param name="width" value="1"/>
+                            <param name="height" value="1"/>
+                          </button>
+                          <button label="Scramble" icon="photo_portrait.png" action="ScrambleEditImageAppletAction"/>
+                          <separator/>
+                          <includebuttonset name="zoombuttons"/>
+                        </buttonset>
+                        <derivative name="box_160" label="160px">
+                          <postprocess>
+                            <transform code="fitw160h160"/>
+                          </postprocess>
+                        </derivative>
+                        <derivative name="box_100" label="100px">
+                          <postprocess>
+                            <transform code="fitw100h100"/>
+                          </postprocess>
+                        </derivative>
+                        <derivative name="box_80" label="80px">
+                          <postprocess>
+                            <transform code="fitw80h80"/>
+                          </postprocess>
+                        </derivative>
+                        <derivative name="box_58" label="58px">
+                          <postprocess>
+                            <transform code="fitw58h58"/>
+                          </postprocess>
+                        </derivative>
+                      </editmode>
+                    </imageapplet>
+                  ]]>
+                </param>
+              </field>
+            </field>
+          </layout>
+        </layout>
+      </layout>
+    </layout>
+
+    <layout name="metadatacolumns" input-template="p.ColumnHolder">
+      <layout name="categorycolumn" input-template="p.Column">
+        <layout name="categorizationSection" input-template="p.LabeledSection" label="cm.general.Categorization">
+          <layout name="categorizationPadding" input-template="p.Group">
+            <param name="showLabel">false</param>
+            <param name="showFieldset">false</param>
+            <param name="cssClass">p_padding</param>
+            <field name="categorization" input-template="p.Metadata" label="">
+              <param name="categoryDimensionsAlias">sites</param>
+            </field>
+          </layout>
+        </layout>
+      </layout>
+      <layout name="metadatacolumn" input-template="p.Column">
+        <layout name="metaDataSection" input-template="p.LabeledSection" label="cm.template.p.siteengine.Image.it.TitleMetadata">
+          <layout name="metadataPadding" input-template="p.Group">
+            <param name="showLabel">false</param>
+            <param name="showFieldset">false</param>
+            <param name="cssClass">p_padding</param>
+            <field name="byline" input-template="p.TextInput" label="cm.general.Byline">
+              <param name="inlineHelp">true</param>
+              <help>cm.template.p.siteengine.Image.it.BylineHelp</help>
+              <param name="defaultUntilChanged">true</param>
+              <param name="defaultModelPath">mainContent.content.byline</param>
+            </field>
+            <field name="contact" input-template="p.TextInput" label="cm.general.Contact">
+              <param name="inlineHelp">true</param>
+              <help>cm.template.p.siteengine.Image.it.BylineHelp</help>
+              <param name="defaultUntilChanged">true</param>
+              <param name="defaultModelPath">mainContent.content.contact</param>
+            </field>
+            <field name="licenseurl" input-template="p.TextInput" label="cm.general.LicenceUrl">
+              <param name="inlineHelp">true</param>
+              <help>cm.template.p.siteengine.Image.it.LicenceUrlHelp</help>
+              <param name="defaultUntilChanged">true</param>
+              <param name="defaultModelPath">mainContent.content.licenseurl</param>
+            </field>
+          </layout>
+        </layout>
+      </layout>
+    </layout>
+
+    <output-templates mode="www">
+      <id>example.Image.ot</id>
+    </output-templates>
+  </input-template>
+</template-definition>

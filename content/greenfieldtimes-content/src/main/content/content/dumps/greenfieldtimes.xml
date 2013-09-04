@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>p.siteengine.Site</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>p.siteengine.Sites.d</externalid>
+      </security-parent>
+    </metadata>
+    
+    <contentlist group="feeds" />
+    <contentlist group="default" />
+    <contentlist group="css" />
+
+    <component group="polopoly.Content" name="name">Greenfield Times</component>
+    <component group="polopoly.ContentLists" name="feeds">feeds</component>
+    <component group="polopoly.ContentLists" name="pageLayouts">pageLayouts</component>
+    <component group="polopoly.ContentLists" name="pageLayout/selected/header/slotElements">pageLayout/selected/header/slotElements</component>
+    <component group="polopoly.ContentLists" name="polopoly.Department">default</component>
+    <component group="polopoly.ContentLists" name="articles">articles</component>
+    <component group="polopoly.ContentLists" name="pageLayout/selected/main/slotElements">pageLayout/selected/main/slotElements</component>
+    <component group="polopoly.ContentLists" name="css">css</component>
+    <component group="polopoly.ContentLists" name="pageLayout/selected/wide/slotElements">pageLayout/selected/wide/slotElements</component>
+    <component group="polopoly.ContentLists" name="pageLayout/selected/nav/slotElements">pageLayout/selected/nav/slotElements</component>
+    <component group="polopoly.ContentLists" name="pageLayout/selected/right/slotElements">pageLayout/selected/right/slotElements</component>
+    <component group="localizedstrings" name="count">0</component>
+    <component group="polopoly.Client" name="homeDepartment">true</component>
+    
+    <!--
+      <component group="domainAlias" name="mainAlias">http://localhost:8080</component>
+    -->
+    
+    <component group="cacheTime/cacheTime" name="selected_0">-1</component>
+    <component group="cacheTime/cacheTime" name="count">1</component>
+    <component group="membershipConfiguration/allowLogin" name="value">true</component>
+    <component group="membershipConfiguration/allowRegistration" name="value">true</component>
+    
+    <component group="membershipConfiguration/mailSenderAddress" name="value">no-reply@greenfieldtimes.com</component>
+    <component group="membershipConfiguration/mailSender" name="value">Greenfieldtimes</component>
+    <component group="membershipConfiguration/htmlMail" name="value">true</component>
+    <component group="membershipConfiguration/blogPage" name="count">1</component>
+
+    <contentref group="polopoly.Content" name="inputTemplateId">
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>p.siteengine.Site</externalid>
+      </contentid>
+    </contentref>
+
+    <contentref group="pageLayout/selected/header/slotElements" name="256">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>extid7.116</externalid>
+      </contentid>
+    </contentref>
+
+    <contentref group="pageLayout/selected/header/slotElements" name="0">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>extid7.107</externalid>
+      </contentid>
+    </contentref>
+
+    <contentref group="pageLayout/selected/mobileheader/slotElements" name="0">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>mobileLogotype118</externalid>
+      </contentid>
+    </contentref>
+
+    <contentref group="pageLayout/selected/mobileheader/slotElements" name="256">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>extid7.116</externalid>
+      </contentid>
+    </contentref>
+
+    <contentref group="pageLayout/selected/topheader/slotElements" name="0">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>elem.navpath</externalid>
+      </contentid>
+    </contentref>
+
+    <contentref group="pageLayout" name="selected">
+      <contentid>
+        <major>InputTemplate</major>
+        <externalid>example.DefaultPageLayout</externalid>
+      </contentid>
+    </contentref>
+
+    <contentref group="pageLayout/selected/nav/slotElements" name="0">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>extid7.105</externalid>
+      </contentid>
+    </contentref>
+  </content>
+</batch>

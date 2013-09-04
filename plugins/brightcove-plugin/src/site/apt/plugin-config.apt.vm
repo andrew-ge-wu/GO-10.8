@@ -1,0 +1,59 @@
+Installation
+
+  There are two types of installation, using as binary plugin and source plugin.
+  With binary plugin, you can directly plug & use. If you wish to do customisation,
+  you can use as source plugin
+
+* Using binary plugin
+
+  Edit $PROJECT/pom.xml and make sure the following is present:
+
++-------------------------------+
+<project>
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>${project.artifactId}</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>${project.artifactId}</artifactId>
+      <version>${project.version}</version>
+      <classifier>contentdata</classifier>
+    </dependency>
+  </dependencies>
+</project>
++-------------------------------+
+
+* Using source plugin
+
+  [[1]] Copy or link your plugin into the project you wish to use.
+
+  [[2]] Edit $PROJECT/pom.xml and make sure the following is present:
+
++-------------------------------+
+<project>
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>${project.artifactId}</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+  <modules>
+    <module>${project.artifactId}</module>
+  </modules>
+</project>
++-------------------------------+
+
+* Running the project and plugin combination
+
+  You should now be able to run the project (with your plugin in it) using:
+
+  <mvn p:run>
+
+  Login to CM GUI, you should able to see ${project.artifactId} installed.
+
+[images/configuration.png]

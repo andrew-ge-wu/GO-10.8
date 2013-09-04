@@ -1,0 +1,61 @@
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- project info ======================================================= -->
+  <name>public - management</name>
+  <artifactId>management</artifactId>
+  <packaging>war</packaging>
+
+  <parent>
+    <groupId>com.polopoly</groupId>
+    <artifactId>public</artifactId>
+    <version>10.8.0</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <!-- dependencies ======================================================= -->
+  <dependencies>
+    <dependency>
+      <groupId>com.polopoly</groupId>
+      <artifactId>polopoly</artifactId>
+      <version>${project.version}</version>
+      <scope>runtime</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>jaxen</groupId>
+          <artifactId>jaxen</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>xml-apis</groupId>
+          <artifactId>xml-apis</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>xerces</groupId>
+          <artifactId>xercesImpl</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>xerces</groupId>
+          <artifactId>xmlParserAPIs</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <!-- Exclude stuff that will be provided by the environment -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <scope>provided</scope>
+      <version>2.4</version>
+    </dependency>
+  </dependencies>
+
+  <!-- build ============================================================== -->
+  <build>
+    <finalName>management</finalName>
+
+  </build>
+
+</project>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.SecurityRootDepartment</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.Configuration</externalid>
+      </input-template>
+    </metadata>
+    <component name="name" group="polopoly.Content">SiteEngine</component>
+    <contentlist mode="reset">
+      <entry>
+        <metadata>
+          <referredContent>
+            <contentid>
+              <major>Department</major>
+              <externalid>p.siteengine.Sites.d</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry>
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>p.siteengine.Configuration.d</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.siteengine.Site</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>p.siteengine.Sites.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Greenfield Times</component>
+  </content>
+</batch>

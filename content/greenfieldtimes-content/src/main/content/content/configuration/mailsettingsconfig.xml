@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content>
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>example.MailSettingsConfig</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.MailSettings</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>p.UGCSettings</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Mail Configuration</component>
+    <component group="smtpServerHostname" name="value">localhost</component>
+    <component group="smtpServerPort" name="value">25</component>
+    <component group="smtpServerUsername" name="value"></component>
+    <component group="smtpServerPassword" name="value"></component>
+    <component group="smtpServerSocketTimeout" name="value">500</component>
+    <component group="smtpServerConnectionTimeout" name="value">500</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <externalid>p.UGCSettings</externalid>
+      </contentid>
+    </metadata>
+    <contentlist>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>example.MailSettingsConfig</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+</batch>

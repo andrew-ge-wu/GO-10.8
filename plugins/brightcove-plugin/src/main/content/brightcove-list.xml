@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+
+  <input-template name="com.atex.plugins.brightcove.empty">
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+  </input-template>
+
+  <input-template name="com.atex.plugins.brightcove.listElement.mode.teaser">
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+
+    <field name="size" input-template="p.TextInput" label="com.atex.plugins.brightcove.listElement.mode.teaser.size">
+      <policy>com.polopoly.cm.app.policy.NumberInputPolicy</policy>
+      <param name="default">1</param>
+      <param name="type">int</param>
+      <param name="size">3</param>
+    </field>
+  </input-template>
+
+  <input-template name="com.atex.plugins.brightcove.listElement.mode.slide">
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+
+    <field name="size" input-template="p.TextInput" label="com.atex.plugins.brightcove.listElement.mode.slide.size">
+      <policy>com.polopoly.cm.app.policy.NumberInputPolicy</policy>
+      <param name="default">3</param>
+      <param name="type">int</param>
+      <param name="size">3</param>
+    </field>
+  </input-template>
+
+  <input-template name="com.atex.plugins.brightcove.ListElement" label="com.atex.plugins.brightcove.listElement">
+
+    <type>LayoutElement</type>
+
+    <policy>com.atex.plugins.brightcove.ListElementPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+
+    <editor contextName="orchid_SEARCHITEM">example.widget.OSearchItemBaseWidget</editor>
+    <viewer contextName="orchid_SEARCHITEM">example.widget.OSearchItemBaseWidget</viewer>
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="renderTemplateIconInSelect">true</param>
+
+    <field name="name" input-template="p.ContentName" label="com.atex.plugins.brightcove.name" required="true" />
+    <field name="displayTitle" input-template="p.Checkbox" label="com.atex.plugins.brightcove.displaytitle" required="false" />
+    <field name="mode" input-template="p.SelectableSubField" label="com.atex.plugins.brightcove.listElement.mode">
+      <param name="inlineHelp">true</param>
+      <help>com.atex.plugins.brightcove.listElement.mode.help</help>
+      <field name="teaser" input-template="com.atex.plugins.brightcove.listElement.mode.teaser" label="com.atex.plugins.brightcove.listElement.mode.teaser" />
+      <field name="slide" input-template="com.atex.plugins.brightcove.listElement.mode.slide" label="com.atex.plugins.brightcove.listElement.mode.slide" />
+    </field>
+    <field name="maxVideo" input-template="p.TextInput" label="com.atex.plugins.brightcove.listElement.maxvideo">
+      <policy>com.polopoly.cm.app.policy.NumberInputPolicy</policy>
+      <param name="default">5</param>
+      <param name="type">int</param>
+      <param name="size">3</param>
+    </field>
+    <field name="videos" input-template="p.ContentListEntryContainer" label="com.atex.plugins.brightcove.listElement.content">
+      <param name="contentListName">videos</param>
+    </field>
+    <field name="display" input-template="p.SelectableSubField" label="com.atex.plugins.brightcove.listElement.display">
+      <param name="inlineHelp">true</param>
+      <help>com.atex.plugins.brightcove.listElement.display.help</help>
+      <field name="webtvDept" input-template="com.atex.plugins.brightcove.empty" label="com.atex.plugins.brightcove.listElement.display.webtv" />
+      <field name="selectedDept" input-template="p.ContentTreeSelect" label="com.atex.plugins.brightcove.listElement.display.specific">
+        <param name="multipleSelect">false</param>
+        <param name="allowDepartments">true</param>
+        <param name="allowArticles">false</param>
+        <param name="height">250</param>
+        <param name="width">300</param>
+        <idparam name="rootContent">
+          <externalid>p.siteengine.Sites.d</externalid>
+        </idparam>
+      </field>
+      <field name="ownDept" input-template="com.atex.plugins.brightcove.empty" label="com.atex.plugins.brightcove.listElement.display.ownhome"/>
+    </field>
+
+    <output-templates mode="www">
+      <id>com.atex.plugins.brightcove.ListElement.ot</id>
+    </output-templates>
+  </input-template>
+</template-definition>

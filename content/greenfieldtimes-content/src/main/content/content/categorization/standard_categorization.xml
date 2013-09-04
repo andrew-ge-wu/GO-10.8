@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>department.categorydimension.subject</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.CategoryTree</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>p.StandardCategorization</externalid>
+      </security-parent>
+    </metadata>
+    <component name="name" group="polopoly.Content">Subject</component>
+    <component name="value" group="changePropagation">false</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>department.categorydimension.tag.Tag</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.TagCategory</externalid>      
+      </input-template>
+      <security-parent>
+        <externalid>p.StandardCategorization</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Tag</component>
+    <component group="description" name="value">Tags</component>
+    <component name="value" group="changePropagation">true</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>department.categorydimension.tag.Person</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.TagCategory</externalid>      
+      </input-template>
+      <security-parent>
+        <externalid>p.StandardCategorization</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Person</component>
+    <component group="description" name="value">Persons mentioned in article</component>
+    <component name="value" group="changePropagation">true</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>department.categorydimension.tag.Company</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.TagCategory</externalid>      
+      </input-template>
+      <security-parent>
+        <externalid>p.StandardCategorization</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Company</component>
+    <component group="description" name="value">Company</component>
+    <component name="value" group="changePropagation">true</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>department.categorydimension.tag.Organisation</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.TagCategory</externalid>      
+      </input-template>
+      <security-parent>
+        <externalid>p.StandardCategorization</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Organization</component>
+    <component group="description" name="value">Organization</component>
+    <component name="value" group="changePropagation">true</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>department.categorydimension.tag.Location</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.TagCategory</externalid>      
+      </input-template>
+      <security-parent>
+        <externalid>p.StandardCategorization</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Location</component>
+    <component group="description" name="value">Location</component>
+    <component name="value" group="changePropagation">true</component>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <externalid>p.StandardCategorization</externalid>
+      </contentid>
+    </metadata>
+    <contentlist>
+      <entry withMetadata="false" mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>department.categorydimension.subject</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry withMetadata="false" mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>department.categorydimension.tag.Person</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry withMetadata="false" mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>department.categorydimension.tag.Company</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry withMetadata="false" mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>department.categorydimension.tag.Organisation</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry withMetadata="false" mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>department.categorydimension.tag.Tag</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry withMetadata="false" mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>department.categorydimension.tag.Location</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+</batch>

@@ -1,0 +1,180 @@
+<?xml version="1.0" ?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.IndexMapping-public-example.Resources</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.SolrIndexDefinitionHome</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.IndexMapping</externalid>
+      </input-template>
+    </metadata>
+    <component group="polopoly.Content" name="name">Public index mappings for resources</component>
+    <component group="mapping" name="name">title</component>
+  </content>
+
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.IndexMapping-internal-example.Image</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.SolrIndexDefinitionHome</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.IndexMapping</externalid>
+      </input-template>
+    </metadata>
+    <component group="polopoly.Content" name="name">Internal index mappings for images</component>
+    <component group="mapping" name="name">title</component>
+    <component group="mapping" name="description.value">text</component>
+    <component group="mapping" name="byline.value">byline</component>
+  </content>
+
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.IndexMapping-internal-example.Link</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.SolrIndexDefinitionHome</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.IndexMapping</externalid>
+      </input-template>
+    </metadata>
+    <component group="polopoly.Content" name="name">Internal index mappings for links</component>
+    <component group="mapping" name="name">title</component>
+  </content>
+
+
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.IndexMapping-internal-example.File</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.SolrIndexDefinitionHome</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.IndexMapping</externalid>
+      </input-template>
+    </metadata>
+    <component group="polopoly.Content" name="name">Internal index mappings for files</component>
+    <component group="mapping" name="name">title</component>
+    <component group="mapping" name="lead.value">text</component>
+    <component group="mapping" name="byline.value">byline</component>
+  </content>
+
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.IndexMapping-internal-example.Flash</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.SolrIndexDefinitionHome</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.IndexMapping</externalid>
+      </input-template>
+    </metadata>
+    <component group="polopoly.Content" name="name">Internal index mappings for files</component>
+    <component group="mapping" name="name">title</component>
+    <component group="mapping" name="lead.value">text</component>
+    <component group="mapping" name="byline.value">byline</component>
+  </content>
+
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.IndexMapping-internal-example.Video</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.SolrIndexDefinitionHome</externalid>
+      </security-parent>
+      <input-template>
+        <externalid>p.IndexMapping</externalid>
+      </input-template>
+    </metadata>
+    <component group="polopoly.Content" name="name">Internal index mappings for files</component>
+    <component group="mapping" name="name">title</component>
+    <component group="mapping" name="lead.value">text</component>
+    <component group="mapping" name="byline.value">byline</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.PublicIndexDefinition</externalid>
+      </contentid>
+    </metadata>
+    <contentref group="mappers" name="example.Image">
+      <contentid>
+        <externalid>p.IndexMapping-public-example.Resources</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="mappers" name="example.File">
+      <contentid>
+        <externalid>p.IndexMapping-public-example.Resources</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="mappers" name="example.Flash">
+      <contentid>
+        <externalid>p.IndexMapping-public-example.Resources</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="mappers" name="example.Link">
+      <contentid>
+        <externalid>p.IndexMapping-public-example.Resources</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="mappers" name="example.Video">
+      <contentid>
+        <externalid>p.IndexMapping-public-example.Resources</externalid>
+      </contentid>
+    </contentref>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.InternalIndexDefinition</externalid>
+      </contentid>
+    </metadata>
+    <contentref group="mappers" name="example.Image">
+      <contentid>
+        <externalid>p.IndexMapping-internal-example.Image</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="mappers" name="example.File">
+      <contentid>
+        <externalid>p.IndexMapping-internal-example.File</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="mappers" name="example.Flash">
+      <contentid>
+        <externalid>p.IndexMapping-internal-example.Flash</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="mappers" name="example.Link">
+      <contentid>
+        <externalid>p.IndexMapping-internal-example.Link</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="mappers" name="example.Video">
+      <contentid>
+        <externalid>p.IndexMapping-internal-example.Video</externalid>
+      </contentid>
+    </contentref>
+  </content>
+</batch>

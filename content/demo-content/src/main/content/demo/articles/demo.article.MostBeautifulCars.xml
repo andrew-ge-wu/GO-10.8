@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+
+<content clear="true">
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.MostBeautifulCars</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="author" name="value">Wikipedia</component>
+<component group="body" name="value"><![CDATA[
+    <p>Few objects hold such acclaim and evoke such strong feelings of want as luxury cars. Every era in automobile history has had a group of car marques and models that have been both expensive to purchase and superior in both design and engineering. It has been said that luxury cars is the realm of "individualistic consideration, and coachwork that could be tailored to an owner like a bespoke suit", as Dennis Alder wrote. Here, we list our favorite ten such cars, ever.</p>
+
+
+    <p><b>1930 Mercedes-Benz Count Trossi SSK</b></p>
+    <p>The classic Mercedes-Benz SSK is a roadster built by German automobile manufacturer Mercedes-Benz between 1928 and 1932. Its name is an acronym of Super Sport Kurz, with the last word being the German for "short", a reference to the fact that the car was based on the earlier Mercedes-Benz S, but with 19 inches (480 mm) chopped from the chassis to make the car lighter and more agile for racing. Only four or five entirely original models remain, and their scarcity and rich heritage make them among the most sought after cars in the world; a 1929 model was auctioned at Bonhams in Chichester in September 2004 for UK£4.17 million (US$7.4 million), making it the second most expensive automobile ever sold.
+    </p>
+    <p><b>Jaguar E-Type</b></p>
+    <p>The Jaguar E-Type is a British automobile manufactured by Jaguar between 1961 and 1975. Its combination of good looks, high performance, and competitive pricing established the marque as an icon of 1960s motoring. A great success for Jaguar, over seventy thousand E-Types were sold during its lifespan. Today, the most sought after is the Series 1, which can be recognised by glass covered headlights (up to 1967), small "mouth" opening at the front, signal lights and tail-lights above bumpers and exhaust tips under the license plate in the rear.
+    </p>
+    <p><b>Bugatti Veyron 16.4</b></p>
+    <p>The Bugatti Veyron EB 16.4 is a German mid-engined grand touring car. The Super Sport version is the fastest production car in the world, with an average top speed of 431.072 kilometres per hour.  It was named "Car of the Decade" (2000–2009) by the BBC television programme Top Gear. Only 200 have ever been sold and the going price for the deluxe model is over €1,900,000 euro.
+    </p>
+    <p><b>1938 Talbot-Lago T150C SS Teardrop Coupe</b></p>
+    <p>Designed by Walter Becchia, the T150C SS Teardrop Coupe featured transverse leaf sprung independent suspension. These ranged from the two litre T11, the 3 litre T17, four litre T23 and sporting Spéciale and the now legendary SS. Lago was an excellent engineer, who developed the existing six-cylinder engine into a high-performance 4-litre one. The sporting six-cylinder models had a great racing history. The body was made by excellent coachbuilders such as Figoni & Falaschi or Saoutchik.
+    </p>
+    <p><b>Pagani Zonda</b></p>
+    <p>The Pagani Zonda is a mid-engined sports car produced by Pagani in Italy. It debuted in 1999 and continues through the present, with production proceeding at roughly 10 cars per year. As of June 2009, 106 Zondas had been built, including test mules. Both 2-seat coupe and convertible versions have been produced. Construction is mainly of carbon fiber.
+    </p>
+    <p><b>1967 Shelby Mustang Eleanor GT 500</b></p>
+    <p>The Shelby Mustang is a high performance variant of the Ford Mustang built from 1965 through 1970. These cars are sought-after today, with some examples selling for more than $200,000. Shelby only produced 1003 of these cars. Most Hertz cars featured gold LeMans stripes and rocker panel stripes. Some were white with blue stripes. Early Hertz cars were available with four-speed manual transmissions until so many cars were returned from rental with burned and broken clutch assemblies that all of the later cars shipped to Hertz were equipped with an automatic transmission. There are stories that many were rented to use as production class cars at SCCA events, returned with different engines, holes where roll bars had been welded in, etc.
+    </p>
+    <p><b>Ferrari Dino</b>
+    </p><p>Dino was a brand for mid-engined, rear-drive sports cars produced by Ferrari from 1968 to 1976. The Dino brand was meant to be used for cars with engines that had fewer than 12 cylinders, reserving the Ferrari name for the V-12 and flat 12 models.  The Dino is lauded by many for its intrinsic driving qualities and groundbreaking design. In 2004, Sports Car International placed the car at number six on its list of Top Sports Cars of the 1970s. Motor Trend Classic placed the 206/246 at number seven in their list of the 10 "Greatest Ferraris of all time".
+    </p>
+    <p><b>1955 Mercedes-Benz 300SL Coupe</b>
+    </p><p>The Mercedes-Benz 300SL was introduced in 1954 as a two-seat, closed sports car with distinctive gull-wing doors. Later it was offered as an open roadster. It was the fastest production car of its day. The 300SL was best known for both its distinctive gull wing doors and being the first-ever gasoline-powered car equipped with fuel injection directly into the combustion chamber. 
+    </p>
+    <p><b>Rolls-Royce Phantom</b>
+    </p><p>The Rolls-Royce Phantom, especially the Phantom IV is the most exclusive Rolls-Royce model ever built. Only 18 were made between 1950 and 1956, exclusively for royalty and heads of state. Of these, 16 have survived. Rolls-Royce Phantom was the car preferred by the Royal Family. Other owners included the Queen's sister, HRH The Princess Margaret, The Countess of Snowdon and the Spanish Head of State, General Francisco Franco, whose three customised Phantom IVs (two limousines and a cabriolet) are still in ceremonial service with HCM King Juan Carlos I of Spain.
+    </p>
+    <p><b>Aston Martin DB4 GT Zagato</b>
+    </p><p>The Aston Martin DB4 GT Zagato was introduced in October 1960 at the London Motor Show. It was effectively a DB4 GT improved by the Zagato factory in Italy, by Ercole Spada. The Zagato's engine produced 314 hp (234 kW), a 0 to 60 mph (97 km/h) acceleration of just 6.1 seconds and a top speed of 154 mph (246 km/h). Initially the factory had plans to produce 25 cars, but demand wasn't as strong as expected and production ceased at the 20th unit. Nowadays, due to the rarity and popularity of the DB4 GT Zagato, the cars are worth a considerable amount of money and may be classed as priceless. At an auction in 1990, one Zagato sold for £1.7 million.
+    </p>
+
+    <p><i>This article was pieced together from different parts of <a href="http://en.wikipedia.org/wiki/Luxury_vehicle">Wikipedia</a> and is reproduced here in accordance with <a href="http://creativecommons.org/licenses/by/2.5/">CC-Attribution-Generic 2.5.</a></i></p>
+    ]]></component>
+
+<component group="polopoly.Content" name="name">Luxury car classics: Our ten favorites</component>
+<component group="polopoly.ContentLists" name="elements/slotElements">elements/slotElements</component>
+<component group="polopoly.ContentLists" name="rightColumn/slotElements">rightColumn/slotElements</component>
+<component group="polopoly.ContentLists" name="images">images</component>
+<component group="polopoly.ContentLists" name="topimages">topimages</component>
+<component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+<component group="p.Inbox" name="showContent">true</component>
+<component group="lead" name="value">Few objects hold such acclaim and evoke such strong feelings of want as luxury cars. Every era in automobile history has had a group of car marques and models that have been both expensive to purchase and superior in both design and engineering. It has been said that luxury cars is the realm of "individualistic consideration, and coachwork that could be tailored to an owner like a bespoke suit", as Dennis Alder wrote. Here, we list our favorite ten such cars, ever.</component>
+
+<component group="onlineOnly" name="value">false</component>
+<component group="associatedSites" name="count">0</component>
+<component group="p.AssociatedUsers" name="associatedUsers">sysadmin</component>
+<component group="elements/inheritSetting" name="count">1</component>
+<component group="elements/inheritSetting" name="selected_0">default</component>
+<component group="categorization" name="value">{
+  "dimensions": [
+    {
+      "id": "department.categorydimension.tag.Person",
+      "name": "Person",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Organisation",
+      "name": "Organisation",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Tag",
+      "name": "Tag",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Location",
+      "name": "Location",
+      "enumerable": false,
+      "entities": []
+    },
+    {
+      "id": "department.categorydimension.tag.Company",
+      "name": "Company",
+      "enumerable": false,
+      "entities": [
+        {
+          "id": "Ferrari",
+          "name": "Ferrari",
+          "entities": [],
+          "attributes": []
+        },
+        {
+          "id": "Jaguar",
+          "name": "Jaguar",
+          "entities": [],
+          "attributes": []
+        },
+        {
+          "id": "Rolls Royce",
+          "name": "Rolls Royce",
+          "entities": [],
+          "attributes": []
+        },
+        {
+          "id": "Mustang",
+          "name": "Mustang",
+          "entities": [],
+          "attributes": []
+        }
+      ]
+    }
+  ]
+}</component>
+<component group="rightColumn/inheritSetting" name="count">1</component>
+<component group="rightColumn/inheritSetting" name="selected_0">default</component>
+<component group="p.Content.state" name="onlineState">true</component>
+<contentref group="images" name="-1280">
+<contentid>
+<externalid>example.demo.image.RollsRoycePhantom</externalid>
+</contentid>
+</contentref>
+<contentref group="images" name="0">
+<contentid>
+<externalid>example.demo.image.AstonMartin</externalid>
+</contentid>
+</contentref>
+<contentref group="images" name="-768">
+<contentid>
+<externalid>example.demo.image.JaguarXke</externalid>
+</contentid>
+</contentref>
+<contentref group="images" name="-1024">
+<contentid>
+<externalid>example.demo.image.PaganiZonda</externalid>
+</contentid>
+</contentref>
+<contentref group="images" name="-512">
+<contentid>
+<externalid>example.demo.image.FerrariDino</externalid>
+</contentid>
+</contentref>
+<contentref group="images" name="-1536">
+<contentid>
+<externalid>example.demo.image.ShelbyMustang</externalid>
+</contentid>
+</contentref>
+<contentref group="images" name="-1792">
+<contentid>
+<externalid>example.demo.image.TalbotLago</externalid>
+</contentid>
+</contentref>
+<contentref group="images" name="-256">
+<contentid>
+<externalid>example.demo.image.BugattiVeyron</externalid>
+</contentid>
+</contentref>
+<contentref group="images" name="-2048">
+<contentid>
+<externalid>example.demo.image.FerrariEnzo</externalid>
+</contentid>
+</contentref>
+<contentref group="elements/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MostBeautifulCars.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="0">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MostBeautifulCars.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="rightColumn/slotElements" name="256">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MostBeautifulCars.RelatedContent</externalid>
+  </contentid>
+</contentref>
+<contentref group="comments_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MostBeautifulCars.Comments</externalid>
+  </contentid>
+</contentref>
+<contentref group="bookmarks_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MostBeautifulCars.Bookmarks</externalid>
+  </contentid>
+</contentref>
+<contentref group="relatedContent_created" name="created">
+  <contentid>
+    <major>LayoutElement</major>
+    <externalid>example.demo.article.MostBeautifulCars.RelatedContent</externalid>
+  </contentid>
+</contentref>
+</content>
+</batch>

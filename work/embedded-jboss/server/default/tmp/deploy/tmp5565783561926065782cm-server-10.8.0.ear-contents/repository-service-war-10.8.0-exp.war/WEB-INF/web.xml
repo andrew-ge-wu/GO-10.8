@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+                             http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4">
+
+  <display-name>Polopoly Repository Service Web Application</display-name>
+  <description>This is Polopoly Repository Service Web Application.</description>
+
+  <!--====================== Application name -->
+  <context-param>
+    <param-name>p.applicationName</param-name>
+    <param-value>ejbhat</param-value>
+  </context-param>
+
+  <!--====================== Heartbeat filter -->
+  <!-- filter>
+    <filter-name>pacemaker</filter-name>
+    <filter-class>com.polopoly.application.servlet.ApplicationHeartbeatFilter</filter-class>
+    <init-param>
+      <param-name>heartbeat.scheduleType</param-name>
+      <param-value>fixedRate</param-value>
+    </init-param>
+    <init-param>
+      <param-name>heartbeat.startThread</param-name>
+      <param-value>false</param-value>
+    </init-param>
+    <init-param>
+      <param-name>heartbeat.interval</param-name>
+      <param-value>100000</param-value>
+    </init-param>
+  </filter -->
+
+  <!-- Perhapps not needed since pacemaker filter uses it's own thread -->
+  <!-- filter-mapping>
+    <filter-name>pacemaker</filter-name>
+    <url-pattern>/status</url-pattern>
+  </filter-mapping -->
+
+  <!--====================== Application initilizer -->
+  <listener>
+    <listener-class>com.polopoly.application.RecorderInitializationContextListener</listener-class>
+  </listener>
+
+  <!--======================  Status servlet -->
+  <servlet>
+    <servlet-name>mbeanstatus</servlet-name>
+    <servlet-class>com.polopoly.management.servlet.StatusServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>mbeanstatus</servlet-name>
+    <url-pattern>/status</url-pattern>
+  </servlet-mapping>
+
+  <!--======================  EJB local interfaces -->
+  <ejb-local-ref id="EJBLocalRef_3">
+    <ejb-ref-name>ejb/TxRecorderServiceLocal</ejb-ref-name>
+    <ejb-ref-type>Session</ejb-ref-type>
+    <local-home>com.polopoly.ejb.cm.TxRecorderServiceLocalHome</local-home>
+    <local>com.polopoly.ejb.cm.TxRecorderServiceLocal</local>
+    <ejb-link>TxRecorderService</ejb-link>
+  </ejb-local-ref>
+
+</web-app>
+

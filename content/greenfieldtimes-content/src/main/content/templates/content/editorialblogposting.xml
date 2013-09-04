@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+
+  <!-- 
+    WARNING: The Editorial Blog functionality contained in Greenfield Times is
+    intended to support a reasonably small flow of editorial blog content. It is
+    NOT intended as a large-scale publishing tool where the amount of postings
+    for any single blog becomes more than trivial.
+    
+    An individual blog should not be used for more than a few hundred postings.
+    Anything more will inevitably lead to a rapidly decreasing performance, mainly
+    experienced while saving new blog postings.
+   -->
+
+  <input-template name="example.EditorialBlogPosting" label="cm.template.example.EditorialBlogPosting.it">
+    <policy>example.content.editorialblog.BlogPostingPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <editor contextName="orchid_SEARCHITEM">example.widget.OSearchItemBaseWidget</editor>
+    <viewer contextName="orchid_SEARCHITEM">example.widget.OSearchItemBaseWidget</viewer>
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+    <type>Article</type>
+    <param name="templateIcon">note.png</param>
+    <content-list name="topimages" input-template="example.ImageContentListWrapper" />
+    <content-list name="images" input-template="example.ImageContentListWrapper" />
+    <content-list name="default" input-template="example.ArticleContentListWrapper" />
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">false</param>
+    <param name="EditNewState_saveAndView">true</param>
+    <param name="ViewState_copy">true</param>
+    <param name="cloneSecurityParent">currentOrHome</param>
+    <param name="titleOfNewContent">cm.template.example.EditorialBlogPosting.it.new</param>
+    <field name="contentVersionLimiter" input-template="p.ContentVersionLimiter">
+      <param name="maxVersions">8</param>
+    </field>
+  
+    <layout name="menu" input-template="p.PageMenu">
+      <layout name="text" input-template="p.Page" label="cm.template.p.siteengine.StandardArticle.it.TextAndImages">
+        <layout name="holder" input-template="p.ColumnHolder">
+          <layout name="textColumn" input-template="p.Column">
+            <field name="blog" input-template="example.ParentEditorialBlogLink" label="cm.template.example.EditorialBlog" />
+            <field name="name" input-template="p.ContentName" label="cm.label.Title" required="true">
+              <param name="style">font-size: 16px; font-weight: bold; width: 510px;</param>
+            </field>
+
+            <field name="body" input-template="p.FCKEditor" label="cm.label.Text">
+              <param name="width">518</param>
+              <param name="height">400</param>
+              <param name="showPasteButton">false</param>
+              <param name="LinkBrowser">false</param>
+              <param name="LinkUpload">false</param>
+              <param name="ImageBrowser">false</param>
+              <param name="ImageUpload">false</param>
+              <param name="ProcessHTMLEntities">false</param>
+            </field>
+            
+            <field name="author" input-template="p.TextInput" label="cm.label.Author" />
+          </layout>
+          <layout name="metaColumn" input-template="p.Column">
+            <field name="publishDate" input-template="p.OptionalDateTime" label="cm.general.PublishedDate">
+              <help>cm.template.p.siteengine.StandardArticle.it.PublishedDateHelp</help>
+              <param name="inlineHelp">true</param>
+              <param name="saveDefaultValue">commitTime</param>
+              <param name="showSeconds">false</param>
+            </field>
+            <field name="categorization" input-template="p.Metadata" label="cm.general.Categorization"></field>
+          </layout>
+        </layout>
+      </layout>
+      <layout name="elements" input-template="p.Page" label="cm.template.p.siteengine.StandardArticle.it.Elements">
+        <layout name="columns" input-template="p.ColumnHolder">
+          <layout name="mainColumn" input-template="p.Column">
+            <layout name="mainColumnComment" input-template="p.Comment"
+                    label="cm.template.p.siteengine.StandardArticle.it.Elements">
+            </layout>
+            <field name="elements" input-template="p.siteengine.layout.Slot.it"/>
+          </layout>
+        </layout>
+      </layout>
+      <!-- NOTE: the default blog element in Greenfield Times does not support time state controlled postings -->
+    </layout>
+    <output-templates mode="www">
+      <id>example.EditorialBlogPosting.ot</id>
+    </output-templates>
+    <output-templates mode="link">
+      <id>example.LinkEditorialBlogPosting.ot</id>
+    </output-templates>
+  </input-template>
+  <output-template name="example.EditorialBlogPosting.ot" input-template="p.siteengine.ArticleOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/www/editorialblogposting.vm
+      </component>
+
+      <contentref group="output/controller" name="selected">
+        <contentid>
+          <externalid>p.siteengine.JavaClassRenderController</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/controller/selected/renderControllerClass" name="value">example.content.editorialblog.RenderControllerBlogPosting</component>
+    </content-xml>
+  </output-template>
+  <output-template name="example.LinkEditorialBlogPosting.ot" input-template="p.siteengine.ArticleOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/link/editorialblogposting.vm
+      </component>
+
+      <contentref group="output/controller" name="selected">
+        <contentid>
+          <externalid>p.siteengine.JavaClassRenderController</externalid>
+        </contentid>
+      </contentref>
+    </content-xml>
+  </output-template>
+</template-definition>

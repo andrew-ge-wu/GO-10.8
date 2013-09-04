@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content>
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>p.KeyboardShortcuts</externalid>
+      </contentid>
+      <security-parent>
+        <externalid>p.SystemDepartment</externalid>
+      </security-parent>
+    </metadata>
+    <!--        
+        For a complete reference of customizable bindings see the Developer's Guide section:
+        Reference Guides - Developing the user interface - Customizing keyboard shortcut bindings
+        e.g. <component group="actions" name="Save">s</component>        
+    -->
+  </content>
+</batch>

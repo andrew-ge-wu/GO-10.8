@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content>
+    <metadata>
+      <contentid>
+        <externalid>p.DefaultModelMapping</externalid>
+      </contentid>
+    </metadata>
+    <component group="mapping_greenfield" name="example.contenthub.Image">example.greenfieldtimes.adapter.ImageModelController</component>
+    <component group="variant_greenfield" name="from_example.contenthub.StandardArticle">example.data.ArticleMapper</component>
+  </content>
+</batch>

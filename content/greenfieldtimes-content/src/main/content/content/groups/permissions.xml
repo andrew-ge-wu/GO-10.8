@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </contentid>
+    </metadata>
+    <acl>
+      <!-- Admin permissions for GT -->
+
+      <entry mode="reset">
+        <principal group="Greenfield times administrators" />
+
+        <!-- Articles -->
+        <addpermission>1READ</addpermission>
+        <addpermission>1WRITE</addpermission>
+        <addpermission>1CREATE</addpermission>
+        <addpermission>1REMOVE</addpermission>
+
+        <!-- Departments -->
+        <addpermission>2READ</addpermission>
+        <addpermission>2WRITE</addpermission>
+        <addpermission>2CREATE</addpermission>
+
+        <!-- Alias -->
+        <addpermission>4READ</addpermission>
+        <addpermission>4WRITE</addpermission>
+
+        <!-- Layout Elements -->
+        <addpermission>7READ</addpermission>
+        <addpermission>7WRITE</addpermission>
+        <addpermission>7CREATE</addpermission>
+
+        <!-- Reference Meta Data -->
+        <addpermission>13READ</addpermission>
+        <addpermission>13WRITE</addpermission>
+        <addpermission>13CREATE</addpermission>
+
+        <!-- User Data -->
+        <addpermission>18READ</addpermission>
+        <addpermission>18WRITE</addpermission>
+        <addpermission>18CREATE</addpermission>
+
+        <!-- Community -->
+        <addpermission>19READ</addpermission>
+        <addpermission>19WRITE</addpermission>
+        <addpermission>19CREATE</addpermission>
+        <addpermission>19REMOVE</addpermission>
+      </entry>
+
+      <!-- Editor permissions for GT -->
+
+      <entry mode="reset">
+        <principal group="Greenfield times editors" />
+
+        <!-- Articles -->
+        <addpermission>1READ</addpermission>
+        <addpermission>1WRITE</addpermission>
+        <addpermission>1CREATE</addpermission>
+
+        <!-- Departments -->
+        <addpermission>2READ</addpermission>
+        <addpermission>2WRITE</addpermission>
+        <addpermission>2CREATE</addpermission>
+
+        <!-- Alias -->
+        <addpermission>4READ</addpermission>
+        <addpermission>4WRITE</addpermission>
+
+        <!-- Layout Elements -->
+        <addpermission>7READ</addpermission>
+        <addpermission>7WRITE</addpermission>
+        <addpermission>7CREATE</addpermission>
+
+        <!-- Reference Meta Data -->
+        <addpermission>13READ</addpermission>
+        <addpermission>13WRITE</addpermission>
+        <addpermission>13CREATE</addpermission>
+      </entry>
+
+      <!-- Moderator permissions for GT -->
+
+      <entry mode="reset">
+        <principal group="Greenfield times moderators" />
+        <addpermission>19WRITE</addpermission>
+      </entry>
+    </acl>
+  </content>
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>GreyhoundPost.d</externalid>
+      </contentid>
+    </metadata>
+    <acl>
+      <!-- Admin permissions for GH -->
+
+      <entry mode="reset">
+        <principal group="Greyhound post administrators" />
+
+        <!-- Articles -->
+        <addpermission>1READ</addpermission>
+        <addpermission>1WRITE</addpermission>
+        <addpermission>1CREATE</addpermission>
+        <addpermission>1REMOVE</addpermission>
+
+        <!-- Departments -->
+        <addpermission>2READ</addpermission>
+        <addpermission>2WRITE</addpermission>
+        <addpermission>2CREATE</addpermission>
+
+        <!-- Layout Elements -->
+        <addpermission>7READ</addpermission>
+        <addpermission>7WRITE</addpermission>
+        <addpermission>7CREATE</addpermission>
+
+        <!-- Reference Meta Data -->
+        <addpermission>13READ</addpermission>
+        <addpermission>13WRITE</addpermission>
+        <addpermission>13CREATE</addpermission>
+
+        <!-- User Data -->
+        <addpermission>18READ</addpermission>
+        <addpermission>18WRITE</addpermission>
+        <addpermission>18CREATE</addpermission>
+
+        <!-- Community -->
+        <addpermission>19READ</addpermission>
+        <addpermission>19WRITE</addpermission>
+        <addpermission>19CREATE</addpermission>
+        <addpermission>19REMOVE</addpermission>
+      </entry>
+
+      <!-- Editor permissions for GH -->
+
+      <entry mode="reset">
+        <principal group="Greyhound post editors" />
+
+        <!-- Articles -->
+        <addpermission>1READ</addpermission>
+        <addpermission>1WRITE</addpermission>
+        <addpermission>1CREATE</addpermission>
+
+        <!-- Departments -->
+        <addpermission>2READ</addpermission>
+        <addpermission>2WRITE</addpermission>
+        <addpermission>2CREATE</addpermission>
+
+        <!-- Layout Elements -->
+        <addpermission>7READ</addpermission>
+        <addpermission>7WRITE</addpermission>
+        <addpermission>7CREATE</addpermission>
+
+        <!-- Reference Meta Data -->
+        <addpermission>13READ</addpermission>
+        <addpermission>13WRITE</addpermission>
+        <addpermission>13CREATE</addpermission>
+      </entry>
+
+      <!-- Moderator permissions for GH -->
+
+      <entry mode="reset">
+        <principal group="Greyhound post moderators" />
+        <addpermission>19WRITE</addpermission>
+      </entry>
+    </acl>
+  </content>
+</batch>

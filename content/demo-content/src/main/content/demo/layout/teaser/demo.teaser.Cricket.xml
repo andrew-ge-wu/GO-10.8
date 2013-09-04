@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.Cricket</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="titleFontSize" name="value">20</component> 
+	<component group="articles" name="contentListMaxSize">1</component> 
+	<component group="polopoly.Content" name="name">India Wins Test Cricket Series</component> 
+	<component group="teaser" name="value">India have drawn the third Test cricket match against England at The Oval, London, England.</component> 
+	<component group="image" name="selected">landscape</component> 
+	<component group="image" name="landscape_height">323</component> 
+	<component group="image" name="landscape_x">110</component> 
+	<component group="image" name="landscape_y">0</component> 
+	<component group="image" name="landscape_width">214</component> 
+	<component group="polopoly.ContentLists" name="articles">articles</component> 
+	<component group="breakingNews" name="value">false</component> 
+	<component group="titleLetterSpacing" name="value">1</component>
+    <contentref group="articles" name="0">
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.Cricket</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="image" name="image">
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.Cricket</externalid>
+      </contentid>
+    </contentref>
+  </content>
+</batch>

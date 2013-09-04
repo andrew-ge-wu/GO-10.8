@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <name>greenfieldtimes-example - Front Web Application</name>
+
+  <groupId>com.polopoly.sites.greenfieldtimes-example</groupId>
+  <artifactId>webapp-front</artifactId>
+  <packaging>war</packaging>
+
+  <parent>
+    <groupId>com.polopoly.sites.greenfieldtimes-example</groupId>
+    <artifactId>top</artifactId>
+    <version>10.8.0</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>webapp-dispatcher</artifactId>
+      <version>${project.version}</version>
+      <type>war</type>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <finalName>ROOT</finalName>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.1.1</version>
+        <configuration>
+          <dependentWarExcludes>WEB-INF/classes/preview/**,_preview/**</dependentWarExcludes>
+          <packagingExcludes>WEB-INF/lib/servlet-api-*.jar</packagingExcludes>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.polopoly.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>${jetty-plugin.version}</version>
+        <configuration>
+          <scanIntervalSeconds>${polopoly.jetty-scanIntervalSeconds}</scanIntervalSeconds>
+          <jettyConfig>${project.parent.basedir}/config/${targetEnv}/jetty-jmx.xml</jettyConfig>
+          <webAppConfig>
+            <contextPath>/</contextPath>
+          </webAppConfig>
+          <systemProperties>
+            <systemProperty>
+              <name>clientCacheBaseDir</name>
+              <value>${project.build.directory}/tmp</value>
+            </systemProperty>
+            <systemProperty>
+              <name>p.connectionPropertiesUrl</name>
+              <value>${polopoly.connection-properties}</value>
+            </systemProperty>
+          </systemProperties>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

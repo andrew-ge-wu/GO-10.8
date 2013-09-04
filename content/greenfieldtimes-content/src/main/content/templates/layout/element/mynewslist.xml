@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.MyNewsListElement" label="cm.template.example.MyNewsListElement">
+    <policy>example.layout.element.mynewslist.MyNewsListElementPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <type>LayoutElement</type>
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="titleOfNewContent">cm.template.example.MyNewsListElement.new</param>
+    <param name="templateIcon">news.png</param>
+    <param name="renderTemplateIconInSelect">true</param>
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+    <field name="name" input-template="p.ContentName" label="cm.label.Name" required="false">
+      <param name="inlineHelp">true</param>
+    </field>
+    <field name="publishingQueues" input-template="p.ContentListEntryContainer" label="cm.template.example.MyNewsListElement.AvailablePublishingQueues">
+      <param name="contentListName">publishingQueues</param>
+      <param name="showActionButtonsInViewMode">false</param>
+      
+      <help>cm.template.example.MyNewsListElement.AvailablePublishingQueues.Help</help>
+      <param name="inlineHelp">true</param>
+    </field>
+      <field name="defaultPublishingQueues" input-template="p.ContentListEntryContainer" label="cm.template.example.MyNewsListElement.DefaultPublishingQueues">
+      <param name="contentListName">defaultPublishingQueues</param>
+      <param name="showActionButtonsInViewMode">false</param>
+      
+      <help>cm.template.example.MyNewsListElement.DefaultPublishingQueues.Help</help>
+      <param name="inlineHelp">true</param>
+    </field>
+    <field name="persist" input-template="p.Checkbox" label="cm.template.example.MyNewsListElement.Persist">
+      <help>cm.template.example.MyNewsListElement.Persist.Help</help>
+      <param name="inlineHelp">true</param>
+      <param name="checked">false</param>
+    </field>
+    <output-templates mode="www">
+      <id>example.MyNewsListElement.ot</id>
+    </output-templates>
+  </input-template>
+  <output-template name="example.MyNewsListElement.ot" input-template="p.siteengine.ElementOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/www/mynewslist.vm</component>
+      <contentref group="output/controller" name="selected">
+        <contentid>
+          <externalid>p.siteengine.JavaClassRenderController</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/controller/selected/renderControllerClass" name="value">example.layout.element.mynewslist.RenderControllerMyNewsListElement</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+    </content-xml>
+  </output-template>
+</template-definition>

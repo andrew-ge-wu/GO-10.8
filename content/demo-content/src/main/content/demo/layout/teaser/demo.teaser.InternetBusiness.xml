@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content clear="true">
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>example.demo.teaser.InternetBusiness</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.TeaserElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>GreenfieldTimes.d</externalid>
+      </security-parent>
+    </metadata>
+	<component group="titleFontSize" name="value">20</component> 
+	<component group="articles" name="contentListMaxSize">1</component> 
+	<component group="teaserFontSize" name="value">14</component> 
+	<component group="polopoly.Content" name="name">China's Economy Surpasses Japan's in Second Quarter</component> 
+	<component group="teaser" name="value">China's economy surpassed Japan's during the second quarter of 2010, and now is the second largest world economic power. China's economy already is larger than Japan's in the fourth quarter of most years, and many expect that the world's most populous country will soon cement its place as the world's second largest economy all year round.</component> 
+	<component group="image" name="selected">landscape</component> 
+	<component group="image" name="landscape_height">207</component> 
+	<component group="image" name="landscape_x">0</component> 
+	<component group="image" name="landscape_y">89</component> 
+	<component group="image" name="landscape_width">500</component> 
+	<component group="polopoly.ContentLists" name="articles">articles</component> 
+	<component group="breakingNews" name="value">false</component>
+    <contentref group="articles" name="0">
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.article.InternetBusiness</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="image" name="image">
+      <contentid>
+        <major>Article</major>
+        <externalid>example.demo.image.InternetBusiness</externalid>
+      </contentid>
+    </contentref>
+  </content>
+</batch>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <batch>
+    <content>
+      <metadata>
+        <contentid>
+          <major>Department</major>
+          <externalid>example.TemplateContents.d</externalid>
+        </contentid>
+        <security-parent>
+          <externalid>p.siteengine.Configuration.d</externalid>
+        </security-parent>
+        <input-template>
+          <externalid>p.Configuration</externalid>
+        </input-template>
+      </metadata>
+      <component name="name" group="polopoly.Content">Template Content</component>
+      <contentlist mode="reset">
+        <entry mode="modify" withMetadata="false">
+          <metadata>
+            <referredContent>
+              <contentid>
+                <externalid>example.BookmarkTemplate</externalid>
+              </contentid>
+            </referredContent>
+          </metadata>
+        </entry>
+        <entry mode="modify" withMetadata="false">
+          <metadata>
+            <referredContent>
+              <contentid>
+                <externalid>example.CommentTemplate</externalid>
+              </contentid>
+            </referredContent>
+          </metadata>
+        </entry>
+        <entry mode="modify" withMetadata="false">
+          <metadata>
+            <referredContent>
+              <contentid>
+                <externalid>example.RelatedContentTemplate</externalid>
+              </contentid>
+            </referredContent>
+          </metadata>
+        </entry>
+      </contentlist>
+    </content>
+  </batch>
+  <batch>
+    <content>
+      <metadata>
+        <contentid>
+          <major>Department</major>
+          <externalid>p.siteengine.Configuration.d</externalid>
+        </contentid>
+        <input-template>
+          <externalid>p.Configuration</externalid>
+        </input-template>
+      </metadata>
+      <contentlist>
+        <entry mode="modify" withMetadata="false">
+          <metadata>
+            <referredContent>
+              <contentid>
+                <major>Department</major>
+                <externalid>example.TemplateContents.d</externalid>
+              </contentid>
+            </referredContent>
+          </metadata>
+        </entry>
+      </contentlist>
+    </content>
+  </batch>
+</batch>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="p.siteengine.SiteUserData" label="cm.template.p.siteengine.SiteUserData">
+    <policy>example.paywall.PremiumUserDataPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    <type>Content</type>
+    <param name="ViewState_refresh">true</param>
+    <field name="screenName" input-template="p.TextInput"
+           label="cm.template.p.siteengine.SiteUserData.ScreenName" />
+    <field name="engagement" input-template="p.Engagement" />
+  </input-template>
+</template-definition>

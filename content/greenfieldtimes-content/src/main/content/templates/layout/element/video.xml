@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.VideoElement" label="cm.template.example.VideoElement">
+    <policy>example.layout.element.ElementPolicy</policy>
+
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+
+    <type>LayoutElement</type>
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="titleOfNewContent">cm.template.example.VideoElement.new</param>
+    <param name="templateIcon">film.png</param>
+    <param name="renderTemplateIconInSelect">true</param>
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+
+    <field name="name" input-template="p.ContentName" label="cm.label.Name" required="true" />
+
+    <field name="description" input-template="p.TextArea" label="cm.general.Description">
+      <param name="rows">4</param>
+      <param name="cols">50</param>
+    </field>
+
+    <field name="videos" input-template="p.ContentListEntryContainer" label="cm.template.example.VideoElement.Videos">
+      <param name="contentListName">videos</param>
+    </field>
+
+    <field name="imageContentCreator" input-template="p.SimpleContentCreator">
+      <param name="insertTargetAlias">content</param>
+      <param name="askInsertTarget">false</param>
+      <param name="insertionContentListName">videos</param>
+      <param name="askInsertionContentListName">false</param>
+      <param name="askContentListPosition">false</param>
+      <param name="insertPosition">top</param>
+      <param name="major">1</param>
+      <idparam name="inputTemplateId">
+        <externalid>example.Video</externalid>
+      </idparam>
+      <param name="createWithSecurityParent">true</param>
+      <param name="securityParentAlias">content</param>
+      <param name="createLabel">cm.template.example.VideoElement.Create</param>
+    </field>
+
+    <output-templates mode="www">
+      <id>example.VideoElement.ot</id>
+    </output-templates>
+  </input-template>
+  <output-template name="example.VideoElement.ot" input-template="p.siteengine.ElementOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/www/video-element.vm</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+    </content-xml>
+  </output-template>
+</template-definition>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content updateIfExists="true">
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>extra.GuiLanguages</externalid>
+      </contentid>
+    </metadata>
+    <component name="fileNameBase" group="">extra_localizedstrings</component>    
+    <file name="" encoding="relative">extra_localizedstrings*.properties</file>
+  </content>
+</batch>

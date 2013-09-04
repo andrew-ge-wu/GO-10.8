@@ -1,0 +1,17 @@
+#set($rs = $m.context.site.bean.resources.strings)
+#set($flashFile = $m.local.flashFile)
+#set($flashWidth = $m.local.flashWidth)
+#set($flashHeight = $m.local.flashHeight)
+#set($flashParams = $m.local.flashParameterMap)
+#if($flashFile)
+<div class="flash">
+    <object type='application/x-shockwave-flash' data='$flashFile' width='$flashWidth' height='$flashHeight'>
+        <param name='movie' value='$flashFile' />
+        #if($flashParams)
+            #foreach ($param in $flashParams.entrySet())
+                <param name="$param.key" value="$param.value" />    
+            #end
+        #end
+    </object>
+</div>
+#end

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <name>greenfieldtimes-example - Content Hub Adapter</name>
+
+  <artifactId>contenthub-adapter</artifactId>
+  <groupId>com.polopoly.sites.greenfieldtimes-example.contenthub</groupId>
+  <packaging>jar</packaging>
+
+  <parent>
+    <groupId>com.polopoly.sites.greenfieldtimes-example.contenthub</groupId>
+    <artifactId>contenthub-adapter-module</artifactId>
+    <version>10.8.0</version>    
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <properties>
+    <remote-content-hub-host>localhost</remote-content-hub-host>
+    <remote-content-hub-port>9090</remote-content-hub-port>
+  </properties>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+        <includes>
+          <include>**/adapter_*.xml</include>
+        </includes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <artifactId>p-maven-plugin</artifactId>
+        <groupId>com.polopoly.extensions</groupId>
+        <version>${project.version}</version>
+	<configuration>
+	  <generatePluginXml>true</generatePluginXml>
+	</configuration>
+        <dependencies>
+          <dependency>
+            <groupId>com.polopoly</groupId>
+            <artifactId>polopoly</artifactId>
+            <version>${project.version}</version>
+          </dependency>
+        </dependencies>
+        <executions>
+          <execution>
+            <goals>
+              <goal>pack</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

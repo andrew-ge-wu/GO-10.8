@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+ 
+ <content xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <metadata>
+   <contentid>
+    <major>Article</major>
+    <externalid>example.DomesticPublishingQueue</externalid>
+   </contentid>
+   <input-template>
+    <major>InputTemplate</major>
+    <externalid>com.atex.plugins.baseline.ContentListPublishingQueue</externalid>
+   </input-template>
+   <security-parent>
+    <major>Department</major>
+    <externalid>GreenfieldTimes.d</externalid>
+   </security-parent>
+  </metadata>
+  <component group="polopoly.Content" name="name">Domestic</component>
+  <component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+  <component group="associatedSites" name="count">0</component>
+  <contentref group="polopoly.Toc" name="0">
+   <contentid>
+    <major>Article</major>
+    <externalid>example.demo.article.AlaskaCruises</externalid>
+   </contentid>   
+  </contentref>
+  <contentref group="polopoly.Toc" name="1">
+  <contentid>
+    <major>Article</major>
+    <externalid>example.demo.article.WorkingFromHome</externalid>
+   </contentid>
+   </contentref>
+   <contentref group="polopoly.Toc" name="2">
+   <contentid>
+    <major>Article</major>
+    <externalid>example.demo.article.LeanOnAgriculture</externalid>
+   </contentid>
+   </contentref>
+ </content>
+ 
+ <content xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <metadata>
+   <contentid>
+    <major>Article</major>
+    <externalid>example.ForeignPublishingQueue</externalid>
+   </contentid>
+   <input-template>
+    <major>InputTemplate</major>
+    <externalid>com.atex.plugins.baseline.ContentListPublishingQueue</externalid>
+   </input-template>
+   <security-parent>
+    <major>Department</major>
+    <externalid>GreenfieldTimes.d</externalid>
+   </security-parent>
+  </metadata>
+  <component group="polopoly.Content" name="name">Foreign</component>
+  <component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+  <component group="associatedSites" name="count">0</component>
+  <contentref group="polopoly.Toc" name="0">
+   <contentid>
+    <major>Article</major>
+    <externalid>example.demo.article.ImportanceOfCommunication</externalid>
+   </contentid>   
+  </contentref>
+  <contentref group="polopoly.Toc" name="1">
+  <contentid>
+    <major>Article</major>
+    <externalid>example.demo.article.InternetBusiness</externalid>
+   </contentid>
+   </contentref>
+   <contentref group="polopoly.Toc" name="2">
+   <contentid>
+    <major>Article</major>
+    <externalid>example.demo.article.ChoosingHotel</externalid>
+   </contentid>
+   </contentref>
+ </content>
+ 
+ <content xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <metadata>
+   <contentid>
+    <major>Article</major>
+    <externalid>example.SportsPublishingQueue</externalid>
+   </contentid>
+   <input-template>
+    <major>InputTemplate</major>
+    <externalid>com.atex.plugins.baseline.ContentListPublishingQueue</externalid>
+   </input-template>
+   <security-parent>
+    <major>Department</major>
+    <externalid>GreenfieldTimes.d</externalid>
+   </security-parent>
+  </metadata>
+  <component group="polopoly.Content" name="name">Sports</component>
+  <component group="polopoly.ContentLists" name="polopoly.Toc">default</component>
+  <component group="associatedSites" name="count">0</component>
+  <contentref group="polopoly.Toc" name="0">
+   <contentid>
+    <major>Article</major>
+    <externalid>example.demo.article.Hockey</externalid>
+   </contentid>   
+  </contentref>
+  <contentref group="polopoly.Toc" name="1">
+  <contentid>
+    <major>Article</major>
+    <externalid>example.demo.article.TennisCourt</externalid>
+   </contentid>
+   </contentref>
+   <contentref group="polopoly.Toc" name="2">
+   <contentid>
+    <major>Article</major>
+    <externalid>example.demo.article.Golf</externalid>
+   </contentid>
+   </contentref>
+ </content>
+ 
+ <content xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+   <metadata>
+     <contentid>
+       <major>LayoutElement</major>
+       <externalid>example.BestOfGreenfieldNews</externalid>
+     </contentid>
+     <input-template>     
+       <major>InputTemplate</major>
+       <externalid>example.MyNewsListElement</externalid>
+     </input-template>
+     <security-parent>
+       <major>Department</major>
+       <externalid>GreenfieldTimes.d</externalid>
+     </security-parent>
+   </metadata>
+   <component group="polopoly.Content" name="name">Best of Greenfield News</component>
+   <component group="polopoly.ContentLists" name="publishingQueues">publishingQueues</component>
+   <component group="polopoly.ContentLists" name="defaultPublishingQueues">defaultPublishingQueues</component>
+   <contentref group="serviceDefinition" name="reference">
+     <contentid>
+       <major>Article</major>
+       <externalid>siteengine.ServiceDefinition.mnl</externalid>
+     </contentid>
+   </contentref>
+   <contentref group="publishingQueues" name="256">
+     <contentid>
+       <major>Article</major>
+       <externalid>example.ForeignPublishingQueue</externalid>
+     </contentid>
+   </contentref>
+   <contentref group="publishingQueues" name="512">
+     <contentid>
+       <major>Article</major>
+       <externalid>example.SportsPublishingQueue</externalid>
+     </contentid>
+   </contentref>
+   <contentref group="publishingQueues" name="0">
+     <contentid>
+       <major>Article</major>
+       <externalid>example.DomesticPublishingQueue</externalid>
+     </contentid>
+   </contentref>
+   <contentref group="defaultPublishingQueues" name="0">
+     <contentid>
+       <major>Article</major>
+       <externalid>example.SportsPublishingQueue</externalid>
+     </contentid>
+   </contentref>
+ </content>
+ 
+</batch>

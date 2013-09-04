@@ -1,0 +1,81 @@
+## (c) Polopoly AB (publ).
+## This software is protected by copyright law and international copyright
+## treaties as well as other intellectual property laws and treaties.
+## All title and rights in and to this software and any copies thereof
+## are the sole property of Polopoly AB (publ).
+## Polopoly is a registered trademark of Polopoly AB (publ).
+
+## brightcove player macro
+#macro(brightcovePlaylist $playerId $width $height $videoId)
+#set($expId = $content.contentId.contentId.contentIdString.replaceAll('\.',''))
+#if(!$m.global.bcexperienceloaded)
+  #set($m.global.bcexperienceloaded = true)
+  <script language="JavaScript" type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+#end
+  <object id="myExperience$expId" class="BrightcoveExperience">
+    <param name="bgcolor" value="#ffffff" />
+    <param name="width" value="$!{width}" />
+    <param name="height" value="$!{height}" />
+    <param name="playerID" value="$!{playerId}" />
+    <param name="isVid" value="true" />
+    <param name="isUI" value="true" />
+    <param name="dynamicStreaming" value="true" />
+#if($!{videoId})
+    <param name="@videoPlayer" value="$!{videoId}" />
+#end
+  </object>
+  <script type="text/javascript">brightcove.createExperiences();</script>
+#end
+
+## set player video Id if player type is video
+#if($!{content.playerType.selectedName} == "video")
+  #set($videoIdVal = $!{content.playerType.selected.video.value})
+#elseif($!{content.playerType.selectedName} == "contentlist")
+  ## set player video Id if there is video in publishing queue or content list
+  #foreach($video in $content.pureVideoList)
+    #if($velocityCount == 1)
+      #set($videoContent = $tool_domain.getModel($video.contentId))
+      #set($videoIdVal = $!{videoContent.video.value})
+    #end
+  #end
+#end
+
+## player width
+#if($!{content.width.value})
+  #set($widthVal = $!{content.width.value})
+  #if($math.toInteger($widthVal) > $math.toInteger($m.stack.colwidth))
+    #set($widthVal = $m.stack.colwidth)
+  #end
+#else
+  #set($widthVal = $m.stack.colwidth)
+#end
+
+## player height base on player type
+#if($!{content.height.value})
+   #set($heightVal = $!{content.height.value})
+#else
+   #set($heightVal = $math.toInteger($widthVal) * 3 / 5)
+   #if($!{content.playerType.selectedName} == "playlist")
+     #set($heightVal = $math.toInteger($widthVal) + 40)
+   #end
+#end
+
+## padding to avoid overflow
+## if the element is not paste in right column
+#if($math.toInteger($m.stack.colwidth) != 300 && $math.toInteger($m.stack.colwidth) != 804)
+  #if($math.toInteger($widthVal) - $math.toInteger($m.stack.colwidth) < 8)
+    #set($widthVal = $math.sub($widthVal, 8))
+  #end
+#end
+
+
+#if($m.local.playerId)
+  #set($playerIdVal = $m.local.playerId)
+#else
+  #set($playerIdVal = $!{content.playerId})
+#end
+
+## brightcove element
+<div class="element brightcove">
+  #brightcovePlaylist ($!{playerIdVal} $!{widthVal} $!{heightVal} $!{videoIdVal})
+</div>

@@ -1,0 +1,68 @@
+Models
+
+  This describes the "public api" of the models of this plugin, these properties can be expected to remain after an upgrade to a new version of this plugin.
+
+* com.atex.plugins.brightcove.MainElement
+
+*-------------+---------------------------+------------------------------------+
+| <<Name>>    | <<Description>>           | <<Type>>                           |
+*-------------+---------------------------+------------------------------------+
+| name        | The Content Name          | java.lang.String                   |
+*-------------+---------------------------+------------------------------------+
+| contentId   | The Content Id            | com.polopoly.cm.VersionedContentId |
+*-------------+---------------------------+------------------------------------+
+| video Id    | Brightcove Video Id       | p.TextInput                        |
+*-------------+---------------------------+------------------------------------+
+| playerId    | Brightcove Player Id      | p.TextInput                        |
+*-------------+---------------------------+------------------------------------+
+| playerType  | Video Or Playlist         | p.SelectableSubField               |
+|             | Or Brightcove Playlist    |                                    |
+*-------------+---------------------------+------------------------------------+
+| width       | Brightcove Player width   | p.TextInput                        |
+*-------------+---------------------------+------------------------------------+
+| height      | Brightcove Player height  | p.TextInput                        |
+*-------------*---------------------------*------------------------------------*
+
+* com.atex.plugins.brightcove.Tv
+
+*----------------+---------------------------+------------------------------------+
+| <<Name>>       | <<Description>>           | <<Type>>                           |
+*----------------+---------------------------+------------------------------------+
+| name           | The Content Name          | java.lang.String                   |
+*----------------+---------------------------+------------------------------------+
+| contentId      | The Content Id            | com.polopoly.cm.VersionedContentId |
+*----------------+---------------------------+------------------------------------+
+| playerID       | Brightcove Player Id      | p.TextInput                        |
+*----------------+---------------------------+------------------------------------+
+| autoStart      | Local or Brightcove       | p.SelectableSubField               |
+*----------------+---------------------------+------------------------------------+
+|   autoStart/   | Local auto start          | p.Checkbox                         |
+| autoStartCmGui |                           |                                    |
+*----------------+---------------------------+------------------------------------+
+| showSlider     | Render Slider or not      | p.Checkbox                         |
+*----------------+---------------------------+------------------------------------+
+| autoPlay       | Auto play after 1st video | p.Checkbox                         |
+*----------------+---------------------------+------------------------------------+
+
+* com.atex.plugins.brightcove.ListElement
+
+*-------------------+---------------------------+------------------------------------+
+| <<Name>>          | <<Description>>           | <<Type>>                           |
+*-------------------+---------------------------+------------------------------------+
+| name              | The Content Name          | java.lang.String                   |
+*-------------------+---------------------------+------------------------------------+
+| contentId         | The Content Id            | com.polopoly.cm.VersionedContentId |
+*-------------------+---------------------------+------------------------------------+
+| mode              | List display mode         | p.SelectableSubField               |
+*-------------------+---------------------------+------------------------------------+
+| mode/slide/size   | Max num of items per page | p.TextInput                        |
+*-------------------+---------------------------+------------------------------------+
+| mode/teaser/size  | Num of big teaser         | p.TextInput                        |
+*-------------------+---------------------------+------------------------------------+
+| maxVideo          | Max num of items in list  | p.TextInput                        |
+*-------------------+---------------------------+------------------------------------+
+| display           | Video display option      | p.SelectableSubField               |
+*-------------------+---------------------------+------------------------------------+
+
+
+

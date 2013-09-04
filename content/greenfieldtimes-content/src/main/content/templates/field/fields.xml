@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="p.siteengine.templates.beanshell.BeanShellCompiler" label="cm.template.p.siteengine.templates.beanshell.BeanShellCompiler">
+    <policy>com.polopoly.cm.policy.ContentPolicy</policy>
+    <editor>com.polopoly.siteengine.script.beanshell.OBeanShellCompilerWidget</editor>
+    <viewer>com.polopoly.siteengine.script.beanshell.OBeanShellCompilerWidget</viewer>
+  </input-template>
+
+  <!-- Name value pair editor -->
+  <input-template name="example.videoPlayer">
+    <policy>com.polopoly.cm.policy.ContentPolicy</policy>
+    <editor>example.widget.OVideoPlayerWidget</editor>
+    <viewer>example.widget.OVideoPlayerWidget</viewer>
+  </input-template>
+
+  <input-template name="example.refreshButton">
+    <policy>com.polopoly.cm.policy.ContentPolicy</policy>
+    <editor>example.widget.ORefreshButtonPolicyWidget</editor>
+    <viewer>example.widget.ORefreshButtonPolicyWidget</viewer>
+  </input-template>
+
+  <input-template name="example.EditorialBlogPostingBrowser">
+    <policy>com.polopoly.cm.policy.ContentPolicy</policy>
+    <editor>example.content.editorialblog.OBlogPostingBrowserPolicyWidget</editor>
+    <viewer>example.content.editorialblog.OBlogPostingBrowserPolicyWidget</viewer>
+  </input-template>
+
+  <input-template name="example.ParentEditorialBlogLink">
+    <policy>com.polopoly.cm.policy.ContentPolicy</policy>
+    <editor>example.content.editorialblog.ParentBlogLinkPolicyWidget</editor>
+    <viewer>example.content.editorialblog.ParentBlogLinkPolicyWidget</viewer>
+  </input-template>
+
+  <input-template name="example.AkismetKeyVerification">
+    <policy>example.content.ContentBasePolicy</policy>
+    <editor>example.akismet.OAkismetKeyVerificationPolicyWidget</editor>
+    <viewer>example.akismet.OAkismetKeyVerificationPolicyWidget</viewer>
+  </input-template>
+
+  <input-template name="example.ModerationStateSearch">
+    <policy>com.polopoly.cm.policy.PolicyImplBase</policy>
+    <editor>com.polopoly.cm.app.search.widget.OModerationStateSearchWidget</editor>
+    <viewer>com.polopoly.cm.app.search.widget.OModerationStateSearchWidget</viewer>
+  </input-template>
+
+  <input-template name="example.Moderation">
+    <policy>com.polopoly.cm.policy.PolicyImplBase</policy>
+    <editor>com.polopoly.cm.app.widget.OComplexFieldTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OComplexFieldTopPolicyWidget</viewer>
+
+    <field name="hidden" input-template="p.Hidden" label=" ">
+      <param name="value">example.mydesktop.moderation</param>
+      <param name="group">polopoly.Content</param>
+      <param name="name">name</param>
+    </field>
+
+    <field name="searchWidget" input-template="example.ModerationStateSearch" label=" ">
+        <param name="itemContextName">orchid_MODERATIONITEM</param>
+    </field>
+  </input-template>
+  
+  <input-template name="example.CommentSettings">
+    <policy>example.content.ContentBasePolicy</policy>
+    <editor>example.layout.element.comments.OCommentSettingsPolicyWidget</editor>
+    <viewer>example.layout.element.comments.OCommentSettingsPolicyWidget</viewer>
+  </input-template>
+
+  <input-template name="example.HttpImageUrl" label="example.HttpImageUrl.label">
+    <editor>example.content.image.OHttpImageUrl</editor>
+    <viewer>example.content.image.OHttpImageUrl</viewer>
+  </input-template>
+</template-definition>

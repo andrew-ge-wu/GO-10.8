@@ -1,0 +1,184 @@
+Usage
+
+ * {{{Create_Brightcove_Element}Create Brightcove Element}}
+ 
+ * {{{Create_Brightcove_Video_Resource_via_Polopoly}Create Brightcove Video Resource via Polopoly}}
+ 
+ * {{{Create_Brightcove_Video_Resource_by_Pulling_from_Brightcove}Create Brightcove Video Resource by Pulling from Brightcove}}
+
+ * {{{Create_Brightcove_TV_Element}Create Brightcove TV Element}}
+
+ * {{{Create_Brightcove_List_Element_Teaser_Mode}Create Brightcove List Element (Teaser Mode)}}
+
+ * {{{Create_Brightcove_List_Element_Slide_Mode}Create Brightcove List Element (Slide Mode)}}
+
+* Create Brightcove Element
+
+  To create a Brightcove element, open up <<Greenfield Times>> and select the <<Start page>> tab. In the <<Main column>>, create a Brightcove element.
+
+[images/howto-1.png]
+
+  
+
+[images/howto-2.png]
+
+  <To play a video directly from Brightcove:>
+
+  Enter name, select player type <<Video>>, enter <<Player Id>>, <<Search>> videos, <<Select>> video from search result, and click <<Insert>>.
+
+[images/howto-2b.png]
+
+  <To play first video from list/publishing queue with Brightcove video resources:>
+
+  Enter name, select player type <<Playlist>>, enter <<Player Id>>, paste or create Brightcove video resources/publishing queue in the content list, and click <<Insert>>.
+
+[images/howto-2c.png]
+
+  <To play from brightcove playlist:>
+
+  Enter name, select player type <<Brightcove Playlist>>, enter <<Player Id>>, and click Insert.
+
+[images/howto-2d.png]
+
+
+  The Brightcove element should be in the list.
+
+[images/howto-3.png]
+
+  On the site, the Brightcove element should show a video.
+
+[images/howto-4.png]
+
+  \* Note: It's a known issue that the search will work only on player type <<Video>> but not others.
+
+* Create Brightcove Video Resource via Polopoly
+
+  To create a Brightcove video resource via <<Polopoly>>, open up <<Greenfield Times>> site and select the <<Articles & Resources>> tab. From drop down list, select <<Brightcove Video>> and hit <<create>> button.
+  
+  Type in nessasery information, then hit <<Push to Brightcove>> button to create content
+
+[images/manual-prepare.png]
+
+[images/manual-prepare2.png]
+
+  After successfully upload video, <<Brightcove Id>> field will populated with video id from Brightcove.
+  
+  You can hit <<Save & Insert>> to save content.
+
+[images/manual-done.png]
+
+  At the Brightcove end, you can see the newly created video.
+
+[images/manual-result.png]
+
+  At site, Brightcove article can be display either as teaser mode and normal mode.
+
+  <Teaser view>
+
+[images/video-resource-teaser.png]
+
+  <Normal view>
+
+[images/video-resource-normal.png]
+
+
+* Create Brightcove Video Resource by Pulling from Brightcove
+
+  To create video by pulling from Brightcove, you need video id. The following shows the video id at Brightcove Video Cloud.
+
+[images/brightcove-id.png]
+
+  To create a Brightcove video resource by pulling from Brightcove, open up <<Greenfield Times>> site and select the <<Articles & Resources>> tab. From drop down list, select <<Brightcove Video>> and hit <<create>> button.
+  
+  Type in Brightcove Id, then hit <<Pull info from Brightcove>> button to create content
+  
+[images/auto-prepare.png]
+
+  After successfuly pulled from Brightcove, you can see the field value are populated. Hit <<Save & Insert>> to save the content.
+
+[images/auto-result.png]
+
+* Create Brightcove TV Element
+
+  This plugin also include a <<Brightcove TV element>>, which is similar to image gallery.
+  To get started, first create few <<Brightcove Video Resource>>.
+  
+[images/create-brightcove-resources.png]
+  
+  Then attach these newly created resources to a manual publishing queue.
+  
+[images/publishing-queue.png]
+  
+  Go to start page, create a new <<Brightcove TV element>>, then fill in the element <<Name>>, and <<Player ID>>. Finally paste the queue into the element and save the content.
+  The <<Player ID>> is optional and it is used to select the player other then the player specified at configuration page.
+  There are option whether to show the slider or to hide it.
+
+[images/brightcove-tv-element.png]
+
+  If the <<Categorization of this WebTv Element>> is selected, the selected categorization in the element will be used to display as links to landing page.
+  If it's empty, the related content links will not appear.
+
+[images/brightcove-tv-element2.png]
+
+  Finally go to front page to view the Brightcove TV element.
+
+  <Brightcove TV without Related Content & Slider>
+
+[images/brightcove-tv-tvonly.png]
+
+  <Brightcove TV with Slider>
+
+[images/brightcove-tv-wslider.png]
+
+  <Brightcove TV with Related Content>
+
+[images/brightcove-tv-wrelated.png]
+
+  <Brightcove TV with Related Content & Slider>
+
+[images/brightcove-tv-wsliderrelated.png]
+
+* Create Brightcove List Element (Teaser Mode)
+
+  To create a <<Brighcove List Element>>, you need have a publishing queue to pull out list of videos. So go ahead to create one.
+
+[images/publishing-queue.png]
+
+  Then create a <<Brightcove List Element>> at the slot you wanted.
+
+[images/brightcove-list-teaser-create.png]
+
+  Fill in fields and paste publishing queue.
+
+[images/brightcove-list-teaser-save.png]
+
+  After save, browse to front page and see the Brightcove List Element.
+
+[images/brightcove-list-teaser-notitle.png]
+
+  Brightcove teaser with title
+
+[images/brightcove-list-teaser.png]
+
+* Create Brightcove List Element (Slide Mode)
+
+  To create a <<Brighcove List Element>>, you need have a publishing queue to pull out list of videos. So go ahead to create one.
+
+[images/publishing-queue.png]
+
+  Then create a <<Brightcove List Element>> at the <<Main column>> slot.
+
+[images/brightcove-list-slide-create.png]
+
+  Fill in fields and paste publishing queue.
+
+[images/brightcove-list-slide-save.png]
+
+  After save, browse to front page and see the Brightcove List Element.
+
+[images/brightcove-list-slide-notitle.png]
+
+  Brightcove slider with title
+
+[images/brightcove-list-slide.png]
+
