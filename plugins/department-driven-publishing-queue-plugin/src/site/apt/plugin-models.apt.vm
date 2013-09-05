@@ -1,0 +1,19 @@
+Models
+
+  This describes the "public api" of the models of this plugin, these properties can be expected to remain after an upgrade to a new version of this plugin.
+
+* com.atex.plugins.deptdrpq.MainElement
+
+*----------------+------------------+---------------------------------------------------+
+| <<Name>>       | <<Description>>  | <<Type>>                                          |
+*----------------+------------------+---------------------------------------------------+
+| name           | The Content Name | java.lang.String                                  |
+*----------------+------------------+---------------------------------------------------+
+| contentId      | The Content Id   | com.polopoly.cm.VersionedContentId                |
+*----------------+------------------+---------------------------------------------------+
+| autoDepartment | Auto Department  | com.atex.plugins.deptdrpq.autoDepartment.Checkbox |
+*----------------+------------------+---------------------------------------------------+
+| department     | Department       | com.atex.plugins.deptdrpq.ContentTreeSelect       |
+*----------------+------------------+---------------------------------------------------+
+| type           | Content Type     | p.ContentTypeSelect                               |
+*----------------+------------------+---------------------------------------------------+

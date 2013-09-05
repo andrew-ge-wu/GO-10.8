@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <!-- Create Site -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.siteengine.Sites.d</externalid>
+      </contentid>
+    </metadata>
+    <contentlist>
+      <entry mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <major>Department</major>
+              <externalid>DeptPQEmptyPage.d</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>DeptPQEmptyPage.d</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>p.siteengine.Site</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>p.siteengine.Sites.d</externalid>
+      </security-parent>
+    </metadata>
+
+    <contentlist>
+      <entry mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <major>Department</major>
+              <externalid>DeptPQNewsPage.d</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <major>Department</major>
+              <externalid>DeptPQSportsPage.d</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+
+    <component group="polopoly.Content" name="name">Dept PQ Main Page</component>
+    <contentref group="pageLayout/selected/main/slotElements" name="0">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>DeptPQ.list.1</externalid>
+      </contentid>
+    </contentref>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>DeptPQNewsPage.d</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>DeptPQEmptyPage.d</externalid>
+      </security-parent>
+    </metadata>
+
+    <component group="polopoly.Content" name="name">Dept PQ News</component>
+    <contentref group="pageLayout/selected/main/slotElements" name="0">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>DeptPQ.list.1</externalid>
+      </contentid>
+    </contentref>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>DeptPQSportsPage.d</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>DeptPQEmptyPage.d</externalid>
+      </security-parent>
+    </metadata>
+
+    <contentlist>
+      <entry mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <major>Department</major>
+              <externalid>DeptPQFootballPage.d</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+
+    <component group="polopoly.Content" name="name">Dept PQ Sports</component>
+    <contentref group="pageLayout/selected/main/slotElements" name="0">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>DeptPQ.list.2</externalid>
+      </contentid>
+    </contentref>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>DeptPQFootballPage.d</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>DeptPQSportsPage.d</externalid>
+      </security-parent>
+    </metadata>
+
+    <component group="polopoly.Content" name="name">Dept PQ Football</component>
+    <contentref group="pageLayout/selected/main/slotElements" name="0">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>DeptPQ.list.2</externalid>
+      </contentid>
+    </contentref>
+  </content>
+  
+  <!-- Dept PQ List -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>DeptPQ.list.1</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ListElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>DeptPQEmptyPage.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">DeptPQList</component>
+    <component group="polopoly.ContentLists" name="publishingQueue">publishingQueue</component>
+    <component group="viewMode" name="selected">link</component>
+    <component group="linkContext" name="count">0</component>
+    <contentref group="publishingQueue" name="0">
+      <contentid>
+        <major>Article</major>
+        <externalid>DeptPQ.pq.1</externalid>
+      </contentid>
+    </contentref>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>DeptPQ.list.2</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.ListElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>DeptPQEmptyPage.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">DeptPQList</component>
+    <component group="polopoly.ContentLists" name="publishingQueue">publishingQueue</component>
+    <component group="viewMode" name="selected">link</component>
+    <component group="linkContext" name="count">0</component>
+    <contentref group="publishingQueue" name="0">
+      <contentid>
+        <major>Article</major>
+        <externalid>DeptPQ.pq.2</externalid>
+      </contentid>
+    </contentref>
+  </content>
+
+  <!-- Dept PQ -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>DeptPQ.pq.1</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.deptdrpq.MainElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>DeptPQEmptyPage.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="autoDepartment" name="value">false</component>
+    <component group="polopoly.Content" name="name">Dept PQ</component>
+    <component group="department" name="count">1</component>
+    <component group="type" name="count">1</component>
+    <contentref group="department" name="reference0">
+      <contentid>
+        <major>Department</major>
+        <externalid>DeptPQEmptyPage.d</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="department" name="reference_parent0">
+      <contentid>
+        <major>Department</major>
+        <externalid>p.siteengine.Sites.d</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="type" name="reference0">
+      <contentid>
+        <major>Department</major>
+        <externalid>p.templatecategory.article</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="type" name="reference_parent0">
+      <contentid>
+        <major>Department</major>
+        <externalid>p.StandardResourceCategorization</externalid>
+      </contentid>
+    </contentref>
+  </content>
+ 
+  <!-- auto dept -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>DeptPQ.pq.2</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.deptdrpq.MainElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>DeptPQEmptyPage.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="autoDepartment" name="value">true</component>
+    <component group="department" name="count">0</component>
+    <component group="polopoly.Content" name="name">Auto Dept PQ</component>
+    <component group="type" name="count">1</component>
+    <contentref group="type" name="reference0">
+      <contentid>
+        <major>Department</major>
+        <externalid>p.templatecategory.article</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="type" name="reference_parent0">
+      <contentid>
+        <major>Department</major>
+        <externalid>p.StandardResourceCategorization</externalid>
+      </contentid>
+    </contentref>
+  </content>
+
+  <!-- articles -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>DeptPQArticle.1</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>DeptPQEmptyPage.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Main Site 1</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>DeptPQArticle.2</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>DeptPQNewsPage.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">News 1</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>DeptPQArticle.3</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>DeptPQSportsPage.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Sports 1</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>DeptPQArticle.4</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>DeptPQSportsPage.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Sports 2</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>DeptPQArticle.5</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>DeptPQFootballPage.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Football 1</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Article</major>
+        <externalid>DeptPQArticle.6</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>example.StandardArticle</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>DeptPQFootballPage.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Football 2</component>
+  </content>
+</batch>

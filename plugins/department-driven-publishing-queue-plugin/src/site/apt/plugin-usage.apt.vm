@@ -1,0 +1,35 @@
+Usage
+
+  Department driven publishing queue must use with List layout element or similiar layout element.
+
+  To create a new List layout element, open up Greenfield Times and select the Start page tab. In the Top Right column, create a new element.
+
+[images/howto-1.png]
+
+  Create List layout element page.
+
+[images/howto-2.png]
+
+  Fill in Name field for List layout element.
+  Select "Department Driven Publishing Queue" and click Create button.
+
+[images/howto-3.png] 
+
+  \ 
+
+[images/howto-4.png] 
+  
+  Fill in Name field for publishing queue. You can select Current department or manual select a department. If current department selected, 
+  the contents displayed will based of current department reside of. Click "Save & Insert" button.
+
+[images/howto-5.png]
+
+  Click "Insert" button to save List layout element.
+  
+[images/howto-6.png]
+
+  Click "Save & View" button to save Greenfield Times.
+  
+[images/howto-6.png]
+
+  browse http://localhost:8080, you should see articles in List layout element.
