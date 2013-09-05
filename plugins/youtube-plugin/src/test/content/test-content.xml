@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+
+  <!-- Create Youtube Site -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.siteengine.Sites.d</externalid>
+      </contentid>
+    </metadata>
+    <contentlist>
+      <entry mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <major>Department</major>
+              <externalid>YoutubeEmptyPage.d</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>YoutubeEmptyPage.d</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>p.siteengine.Site</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>p.siteengine.Sites.d</externalid>
+      </security-parent>
+    </metadata>
+
+    <component group="polopoly.Content" name="name">Youtube Empty Page</component>
+    <contentref group="pageLayout/selected/righttop/slotElements" name="0">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>youtube.player.1</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout" name="selected">
+      <contentid>
+        <externalid>example.DefaultPageLayout</externalid>
+      </contentid>
+    </contentref>
+  </content>
+  
+  <!-- Create Youtube Sub-Department 1 -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>YoutubeEmptyPage.d</externalid>
+      </contentid>
+    </metadata>
+    <contentlist>
+      <entry mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <major>Department</major>
+              <externalid>YoutubeSubDept.d</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <major>Department</major>
+              <externalid>YoutubeSubDept2.d</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+      <entry mode="modify">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <major>Department</major>
+              <externalid>YoutubeSubDept3.d</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>YoutubeSubDept.d</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>YoutubeEmptyPage.d</externalid>
+      </security-parent>
+    </metadata>
+
+    <component group="polopoly.Content" name="name">Youtube - Empty Width</component>
+    <component group="pageLayout/selected/righttop/inheritSetting" name="count">1</component>
+    <component group="pageLayout/selected/righttop/inheritSetting" name="selected_0">off</component>
+    <contentref group="pageLayout/selected/wide/slotElements" name="0">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>youtube.player.2</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout" name="selected">
+      <contentid>
+        <externalid>example.DefaultPageLayout</externalid>
+      </contentid>
+    </contentref>
+  </content>
+
+  <!-- Create Youtube Sub-Department 2 -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>YoutubeSubDept2.d</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>YoutubeEmptyPage.d</externalid>
+      </security-parent>
+    </metadata>
+
+    <component group="polopoly.Content" name="name">Youtube - Empty Height</component>
+    <component group="pageLayout/selected/righttop/inheritSetting" name="count">1</component>
+    <component group="pageLayout/selected/righttop/inheritSetting" name="selected_0">off</component>
+    <contentref group="pageLayout/selected/main/slotElements" name="0">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>youtube.player.3</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout" name="selected">
+      <contentid>
+        <externalid>example.DefaultPageLayout</externalid>
+      </contentid>
+    </contentref>
+  </content>
+  
+  <!-- Create Youtube Sub-Department 3 -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>YoutubeSubDept3.d</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>p.siteengine.Page</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>YoutubeEmptyPage.d</externalid>
+      </security-parent>
+    </metadata>
+
+    <component group="polopoly.Content" name="name">Youtube - Empty Width and Height</component>
+    <component group="pageLayout/selected/righttop/inheritSetting" name="count">1</component>
+    <component group="pageLayout/selected/righttop/inheritSetting" name="selected_0">off</component>
+    <contentref group="pageLayout/selected/main/slotElements" name="0">
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>youtube.player.4</externalid>
+      </contentid>
+    </contentref>
+    <contentref group="pageLayout" name="selected">
+      <contentid>
+        <externalid>example.DefaultPageLayout</externalid>
+      </contentid>
+    </contentref>
+  </content>
+  
+  <!-- Create Youtube Player -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>youtube.player.1</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.youtube.MainElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>YoutubeEmptyPage.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="videowidth" name="value">280</component>
+    <component group="polopoly.Content" name="name">Samsung Galaxy Nexus</component>
+    <component group="allowfullscreen" name="value">true</component>
+    <component group="p.Inbox" name="showContent">true</component>
+    <component group="yid" name="value">t8PQYgw62vY</component>
+    <component group="videoheight" name="value">250</component>
+  </content>
+  
+  <!-- width is empty -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>youtube.player.2</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.youtube.MainElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>YoutubeEmptyPage.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Atex DNA H264 16 9</component>
+    <component group="allowfullscreen" name="value">false</component>
+    <component group="p.Inbox" name="showContent">true</component>
+    <component group="yid" name="value">g0_egjMb5Yo</component>
+    <component group="videoheight" name="value">400</component>
+  </content>
+  
+  <!-- height is empty -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>youtube.player.3</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.youtube.MainElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>YoutubeEmptyPage.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">ASUS Padphone Promo</component>
+    <component group="videowidth" name="value">280</component>
+    <component group="allowfullscreen" name="value">true</component>
+    <component group="p.Inbox" name="showContent">true</component>
+    <component group="yid" name="value">DE4NxPGyFjI</component>
+  </content>
+  
+  <!-- width and height are empty -->
+  <content>
+    <metadata>
+      <contentid>
+        <major>LayoutElement</major>
+        <externalid>youtube.player.4</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.youtube.MainElement</externalid>
+      </input-template>
+      <security-parent>
+        <major>Department</major>
+        <externalid>YoutubeEmptyPage.d</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Marvel Avengers Assemble (2012) Watch the Official trailer | HD</component>
+    <component group="allowfullscreen" name="value">true</component>
+    <component group="p.Inbox" name="showContent">true</component>
+    <component group="yid" name="value">NPoHPNeU9fc</component>
+  </content>
+</batch>

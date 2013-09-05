@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+
+
+  <input-template name="com.atex.plugins.youtube.viewer">
+    <policy>com.atex.plugins.youtube.YoutubeFieldPolicy</policy>
+    <editor>com.atex.plugins.youtube.widget.OYoutubeViewer</editor>
+    <viewer>com.atex.plugins.youtube.widget.OYoutubeViewer</viewer>
+  </input-template>
+
+  <input-template name="com.atex.plugins.youtube.search">
+    <editor>com.atex.plugins.youtube.widget.OYoutubeSearchWidget</editor>
+    <viewer>com.atex.plugins.youtube.widget.OYoutubeSearchWidget</viewer>
+  </input-template>
+
+
+  <input-template name="com.atex.plugins.youtube.MainElement" label="com.atex.plugins.youtube.MainElement">
+
+    <type>LayoutElement</type>
+
+    <policy>com.atex.plugins.youtube.YoutubeElementPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OAjaxTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OAjaxTopPolicyWidget</viewer>
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+
+    <param name="ViewState_insert">false</param>
+    <param name="ViewState_refresh">true</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="renderTemplateIconInSelect">true</param>
+
+    <layout name="youtubeelementcolumholder" input-template="p.ColumnHolder">
+      <layout name="youtubeelementcolumn" input-template="p.Column">
+        <field name="name" input-template="p.ContentName" label="com.atex.plugins.youtube.name" required="true" />
+        <field name="yid" input-template="p.TextInput" label="com.atex.plugins.youtube.videoid" required="true" />
+        <field name="videowidth" input-template="p.TextInput" label="com.atex.plugins.youtube.label.width">
+          <help>com.atex.plugins.youtube.label.width.help</help>
+          <param name="inlineHelp">true</param>
+          <policy>com.polopoly.cm.app.policy.NumberInputPolicy</policy>
+          <param name="type">int</param>
+          <param name="size">3</param>
+        </field>
+        <field name="videoheight" input-template="p.TextInput" label="com.atex.plugins.youtube.label.height">
+          <help>com.atex.plugins.youtube.label.height.help</help>
+          <param name="inlineHelp">true</param>
+          <policy>com.polopoly.cm.app.policy.NumberInputPolicy</policy>
+          <param name="type">int</param>
+          <param name="size">3</param>
+        </field>
+        <field name="allowfullscreen" input-template="p.Checkbox" label="com.atex.plugins.youtube.label.allow.playback">
+          <param name="checked">true</param>
+        </field>
+      </layout>
+      <layout name="previewcolumn" input-template="p.Column">
+        <field name="preview" input-template="com.atex.plugins.youtube.viewer" label="com.atex.plugins.youtube.label.preview" />
+      </layout>
+    </layout>
+    <field name="search" input-template="com.atex.plugins.youtube.search">
+    </field>
+    <output-templates mode="www">
+      <id>com.atex.plugins.youtube.MainElement.ot</id>
+    </output-templates>
+  </input-template>
+</template-definition>

@@ -89,6 +89,7 @@
     <module>webapp-front</module>
     <module>webapp-moderation</module>
     <module>plugins/brightcove-plugin</module>
+    <module>plugins/youtube-plugin</module>
     <!--Example: how to use a plugin as a source plugin -->
     <!--To use a plugin as a SOURCE PLUGIN:
         * copy the source code of the plugin and place it as a module in your project
@@ -185,6 +186,11 @@
       <groupId>com.atex.plugins</groupId>
       <artifactId>imagegallery-plugin</artifactId>
       <version>1.2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.atex.plugins</groupId>
+      <artifactId>youtube-plugin</artifactId>
+      <version>2.0.2-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>com.atex.plugins</groupId>

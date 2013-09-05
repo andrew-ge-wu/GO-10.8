@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="The example GT plugin">
+  <bannerLeft>
+    <name>${project.name}</name>
+  </bannerLeft>
+
+  <skin>
+    <groupId>com.polopoly.extensions</groupId>
+    <artifactId>gt-example-plugin-site-skin</artifactId>
+    <version>10.3-DR4-r59629</version>
+  </skin>
+
+  <body>
+    <menu name="The plugin">
+      <item name="Overview" href="index.html" />
+      <item name="Usage" href="plugin-usage.html" />
+    </menu>
+
+    <menu name="Configuration">
+      <item name="Configuration" href="plugin-config.html" />
+    </menu>
+
+    <menu name="Documentation">
+      <item name="JavaDocs" href="apidocs/index.html" />
+      <item name="ModelDocs" href="plugin-models.html" />
+    </menu>
+
+    <menu name="Test Reports">
+      <item name="Test results" href="surefire-report.html" />
+      <item name="Test coverage" href="cobertura/index.html" />
+      <item name="Findbugs result" href="findbugs.html" />
+    </menu>
+
+    <menu name="Detailed Project Information" ref="reports"/>
+
+  </body>
+</project>

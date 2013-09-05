@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+	<!-- This file is only needed if we have circular dependencies between templates 
+		and content -->
+	<content>
+		<metadata>
+			<contentid>
+				<major>InputTemplate</major>
+				<externalid>com.atex.plugins.youtube.MainElement</externalid>
+			</contentid>
+		</metadata>
+	</content>
+	<content>
+		<metadata>
+			<contentid>
+				<major>InputTemplate</major>
+				<externalid>com.atex.plugins.youtube.YoutubeArticle</externalid>
+			</contentid>
+		</metadata>
+	</content>
+	<content>
+		<metadata>
+			<contentid>
+				<major>OutputTemplate</major>
+				<externalid>com.atex.plugins.youtube.YoutubeArticle.ot</externalid>
+			</contentid>
+		</metadata>
+	</content>
+	<content>
+		<metadata>
+			<contentid>
+				<major>InputTemplate</major>
+				<externalid>com.atex.plugins.youtube.youtubeViewer</externalid>
+			</contentid>
+		</metadata>
+	</content>
+	<content>
+		<metadata>
+			<contentid>
+				<major>InputTemplate</major>
+				<externalid>com.atex.plugins.youtube.updateField</externalid>
+			</contentid>
+		</metadata>
+	</content>
+</batch>

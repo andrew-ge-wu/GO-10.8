@@ -1,0 +1,25 @@
+Usage
+
+  To create a new element, open up Greenfield Times and select the Start page tab. In the Right column, create a new element.
+
+[images/howto-1.png]
+
+  Create youtube element page
+
+[images/howto-2.png]
+
+  Enter keyword and hit "Search" button
+
+[images/howto-3.png]
+
+  On the result list, click "Select" button to preview a video, the Name and Video ID will be automatically populated based on the video metadata. Click "Insert" to save the element.
+
+[images/howto-4.png]
+
+  The new youtube element should be in the list.
+
+[images/howto-5.png]
+
+  On the site, the new youtube element should show youtube player.
+
+[images/howto-6.png]

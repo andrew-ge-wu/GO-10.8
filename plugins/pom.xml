@@ -173,6 +173,7 @@
   <!-- gt plugins  ======================================================== -->
   <modules>
     <module>brightcove-plugin</module>
+    <module>youtube-plugin</module>
   </modules>
 
 </project>

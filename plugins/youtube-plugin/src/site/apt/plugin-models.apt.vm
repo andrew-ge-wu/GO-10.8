@@ -1,0 +1,22 @@
+Models
+
+  This describes the "public api" of the models of this plugin, these properties can be expected to remain after an upgrade to a new version of this plugin.
+
+* com.atex.plugins.youtube.MainElement
+
+*-----------------+----------------------------------------------------+------------------------------------+
+| <<Name>>        | <<Description>>                                    | <<Type>>                           |
+*-----------------+----------------------------------------------------+------------------------------------+
+| name            | The Content Name                                   | java.lang.String                   |
+*-----------------+----------------------------------------------------+------------------------------------+
+| contentId       | The Content Id                                     | com.polopoly.cm.VersionedContentId |
+*-----------------+----------------------------------------------------+------------------------------------+
+| yid             | The Youtube Id                                     | p.TextInput                        |
+*-----------------+----------------------------------------------------+------------------------------------+
+| videoheight     | Video Height (default is empty)                    | p.TextInput                        |
+*-----------------+----------------------------------------------------+------------------------------------+
+| videowidth      | Video Width (default is empty)                     | p.TextInput                        |
+*-----------------+----------------------------------------------------+------------------------------------+
+| allowfullscreen | Is allow to full screen playback? (default is Yes) | p.Checkbox                         |
+*-----------------+----------------------------------------------------+------------------------------------+
+

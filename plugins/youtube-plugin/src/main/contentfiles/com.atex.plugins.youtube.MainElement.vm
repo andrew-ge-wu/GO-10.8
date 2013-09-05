@@ -1,0 +1,37 @@
+## (c) Polopoly AB (publ).
+## This software is protected by copyright law and international copyright
+## treaties as well as other intellectual property laws and treaties.
+## All title and rights in and to this software and any copies thereof
+## are the sole property of Polopoly AB (publ).
+## Polopoly is a registered trademark of Polopoly AB (publ).
+
+#set($videoId = $content.yid.value)
+
+#if($content.allowfullscreen.value && $content.allowfullscreen.value == 'true')
+	#set($fullscreen = "true")
+	#set($fs = "fs=1")
+#else
+	#set($fullscreen = "false")
+	#set($fs = "fs=0")
+#end
+#set($width = $widthInRatio)
+## padding 7px, so need deduct 7px to avoid overflow
+#if($math.toInteger($width) - $math.toInteger($m.stack.colwidth) < 7)
+  #set($width = $math.sub($width, 7))
+#end
+<div class="element youtube">
+	<div class="ytplayer" align="center">
+		<object width="$width" height="$heightInRatio">
+		<param name="movie" value="http://www.youtube.com/v/$videoId?$fs"></param>
+		<param name="allowFullScreen" value="$fullscreen"></param>
+		<param name="allowScriptAccess" value="always"></param>
+		<embed src="http://www.youtube.com/v/$videoId?$fs"
+		  type="application/x-shockwave-flash"
+		  allowfullscreen="$fullscreen"
+		  allowscriptaccess="always"
+		  width="$width" height="$heightInRatio">
+		</embed>
+		</object>
+	</div>
+	<h2 style="font-size:1.4em;text-align:center">$content.name</h2>
+</div>
