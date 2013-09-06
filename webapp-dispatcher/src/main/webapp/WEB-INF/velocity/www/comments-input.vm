@@ -55,11 +55,13 @@
           
         </span>
       <div class="field">
+        <!--
         <label class="required" for="reg_captcha">$rs.captcha.wordverification <span class="required"></span></label>
         <div>$rs.comments.typeincharacters</div>
         <div id="captcha_container-$elementId" class="captcha_container">
         </div> 
-        <input type="text" name="captcha_response" id="captcha_response-$elementId"/>
+        -->
+        <input type="hidden" name="captcha_response" id="captcha_response-$elementId"/>
       </div>
         
         <br />
@@ -80,7 +82,7 @@
           required: true
         },
         captcha_response: {
-          required: true
+          required: false
         }
       },
       messages: {
