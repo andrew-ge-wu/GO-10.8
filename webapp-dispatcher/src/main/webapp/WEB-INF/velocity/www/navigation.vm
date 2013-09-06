@@ -57,7 +57,7 @@
     #foreach($page in $navigation)
         #set($navigation = $page.content.pages.list)
         #if($navigation && $navigation.size() > 0)             
-            <h2>All in $page.content.name</h2>        
+            <h2>$page.content.name</h2>        
             #set($subPath = $tool_path.concat($path.asArray, $page.content.contentId))
                 
             #navigation($navigation $subPath)

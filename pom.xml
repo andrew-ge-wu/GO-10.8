@@ -262,6 +262,19 @@
       <classifier>contentdata</classifier>
     </dependency>
     
+	<dependency>
+        <groupId>com.atex.plugins</groupId>
+        <artifactId>non-repeating-publishing-queue-plugin</artifactId>
+        <version>1.0.0</version>
+    </dependency>
+
+    <dependency>
+        <groupId>com.atex.plugins</groupId>
+        <artifactId>non-repeating-publishing-queue-plugin</artifactId>
+        <version>1.0.0</version>
+        <classifier>contentdata</classifier>
+     </dependency>
+    
     <!-- <dependency>
       <groupId>com.atex.plugins</groupId>
       <artifactId>twitter-plugin</artifactId>
