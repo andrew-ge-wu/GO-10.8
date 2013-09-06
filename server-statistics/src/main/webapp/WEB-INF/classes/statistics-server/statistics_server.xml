@@ -9,6 +9,7 @@
     <analyzer>referrer</analyzer>
     <analyzer>bloganalyzer</analyzer>
     <analyzer>pollanalyzer</analyzer>
+    <analyzer>fblikeanalyzer</analyzer>
   </analyzers>
   <computers>
     <computer>referrerdomaincomputer</computer>
