@@ -143,6 +143,8 @@
             <field name="author" input-template="p.TextInput" label="cm.label.Author">
                 <param name="tabIndex">4</param>
             </field>
+            <field name="tweeterFields" input-template="com.atex.plugins.twitter.Twittable" >
+            </field>
           </layout>
         </layout>
 

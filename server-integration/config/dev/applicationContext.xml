@@ -30,6 +30,22 @@
   <!--
   <bean id="contentEventToJsonStringProcessor" class="example.integration.ContentEventToJsonStringProcessor" />
   -->
+  <bean id="jbossmq" class="org.apache.camel.component.jms.JmsComponent">
+    <property name="connectionFactory" ref="jbossConnectionFactory"/>
+  </bean>
+  <bean id="eventToTwitterProcessor" class="com.atex.plugins.twitter.integration.EventToTwitterProcessor" />
+  <bean id="camelTracer" class="org.apache.camel.processor.interceptor.Tracer">
+    <property name="traceExceptions" value="true"/>
+    <property name="traceInterceptors" value="true"/>
+    <property name="traceOutExchanges" value="true" />
+    <property name="logName" value="com.atex.plugins.twitter"/>
+  </bean>
+  <jee:jndi-lookup id="jbossConnectionFactory" jndi-name="ConnectionFactory">
+    <jee:environment>
+      java.naming.provider.url=jnp://localhost:1099
+      java.naming.factory.initial=org.jboss.naming.NamingContextFactory
+    </jee:environment>
+  </jee:jndi-lookup>
 
   <camel:camelContext xmlns="http://camel.apache.org/schema/spring">
     <camel:errorHandler id="inboxErrorHandler" redeliveryPolicyRef="inboxRedeliveryPolicy" />
@@ -56,7 +72,13 @@
       <camel:from uri="file:work/inbox?recursive=true&amp;initialDelay=10000&amp;delay=2000&amp;readLock=changed&amp;readLockMinLength=0&amp;delete=true&amp;moveFailed=../inbox-failed-imports/${date:now:yyyy.MM.dd.HH.mm.ss}-${file:name}&amp;include=.*\.content" />
       <camel:to uri="polopoly://sysadmin:sysadmin@content-dot-content" />
     </camel:route>
-
+    <camel:route>
+      <from uri="jbossmq:topic:jms/PolopolyTopic" />
+      <camel:process ref="eventToTwitterProcessor" />
+      <camel:recipientList>
+        <camel:header>recipients</camel:header>
+      </camel:recipientList>
+    </camel:route>
     <!-- Listen to the PolopolyTopic, convert event to string and log to file -->
     <!--
     <camel:route>
