@@ -1,0 +1,54 @@
+Models
+
+  This describes the "public api" of the models of this plugin, these properties can be expected to remain after an upgrade to a new version of this plugin.
+
+* com.atex.plugins.twitter.MainElement
+
+*-------------------+-----------------------------------+------------------------------------+
+| <<Name>>          | <<Description>>                   | <<Type>>                           |
+*-------------------+-----------------------------------+------------------------------------+
+| name              | The Content Name                  | p.ContentName                      |
+*-------------------+-----------------------------------+------------------------------------+
+| contentId         | The Content Id                    | com.polopoly.cm.VersionedContentId |
+*-------------------+-----------------------------------+------------------------------------+
+| title             | The Widget Title                  | p.TextInput                        |
+*-------------------+-----------------------------------+------------------------------------+
+| hashtags          | The Twitter Mark Keywords Search  | p.TextInput                        |
+*-------------------+-----------------------------------+------------------------------------+
+| rpp               | The Number of Tweet               | p.TextInput                        |
+*-------------------+-----------------------------------+------------------------------------+
+| toptweets         | Find the most relevant tweets     | p.Checkbox                         |
+*-------------------*-----------------------------------*------------------------------------*
+
+* com.atex.plugins.twitter.ConfigTemplate
+
+*-------------------+-----------------------------------+---------------------------------------+
+| <<Name>>          | <<Description>>                   | <<Type>>                              |
+*-------------------+-----------------------------------+---------------------------------------+
+| name              | The Content Name                  | p.ContentName                         |
+*-------------------+-----------------------------------+---------------------------------------+
+| contentId         | The Content Id                    | com.polopoly.cm.VersionedContentId    |
+*-------------------+-----------------------------------+---------------------------------------+
+| shellBgColor      | The Shell Background Color        | com.atex.plugins.twitter.ColorPicker  |
+*-------------------+-----------------------------------+---------------------------------------+
+| shellFgColor      | The Shell Text Color              | com.atex.plugins.twitter.ColorPicker  |
+*-------------------+-----------------------------------+---------------------------------------+
+| tweetBgColor      | The Tweet Background Color        | com.atex.plugins.twitter.ColorPicker  |
+*-------------------+-----------------------------------+---------------------------------------+
+| tweetFgColor      | The Tweet Text Color              | com.atex.plugins.twitter.ColorPicker  |
+*-------------------+-----------------------------------+---------------------------------------+
+| tweetLinkColor    | The Tweet Link Color              | com.atex.plugins.twitter.ColorPicker  |
+*-------------------+-----------------------------------+---------------------------------------+
+| width             | The Widget Width                  | p.TextInput                           |
+*-------------------+-----------------------------------+---------------------------------------+
+| height            | The Widget Height                 | p.TextInput                           |
+*-------------------+-----------------------------------+---------------------------------------+
+| avatars           | Show/Hide Avatars In The Tweet    | p.Checkbox                            |
+*-------------------+-----------------------------------+---------------------------------------+
+| scrollbar         | Show/Hide Scroll Bar              | p.Checkbox                            |
+*-------------------+-----------------------------------+---------------------------------------+
+| loop              | Enable/Disable Tweet Text loop    | p.Checkbox                            |
+*-------------------+-----------------------------------+---------------------------------------+
+| refreshPreview    | Update Preview Button             | example.refreshButton                 |
+*-------------------*-----------------------------------*---------------------------------------*
+

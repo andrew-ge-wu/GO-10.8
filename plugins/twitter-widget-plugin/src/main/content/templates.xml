@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <!--This file contains input template definitions -->
+  <input-template name="com.atex.plugins.twitter.MainElement" label="com.atex.plugins.twitter.mainElement">
+
+    <type>LayoutElement</type>
+
+    <policy>example.layout.element.ElementPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="renderTemplateIconInSelect">true</param>
+
+    <!-- Name -->
+    <field name="name" input-template="p.ContentName" label="com.atex.plugins.twitter.name" required="true" />
+    <!-- Title -->
+    <field name="title" input-template="p.TextInput" label="com.atex.plugins.twitter.title">
+      <param name="inlineHelp">true</param>
+      <help>com.atex.plugins.twitter.title.help</help>
+    </field>
+    <!-- Hashtags Search -->
+    <field name="hashtags" input-template="p.TextInput" label="com.atex.plugins.twitter.hashtags" required="true">
+      <param name="inlineHelp">true</param>
+      <help>com.atex.plugins.twitter.hashtags.help</help>
+    </field>
+    <field name="rpp" input-template="p.TextInput" label="com.atex.plugins.twitter.rpp">
+      <policy>com.atex.plugins.twitter.NumberMaxValuePolicy</policy>
+      <param name="maxSize">100</param>
+      <param name="default">10</param>
+      <param name="inlineHelp">true</param>
+      <help>com.atex.plugins.twitter.rpp.help</help>
+    </field>
+    <field name="toptweets" input-template="p.Checkbox" label="com.atex.plugins.twitter.toptweets">
+      <param name="checked">true</param>
+      <param name="inlineHelp">true</param>
+      <help>com.atex.plugins.twitter.toptweets.help</help>
+    </field>
+
+    <output-templates mode="www">
+      <id>com.atex.plugins.twitter.MainElement.ot</id>
+    </output-templates>
+  </input-template>
+</template-definition>

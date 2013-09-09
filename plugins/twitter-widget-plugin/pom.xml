@@ -1,0 +1,375 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- artifact description -->
+  <name>Twitter Widget Plugin</name>
+  <url>http://support.polopoly.com/confluence/display/GREENHOUSE/Twitter+Plugin</url>
+  <description>This plugin enable editor to create Twitter hashtags search widget and display Twitter updates on the web page</description>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <polopoly.version>10.4.1-3c858f3</polopoly.version>
+  </properties>
+
+  <!-- artifact definition -->
+  <groupId>com.atex.plugins</groupId>
+  <artifactId>twitter-widget-plugin</artifactId>
+  <version>2.0.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <parent>
+    <artifactId>plugins</artifactId>
+    <groupId>com.polopoly.sites</groupId>
+    <version>10.8.0</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <organization>
+    <name>Atex</name>
+    <url>http://www.atex.com</url>
+  </organization>
+
+  <licenses>
+    <license>
+      <name>Atex Polopoly Source Code License</name>
+      <url>http://support.polopoly.com/confluence/display/GREENHOUSE/APSCL</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>mdcpd</id>
+      <name>MDC Product Development</name>
+      <email>mdcpd@atex.com</email>
+      <url>http://atex.com</url>
+      <organization>Atex</organization>
+      <organizationUrl>http://atex.com</organizationUrl>
+      <roles>
+        <role>developer</role>
+        <role>supporter</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <issueManagement>
+    <system>JIRA</system>
+    <url>http://support.polopoly.com/jira/browse/GO</url>
+  </issueManagement>
+
+  <ciManagement>
+    <system>Jenkins</system>
+    <url>http://mdc-jenkins.atex.com:8080/job/twitter%20plugin/</url>
+  </ciManagement>
+
+  <distributionManagement>
+    <repository>
+      <uniqueVersion>false</uniqueVersion>
+      <id>polopoly-public</id>
+      <name>Polopoly Public</name>
+      <url>http://maven.polopoly.com/nexus/content/repositories/mdc-pd-plugins</url>
+      <layout>default</layout>
+    </repository>
+    <snapshotRepository>
+      <uniqueVersion>false</uniqueVersion>
+      <id>polopoly-public</id>
+      <name>Polopoly Public</name>
+      <url>http://mdc-maven.atex.com/nexus/content/repositories/mdc-pd-plugins-snapshots</url>
+      <layout>default</layout>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <scm>
+    <connection>scm:git:http://git.polopoly.com/git/twitter-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:atex-polopoly/twitter-plugin.git</developerConnection>
+    <url>https://github.com/atex-polopoly/twitter-plugin</url>
+  </scm>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>polopoly-public</id>
+      <name>Polopoly Public</name>
+      <url>http://maven.polopoly.com/nexus/content/groups/polopoly-public</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <repositories>
+    <repository>
+      <id>polopoly-public</id>
+      <name>Polopoly Public</name>
+      <url>http://maven.polopoly.com/nexus/content/groups/polopoly-public</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.polopoly.extensions</groupId>
+      <artifactId>cm-velocity-integration</artifactId>
+      <version>${polopoly.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.polopoly</groupId>
+      <artifactId>polopoly</artifactId>
+      <version>${polopoly.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.atex.plugins</groupId>
+      <artifactId>baseline</artifactId>
+      <version>3.0.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.4</version>
+      <scope>provided</scope>
+    </dependency>
+    <!-- test -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>2.21.0</version>
+      <exclusions>
+        <exclusion>
+          <groupId>commons-logging</groupId>
+          <artifactId>commons-logging</artifactId>
+        </exclusion>
+      </exclusions>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-all</artifactId>
+      <version>1.9.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>jsp-api</artifactId>
+      <version>2.2</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.sourceforge.htmlunit</groupId>
+      <artifactId>htmlunit</artifactId>
+      <version>2.9</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>jboss</groupId>
+      <artifactId>jbossall-client</artifactId>
+      <version>4.0.5</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.atex.plugins.test</groupId>
+      <artifactId>plugin-test-baseline</artifactId>
+      <version>1.0.0</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>p-maven-plugin</artifactId>
+        <groupId>com.polopoly.extensions</groupId>
+        <version>${polopoly.version}</version>
+        <configuration>
+          <generatePluginXml>true</generatePluginXml>
+          <optionalPolopolyDir>true</optionalPolopolyDir>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>jboss</groupId>
+            <artifactId>jbossall-client</artifactId>
+            <version>4.0.5</version>
+          </dependency>
+          <dependency>
+            <groupId>com.polopoly</groupId>
+            <artifactId>polopoly</artifactId>
+            <version>${polopoly.version}</version>
+          </dependency>
+        </dependencies>
+        <executions>
+          <execution>
+            <goals>
+              <goal>pack</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>com.polopoly.extensions</groupId>
+        <artifactId>p-maven-plugin</artifactId>
+        <version>${polopoly.version}</version>
+        <executions>
+          <execution>
+            <id>generate-test-contentdata-jar</id>
+            <goals>
+              <goal>dot-content-to-xml</goal>
+              <goal>pack</goal>
+            </goals>
+            <configuration>
+              <sources>
+                <generatedContent>
+                  <directory>${project.basedir}/src/test/content</directory>
+                  <includes>
+                    <include>*.content</include>
+                    <include>**/*.content</include>
+                  </includes>
+                </generatedContent>
+              </sources>
+              <targetDirectory>${project.build.directory}/test-generated-content</targetDirectory>
+              <generatePluginXml>false</generatePluginXml>
+              <classifier>test-contentdata</classifier>
+              <contentDataXmlResources>
+                <contentXml>
+                  <directory>${project.basedir}/src/test/content</directory>
+                  <includes>
+                    <include>*.xml</include>
+                    <include>**/*.xml</include>
+                  </includes>
+                </contentXml>
+                <generatedContent>
+                  <directory>${project.build.directory}/test-generated-content</directory>
+                  <includes>
+                    <include>*.xml</include>
+                    <include>**/*.xml</include>
+                  </includes>
+                </generatedContent>
+              </contentDataXmlResources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <!--  package test -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.4</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>test-jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <!--  profiles  -->
+  <profiles>
+    <!-- deploy profile -->
+    <profile>
+      <id>deploy</id>
+      <build>
+        <plugins>
+          <!-- bundles the site output into a JAR so that it can be deployed to nexus -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-site-plugin</artifactId>
+            <version>3.0</version>
+            <configuration>
+              <port>9000</port>
+              <tempWebappDirectory>${basedir}/target/site/tempdir</tempWebappDirectory>
+            </configuration>
+            <executions>
+              <execution>
+                <id>attach-site</id>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <!-- bundles the source code into a JAR so that it can be deployed to nexus -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <version>2.1.2</version>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>jar</goal>
+                  <goal>test-jar-no-fork</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+      <!-- only generate selected reports, report for dependencies take long time to complete -->
+      <reporting>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-project-info-reports-plugin</artifactId>
+            <version>2.4</version>
+            <configuration>
+              <linkOnly>true</linkOnly>
+            </configuration>
+            <reportSets>
+              <reportSet>
+                <reports>
+                  <report>project-team</report>
+                  <report>cim</report>
+                  <report>issue-tracking</report>
+                  <report>license</report>
+                  <report>scm</report>
+                  <report>summary</report>
+                </reports>
+              </reportSet>
+            </reportSets>
+          </plugin>
+          <!-- generate javadoc -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>2.8.1</version>
+            <reportSets>
+              <reportSet>
+                <reports>
+                  <report>javadoc</report>
+                </reports>
+              </reportSet>
+            </reportSets>
+          </plugin>
+          <!-- generate test report -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-report-plugin</artifactId>
+            <version>2.12</version>
+          </plugin>
+          <!-- generate test coverage report -->
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>cobertura-maven-plugin</artifactId>
+            <version>2.5.1</version>
+          </plugin>
+          <!-- generate findbugs report -->
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>findbugs-maven-plugin</artifactId>
+            <version>2.4.0</version>
+          </plugin>
+        </plugins>
+      </reporting>
+    </profile>
+  </profiles>
+</project>

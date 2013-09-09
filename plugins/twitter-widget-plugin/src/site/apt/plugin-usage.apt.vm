@@ -1,0 +1,27 @@
+Usage
+
+* Create Twitter hashtags element
+
+  Select Twitter hashtags element from the dropdown list
+
+[images/howto-1.png]
+
+  Enter name, title, hashtags, top tweets and click Insert.
+
+[images/howto-2.png]
+
+* Configure widget look and feel and preference 
+
+  Select "Twitter Widget Configuration" from Plugin Configurations
+
+[images/howto-3.png]
+
+  Make change on widget color or widget preferences and click save
+
+  Note: Click "Update Preview" button to preview widget look and feel
+
+[images/howto-4.png]
+
+  On the site, the twitter hashtags element should display the tweets.
+
+[images/howto-5.png]

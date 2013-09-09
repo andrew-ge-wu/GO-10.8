@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+
+  <input-template name="com.atex.plugins.twitter.RefreshButton">
+    <policy>com.polopoly.cm.policy.ContentPolicy</policy>
+    <editor>com.atex.plugins.twitter.widget.ORefreshButtonPolicyWidget</editor>
+    <viewer>com.atex.plugins.twitter.widget.ORefreshButtonPolicyWidget</viewer>
+  </input-template>
+
+  <input-template name="com.atex.plugins.twitter.ColorPicker">
+    <policy>com.polopoly.cm.app.policy.SingleValuePolicy</policy>
+    <editor>com.atex.plugins.twitter.widget.OColorPickerPolicyWidget</editor>
+    <viewer>com.atex.plugins.twitter.widget.OColorPickerPolicyWidget</viewer>
+  </input-template>
+
+  <input-template name="com.atex.plugins.twitter.LayoutPreview">
+    <policy>com.polopoly.cm.app.policy.SingleValuePolicy</policy>
+    <editor>com.atex.plugins.twitter.widget.OTwitterPreviewPolicyWidget</editor>
+    <viewer>com.atex.plugins.twitter.widget.OTwitterPreviewPolicyWidget</viewer>
+  </input-template> 
+
+  <!--This file contains input template definitions -->
+  <input-template name="com.atex.plugins.twitter.ConfigTemplate" label="com.atex.plugins.twitter.configTemplate">
+
+    <policy>com.atex.plugins.twitter.TwitterWidgetPolicy</policy>
+    <editor>com.atex.plugins.twitter.widget.OTwitterConfigTopPolicyWidget</editor>
+    <viewer>com.atex.plugins.twitter.widget.OTwitterConfigTopPolicyWidget</viewer>
+
+    <type>AppConfig</type>
+
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="renderTemplateIconInSelect">true</param>
+
+    <field name="name" input-template="p.ContentName" label="cm.label.Name" required="true" />
+
+    <!-- Themes -->
+    <layout name="themesLabeledSection" input-template="p.LabeledSection" label="com.atex.plugins.twitter.widget.themes.label">
+      <layout name="themesColumnHolder" input-template="p.ColumnHolder">
+        <!-- Shell -->
+        <layout name="shellColumn" input-template="p.Column">
+          <param name="width">150</param>
+          <field name="shellBgColor" input-template="com.atex.plugins.twitter.ColorPicker" label="com.atex.plugins.twitter.widget.shell.bgcolor">
+            <param name="default">#8ec1da</param>
+          </field>
+          <field name="tweetBgColor" input-template="com.atex.plugins.twitter.ColorPicker" label="com.atex.plugins.twitter.widget.tweet.bgcolor">
+            <param name="default">#ffffff</param>
+          </field>
+          <field name="tweetLinkColor" input-template="com.atex.plugins.twitter.ColorPicker" label="com.atex.plugins.twitter.widget.tweet.linkcolor">
+            <param name="default">#1985b5</param>
+          </field>
+          <field name="refreshPreview" input-template="com.atex.plugins.twitter.RefreshButton" label="com.atex.plugins.twitter.widget.tweet.updatebutton.label" />
+        </layout>
+        <layout name="shellColumn2" input-template="p.Column">
+          <param name="width">150</param>
+          <field name="shellFgColor" input-template="com.atex.plugins.twitter.ColorPicker" label="com.atex.plugins.twitter.widget.shell.fgcolor">
+            <param name="default">#ffffff</param>
+          </field>
+          <field name="tweetFgColor" input-template="com.atex.plugins.twitter.ColorPicker" label="com.atex.plugins.twitter.widget.tweet.fgcolor">
+            <param name="default">#444444</param>
+          </field>
+        </layout>
+        <!-- Preview -->
+        <layout name="previewColumn" input-template="p.Column">
+          <param name="width">500</param>
+          <field name="shellPreview" input-template="com.atex.plugins.twitter.LayoutPreview" label="com.atex.plugins.twitter.widget.tweet.preview" />
+        </layout>
+      </layout>
+    </layout>
+
+    <!-- Preference -->
+    <layout name="preferenceLabeledSection" input-template="p.LabeledSection" label="com.atex.plugins.twitter.widget.preference.label">
+      <layout name="preferenceColumnsHolder" input-template="p.ColumnHolder">
+        <!-- Size -->
+        <layout name="sizeColumn" input-template="p.Column">
+          <field name="width" input-template="p.TextInput" label="com.atex.plugins.twitter.widget.width">
+            <param name="default">auto</param>
+          </field>
+          <field name="height" input-template="p.TextInput" label="com.atex.plugins.twitter.Widget.height">
+            <param name="default">auto</param>
+          </field>
+        </layout>
+        <!-- Feature -->
+        <layout name="featureColumn" input-template="p.Column">
+          <field name="avatars" input-template="p.Checkbox" label="com.atex.plugins.twitter.widget.avatars">
+            <param name="checked">true</param>
+            <param name="inlineHelp">true</param>
+            <help>com.atex.plugins.twitter.widget.avatars.help</help>
+          </field>
+          <field name="scrollbar" input-template="p.Checkbox" label="com.atex.plugins.twitter.widget.scrollbar">
+            <param name="checked">true</param>
+            <param name="inlineHelp">true</param>
+            <help>com.atex.plugins.twitter.widget.scrollbar.help</help>
+          </field>
+          <field name="loop" input-template="p.Checkbox" label="com.atex.plugins.twitter.widget.loop">
+            <param name="checked">true</param>
+            <param name="inlineHelp">true</param>
+            <help>com.atex.plugins.twitter.widget.loop.help</help>
+          </field>
+        </layout>
+      </layout>
+    </layout>
+
+  </input-template>
+</template-definition>

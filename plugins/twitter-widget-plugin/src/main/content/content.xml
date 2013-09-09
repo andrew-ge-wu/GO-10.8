@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content>
+    <metadata>
+      <contentid>
+        <externalid>p.siteengine.ElementLayoutTemplates.d</externalid>
+      </contentid>
+    </metadata>
+    <contentlist>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>com.atex.plugins.twitter.MainElement</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>com.atex.plugins.config.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.Configuration</externalid>
+      </input-template>
+    </metadata>
+    <component name="name" group="polopoly.Content">Plugin Configurations</component>
+    <contentlist>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>com.atex.plugins.twitter.TwitterWidgetConfigHome</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>com.atex.plugins.twitter.TwitterWidgetConfigHome</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.twitter.ConfigTemplate</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>p.Configuration</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Twitter Widget Configuration</component>
+    <component group="shellBgColor" name="value">#8ec1da</component>
+    <component group="shellFgColor" name="value">#ffffff</component>
+    <component group="tweetBgColor" name="value">#ffffff</component>
+    <component group="tweetFgColor" name="value">#444444</component>
+    <component group="tweetLinkColor" name="value">#1985b5</component>
+    <component group="width" name="value">auto</component>
+    <component group="height" name="value">auto</component>
+    <component group="avatars" name="value">true</component>
+    <component group="scrollbar" name="value">true</component>
+    <component group="loop" name="value">true</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.siteengine.Configuration.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.Configuration</externalid>
+      </input-template>
+    </metadata>
+    <contentlist>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <major>Department</major>
+              <externalid>com.atex.plugins.config.d</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+</batch>
