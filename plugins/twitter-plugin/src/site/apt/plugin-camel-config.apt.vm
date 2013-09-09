@@ -1,0 +1,79 @@
+Camel Configuration
+
+  To use this plugin through <<Apache Camel>> integration with <<SpringFramework>>, 
+  you need to configure usng <<Spring DSL>> for <<Apache Camel>>.
+  In order to tweet content upon it's saved, the following steps are required.
+  
+* Enable Tracer for Debuggin Purpose
+
+  During development, you can enable <<Camel Tracer>> for debugging purpose. \
+  <<Note:>> Not recommended for <<production>> environment.
+  
++-------------------------------+
+  <bean id="camelTracer" class="org.apache.camel.processor.interceptor.Tracer">
+    <property name="traceExceptions" value="true"/>
+    <property name="traceInterceptors" value="true"/>
+    <property name="traceOutExchanges" value="true" />
+    <property name="logName" value="com.atex.plugins.twitter"/>
+  </bean>
++-------------------------------+
+  
+* Enable Polopoly JMS for Twitter Plugin
+  
+  At the project's server-integration/config/<environment>/applicationContext.xml, include this
+  
++-------------------------------+
+  <bean id="jbossmq" class="org.apache.camel.component.jms.JmsComponent">
+    <property name="connectionFactory" ref="jbossConnectionFactory"/>
+  </bean>
+  <jee:jndi-lookup id="jbossConnectionFactory" jndi-name="ConnectionFactory">
+    <jee:environment>
+      java.naming.provider.url=jnp://localhost:1099
+      java.naming.factory.initial=org.jboss.naming.NamingContextFactory
+    </jee:environment>
+  </jee:jndi-lookup>  
++-------------------------------+
+
+  For further reading, refer 
+{{{http://support.polopoly.com/confluence/display/PolopolyMaster/How+to+work+with+the+Integration+Server}How to work with the Integration Server}}
+  
+* Configure Twitter Plugin Bean for Camel Processor
+  
++-------------------------------+
+  <bean id="eventToTwitterProcessor" class="com.atex.plugins.twitter.integration.EventToTwitterProcessor" />  
++-------------------------------+
+
+* Configure Camel Router
+
+  Include the following in <camel:camelContext> tag
+  
++-------------------------------+
+  <camel:route>
+    <from uri="jbossmq:topic:jms/PolopolyTopic" />
+    <camel:process ref="eventToTwitterProcessor" />
+    <camel:recipientList>
+      <camel:header>recipients</camel:header>
+    </camel:recipientList>
+  </camel:route>     
++-------------------------------+
+
+* Using Twitter Plugin Field
+
+  At the content's input template, include this
+  
++-------------------------------+
+  <field name="tweeterFields" input-template="com.atex.plugins.twitter.Twittable" />
++-------------------------------+
+
+* Verify Field
+
+  Open the content you added Twitter Field, you can verified that the
+  content now have one new field.
+  
+** Default look and feel
+  
+[images/default-twitter-content.png]
+
+** Enabled look and feel
+
+[images/enable-twitter-content.png]

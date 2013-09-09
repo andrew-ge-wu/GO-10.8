@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <!-- Twittable -->
+  <input-template name="com.atex.plugins.twitter.twittable.Checkbox">
+    <policy>com.polopoly.cm.app.policy.CheckboxPolicy</policy>
+    <editor>com.atex.plugins.twitter.widget.OTwittableCheckboxPolicyWidget</editor>
+    <viewer>com.atex.plugins.twitter.widget.OTwittableCheckboxPolicyWidget</viewer>
+  </input-template>
+
+  <input-template name="com.atex.plugins.twitter.twittable.TextInput">
+    <policy>com.polopoly.cm.app.policy.SingleValuePolicy</policy>
+    <editor>com.atex.plugins.twitter.widget.OTwittableTextInputPolicyWidget</editor>
+    <viewer>com.atex.plugins.twitter.widget.OTwittableTextInputPolicyWidget</viewer>
+  </input-template>
+  
+  <input-template name="com.atex.plugins.twitter.twittable.TwitterAccount">
+    <policy>com.polopoly.cm.app.policy.ContentSingleSelectPolicy</policy>
+    <editor>com.atex.plugins.twitter.widget.OTwitterAccountSelectWidget</editor>
+    <viewer>com.atex.plugins.twitter.widget.OTwitterAccountSelectWidget</viewer>
+  </input-template>
+
+  <input-template name="com.atex.plugins.twitter.Twittable">
+    <policy>com.atex.plugins.twitter.TwittableInputPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OAjaxTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OAjaxTopPolicyWidget</viewer>
+    <field name="tweetitnow" input-template="com.atex.plugins.twitter.twittable.Checkbox" label="com.atex.plugins.twitter.tweetitnow">
+      <param name="checked">false</param>
+    </field>
+    <field name="tweetText" input-template="com.atex.plugins.twitter.twittable.TextInput" label="com.atex.plugins.twitter.tweetText">
+      <param name="maxlength">110</param>
+    </field>
+        <field name="account" input-template="com.atex.plugins.twitter.twittable.TwitterAccount" label="com.atex.plugins.twitter.select.account">
+          <param name="allowDepartments">false</param>
+          <param name="allowArticles">true</param>
+          <idparam name="rootContent">
+            <externalid>com.atex.plugins.twitter.TwitterConfigHome</externalid>
+          </idparam>
+          <param name="hierarchyModel">com.atex.plugins.twitter.hierarchy.AccountListHierarchyModel</param>
+          <param name="inlineHelp">true</param>
+          <help>com.atex.plugins.twitter.select.account.help</help>
+        </field>
+  </input-template>
+</template-definition>

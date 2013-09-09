@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch xmlns="http://www.polopoly.com/polopoly/cm/xmlio">
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>com.atex.plugins.config.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.Configuration</externalid>
+      </input-template>
+    </metadata>
+    <component name="name" group="polopoly.Content">Plugin Configurations</component>
+    <contentlist>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <externalid>com.atex.plugins.twitter.TwitterConfigHome</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>AppConfig</major>
+        <externalid>com.atex.plugins.twitter.TwitterConfigHome</externalid>
+      </contentid>
+      <input-template>
+        <major>InputTemplate</major>
+        <externalid>com.atex.plugins.twitter.ConfigTemplate</externalid>
+      </input-template>
+      <security-parent>
+        <externalid>p.Configuration</externalid>
+      </security-parent>
+    </metadata>
+    <component group="polopoly.Content" name="name">Twitter Configuration</component>
+  </content>
+
+  <content>
+    <metadata>
+      <contentid>
+        <major>Department</major>
+        <externalid>p.siteengine.Configuration.d</externalid>
+      </contentid>
+      <input-template>
+        <externalid>p.Configuration</externalid>
+      </input-template>
+    </metadata>
+    <contentlist>
+      <entry mode="modify" withMetadata="false">
+        <metadata>
+          <referredContent>
+            <contentid>
+              <major>Department</major>
+              <externalid>com.atex.plugins.config.d</externalid>
+            </contentid>
+          </referredContent>
+        </metadata>
+      </entry>
+    </contentlist>
+  </content>
+</batch>

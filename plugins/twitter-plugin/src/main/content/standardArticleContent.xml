@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <input-template name="example.StandardArticle" label="cm.template.p.siteengine.StandardArticle.it">
+    <policy>example.content.article.StandardArticlePolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OAjaxTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OAjaxTopPolicyWidget</viewer>
+    <editor contextName="orchid_SEARCHITEM">example.widget.OSearchItemBaseWidget</editor>
+    <viewer contextName="orchid_SEARCHITEM">example.widget.OSearchItemBaseWidget</viewer>
+    <editor contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">com.atex.plugins.baseline.widget.OContentListEntryBasePolicyWidget</viewer>
+    <editor contextName="orchid_INBOXITEM">example.widget.OInboxEntryWidget</editor>
+    <viewer contextName="orchid_INBOXITEM">example.widget.OInboxEntryWidget</viewer>
+    <editor contextName="orchid_THUMBENTRY">example.widget.OSearchThumbArticle</editor>
+    <viewer contextName="orchid_THUMBENTRY">example.widget.OSearchThumbArticle</viewer>
+
+    <type>Article</type>
+    
+    <param name="enableAutosave">true</param>
+
+    <param name="templateIcon">document_text.png</param>
+    <param name="renderTemplateIconInSelect">true</param>
+
+    <content-list name="topimages" input-template="example.ImageContentListWrapper" />
+    <content-list name="images" input-template="example.ImageContentListWrapper" />
+    <content-list name="default" input-template="example.ArticleContentListWrapper" />
+    
+    <!-- This content list is created by the policy based on article comments -->
+    <content-list name="comments" />
+    
+    <param name="ViewState_insert">false</param>
+    <param name="ViewState_refresh">true</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditState_saveAndEdit">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">true</param>
+    <param name="EditNewState_saveAndFastInsert">false</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="PrepareInsertionState_abortAndClose">false</param>
+    <param name="PrepareInsertionState_abortAndView">true</param>
+    <param name="titleOfNewContent">cm.template.p.siteengine.StandardArticle.it.new</param>
+    <param name="ViewState_copy">true</param>
+    <param name="cloneSecurityParent">currentOrHome</param>
+    <layout name="menu" input-template="p.PageMenu">
+      <layout name="main" input-template="p.Page" label="cm.template.p.siteengine.StandardArticle.it.TextAndImages">
+        <param name="lazyInit">true</param>
+        <layout name="content" input-template="p.Group">
+          <layout name="text" input-template="p.Group">
+            <layout name="name" input-template="p.Group" label="cm.template.example.StandardArticle.title.required">
+              <param name="fieldsetClass">field p_resizable_text</param>
+              <field name="name" input-template="p.ContentName" label="cm.label.Title" required="true">
+                <param name="showLabel">false</param>
+                <param name="fieldsetClass">field text heading</param>
+                <!-- A size of zero or less will prevent the OTextInput from printing the size attribute of the HTML tag, this text input field's width is controlled by CSS -->
+                <param name="size">-1</param>
+                <param name="tabIndex">1</param>
+                <!-- <param name="style">font-size: 16px; font-weight: bold; width: 95%;max-width:512px;</param> -->
+              </field>
+              <layout name="title tools" input-template="p.Group">
+                <param name="fieldsetClass">tools</param>
+                <field name="titleFontSize" input-template="p.TextInput" label="cm.template.example.TeaserElement.TitleFontSize">
+                  <help>cm.template.example.TeaserElement.TitleFontSize.help</help>
+                  <policy>com.polopoly.cm.app.policy.NumberInputPolicy</policy>
+                  <param name="fieldsetClass">field p_font_size</param>
+                  <param name="type">int</param>
+                  <param name="size">3</param>
+                  <param name="title">cm.template.example.TeaserElement.TitleFontSize</param>
+                  <param name="tabIndex">11</param>
+                </field>
+              </layout>
+            </layout>
+            <layout name="lead" input-template="p.Group" label="cm.label.Lead">
+              <param name="fieldsetClass">field p_resizable_text</param>
+              <field name="lead" input-template="p.TextArea" label="">
+                <param name="fieldsetClass">heading</param>
+                <param name="showLabel">false</param>
+                <param name="fieldsetClass">field text</param>
+                <param name="rows">3</param>
+                <param name="cols">50</param>
+                <param name="tabIndex">2</param>
+              </field>
+              <layout name="lead tools" input-template="p.Group">
+                <param name="fieldsetClass">tools</param>
+                <field name="leadFontSize" input-template="p.TextInput" label="cm.template.example.TeaserElement.LeadFontSize">
+                  <help>cm.template.example.TeaserElement.TitleFontSize.help</help>
+                  <policy>com.polopoly.cm.app.policy.NumberInputPolicy</policy>
+                  <param name="fieldsetClass">field p_font_size</param>
+                  <param name="type">int</param>
+                  <param name="size">3</param>
+                  <param name="title">cm.template.example.TeaserElement.LeadFontSize</param>
+                  <param name="tabIndex">12</param>
+                </field>
+              </layout>
+            </layout>
+            <field name="body" input-template="p.FCKEditor" label="cm.label.Text">
+              <param name="fieldsetClass">field text</param>
+              <param name="width">-1</param>
+              <param name="height">300</param>
+              <param name="cols">50</param>
+              <param name="rows">30</param>
+              <param name="showPasteButton">false</param>
+              <param name="tabIndex">3</param>
+            </field>
+            <!-- This is the tweet field, the field name must be "tweetrFields" -->
+            <field name="tweeterFields" input-template="com.atex.plugins.twitter.Twittable" >
+            </field>
+          </layout>
+        </layout>
+
+        <field name="comments" input-template="p.AutoContentCreator">
+          <idparam name="templateContentId">
+            <externalid>example.CommentTemplate</externalid>
+          </idparam>
+          <param name="insertionContentListName">elements/slotElements</param>
+          <param name="showFieldset">false</param>
+        </field>
+        <field name="bookmarks" input-template="p.AutoContentCreator">
+          <idparam name="templateContentId">
+            <externalid>example.BookmarkTemplate</externalid>
+          </idparam>
+          <param name="insertionContentListName">rightColumn/slotElements</param>
+          <param name="showFieldset">false</param>
+        </field>
+        <field name="relatedContent" input-template="p.AutoContentCreator">
+          <idparam name="templateContentId">
+            <externalid>example.RelatedContentTemplate</externalid>
+          </idparam>          
+          <param name="insertionContentListName">rightColumn/slotElements</param>
+          <param name="showFieldset">false</param>
+        </field>
+
+        <layout name="author-date-column" input-template="p.ColumnHolder">
+          <layout name="date-column" input-template="p.Column">
+            <field name="publishedDate" input-template="p.OptionalDateTime" label="cm.general.PublishedDate">
+              <help>cm.template.p.siteengine.StandardArticle.it.PublishedDateHelp</help>
+              <param name="inlineHelp">true</param>
+              <param name="saveDefaultValue">commitTime</param>
+              <param name="showSeconds">false</param>
+            </field>
+          </layout>
+          <layout name="author-column" input-template="p.Column">
+            <field name="author" input-template="p.TextInput" label="cm.label.Author">
+                <param name="tabIndex">4</param>
+            </field>
+          </layout>
+        </layout>
+
+        <layout name="imagescolumholder" input-template="p.ColumnHolder">
+          <layout name="imagecolumn" input-template="p.Column">
+            <layout name="imagessection" input-template="p.LabeledSection" label="cm.general.Images">
+                <param name="cssClass">p_section</param>
+              <field name="imageContentCreator" input-template="p.SimpleContentCreator">
+                <param name="insertTargetAlias">content</param>
+                <param name="askInsertTarget">false</param>
+                <param name="insertionContentListName">images</param>
+                <param name="askInsertionContentListName">false</param>
+                <param name="askContentListPosition">false</param>
+                <param name="insertPosition">top</param>
+                <param name="major">1</param>
+                <idparam name="inputTemplateId">
+                  <externalid>example.Image</externalid>
+                </idparam>
+                <param name="createWithSecurityParent">true</param>
+                <param name="securityParentAlias">content</param>
+                <param name="createLabel">cm.action.CreateNewImage</param>
+              </field>
+              <field name="images" input-template="p.ContentListEntryContainer" label="">
+                <param name="contentListName">images</param>
+              </field>
+            </layout>
+          </layout>
+          <layout name="topimagecolumn" input-template="p.Column">
+            <layout name="topimagesection" input-template="p.LabeledSection" label="cm.template.p.siteengine.StandardArticle.it.topImage">
+              <param name="cssClass">p_section</param>
+              <field name="topimageContentCreator" input-template="p.SimpleContentCreator">
+                <param name="insertTargetAlias">content</param>
+                <param name="askInsertTarget">false</param>
+                <param name="insertionContentListName">topimages</param>
+                <param name="askInsertionContentListName">false</param>
+                <param name="askContentListPosition">false</param>
+                <param name="insertPosition">top</param>
+                <param name="major">1</param>
+                <idparam name="inputTemplateId">
+                  <externalid>example.Image</externalid>
+                </idparam>
+                <param name="createWithSecurityParent">true</param>
+                <param name="securityParentAlias">content</param>
+                <param name="createLabel">cm.action.CreateNewImage</param>
+              </field>
+              <field name="topimages" input-template="p.ContentListEntryContainer" label="">
+                <param name="contentListName">topimages</param>
+              </field>
+            </layout>
+          </layout>
+        </layout>
+        <layout name="metadataColumns" input-template="p.ColumnHolder">
+          <layout name="categorySelectorColumn" input-template="p.Column">
+            <layout name="metadataSection" input-template="p.LabeledSection" label="cm.general.Categorization">
+              <param name="cssClass">p_section</param>
+              <layout name="categorizationPadding" input-template="p.Group">                
+                <param name="showLabel">false</param>
+                <param name="showFieldset">false</param>
+                <param name="cssClass">p_padding</param>
+                <field name="categorization" input-template="p.siteengine.Content.Categorization" label="">
+                  <param name="categoryDimensionsAlias">sites</param>
+                </field>
+                <field name="categorizationSuggestion" input-template="p.ArticleCategorizationSuggestion" />
+              </layout>
+            </layout>
+          </layout>
+          <layout name="relatedArticlesColumn" input-template="p.Column">
+            <layout name="relatedArticlesSection" input-template="p.LabeledSection" label="cm.general.RelatedArticles">
+              <param name="cssClass">p_section</param>
+              <field name="related" input-template="p.ContentListEntryContainer" label="">
+                <param name="contentListName">default</param>
+              </field>
+            </layout>
+          </layout>
+        </layout>
+      </layout>
+      <layout name="elements" input-template="p.Page" label="cm.template.p.siteengine.StandardArticle.it.Elements">
+        <param name="lazyInit">true</param>
+        <layout name="columns" input-template="p.ColumnHolder">
+          <layout name="mainColumn" input-template="p.Column">
+            <layout name="mainColumnSection" input-template="p.LabeledSection" label="cm.template.p.siteengine.StandardArticle.it.Elements.MainColumn">
+              <param name="cssClass">p_section</param>
+              <field name="elements" input-template="p.siteengine.layout.Slot.it" />
+            </layout>
+          </layout>
+          <layout name="rightColumn" input-template="p.Column">
+            <layout name="rightColumnSection" input-template="p.LabeledSection" label="cm.template.p.siteengine.StandardArticle.it.Elements.RightColumn">
+              <param name="cssClass">p_section</param>
+              <field name="rightColumn" input-template="p.siteengine.layout.Slot.it" />
+            </layout>
+          </layout>
+        </layout>
+      </layout>
+      <layout name="settings" input-template="p.Page" label="cm.general.Advanced">
+        <param name="lazyInit">true</param>
+        <layout name="settingsMenu" input-template="p.PageMenu">
+          <layout name="metadata" input-template="p.Page" label="cm.template.example.StandardArticle.metadata">
+            <field name="createdDate" input-template="p.OptionalDateTime" label="cm.template.p.siteengine.StandardArticle.it.CreatedDate">
+              <help>cm.template.p.siteengine.StandardArticle.it.CreatedDateHelp</help>
+              <param name="inlineHelp">true</param>
+              <param name="saveDefaultValue">commitTime</param>
+              <param name="showSeconds">false</param>
+            </field>
+            <field name="modifiedDate" input-template="p.OptionalDateTime" label="cm.template.p.siteengine.StandardArticle.it.ModifiedDate">
+              <help>cm.template.p.siteengine.StandardArticle.it.ModifiedDateHelp</help>
+              <param name="inlineHelp">true</param>
+              <param name="saveDefaultValue">commitTime</param>
+              <param name="showSeconds">false</param>
+            </field>
+          </layout>
+          <layout name="other" input-template="p.Page" label="example.article.misc">
+            <layout name="notes" input-template="p.Group">
+              <field name="editorialNotes" input-template="p.TextArea" label="cm.template.p.siteengine.StandardArticle.it.EditorialNotes">
+                <param name="rows">3</param>
+                <param name="cols">50</param>
+                <param name="style">font-size: 11px; font-weight: bold; width: 99%;max-width:400px;</param>
+              </field>
+            </layout>
+            <layout name="structure" input-template="p.Group">
+              <field name="pathsegment" input-template="p.TextInput" label="cm.template.p.siteengine.StandardArticle.it.PathSegment" />
+              <field name="securityparent" input-template="p.SecurityParentSelect" label="cm.general.HomePage">
+                <help>cm.template.p.siteengine.StandardArticle.it.HomePageHelp</help>
+                <param name="inlineHelp">true</param>
+                <idparam name="rootContent">
+                  <externalid>p.siteengine.Sites.d</externalid>
+                </idparam>
+                <param name="width">314</param>
+                <param name="height">120</param>
+              </field>
+              <field name="associatedSites" input-template="p.siteengine.SiteSelector" label="cm.general.AssociatedSites">
+                <param name="showLabel">true</param>
+                <param name="multipleSelect">true</param>
+                <param name="allowDepartments">true</param>
+                <param name="allowArticles">false</param>
+                <param name="height">250</param>
+                <param name="width">400</param>
+                <param name="inlineHelp">true</param>
+                <help>cm.template.p.siteengine.StandardArticle.it.AssociatedSitesHelp</help>
+                <idparam name="rootContent">
+                  <externalid>p.siteengine.Sites.d</externalid>
+                </idparam>
+              </field>
+            </layout>
+            <layout name="state" input-template="p.Group">
+              <field name="timestate" input-template="p.TimeState" label="cm.general.TimeState">
+                <help>cm.template.p.siteengine.StandardArticle.it.TimeStateHelp</help>
+                <param name="inlineHelp">true</param>
+                <param name="showYear">true</param>
+                <param name="showMonth">true</param>
+                <param name="showDay">true</param>
+                <param name="showHour">true</param>
+                <param name="showMinute">true</param>
+                <param name="showSecond">false</param>
+                <param name="show12HourFormat">false</param>
+                <param name="format">yyyyMMddHHmmss</param>
+                <param name="startYear">1970</param>
+                <param name="endYear">2050</param>
+              </field>
+              <field name="workflowaction" input-template="p.WorkflowAction" label="cm.general.WorkFlowAction" />
+              <field name="workflowtoinherit" input-template="p.InheritWorkflow" label="cm.general.Workflow">
+                <param name="inheritFromPolicyName">inherit</param>
+                <param name="parentName">securityParent</param>
+              </field>
+              <field name="onlineOnly" input-template="p.Checkbox" label="cm.template.p.siteengine.StandardArticle.it.OnlineOnly">
+                <help>cm.template.p.siteengine.StandardArticle.it.OnlineOnlyHelp</help>
+                <param name="inlineHelp">true</param>
+                <param name="checked">false</param>
+              </field>
+              <field name="onlineState" input-template="p.OnlineState" label="cm.field.OnlineState.Label" required="false">
+                <param name="inlineHelp">true</param>
+                <param name="initialOnlineState">true</param>
+              </field>
+              <field name="priority" input-template="p.TextInput" label="cm.template.p.siteengine.StandardArticle.it.Priority">
+                <help>cm.template.p.siteengine.StandardArticle.it.Priority.help</help>
+                <param name="inlineHelp">true</param>
+                <policy>com.polopoly.cm.app.policy.NumberInputPolicy</policy>
+                <param name="fieldsetClass">field</param>
+                <param name="type">int</param>
+                <param name="size">5</param>
+                <param name="tabIndex">11</param>
+              </field>
+            </layout>
+          </layout>
+          <layout name="custom" input-template="p.Page" label="example.article.custom">
+            <field name="custom" input-template="p.NameValue" label="example.article.custom">
+              <help>example.article.custom.help</help>
+              <param name="inlineHelp">true</param>
+            </field>
+          </layout>
+        </layout>
+      </layout>
+    </layout>
+    <field name="associatedUsers" input-template="p.AssociatedUsers" />
+    <output-templates mode="www">
+      <id>example.StandardArticle.ot</id>
+    </output-templates>
+    <output-templates mode="mobile">
+      <id>example.MobileStandardArticle.ot</id>
+    </output-templates>
+  </input-template>
+  <output-template name="example.MobileStandardArticle.ot" input-template="p.siteengine.ArticleOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/modelPaths" name="value">m.local.content.contentId;m.request.view;m.request.mode;m.local.imageDerivativeKey</component>
+
+      <contentref group="output/controller" name="selected">
+        <contentid>
+          <externalid>p.siteengine.JavaClassRenderController</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/controller/selected/renderControllerClass" name="value">example.content.article.RenderControllerStandardArticle</component>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/mobile/standardarticle.vm</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+    </content-xml>
+  </output-template>
+
+  <output-template name="example.StandardArticle.ot" input-template="p.siteengine.ArticleOutputTemplate">
+    <content-xml>
+      <component group="output/modelKeyMode" name="selected">no-cache</component>
+      <contentref group="output/renderer" name="selected">
+        <contentid>
+          <externalid>p.siteengine.VelocityFileRenderer</externalid>
+        </contentid>
+      </contentref>
+      <contentref group="output/controller" name="selected">
+        <contentid>
+          <externalid>p.siteengine.JavaClassRenderController</externalid>
+        </contentid>
+      </contentref>
+      <component group="output/controller/selected/renderControllerClass" name="value">example.content.article.RenderControllerStandardArticle</component>
+      <component group="output/renderer/selected/defaultVelocityViewFileName" name="value">/WEB-INF/velocity/www/standardarticle.vm</component>
+      <component group="output/interactivePreviewEditableObjectName" name="value">Example.EditableArticle</component>
+      <component group="preview/controller" name="value">com.polopoly.siteengine.preview.PreviewControllerStandard</component>
+    </content-xml>
+  </output-template>
+</template-definition>

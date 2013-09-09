@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+  <!--This file contains input template definitions -->
+  <input-template name="com.atex.plugins.twitter.Account" label="com.atex.plugins.twitter.account">
+
+    <policy>com.atex.plugins.twitter.policy.TwitterAccountPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+
+    <type>AppConfig</type>
+
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="renderTemplateIconInSelect">true</param>
+
+    <field name="name" input-template="p.ContentName" label="cm.label.Name" required="true" />
+    <field name="consumerKey" input-template="p.TextInput" label="com.atex.plugins.twitter.account.consumerKey" required="true">
+        <param name="inlineHelp">true</param>
+        <help>com.atex.plugins.twitter.account.consumerKey.help</help>
+    </field>
+    <field name="consumerSecret" input-template="p.TextInput" label="com.atex.plugins.twitter.account.consumerSecret" required="true">
+        <param name="inlineHelp">true</param>
+        <help>com.atex.plugins.twitter.account.consumerSecret.help</help>
+    </field>
+    <field name="accessToken" input-template="p.TextInput" label="com.atex.plugins.twitter.account.accessToken" required="true">
+        <param name="inlineHelp">true</param>
+        <help>com.atex.plugins.twitter.account.accessToken.help</help>
+    </field>
+    <field name="accessTokenSecret" input-template="p.TextInput" label="com.atex.plugins.twitter.account.accessTokenSecret" required="true">
+        <param name="inlineHelp">true</param>
+        <help>com.atex.plugins.twitter.account.accessTokenSecret.help</help>
+    </field>
+  </input-template>
+</template-definition>

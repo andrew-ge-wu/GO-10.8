@@ -1,0 +1,19 @@
+Models
+
+  This describes the "public api" of the models of this plugin, these properties can be expected to remain after an upgrade to a new version of this plugin.
+
+* com.atex.plugins.twitter.Account
+
+*-------------------+-----------------------------------+--------------------------+
+| <<Name>>          | <<Description>>                   | <<Type>>                 |
+*-------------------+-----------------------------------+--------------------------+
+| name              | The Content Name                  | p.ContentName            |
+*-------------------+-----------------------------------+--------------------------+
+| consumerKey       | Application OAuth settings        | p.TextInput              |
+*-------------------+-----------------------------------+--------------------------+
+| consumerSecret    | Application OAuth settings        | p.TextInput              |
+*-------------------+-----------------------------------+--------------------------+
+| accessToken       | Application OAuth settings        | p.TextInput              |
+*-------------------+-----------------------------------+--------------------------+
+| accessTokenSecret | Application OAuth settings        | p.TextInput              |
+*-------------------*-----------------------------------*--------------------------*

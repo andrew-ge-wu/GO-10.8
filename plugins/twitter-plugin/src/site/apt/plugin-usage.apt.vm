@@ -1,0 +1,56 @@
+Usage
+
+* Create Twitter Widget
+
+  This feature is replaced by embed-code-plugin because of Twitter API migrated to version 1.1
+
+* Configure Twitter Account
+
+  To able to tweet article, you first will need to configure Twitter Account
+  
+** Add Application At Twitter Account
+
+  To create twitter application, follow the steps:
+  
+  [[1]] Login to {{https://dev.twitter.com/apps/new}} 
+
+  [[2]] Fill in details then create.
+
+  [[3]] Click on <<Create my access token>> to generate tokens 
+  
+  [[4]] Change the access to <<Read, Write and Access direct messages>> via <<Settings>> tab
+
+** Create Twitter Account at Polopoly
+
+  To create Twitter Account, follow the steps:
+  
+  [[1]] Go to <<Twitter Widget Configuration>> under <<Plugin Configuration>>
+  
+  [[2]] Click on <<Add Twitter Account>>
+  
+  [[3]] Fill in details based on the previous section <<Add Application At Twitter Account>>
+  
+  [[4]] Click on <<Insert>> then <<Save & View>>
+
+* Create Twittable Content
+
+  This example will use the StandardArticle. \
+  At CmGui's <Articles & Resources> tab, select <Standard article> and click <Create> button.
+
+[images/twittable-content-create.png]
+
+  Fill in name and other relevant fields. \
+  Ticked the <Tweet this upon saving the content>. Fill in the <Text to be tweeted>. \ 
+  It'll be the same as the content's name by default. 
+
+[images/twittable-content-tweetfields.png]
+
+[images/twittable-content-tweetfields2.png]
+
+  Please ensure that the tweet text length does not exceed the maximum allowed length.
+
+[images/twittable-content-tweettextexceed.png]
+
+  When the content is saved, the content will be tweeted.
+
+[images/twittable-content-twittersite.png]

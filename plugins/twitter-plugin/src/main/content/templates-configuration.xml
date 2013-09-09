@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+
+  <!--This file contains input template definitions -->
+  <input-template name="com.atex.plugins.twitter.ConfigTemplate" label="com.atex.plugins.twitter.configTemplate">
+
+    <policy>com.atex.plugins.baseline.policy.BaselinePolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+
+    <type>AppConfig</type>
+
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="renderTemplateIconInSelect">true</param>
+    <layout name="menu" input-template="p.PageMenu">
+      <layout name="general" input-template="p.Page" label="cm.general.General">
+        <field name="name" input-template="p.ContentName" label="cm.label.Name" required="true" />
+        <field name="accounts" input-template="p.ContentListEntryContainer">
+          <param name="contentListName">accounts</param>
+        </field>
+        <field name="creator" input-template="p.SimpleContentCreator">
+          <param name="insertionContentListName">accounts</param>
+          <idparam name="inputTemplateId">
+            <externalid>com.atex.plugins.twitter.Account</externalid>
+          </idparam>
+          <param name="securityParentAlias">content</param>
+          <param name="createWithSecurityParent">true</param>
+          <param name="insertParentAlias">content</param>
+          <param name="insertTargetAlias">content</param>
+          <param name="autoInsertContentListRelativeName">accounts</param>
+          <param name="createLabel">com.atex.plugins.twitter.create</param>
+        </field>
+      </layout>
+    </layout>
+  </input-template>
+</template-definition>

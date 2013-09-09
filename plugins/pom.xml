@@ -175,6 +175,8 @@
     <module>brightcove-plugin</module>
     <module>youtube-plugin</module>
     <module>department-driven-publishing-queue-plugin</module>
+    <module>twitter-plugin</module>
+
   </modules>
 
 </project>
