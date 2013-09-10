@@ -181,7 +181,7 @@ public class TwitterWidgetPolicyTest {
     public void testGetAvatars() throws CMException {
         when(avatars.getValue()).thenReturn("true");
         assertNotNull(target.getAvatars());
-        assertEquals("true", target.getAvatars());
+        assertEquals(true, target.getAvatars());
     }
 
     @Test
@@ -192,9 +192,9 @@ public class TwitterWidgetPolicyTest {
 
     @Test
     public void testGetScrollbar() throws CMException {
-        when(scrollbar.getValue()).thenReturn("true");
+        when(scrollbar.getChecked()).thenReturn(true);
         assertNotNull(target.getScrollbar());
-        assertEquals("true", target.getScrollbar());
+        assertEquals(true, target.getScrollbar());
     }
 
     @Test
@@ -205,9 +205,9 @@ public class TwitterWidgetPolicyTest {
 
     @Test
     public void testGetLoop() throws CMException {
-        when(loop.getValue()).thenReturn("true");
+        when(loop.getChecked()).thenReturn(true);
         assertNotNull(target.getLoop());
-        assertEquals("true", target.getLoop());
+        assertEquals(true, target.getLoop());
     }
 
     @Test

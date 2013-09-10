@@ -20,7 +20,7 @@ Models
 | toptweets         | Find the most relevant tweets     | p.Checkbox                         |
 *-------------------*-----------------------------------*------------------------------------*
 
-* com.atex.plugins.twitter.ConfigTemplate
+* com.atex.plugins.twitter.widget.ConfigTemplate
 
 *-------------------+-----------------------------------+---------------------------------------+
 | <<Name>>          | <<Description>>                   | <<Type>>                              |

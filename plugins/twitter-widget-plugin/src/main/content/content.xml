@@ -51,7 +51,7 @@
       </contentid>
       <input-template>
         <major>InputTemplate</major>
-        <externalid>com.atex.plugins.twitter.ConfigTemplate</externalid>
+        <externalid>com.atex.plugins.twitter.widget.ConfigTemplate</externalid>
       </input-template>
       <security-parent>
         <externalid>p.Configuration</externalid>

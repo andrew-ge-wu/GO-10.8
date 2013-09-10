@@ -70,9 +70,9 @@ public class MainElementControllerTest {
         when(policy.getTweetLinkColor()).thenReturn("#00ffff");
         when(policy.getHeight()).thenReturn("auto");
         when(policy.getWidth()).thenReturn("auto");
-        when(policy.getAvatars()).thenReturn("true");
-        when(policy.getScrollbar()).thenReturn("true");
-        when(policy.getLoop()).thenReturn("true");
+        when(policy.getAvatars()).thenReturn(true);
+        when(policy.getScrollbar()).thenReturn(true);
+        when(policy.getLoop()).thenReturn(true);
     }
 
     @Test
@@ -85,8 +85,8 @@ public class MainElementControllerTest {
         verify(local).setAttribute("tweetLinkColor", "#00ffff");
         verify(local).setAttribute("width", "auto");
         verify(local).setAttribute("height", "auto");
-        verify(local).setAttribute("avatars", "true");
-        verify(local).setAttribute("scrollbar", "true");
-        verify(local).setAttribute("loop", "true");
+        verify(local).setAttribute("avatars", true);
+        verify(local).setAttribute("scrollbar", true);
+        verify(local).setAttribute("loop", true);
     }
 }

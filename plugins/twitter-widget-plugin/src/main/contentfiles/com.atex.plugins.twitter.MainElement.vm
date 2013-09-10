@@ -5,67 +5,44 @@
 ## are the sole property of Polopoly AB (publ).
 ## Polopoly is a registered trademark of Polopoly AB (publ).
 
-<link rel="stylesheet" type="text/css" href="#file({'contentId': $filesContentId, 'filename':'com.atex.plugins.twitter.MainElement.css', '':''})" />
+<link rel="stylesheet" type="text/css" href="#file({'contentId': $filesContentId, 'filename':'com.atex.plugins.twitter.MainElement.css', '':''})"/>
 
 #set($height = $!{m.local.height})
 #if(!$height)
-  #set($height = "auto")
+    #set($height = "auto")
 #end
 
 #set($colwidth = $m.stack.colwidth)
 #set($width = $!{m.local.width})
 #if(!$width)
-  #set($width = $colwidth)
+    #set($width = $colwidth)
 #elseif($width == "auto")
-  #set($width = $colwidth)
+    #set($width = $colwidth)
 #end
 
 #if($math.toInteger($width) > $math.toInteger($colwidth))
-  #set($width = $colwidth)
+    #set($width = $colwidth)
 #end
 ## padding 7px, so need deduct 7px to avoid overflow
 #if($math.toInteger($width) - $math.toInteger($colwidth) < 7)
-  #set($width = $math.sub($width, 7))
+    #set($width = $math.sub($width, 7))
 #end
 
 #set($loop = $!{m.local.loop})
-
-<div class="element twitter" style="height:$!{height}; width:$!{width}px;">
-<script src="http://widgets.twimg.com/j/2/widget.js"></script>
-<script type="text/javascript">
-  new TWTR.Widget({
-    version: 2,
-    type: 'search',
-    interval: 5000,
-    search: '$!{content.hashtags.value}',
-    title: '$!{content.name}',
-    subject: '$!{content.title.value}',
-    rpp: '$!{content.rpp.value}',
-    width: '$width',
-    height: '$height',
-    theme: {
-      shell: {
-        background: '$!{m.local.shellBgColor}',
-        color: '$!{m.local.shellFgColor}'
-      },
-    tweets: {
-      background: '$!{m.local.tweetBgColor}',
-      color: '$!{m.local.tweetFgColor}',
-      links: '$!{m.local.tweetLinkColor}'
+<a class="twitter-timeline twitter"
+   data-widget-id="$!{content.widgetId.value}"
+   data-link-color="$!{m.local.tweetLinkColor}"
+   data-chrome="#if(!${m.local.scrollbar})noscrollbar #end"
+   data-tweet-limit=${content.rpp.value}
+   width="${width}"
+   height="${height}"
+        >$!{content.title.value}</a>
+<script>!function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = p + "://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
     }
-  },
-  features: {
-    scrollbar: $!{m.local.scrollbar},
-    loop: $!{loop},
-    live: true,
-    avatars: $!{m.local.avatars},
-    toptweets: $!{content.toptweets.value},
-    #if($loop == "false")
-    behavior: 'all'
-    #else 
-    behavior: 'default' 
-    #end 
-  }
-}).render().start();
-</script>
-</div>
+}(document, "script", "twitter-wjs");</script>

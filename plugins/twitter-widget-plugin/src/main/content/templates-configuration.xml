@@ -20,7 +20,7 @@
   </input-template> 
 
   <!--This file contains input template definitions -->
-  <input-template name="com.atex.plugins.twitter.ConfigTemplate" label="com.atex.plugins.twitter.configTemplate">
+  <input-template name="com.atex.plugins.twitter.widget.ConfigTemplate" label="com.atex.plugins.twitter.widget.ConfigTemplate">
 
     <policy>com.atex.plugins.twitter.TwitterWidgetPolicy</policy>
     <editor>com.atex.plugins.twitter.widget.OTwitterConfigTopPolicyWidget</editor>

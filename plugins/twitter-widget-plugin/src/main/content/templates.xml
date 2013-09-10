@@ -30,22 +30,16 @@
       <param name="inlineHelp">true</param>
       <help>com.atex.plugins.twitter.title.help</help>
     </field>
-    <!-- Hashtags Search -->
-    <field name="hashtags" input-template="p.TextInput" label="com.atex.plugins.twitter.hashtags" required="true">
-      <param name="inlineHelp">true</param>
-      <help>com.atex.plugins.twitter.hashtags.help</help>
+
+    <field name="widgetId" input-template="p.TextInput" label="com.atex.plugins.twitter.widget.appId.label" required="true">
+      <help>com.atex.plugins.twitter.widget.appId.help</help>
     </field>
     <field name="rpp" input-template="p.TextInput" label="com.atex.plugins.twitter.rpp">
       <policy>com.atex.plugins.twitter.NumberMaxValuePolicy</policy>
-      <param name="maxSize">100</param>
+      <param name="maxSize">20</param>
       <param name="default">10</param>
       <param name="inlineHelp">true</param>
       <help>com.atex.plugins.twitter.rpp.help</help>
-    </field>
-    <field name="toptweets" input-template="p.Checkbox" label="com.atex.plugins.twitter.toptweets">
-      <param name="checked">true</param>
-      <param name="inlineHelp">true</param>
-      <help>com.atex.plugins.twitter.toptweets.help</help>
     </field>
 
     <output-templates mode="www">

@@ -13,6 +13,7 @@ import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.polopoly.cm.app.policy.CheckboxPolicy;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -93,9 +94,9 @@ public class TwitterConfiguration {
         ((SingleValuePolicy) policy.getChildPolicy("tweetLinkColor")).setValue("#1985b5");
         ((SingleValuePolicy) policy.getChildPolicy("width")).setValue("auto");
         ((SingleValuePolicy) policy.getChildPolicy("height")).setValue("auto");
-        ((SingleValuePolicy) policy.getChildPolicy("avatars")).setValue("true");
-        ((SingleValuePolicy) policy.getChildPolicy("scrollbar")).setValue("true");
-        ((SingleValuePolicy) policy.getChildPolicy("loop")).setValue("true");
+        ((CheckboxPolicy) policy.getChildPolicy("avatars")).setChecked(true);
+        ((CheckboxPolicy) policy.getChildPolicy("scrollbar")).setChecked(true);
+        ((CheckboxPolicy) policy.getChildPolicy("loop")).setChecked(true);
 
         // fix content locked issue
         try {

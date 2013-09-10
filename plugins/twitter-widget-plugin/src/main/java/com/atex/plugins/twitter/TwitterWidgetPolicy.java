@@ -145,8 +145,8 @@ public class TwitterWidgetPolicy extends ContentPolicy {
      * Get widget avatars setting
      * @throws com.polopoly.cm.client.CMException
      */
-    public String getAvatars() throws CMException {
-        return ((CheckboxPolicy) getChildPolicy(AVATARS)).getValue();
+    public boolean getAvatars() throws CMException {
+        return ((CheckboxPolicy) getChildPolicy(AVATARS)).getChecked();
     }
 
     /**
@@ -161,8 +161,8 @@ public class TwitterWidgetPolicy extends ContentPolicy {
      * Get widget scrollbar setting
      * @throws com.polopoly.cm.client.CMException
      */
-    public String getScrollbar() throws CMException {
-        return ((CheckboxPolicy) getChildPolicy(SCROLL_BAR)).getValue();
+    public boolean getScrollbar() throws CMException {
+        return ((CheckboxPolicy) getChildPolicy(SCROLL_BAR)).getChecked();
     }
 
     /**
@@ -177,8 +177,8 @@ public class TwitterWidgetPolicy extends ContentPolicy {
      * Get widget loop setting
      * @throws com.polopoly.cm.client.CMException
      */
-    public String getLoop() throws CMException {
-        return ((CheckboxPolicy) getChildPolicy(LOOP)).getValue();
+    public boolean getLoop() throws CMException {
+        return ((CheckboxPolicy) getChildPolicy(LOOP)).getChecked();
     }
 
     /**
