@@ -37,7 +37,6 @@
     <field name="rpp" input-template="p.TextInput" label="com.atex.plugins.twitter.rpp">
       <policy>com.atex.plugins.twitter.NumberMaxValuePolicy</policy>
       <param name="maxSize">20</param>
-      <param name="default">10</param>
       <param name="inlineHelp">true</param>
       <help>com.atex.plugins.twitter.rpp.help</help>
     </field>

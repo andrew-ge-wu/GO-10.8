@@ -33,7 +33,9 @@
    data-widget-id="$!{content.widgetId.value}"
    data-link-color="$!{m.local.tweetLinkColor}"
    data-chrome="#if(!${m.local.scrollbar})noscrollbar #end"
-   data-tweet-limit=${content.rpp.value}
+   #if(${content.rpp.value})
+     data-tweet-limit=${content.rpp.value}
+   #end
    width="${width}"
    height="${height}"
         >$!{content.title.value}</a>
