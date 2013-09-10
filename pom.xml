@@ -261,7 +261,7 @@
       <artifactId>imagegallery-plugin</artifactId>
       <version>1.2.0</version>
     </dependency>
-                  377088173265788928
+
     <dependency>
       <groupId>com.atex.plugins</groupId>
       <artifactId>imagegallery-plugin</artifactId>
