@@ -91,6 +91,8 @@
     <module>plugins/brightcove-plugin</module>
     <module>plugins/youtube-plugin</module>
     <module>plugins/department-driven-publishing-queue-plugin</module>
+    <module>plugins/twitter-plugin</module>
+    <module>plugins/twitter-widget-plugin</module>
     <!--Example: how to use a plugin as a source plugin -->
     <!--To use a plugin as a SOURCE PLUGIN:
         * copy the source code of the plugin and place it as a module in your project
@@ -228,6 +230,11 @@
     </dependency>
     <dependency>
       <groupId>com.atex.plugins</groupId>
+      <artifactId>twitter-widget-plugin</artifactId>
+      <version>2.0.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>com.atex.plugins</groupId>
       <artifactId>facebook-plugin</artifactId>
       <version>2.1.0</version>
     </dependency>
@@ -261,19 +268,19 @@
       <version>1.2.0</version>
       <classifier>contentdata</classifier>
     </dependency>
-    
-    <!-- <dependency>
-      <groupId>com.atex.plugins</groupId>
-      <artifactId>twitter-plugin</artifactId>
-      <version>3.0.0-SNAPSHOT</version>
-    </dependency>
-
     <dependency>
       <groupId>com.atex.plugins</groupId>
       <artifactId>twitter-plugin</artifactId>
       <version>3.0.0-SNAPSHOT</version>
-      <classifier>contentdata</classifier>
-    </dependency> -->
+    </dependency>
+    <!--
+    <dependency>
+      <groupId>com.atex.plugins</groupId>
+      <artifactId>twitter-plugin</artifactId>
+      <version>3.0.0-SNAPSHOT</version>
+    </dependency>
+     -->
+
 
   </dependencies>
 
