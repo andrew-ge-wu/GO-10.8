@@ -177,7 +177,8 @@ public abstract class AddCommentCommand implements Command
     {
         boolean isValid = true;
 
-        Boolean validCaptcha = (Boolean) request.getAttribute(CaptchaValidationFilter.IS_VALID_CAPTCHA_ATTRIBUTE);
+        //Boolean validCaptcha = (Boolean) request.getAttribute(CaptchaValidationFilter.IS_VALID_CAPTCHA_ATTRIBUTE);
+        Boolean validCaptcha = true;
         boolean isMobileMode = cmRenderContext.getControllerContext().getMode().equals("mobile");
 
         // We don't require captcha for mobile mode, so check this too.

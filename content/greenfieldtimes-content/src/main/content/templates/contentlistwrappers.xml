@@ -15,6 +15,9 @@
       <contentid>
         <externalid>example.StandardArticle</externalid>
       </contentid>
+      <contentid>
+        <externalid>example.Link</externalid>
+      </contentid>
     </idparam-list>
     <param name="maxSize">1</param>
   </input-template>
